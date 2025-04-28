@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-dotenv
+python-multipart
+pillow
+python-pptx
+google-generativeai
+google-genai
+cloudinary
+requests
+pydantic
+aiohttp

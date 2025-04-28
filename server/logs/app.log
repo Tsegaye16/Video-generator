@@ -1,0 +1,19 @@
+2025-04-29 00:05:03,914 - config - INFO - Avatars fetched successfully
+2025-04-29 00:05:05,493 - config - INFO - Voices fetched successfully
+2025-04-29 00:05:12,582 - config - INFO - Avatars fetched successfully
+2025-04-29 00:05:14,166 - config - INFO - Voices fetched successfully
+2025-04-29 00:10:02,767 - config - INFO - File uploaded successfully: Sample 3.pptx
+2025-04-29 00:10:03,067 - config - INFO - File processed successfully: Sample 3.pptx
+2025-04-29 00:10:05,402 - config - INFO - Extracted slide 1 with title: AI – Use Cases
+2025-04-29 00:10:05,412 - config - INFO - Extracted slide 2 with title: None
+2025-04-29 00:10:05,423 - config - INFO - Extracted slide 3 with title: None
+2025-04-29 00:10:05,430 - config - INFO - Extracted slide 4 with title: Thank you
+2025-04-29 00:10:34,239 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1745874633/logos/9372c0c9-8a53-4079-810e-62bf35778fc2.png
+2025-04-29 00:10:42,076 - config - INFO - Generated 7 scenes for file 33a07b1f-d02b-4e70-8cb3-d70a8d00ece2.pptx.
+2025-04-29 00:11:14,695 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745874674/generated_images/bofpwpvoch4hic4tdrvj.png
+2025-04-29 00:11:16,520 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745874675/generated_images/kit1bvh4qbwtanhg7u2s.png
+2025-04-29 00:11:18,472 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745874677/generated_images/jou6atk4gr7v5dpfpizd.png
+2025-04-29 00:11:20,109 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745874679/generated_images/qbwfblmprqddjoxwupjy.png
+2025-04-29 00:11:21,738 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745874681/generated_images/oplnrw36gtakvbjx1kky.png
+2025-04-29 00:11:28,004 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745874687/generated_images/ouxqs0vf6qszkpcsrnqv.png
+2025-04-29 00:11:29,907 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745874689/generated_images/jsrjrmax9y7hcisvnkdk.png
