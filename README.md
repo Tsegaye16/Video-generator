@@ -22,11 +22,17 @@ This project is a full-stack application that converts PowerPoint presentations 
 - **pip** (Python package manager)
 - **Virtual Environment** (optional but recommended)
 
+Clone the repositor
+
+```bash
+    git clone https://github.com/Tsegaye16/Video-generator
+```
+
 ### Back-End Setup
 
-1. Navigate to the `v2/server` directory:
+1. Navigate to the `Video-generator/server` directory:
    ```bash
-   cd v2/server
+   <!-- cd Video-generator/server -->
    ```
 2. Create a virtual environment and activate it:
 
@@ -41,7 +47,7 @@ This project is a full-stack application that converts PowerPoint presentations 
 pip install -r requirements.txt
 ```
 
-4. Create a `.env` file in the `v2/server` directory and configure the following keys:
+4. Create a `.env` file in the `server` directory and configure the following keys:
 
    ```
    HEYGEN_API_KEY=<your_heygen_api_key>
@@ -59,10 +65,10 @@ uvicorn main:app --reload
 
 ### Front-End Setup
 
-1. Navigate to the `v2/client` directory:
+1. Navigate to the `Video-generator/client` directory:
 
 ```bash
-    cd v2/client
+    cd Video-generator/client
 ```
 
 1. Install dependencies:
