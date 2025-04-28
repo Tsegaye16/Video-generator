@@ -100,7 +100,7 @@ async def generate_video(request: VideoGenerationRequest):
             json=payload,
             headers=headers
         )
-        print("Response",response.text)
+      
         if response.status_code == 200:
             video_data = response.json()
 
@@ -112,7 +112,7 @@ async def generate_video(request: VideoGenerationRequest):
             }
         else:
             logger.error(f"HeyGen API error: {response.text}")
-            print("Else: ", response)
+            
             return {
                 'success': False,
                 'error': 'HeyGen API error',
@@ -137,6 +137,7 @@ async def get_video_status(video_id: str):
             f"https://api.heygen.com/v1/video_status.get?video_id={video_id}",
             headers=headers
         )
+        print("Response:",response.text)
         response.raise_for_status()
         status_data = response.json()
 

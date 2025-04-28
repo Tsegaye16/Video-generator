@@ -17,3 +17,88 @@
 2025-04-29 00:11:21,738 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745874681/generated_images/oplnrw36gtakvbjx1kky.png
 2025-04-29 00:11:28,004 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745874687/generated_images/ouxqs0vf6qszkpcsrnqv.png
 2025-04-29 00:11:29,907 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745874689/generated_images/jsrjrmax9y7hcisvnkdk.png
+2025-04-29 01:39:59,021 - config - INFO - File uploaded successfully: Sample 3.pptx
+2025-04-29 01:39:59,317 - config - INFO - File processed successfully: Sample 3.pptx
+2025-04-29 01:40:00,823 - config - INFO - Extracted slide 1 with title: AI – Use Cases
+2025-04-29 01:40:00,827 - config - INFO - Extracted slide 2 with title: None
+2025-04-29 01:40:00,882 - config - INFO - Extracted slide 3 with title: None
+2025-04-29 01:40:00,884 - config - INFO - Extracted slide 4 with title: Thank you
+2025-04-29 01:40:11,331 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1745880010/logos/f909f3ac-7bc2-4ac3-a7c6-4d8985928748.png
+2025-04-29 01:40:21,213 - config - INFO - Generated 8 scenes for file 10b8782d-af68-41c4-83d2-0373ac4186a4.pptx.
+2025-04-29 01:40:59,016 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880058/generated_images/kpvlecpnsy9pwsnpi4y5.png
+2025-04-29 01:41:03,695 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880062/generated_images/icbui8flffroij6slc3y.png
+2025-04-29 01:41:07,321 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880066/generated_images/zauaafimr1njdmlsigxr.png
+2025-04-29 01:41:15,565 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880075/generated_images/z8ebohhzbkbzjiyxwaou.png
+2025-04-29 01:41:24,015 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880083/generated_images/yesudxreyssegohshkyw.png
+2025-04-29 01:41:25,075 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880084/generated_images/xy7sbksyoyiiafo8qczw.png
+2025-04-29 01:41:34,507 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880093/generated_images/htbzisuw4vhb82dovm1n.png
+2025-04-29 01:41:40,222 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880099/generated_images/xxpnnbjtimwdxooby7q6.png
+2025-04-29 01:42:47,061 - config - INFO - Avatars fetched successfully
+2025-04-29 01:42:48,700 - config - INFO - Voices fetched successfully
+2025-04-29 01:42:54,370 - config - INFO - Avatars fetched successfully
+2025-04-29 01:43:03,051 - config - INFO - Voices fetched successfully
+2025-04-29 01:43:10,517 - config - INFO - File uploaded successfully: Sample 3.pptx
+2025-04-29 01:43:10,828 - config - INFO - File processed successfully: Sample 3.pptx
+2025-04-29 01:43:12,552 - config - INFO - Extracted slide 1 with title: AI – Use Cases
+2025-04-29 01:43:12,560 - config - INFO - Extracted slide 2 with title: None
+2025-04-29 01:43:12,575 - config - INFO - Extracted slide 3 with title: None
+2025-04-29 01:43:12,578 - config - INFO - Extracted slide 4 with title: Thank you
+2025-04-29 01:43:21,644 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1745880201/logos/8597c132-8993-49b1-998c-bb471173dc7c.png
+2025-04-29 01:43:28,725 - config - INFO - Generated 8 scenes for file e8bb9c4f-2b80-45c2-be85-37caf50d8924.pptx.
+2025-04-29 01:44:07,666 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880246/generated_images/hxnsit6nbllvpyichjcm.png
+2025-04-29 01:44:18,336 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880257/generated_images/hkrgtdqjvg8zslj3ygj4.png
+2025-04-29 01:44:22,208 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880261/generated_images/v1wtivifv3h8jzoyqe3s.png
+2025-04-29 01:44:25,745 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880265/generated_images/euexgz7db5vbox71krso.png
+2025-04-29 01:44:30,178 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880269/generated_images/vjbihogwrr5dt7txwms0.png
+2025-04-29 01:44:38,985 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880278/generated_images/fy1dd1nnfaqdk79cel9v.png
+2025-04-29 01:44:44,556 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880284/generated_images/vv22esc6pwvk9ixeyt6a.png
+2025-04-29 01:44:47,889 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880287/generated_images/cxcisyjveyewzx1dgskb.png
+2025-04-29 01:46:07,591 - config - INFO - Avatars fetched successfully
+2025-04-29 01:46:09,152 - config - INFO - Voices fetched successfully
+2025-04-29 01:46:14,278 - config - INFO - Avatars fetched successfully
+2025-04-29 01:46:15,900 - config - INFO - Voices fetched successfully
+2025-04-29 01:46:16,179 - config - INFO - File uploaded successfully: Sample 3.pptx
+2025-04-29 01:46:16,492 - config - INFO - File processed successfully: Sample 3.pptx
+2025-04-29 01:46:23,245 - config - INFO - Extracted slide 1 with title: AI – Use Cases
+2025-04-29 01:46:23,252 - config - INFO - Extracted slide 2 with title: None
+2025-04-29 01:46:23,264 - config - INFO - Extracted slide 3 with title: None
+2025-04-29 01:46:23,270 - config - INFO - Extracted slide 4 with title: Thank you
+2025-04-29 01:46:32,906 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1745880392/logos/6a9d785a-e92b-4e18-bef6-6b2105031169.png
+2025-04-29 01:46:42,331 - config - INFO - Generated 9 scenes for file de2b712b-7399-493f-a91e-dc81e78e67fd.pptx.
+2025-04-29 01:47:00,597 - config - ERROR - Error generating image: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash-exp', 'location': 'global'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '59s'}]}}
+2025-04-29 01:47:02,290 - config - ERROR - Error generating image: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-exp'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '57s'}]}}
+2025-04-29 01:47:04,318 - config - ERROR - Error generating image: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash-exp', 'location': 'global'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '55s'}]}}
+2025-04-29 01:47:06,399 - config - ERROR - Error generating image: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash-exp', 'location': 'global'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '53s'}]}}
+2025-04-29 01:47:08,190 - config - ERROR - Error generating image: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-exp'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '51s'}]}}
+2025-04-29 01:47:09,891 - config - ERROR - Error generating image: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-exp'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '50s'}]}}
+2025-04-29 01:47:22,134 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880441/generated_images/ebrcvljkduf0carbvepe.png
+2025-04-29 01:47:25,470 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880444/generated_images/n20v6rkj1pwlvkpbo6an.png
+2025-04-29 01:47:28,702 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880448/generated_images/vmtpmyg4qt7bdw0ins1s.png
+2025-04-29 01:48:16,627 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880495/generated_images/wginic1xpe9mtghsfw49.png
+2025-04-29 01:48:37,171 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880516/generated_images/zrwhtm1g0qkq6f1zrmkm.png
+2025-04-29 01:50:10,350 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880609/generated_images/l0yj2rxbr1baskswyzzn.png
+2025-04-29 01:50:30,318 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880629/generated_images/oo252r88jfeyouqoislf.png
+2025-04-29 01:50:49,581 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880648/generated_images/nbhudm45tujpdmospwjv.png
+2025-04-29 01:51:06,535 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1745880665/generated_images/ewa9yqvy3zcisi3mel3v.png
+2025-04-29 01:51:21,267 - config - INFO - Video generated successfully: 306a07630fa44e18b8615e1f074de0ff
+2025-04-29 01:51:22,735 - config - INFO - Video status fetched successfully: 306a07630fa44e18b8615e1f074de0ff
+2025-04-29 01:51:23,354 - config - INFO - Video status fetched successfully: 306a07630fa44e18b8615e1f074de0ff
+2025-04-29 01:51:23,969 - config - INFO - Video status fetched successfully: 306a07630fa44e18b8615e1f074de0ff
+2025-04-29 01:51:24,596 - config - INFO - Video status fetched successfully: 306a07630fa44e18b8615e1f074de0ff
+2025-04-29 01:51:25,411 - config - INFO - Video status fetched successfully: 306a07630fa44e18b8615e1f074de0ff
+2025-04-29 01:54:25,849 - config - INFO - Video generated successfully: 1c459480f1d94f0e978b38c5a633c2f5
+2025-04-29 01:54:27,737 - config - INFO - Video status fetched successfully: 1c459480f1d94f0e978b38c5a633c2f5
+2025-04-29 01:54:28,354 - config - INFO - Video status fetched successfully: 1c459480f1d94f0e978b38c5a633c2f5
+2025-04-29 01:54:33,533 - config - INFO - Video status fetched successfully: 1c459480f1d94f0e978b38c5a633c2f5
+2025-04-29 01:54:34,195 - config - INFO - Video status fetched successfully: 1c459480f1d94f0e978b38c5a633c2f5
+2025-04-29 01:54:50,040 - config - INFO - Video generated successfully: c547f544e5b842fea4503de9a0a8935e
+2025-04-29 01:54:51,997 - config - INFO - Video status fetched successfully: c547f544e5b842fea4503de9a0a8935e
+2025-04-29 01:54:52,610 - config - INFO - Video status fetched successfully: c547f544e5b842fea4503de9a0a8935e
+2025-04-29 01:54:53,245 - config - INFO - Video status fetched successfully: c547f544e5b842fea4503de9a0a8935e
+2025-04-29 01:54:53,902 - config - INFO - Video status fetched successfully: c547f544e5b842fea4503de9a0a8935e
+2025-04-29 01:54:54,549 - config - INFO - Video status fetched successfully: c547f544e5b842fea4503de9a0a8935e
+2025-04-29 01:58:41,992 - config - INFO - Video generated successfully: 56b4e4cdf9f54326b550c489e7c69fe8
+2025-04-29 01:58:43,793 - config - INFO - Video status fetched successfully: 56b4e4cdf9f54326b550c489e7c69fe8
+2025-04-29 01:58:44,465 - config - INFO - Video status fetched successfully: 56b4e4cdf9f54326b550c489e7c69fe8
+2025-04-29 01:58:49,578 - config - INFO - Video status fetched successfully: 56b4e4cdf9f54326b550c489e7c69fe8
+2025-04-29 01:58:50,227 - config - INFO - Video status fetched successfully: 56b4e4cdf9f54326b550c489e7c69fe8
