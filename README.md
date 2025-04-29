@@ -1,13 +1,15 @@
 # Presentation to Video Conversion System
 
-<video width="320" height="240" controls>
-  <source src="data/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-<video width="320" height="240" controls>
-  <source src="data/aa69986ec9044d7d91be597b30b60655.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div style="display: flex; justify-content: space-around;">
+  <video width="320" height="240" controls>
+    <source src="data/demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video width="320" height="240" controls>
+    <source src="data/aa69986ec9044d7d91be597b30b60655.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 This project is a full-stack application that converts PowerPoint presentations into engaging videos using AI-generated visuals and speech. It includes a **React-based front-end** and a **FastAPI-based back-end**.
 
 ---
