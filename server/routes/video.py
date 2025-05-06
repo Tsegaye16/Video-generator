@@ -16,7 +16,7 @@ async def get_avatars():
         response = requests.get(
             "https://api.heygen.com/v2/avatars",
             headers=headers,
-            timeout=10
+            timeout=40
         )
         response.raise_for_status()
         response_data = response.json()

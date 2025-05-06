@@ -40,22 +40,31 @@ const SceneCard = ({
           <Text type="secondary">(Slide {scene.original_slide_number})</Text>
         </Space>
       }
-      extra={
-        <Tooltip title="Regenerate image">
-          <Button
-            icon={<SyncOutlined />}
-            onClick={() => handleRegenerateImage(scene.scene_id)}
-            loading={scene.isGenerating}
-            disabled={scene.isGenerating}
-            size="small"
-            shape="circle"
-          />
-        </Tooltip>
-      }
     >
       <Row gutter={[24, 16]}>
         <Col xs={24} md={12}>
-          <Text strong>Background Visual</Text>
+          <Row
+            justify="space-between"
+            align="middle"
+            style={{ marginBottom: 8 }}
+          >
+            <Col>
+              <Text strong>Background Visual</Text>
+            </Col>
+            <Col>
+              <Tooltip title="Regenerate image">
+                <Button
+                  icon={<SyncOutlined />}
+                  onClick={() => handleRegenerateImage(scene.scene_id)}
+                  loading={scene.isGenerating}
+                  disabled={scene.isGenerating}
+                  size="small"
+                  shape="circle"
+                />
+              </Tooltip>
+            </Col>
+          </Row>
+
           <SceneImageContainer>
             <SceneCounter>
               Scene {index + 1}/{totalScenes}
@@ -106,7 +115,6 @@ const SceneCard = ({
               </Text>
             )}
           </SceneImageContainer>
-
           <TextArea
             rows={3}
             placeholder="Customize the image generation prompt..."
@@ -116,7 +124,6 @@ const SceneCard = ({
             }
             style={{ marginBottom: 16 }}
           />
-
           {scene.imageGenError && (
             <Alert
               message={scene.imageGenError}
