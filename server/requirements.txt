@@ -10,3 +10,4 @@ cloudinary
 requests
 pydantic
 aiohttp
+spire.presentation.free
