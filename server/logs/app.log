@@ -154,3 +154,22 @@
 2025-05-07 11:59:58,153 - config - INFO - Voices fetched successfully
 2025-05-07 12:00:04,535 - config - INFO - Avatars fetched successfully
 2025-05-07 12:00:16,933 - config - INFO - Voices fetched successfully
+2025-05-07 12:57:00,447 - config - INFO - File uploaded successfully: Sample 3.pptx
+2025-05-07 12:57:00,659 - config - INFO - File processed successfully: Sample 3.pptx
+2025-05-07 12:57:07,840 - config - INFO - Extracted slide 1 with title: AI – Use Cases
+2025-05-07 12:57:07,844 - config - INFO - Extracted slide 2 with title: None
+2025-05-07 12:57:07,911 - config - INFO - Extracted slide 3 with title: None
+2025-05-07 12:57:07,912 - config - INFO - Extracted slide 4 with title: Thank you
+2025-05-07 12:57:07,913 - config - INFO - Cleaned up original file: temp_uploads\6b92d053-d1de-454e-af8e-242c45eb386a.pptx
+2025-05-07 12:57:36,087 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746611855/logos/ae2a84a3-c2e3-4824-bdb4-56689c54b2a6.png
+2025-05-07 12:57:52,635 - config - INFO - Generated 8 scenes for file 6b92d053-d1de-454e-af8e-242c45eb386a.pptx.
+2025-05-07 12:58:24,068 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746611903/generated_images/ng4hr9wok7flyorokldw.png
+2025-05-07 12:58:26,061 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746611905/generated_images/x8xdawk9grfuitt3ng6n.png
+2025-05-07 12:58:28,317 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746611907/generated_images/otcmebniothgkcixl0fg.png
+2025-05-07 12:58:30,470 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746611909/generated_images/dxeaxzkkrzkdnkey4zl6.png
+2025-05-07 12:58:32,533 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746611912/generated_images/zueaknqzvd8knmxmzz4c.png
+2025-05-07 12:58:44,841 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746611924/generated_images/box3u4t6ng7gmp0ez4rv.png
+2025-05-07 12:58:46,581 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746611926/generated_images/lg5wwmnwxrp3rdthguhg.png
+2025-05-07 12:58:48,248 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746611927/generated_images/y01oxzb357cl7utbtaeg.png
+2025-05-07 12:58:57,060 - config - ERROR - Internal server error: 'VideoGenerationRequest' object has no attribute 'avatar_idd'
+2025-05-07 13:03:45,080 - config - ERROR - Internal server error: 'VideoGenerationRequest' object has no attribute 'avatar_idd'
