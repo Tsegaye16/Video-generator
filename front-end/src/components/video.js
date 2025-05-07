@@ -14,8 +14,27 @@ import { useEffect } from "react";
 
 const { Text } = Typography;
 
+// Map HeyGen error messages to user-friendly versions
+const mapErrorMessage = (error) => {
+  if (!error) return "An unknown error occurred.";
+  if (error.includes("Daily rate limit exceeded")) {
+    return "You've reached the daily limit for video generation. Please try again tomorrow or upgrade your HeyGen plan.";
+  }
+  if (error.includes("Video is too long")) {
+    return "The video duration exceeds the limit (60 minutes). Please shorten the scenes or upgrade your HeyGen plan.";
+  }
+  if (error.includes("Invalid API key")) {
+    return "There was an issue with the API key. Please contact support.";
+  }
+  if (error.includes("timed out")) {
+    return "Video generation took too long. Please try again later.";
+  }
+  return error; // Fallback to the original error message
+};
+
 const VideoResult = ({ videoId, videoUrl, status, progress, error }) => {
-  console.log("Status:", status);
+  console.log("VideoResult - Status:", status, "Error:", error);
+
   const handleDownload = async () => {
     if (!videoUrl) {
       message.error("No download URL available.");
@@ -64,7 +83,8 @@ const VideoResult = ({ videoId, videoUrl, status, progress, error }) => {
     if (status === "completed" && videoUrl) {
       message.success("Video is ready to view!");
     } else if (status === "failed" && error) {
-      message.error(error);
+      const userFriendlyError = mapErrorMessage(error);
+      message.error(userFriendlyError);
     }
   }, [status, videoUrl, error]);
 
@@ -122,7 +142,7 @@ const VideoResult = ({ videoId, videoUrl, status, progress, error }) => {
         )}
 
         {status === "failed" && error && (
-          <Alert message={error} type="error" showIcon />
+          <Alert message={mapErrorMessage(error)} type="error" showIcon />
         )}
       </Space>
     </Card>

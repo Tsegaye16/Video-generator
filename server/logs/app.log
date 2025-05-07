@@ -173,3 +173,535 @@
 2025-05-07 12:58:48,248 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746611927/generated_images/y01oxzb357cl7utbtaeg.png
 2025-05-07 12:58:57,060 - config - ERROR - Internal server error: 'VideoGenerationRequest' object has no attribute 'avatar_idd'
 2025-05-07 13:03:45,080 - config - ERROR - Internal server error: 'VideoGenerationRequest' object has no attribute 'avatar_idd'
+2025-05-07 13:14:22,377 - config - ERROR - Internal server error: name 'payload' is not defined
+2025-05-07 13:17:57,794 - config - ERROR - Internal server error: 'VideoGenerationRequest' object has no attribute 'avatar_idd'
+2025-05-07 13:18:01,439 - config - ERROR - Internal server error: 'VideoGenerationRequest' object has no attribute 'avatar_idd'
+2025-05-07 13:18:26,058 - config - ERROR - Internal server error: 'VideoGenerationRequest' object has no attribute 'avatar_idd'
+2025-05-07 13:18:44,218 - config - ERROR - Internal server error: 'VideoGenerationRequest' object has no attribute 'avatar_idd'
+2025-05-07 13:19:08,442 - config - ERROR - Internal server error: 'VideoGenerationRequest' object has no attribute 'avatar_idd'
+2025-05-07 13:19:44,614 - config - ERROR - Internal server error: 'VideoGenerationRequest' object has no attribute 'avatar_idd'
+2025-05-07 13:20:54,935 - config - INFO - Video request submitted: 22d770a6d64843f0ae2cd56a3d06d201
+2025-05-07 13:28:38,321 - config - INFO - Video request submitted: 542fc51fbef24868837f9a4839edae13
+2025-05-07 13:30:05,598 - config - INFO - Avatars fetched successfully
+2025-05-07 13:30:08,015 - config - INFO - Voices fetched successfully
+2025-05-07 13:30:16,045 - config - INFO - Avatars fetched successfully
+2025-05-07 13:30:18,527 - config - INFO - Voices fetched successfully
+2025-05-07 13:30:18,602 - config - INFO - File uploaded successfully: Sample 3.pptx
+2025-05-07 13:30:18,749 - config - INFO - File processed successfully: Sample 3.pptx
+2025-05-07 13:30:33,655 - config - INFO - Extracted slide 1 with title: AI – Use Cases
+2025-05-07 13:30:33,660 - config - INFO - Extracted slide 2 with title: None
+2025-05-07 13:30:33,715 - config - INFO - Extracted slide 3 with title: None
+2025-05-07 13:30:33,716 - config - INFO - Extracted slide 4 with title: Thank you
+2025-05-07 13:30:33,717 - config - INFO - Cleaned up original file: temp_uploads\ab208a45-0193-4a67-a10d-ac6dfb073189.pptx
+2025-05-07 13:30:42,105 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746613841/logos/252a1352-ef73-42fa-9669-40eeae797d2d.png
+2025-05-07 13:30:49,864 - config - INFO - Generated 7 scenes for file ab208a45-0193-4a67-a10d-ac6dfb073189.pptx.
+2025-05-07 13:31:37,060 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746613896/generated_images/u9oabitzgqcgt5cwuvsv.png
+2025-05-07 13:31:38,962 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746613898/generated_images/a6iomhnkzudkypgg0lmk.png
+2025-05-07 13:31:42,704 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746613902/generated_images/csaekl0qis7sgnkpzqnl.png
+2025-05-07 13:31:44,647 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746613904/generated_images/kodqdymwvosxp8gsnivw.png
+2025-05-07 13:31:47,055 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746613906/generated_images/wefwknhciretzo9azba4.png
+2025-05-07 13:31:48,927 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746613908/generated_images/vsxqtqro5o6h0y2uqu1u.png
+2025-05-07 13:31:55,671 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746613915/generated_images/scvfptvs48yo5krino7e.png
+2025-05-07 13:32:49,496 - config - INFO - Video request submitted: 688cb9c6e95148418df0eb6e2d0d6353
+2025-05-07 13:39:49,654 - config - INFO - Video request submitted: 3919308406ae4d2583624751acfa45da
+2025-05-07 13:46:43,095 - config - INFO - Voices fetched successfully
+2025-05-07 13:46:51,143 - config - INFO - Avatars fetched successfully
+2025-05-07 13:46:58,891 - config - INFO - Avatars fetched successfully
+2025-05-07 13:47:01,374 - config - INFO - Voices fetched successfully
+2025-05-07 13:47:03,723 - config - INFO - Voices fetched successfully
+2025-05-07 13:47:09,690 - config - INFO - Avatars fetched successfully
+2025-05-07 13:47:12,077 - config - INFO - Voices fetched successfully
+2025-05-07 13:47:12,158 - config - INFO - File uploaded successfully: Sample 3.pptx
+2025-05-07 13:47:12,328 - config - INFO - File processed successfully: Sample 3.pptx
+2025-05-07 13:47:25,139 - config - INFO - Extracted slide 1 with title: AI – Use Cases
+2025-05-07 13:47:25,145 - config - INFO - Extracted slide 2 with title: None
+2025-05-07 13:47:25,153 - config - INFO - Extracted slide 3 with title: None
+2025-05-07 13:47:25,155 - config - INFO - Extracted slide 4 with title: Thank you
+2025-05-07 13:47:25,156 - config - INFO - Cleaned up original file: temp_uploads\656419cc-02e0-4fc1-ac22-0fb8d59f1289.pptx
+2025-05-07 13:47:34,723 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746614854/logos/a9c49f7c-c982-4e69-9490-43ac341c0a74.png
+2025-05-07 13:47:57,512 - config - INFO - Generated 9 scenes for file 656419cc-02e0-4fc1-ac22-0fb8d59f1289.pptx.
+2025-05-07 13:48:47,173 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746614926/generated_images/f8s10yjsg2tubn0s7quj.png
+2025-05-07 13:48:49,694 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746614929/generated_images/rt4jnfirefdycvrzsriz.png
+2025-05-07 13:48:57,321 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746614936/generated_images/nfdgtoy3xpmfakgjvrkb.png
+2025-05-07 13:49:03,321 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746614942/generated_images/vmktbzhpljwl2pq6tgbb.png
+2025-05-07 13:49:24,027 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746614963/generated_images/ok9gvrzgbtwwrwgfgzac.png
+2025-05-07 13:49:28,533 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746614968/generated_images/fk9hm8tuofgm6aol4khx.png
+2025-05-07 13:49:30,416 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746614969/generated_images/gdzcyfqqeh8rsjskuvd3.png
+2025-05-07 13:49:32,127 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746614971/generated_images/qx1dcm7rbkcdsby3ll1p.png
+2025-05-07 13:49:34,412 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746614973/generated_images/gaf02dyn98w9hheug6dn.png
+2025-05-07 13:49:58,492 - config - INFO - Video request submitted: df098f744c4f4366b9d5dd174cff71cc
+2025-05-07 14:24:34,463 - config - INFO - Avatars fetched successfully
+2025-05-07 14:24:36,787 - config - INFO - Voices fetched successfully
+2025-05-07 14:24:39,271 - config - INFO - Voices fetched successfully
+2025-05-07 14:24:46,446 - config - INFO - Avatars fetched successfully
+2025-05-07 14:28:06,757 - config - INFO - Voices fetched successfully
+2025-05-07 14:28:14,511 - config - INFO - Avatars fetched successfully
+2025-05-07 14:28:16,892 - config - INFO - Voices fetched successfully
+2025-05-07 14:28:22,691 - config - INFO - Avatars fetched successfully
+2025-05-07 14:33:13,655 - config - INFO - Voices fetched successfully
+2025-05-07 14:33:20,728 - config - INFO - Avatars fetched successfully
+2025-05-07 14:33:23,411 - config - INFO - Voices fetched successfully
+2025-05-07 14:33:31,773 - config - INFO - Avatars fetched successfully
+2025-05-07 14:33:31,931 - config - INFO - File uploaded successfully: Sample.pptx
+2025-05-07 14:33:32,252 - config - INFO - File processed successfully: Sample.pptx
+2025-05-07 14:33:34,159 - config - INFO - Extracted slide 1 with title: None
+2025-05-07 14:33:34,162 - config - INFO - Extracted slide 2 with title: None
+2025-05-07 14:33:34,174 - config - INFO - Extracted slide 3 with title: None
+2025-05-07 14:33:34,176 - config - INFO - Cleaned up original file: temp_uploads\37948154-fa1b-4e4c-8c0a-3b769206421f.pptx
+2025-05-07 14:33:43,832 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746617623/logos/e7d5a1c1-d4c8-4a87-921d-41b4375545dd.png
+2025-05-07 14:33:51,653 - config - INFO - Generated 10 scenes for file 37948154-fa1b-4e4c-8c0a-3b769206421f.pptx.
+2025-05-07 14:34:41,369 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617680/generated_images/asdb890sndl7tsxrut1r.png
+2025-05-07 14:34:43,384 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617682/generated_images/bral0diu3xdoaj0rdzfl.png
+2025-05-07 14:34:45,426 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617685/generated_images/ofe6cwi3gkhb9wy1nybe.png
+2025-05-07 14:34:50,835 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617690/generated_images/ygocj3ehgksbvnk3xsvy.png
+2025-05-07 14:34:52,811 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617692/generated_images/qystyesdgbmi9zobcwkp.png
+2025-05-07 14:34:54,584 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617694/generated_images/sun2vf1bpzigxeyzpokv.png
+2025-05-07 14:35:12,713 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617712/generated_images/yhadj7qnhawn49gjorez.png
+2025-05-07 14:35:15,088 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617714/generated_images/jocl2b12vpvwuwcsdsqo.png
+2025-05-07 14:35:16,933 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617716/generated_images/kkt0o4rbnrummd7bc8qx.png
+2025-05-07 14:35:19,036 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617718/generated_images/jzrsdb307gcb5tej9bjw.png
+2025-05-07 14:36:24,004 - config - INFO - Avatars fetched successfully
+2025-05-07 14:36:26,324 - config - INFO - Voices fetched successfully
+2025-05-07 14:36:33,767 - config - INFO - Avatars fetched successfully
+2025-05-07 14:36:36,303 - config - INFO - Voices fetched successfully
+2025-05-07 14:36:36,415 - config - INFO - File uploaded successfully: Sample.pptx
+2025-05-07 14:36:36,743 - config - INFO - File processed successfully: Sample.pptx
+2025-05-07 14:36:40,928 - config - INFO - Extracted slide 1 with title: None
+2025-05-07 14:36:40,930 - config - INFO - Extracted slide 2 with title: None
+2025-05-07 14:36:40,941 - config - INFO - Extracted slide 3 with title: None
+2025-05-07 14:36:40,943 - config - INFO - Cleaned up original file: temp_uploads\fb6c32a5-4b0e-42e4-881a-d55dcc67b3ef.pptx
+2025-05-07 14:36:49,294 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746617808/logos/a4bb0c36-d234-4002-b4f8-b9f3a0bac97b.png
+2025-05-07 14:36:57,851 - config - INFO - Generated 11 scenes for file fb6c32a5-4b0e-42e4-881a-d55dcc67b3ef.pptx.
+2025-05-07 14:37:57,100 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617876/generated_images/ihsze43t5om9xth53h8a.png
+2025-05-07 14:38:03,784 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617883/generated_images/ti1mkb6hemrg6glo3imp.png
+2025-05-07 14:38:05,779 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617885/generated_images/r5sxjpkcfaxfw4gofcn3.png
+2025-05-07 14:38:07,754 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617887/generated_images/kz10yaony625t8cao3np.png
+2025-05-07 14:38:09,561 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617889/generated_images/sbdmqv7jn9dlczu51pjz.png
+2025-05-07 14:38:12,287 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617891/generated_images/fonlizweminj8lk6xves.png
+2025-05-07 14:38:48,200 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617927/generated_images/uk5bvpet72fgywbuwwbl.png
+2025-05-07 14:38:50,704 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617930/generated_images/aeqeldnzzalbqhhipywg.png
+2025-05-07 14:38:52,724 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617932/generated_images/yb3rhsi0vgjsujtghet7.png
+2025-05-07 14:38:55,422 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617934/generated_images/dgoa8ae6jdtomyfvippc.png
+2025-05-07 14:39:01,050 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746617937/generated_images/gsmsezhilknjtjjetgst.png
+2025-05-07 14:43:13,267 - config - INFO - Video request submitted: 4711e6b1e2ab4ea0bbc55253d745a51e
+2025-05-07 14:43:29,924 - config - INFO - Video request submitted: f00161fe81ab4bc3b7dbe45352cd2937
+2025-05-07 14:55:03,406 - config - INFO - Video request submitted: 6cea09d6659e41b7b57a4966445c9b2e
+2025-05-07 14:57:00,775 - config - INFO - Video request submitted: b8b559efecc74ba79f6fd50e0c146822
+2025-05-07 15:02:13,524 - config - INFO - Video request submitted: f63990a6cba94c33b116291ee00067f9
+2025-05-07 15:06:52,403 - config - INFO - Voices fetched successfully
+2025-05-07 15:07:02,279 - config - INFO - Avatars fetched successfully
+2025-05-07 15:07:02,369 - config - INFO - File uploaded successfully: Sample 3.pptx
+2025-05-07 15:07:02,525 - config - INFO - File processed successfully: Sample 3.pptx
+2025-05-07 15:07:06,262 - config - INFO - Extracted slide 1 with title: AI – Use Cases
+2025-05-07 15:07:06,266 - config - INFO - Extracted slide 2 with title: None
+2025-05-07 15:07:06,292 - config - INFO - Extracted slide 3 with title: None
+2025-05-07 15:07:06,294 - config - INFO - Extracted slide 4 with title: Thank you
+2025-05-07 15:07:06,295 - config - INFO - Cleaned up original file: temp_uploads\19afe6da-0bf8-4cf8-b8d4-7549aba1ad62.pptx
+2025-05-07 15:07:15,639 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746619635/logos/6370263b-ea5a-4464-a19a-2519d7f903c7.png
+2025-05-07 15:08:56,529 - config - INFO - Generated 9 scenes for file 19afe6da-0bf8-4cf8-b8d4-7549aba1ad62.pptx.
+2025-05-07 15:09:30,974 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746619769/generated_images/amvygdun3qpdgq9q6jvm.png
+2025-05-07 15:09:33,546 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746619772/generated_images/ngzitjc4kyzumo2qx0jn.png
+2025-05-07 15:09:40,584 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746619779/generated_images/kckghgpoqueqfiegw5hx.png
+2025-05-07 15:09:46,524 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746619786/generated_images/askuxq57ef70sjkcy1jo.png
+2025-05-07 15:09:50,877 - config - ERROR - Failed to merge image with logo.
+2025-05-07 15:09:50,877 - config - ERROR - Error generating image: 500: Failed to merge image with logo.
+2025-05-07 15:09:57,404 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746619796/generated_images/jyyn8elxwnnufu7kjasv.png
+2025-05-07 15:09:59,250 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746619798/generated_images/cevyinhmtmadrcslrsyp.png
+2025-05-07 15:10:01,077 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746619800/generated_images/x5z4f7y70w85zx3ay0fm.png
+2025-05-07 15:10:02,946 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746619802/generated_images/wz0msuyk9uthkwqijhu5.png
+2025-05-07 15:11:54,898 - config - ERROR - HeyGen API error: {"data":null,"error":{"code":"invalid_parameter","message":"video_inputs.6.background.ImageBackground.__root__ is invalid: either url or image_asset_id needs to be provided"}}
+
+2025-05-07 15:13:05,071 - config - ERROR - HeyGen API error: {"data":null,"error":{"code":"invalid_parameter","message":"video_inputs.6.background.ImageBackground.__root__ is invalid: either url or image_asset_id needs to be provided"}}
+
+2025-05-07 15:26:50,341 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746620809/generated_images/gbadqpldenabnutszuxy.png
+2025-05-07 15:28:21,922 - config - INFO - Video request submitted: a1bad2e4e79745f2bb87c9a17f0a5e46
+2025-05-07 15:28:22,953 - config - INFO - Checking status for a1bad2e4e79745f2bb87c9a17f0a5e46: waiting
+2025-05-07 15:28:28,983 - config - INFO - Checking status for a1bad2e4e79745f2bb87c9a17f0a5e46: processing
+2025-05-07 15:28:34,931 - config - INFO - Checking status for a1bad2e4e79745f2bb87c9a17f0a5e46: processing
+2025-05-07 15:28:40,999 - config - INFO - Checking status for a1bad2e4e79745f2bb87c9a17f0a5e46: processing
+2025-05-07 15:28:46,928 - config - INFO - Checking status for a1bad2e4e79745f2bb87c9a17f0a5e46: processing
+2025-05-07 15:28:52,918 - config - INFO - Checking status for a1bad2e4e79745f2bb87c9a17f0a5e46: processing
+2025-05-07 15:28:58,837 - config - INFO - Checking status for a1bad2e4e79745f2bb87c9a17f0a5e46: processing
+2025-05-07 15:29:20,276 - config - INFO - Checking status for a1bad2e4e79745f2bb87c9a17f0a5e46: failed
+2025-05-07 15:29:52,333 - config - INFO - Video request submitted: d9cc35e65d904314a99fa9b4108a4539
+2025-05-07 15:29:53,270 - config - INFO - Checking status for d9cc35e65d904314a99fa9b4108a4539: waiting
+2025-05-07 15:29:59,259 - config - INFO - Checking status for d9cc35e65d904314a99fa9b4108a4539: failed
+2025-05-07 15:51:25,646 - config - INFO - Video request submitted: 9aed7b9833ce4d55845926b64b89b89d
+2025-05-07 15:51:26,602 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: waiting
+2025-05-07 15:51:32,560 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:51:38,468 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:51:44,415 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:51:50,370 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:51:56,301 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:52:05,578 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:52:11,562 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:52:17,545 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:52:23,538 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:52:29,623 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:52:35,565 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:52:41,499 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:52:47,509 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:52:53,502 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:52:59,509 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:53:05,477 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:53:11,402 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:53:17,357 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:53:23,312 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:53:29,341 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:53:35,367 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:53:41,372 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:53:47,320 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:53:53,304 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:53:59,266 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:54:05,273 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:54:11,220 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:54:17,127 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:54:23,098 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:54:29,176 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:54:35,143 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:54:41,105 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:54:47,168 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:54:53,171 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:54:59,142 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:55:05,086 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:55:11,032 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:55:16,972 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:55:22,908 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:55:28,873 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:55:34,919 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:55:40,865 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: processing
+2025-05-07 15:55:46,817 - config - INFO - Checking status for 9aed7b9833ce4d55845926b64b89b89d: completed
+2025-05-07 15:55:54,150 - config - INFO - Avatars fetched successfully
+2025-05-07 15:55:56,470 - config - INFO - Voices fetched successfully
+2025-05-07 15:56:03,235 - config - INFO - Avatars fetched successfully
+2025-05-07 15:56:05,498 - config - INFO - Voices fetched successfully
+2025-05-07 15:56:07,814 - config - INFO - Voices fetched successfully
+2025-05-07 15:56:16,854 - config - INFO - Avatars fetched successfully
+2025-05-07 15:56:19,163 - config - INFO - Voices fetched successfully
+2025-05-07 15:56:27,619 - config - INFO - Avatars fetched successfully
+2025-05-07 15:56:59,999 - config - INFO - Avatars fetched successfully
+2025-05-07 15:57:02,417 - config - INFO - Voices fetched successfully
+2025-05-07 15:57:09,343 - config - INFO - Avatars fetched successfully
+2025-05-07 15:57:11,889 - config - INFO - Voices fetched successfully
+2025-05-07 15:57:57,611 - config - INFO - File uploaded successfully: Sample.pptx
+2025-05-07 15:57:57,970 - config - INFO - File processed successfully: Sample.pptx
+2025-05-07 15:57:59,893 - config - INFO - Extracted slide 1 with title: None
+2025-05-07 15:57:59,895 - config - INFO - Extracted slide 2 with title: None
+2025-05-07 15:57:59,906 - config - INFO - Extracted slide 3 with title: None
+2025-05-07 15:57:59,908 - config - INFO - Cleaned up original file: temp_uploads\b0784dbf-db9a-45ca-8a3e-d6895f698632.pptx
+2025-05-07 15:58:08,894 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746622688/logos/a8e6ed63-9fc3-4b25-bf11-be0ab418982f.png
+2025-05-07 15:58:25,817 - config - INFO - Generated 11 scenes for file b0784dbf-db9a-45ca-8a3e-d6895f698632.pptx.
+2025-05-07 15:59:05,931 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746622744/generated_images/vgki72mcxev6cld6epbg.png
+2025-05-07 15:59:08,186 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746622747/generated_images/jrobaytweu3fcjob3zof.png
+2025-05-07 15:59:10,127 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746622749/generated_images/udtp3e1kkygqmiv1hrai.png
+2025-05-07 15:59:12,434 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746622752/generated_images/s3nu72jvq6opupiukad9.png
+2025-05-07 15:59:14,897 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746622754/generated_images/vu3rmdufq0csppljwxkq.png
+2025-05-07 15:59:17,298 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746622756/generated_images/pfr3bzg5tvlztlzdq6wg.png
+2025-05-07 15:59:45,837 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746622785/generated_images/tsklhrlcv5m9jmywpelz.png
+2025-05-07 15:59:48,214 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746622787/generated_images/k6omrm3mcyc1sp7m0pk2.png
+2025-05-07 15:59:50,582 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746622789/generated_images/snxdeex40guqs8sm8w11.png
+2025-05-07 15:59:53,138 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746622792/generated_images/pozpcbteasw809jv4zyr.png
+2025-05-07 15:59:55,172 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746622794/generated_images/jen3hxjampmfnpddp6t3.png
+2025-05-07 16:00:04,082 - config - ERROR - Internal server error: 'VideoGenerationRequest' object has no attribute 'voice_idd'
+2025-05-07 16:06:21,790 - config - INFO - Video request submitted: 85d465b2fe734b15b875367b737a8d00
+2025-05-07 16:06:38,070 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:06:44,065 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:06:50,009 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:06:55,977 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:07:01,917 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:07:07,851 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:07:13,761 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:07:40,779 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:07:46,829 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:07:52,775 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:07:58,756 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:08:04,672 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:08:10,668 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:08:16,580 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:08:22,538 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:08:28,512 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:08:34,447 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:08:40,382 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:08:46,420 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:08:52,411 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:08:58,436 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:09:04,410 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:09:10,611 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:09:16,578 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:09:22,512 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:09:28,466 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:09:34,570 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:09:40,605 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:09:46,557 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:09:52,510 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:09:58,458 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:10:04,553 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:10:10,451 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:10:16,503 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:10:22,472 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:10:28,469 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:10:34,402 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:10:40,771 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:10:46,719 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:10:52,660 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:10:58,609 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:11:04,568 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:11:10,496 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:11:17,534 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:11:23,609 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:11:29,537 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:11:35,888 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:11:41,944 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:11:47,902 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:11:53,924 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:11:59,896 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:12:05,884 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:12:11,834 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:12:17,764 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:12:23,764 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:12:29,716 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:12:35,689 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:12:41,700 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:12:47,793 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:12:53,855 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:12:59,832 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:13:05,825 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:13:27,209 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:13:33,150 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:13:39,131 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:13:45,085 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:13:51,253 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:13:57,186 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:14:18,457 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: processing
+2025-05-07 16:14:24,593 - config - INFO - Checking status for 85d465b2fe734b15b875367b737a8d00: completed
+2025-05-07 16:14:37,271 - config - INFO - Voices fetched successfully
+2025-05-07 16:14:45,909 - config - INFO - Avatars fetched successfully
+2025-05-07 16:14:52,545 - config - INFO - Avatars fetched successfully
+2025-05-07 16:14:55,241 - config - INFO - Voices fetched successfully
+2025-05-07 16:15:01,704 - config - INFO - Avatars fetched successfully
+2025-05-07 16:15:09,928 - config - INFO - Avatars fetched successfully
+2025-05-07 16:15:12,264 - config - INFO - Voices fetched successfully
+2025-05-07 16:15:14,600 - config - INFO - Voices fetched successfully
+2025-05-07 16:21:12,058 - config - INFO - File uploaded successfully: Sample.pptx
+2025-05-07 16:21:12,401 - config - INFO - File processed successfully: Sample.pptx
+2025-05-07 16:21:14,614 - config - INFO - Extracted slide 1 with title: None
+2025-05-07 16:21:14,616 - config - INFO - Extracted slide 2 with title: None
+2025-05-07 16:21:14,625 - config - INFO - Extracted slide 3 with title: None
+2025-05-07 16:21:14,627 - config - INFO - Cleaned up original file: temp_uploads\93228053-ec8e-41bf-b61b-f6e1fc128ecd.pptx
+2025-05-07 16:21:22,283 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746624081/logos/e77c1e61-aa3c-408e-8ce8-d1f168e5b513.png
+2025-05-07 16:21:31,512 - config - INFO - Generated 10 scenes for file 93228053-ec8e-41bf-b61b-f6e1fc128ecd.pptx.
+2025-05-07 16:22:03,788 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624123/generated_images/imcuzcbig2afqzdaqqy2.png
+2025-05-07 16:22:05,942 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624125/generated_images/fsje0atudibu52slotwj.png
+2025-05-07 16:22:08,120 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624127/generated_images/ctoivvscpbwtdzlneiin.png
+2025-05-07 16:22:10,141 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624129/generated_images/fvrh9iechumlcs9zjc6g.png
+2025-05-07 16:22:32,077 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624151/generated_images/rqtgfgsdbgtfz451xn9n.png
+2025-05-07 16:22:33,766 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624153/generated_images/uwvg2mgesm6c1eaexrn2.png
+2025-05-07 16:22:35,979 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624155/generated_images/mdrnauk3qayke6dmux2l.png
+2025-05-07 16:22:38,025 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624157/generated_images/ibuu5cqknmuptkiunvpe.png
+2025-05-07 16:22:46,863 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624166/generated_images/vqfav5wflnebvhl3rmz7.png
+2025-05-07 16:22:49,150 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624168/generated_images/chrgp5a5jcqgstaubqp6.png
+2025-05-07 16:24:14,181 - config - ERROR - Internal server error: 'VideoGenerationRequest' object has no attribute 'voice_idd'
+2025-05-07 16:30:29,082 - config - INFO - Avatars fetched successfully
+2025-05-07 16:30:41,912 - config - INFO - Voices fetched successfully
+2025-05-07 16:31:34,810 - config - INFO - File uploaded successfully: Sample.pptx
+2025-05-07 16:31:35,165 - config - INFO - File processed successfully: Sample.pptx
+2025-05-07 16:31:37,360 - config - INFO - Extracted slide 1 with title: None
+2025-05-07 16:31:37,362 - config - INFO - Extracted slide 2 with title: None
+2025-05-07 16:31:37,369 - config - INFO - Extracted slide 3 with title: None
+2025-05-07 16:31:37,371 - config - INFO - Cleaned up original file: temp_uploads\e7e5787a-73c2-4133-b43c-23cd5e4c585a.pptx
+2025-05-07 16:31:46,205 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746624705/logos/f86eb819-eb94-48f0-a45d-abd9a9ed773f.png
+2025-05-07 16:31:55,317 - config - INFO - Generated 11 scenes for file e7e5787a-73c2-4133-b43c-23cd5e4c585a.pptx.
+2025-05-07 16:32:29,736 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624749/generated_images/jgmzzjw7csejst11rvf1.png
+2025-05-07 16:32:32,256 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624751/generated_images/ii2gcygbr3kddfjytvp4.png
+2025-05-07 16:32:33,923 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624753/generated_images/lqry0yhfrnjqzbuxdexm.png
+2025-05-07 16:32:39,537 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624759/generated_images/ecdjrrps2kfzledavx9k.png
+2025-05-07 16:32:51,049 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624770/generated_images/byuhlsjncay5jyqocau6.png
+2025-05-07 16:32:53,492 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624772/generated_images/jmrzx8mmyupyo6fezxff.png
+2025-05-07 16:33:06,736 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624786/generated_images/ifugffcpj8rnxgihie82.png
+2025-05-07 16:33:08,569 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624788/generated_images/jgnwv5d6f0v0x2p6vxum.png
+2025-05-07 16:33:11,493 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624790/generated_images/czzuiunw2kzkuy47emma.png
+2025-05-07 16:33:14,374 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624793/generated_images/psr7yd2w4dwpfhdbjno9.png
+2025-05-07 16:33:16,937 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746624796/generated_images/doncrrqjmft1mv0x0m5f.png
+2025-05-07 16:33:32,072 - config - INFO - Video request submitted: d62c9c32f8bf43fb83a867a5580aba96
+2025-05-07 16:33:33,011 - config - INFO - Checking status for d62c9c32f8bf43fb83a867a5580aba96: waiting
+2025-05-07 16:33:38,937 - config - INFO - Checking status for d62c9c32f8bf43fb83a867a5580aba96: failed
+2025-05-07 16:33:38,937 - config - ERROR - Video generation failed for d62c9c32f8bf43fb83a867a5580aba96: Daily rate limit exceeded
+2025-05-07 16:40:44,380 - config - INFO - Video request submitted: efbbf4a2a4884d6690b2ff26f1f801bd
+2025-05-07 16:40:45,299 - config - INFO - Checking status for efbbf4a2a4884d6690b2ff26f1f801bd: waiting
+2025-05-07 16:40:51,213 - config - INFO - Checking status for efbbf4a2a4884d6690b2ff26f1f801bd: failed
+2025-05-07 16:40:51,214 - config - ERROR - Video generation failed for efbbf4a2a4884d6690b2ff26f1f801bd: Daily rate limit exceeded
+2025-05-07 16:40:51,214 - config - ERROR - Internal server error: 500: {'success': False, 'video_id': 'efbbf4a2a4884d6690b2ff26f1f801bd', 'error': 'Daily rate limit exceeded'}
+2025-05-07 16:43:21,488 - config - INFO - Video request submitted: 7c9c991c1dee4023a626ee9724a44c13
+2025-05-07 16:43:22,456 - config - INFO - Checking status for 7c9c991c1dee4023a626ee9724a44c13: waiting
+2025-05-07 16:43:28,342 - config - INFO - Checking status for 7c9c991c1dee4023a626ee9724a44c13: failed
+2025-05-07 16:43:28,343 - config - ERROR - Video generation failed for 7c9c991c1dee4023a626ee9724a44c13: Daily rate limit exceeded
+2025-05-07 16:43:28,343 - config - ERROR - Internal server error: 500: {'success': False, 'video_id': '7c9c991c1dee4023a626ee9724a44c13', 'error': 'Daily rate limit exceeded'}
+2025-05-07 16:47:04,114 - config - INFO - Video request submitted: 93b5b684b9844fc7afe661add0e0f711
+2025-05-07 16:47:05,048 - config - INFO - Checking status for 93b5b684b9844fc7afe661add0e0f711: waiting
+2025-05-07 16:47:10,962 - config - INFO - Checking status for 93b5b684b9844fc7afe661add0e0f711: failed
+2025-05-07 16:47:10,962 - config - ERROR - Video generation failed for 93b5b684b9844fc7afe661add0e0f711: Daily rate limit exceeded
+2025-05-07 16:47:10,962 - config - ERROR - Internal server error: 500: {'success': False, 'video_id': '93b5b684b9844fc7afe661add0e0f711', 'error': 'Daily rate limit exceeded'}
+2025-05-07 16:51:02,907 - config - INFO - Video request submitted: 9bb5009d40fa480e83c29eef2931a670
+2025-05-07 16:51:03,835 - config - INFO - Checking status for 9bb5009d40fa480e83c29eef2931a670: waiting
+2025-05-07 16:51:09,775 - config - INFO - Checking status for 9bb5009d40fa480e83c29eef2931a670: failed
+2025-05-07 16:51:09,775 - config - ERROR - Video generation failed for 9bb5009d40fa480e83c29eef2931a670: Daily rate limit exceeded
+2025-05-07 16:51:09,775 - config - ERROR - Internal server error: 500: {'success': False, 'video_id': '9bb5009d40fa480e83c29eef2931a670', 'error': 'Daily rate limit exceeded'}
+2025-05-07 16:54:52,342 - config - INFO - Video request submitted: b4dbd7b8710144c3a8845f5b4eb95ec1
+2025-05-07 16:54:53,295 - config - INFO - Checking status for b4dbd7b8710144c3a8845f5b4eb95ec1: waiting
+2025-05-07 16:54:59,262 - config - INFO - Checking status for b4dbd7b8710144c3a8845f5b4eb95ec1: failed
+2025-05-07 16:54:59,262 - config - ERROR - Video generation failed for b4dbd7b8710144c3a8845f5b4eb95ec1: Daily rate limit exceeded
+2025-05-07 16:56:00,392 - config - INFO - Video request submitted: ca4646b09eeb44faafbd948851071b39
+2025-05-07 16:56:01,334 - config - INFO - Checking status for ca4646b09eeb44faafbd948851071b39: waiting
+2025-05-07 16:56:07,287 - config - INFO - Checking status for ca4646b09eeb44faafbd948851071b39: failed
+2025-05-07 16:56:07,288 - config - ERROR - Video generation failed for ca4646b09eeb44faafbd948851071b39: Daily rate limit exceeded
+2025-05-07 16:56:07,288 - config - ERROR - Internal server error: 500: {'success': False, 'video_id': 'ca4646b09eeb44faafbd948851071b39', 'error': 'Daily rate limit exceeded'}
+2025-05-07 16:56:46,757 - config - INFO - Video request submitted: da8b02b1dd36475d98f15b97394813e2
+2025-05-07 16:56:47,678 - config - INFO - Checking status for da8b02b1dd36475d98f15b97394813e2: waiting
+2025-05-07 16:56:53,604 - config - INFO - Checking status for da8b02b1dd36475d98f15b97394813e2: failed
+2025-05-07 16:56:53,604 - config - ERROR - Video generation failed for da8b02b1dd36475d98f15b97394813e2: Daily rate limit exceeded
+2025-05-07 17:00:16,581 - config - INFO - Voices fetched successfully
+2025-05-07 17:00:41,366 - config - INFO - Avatars fetched successfully
+2025-05-07 17:01:03,267 - config - INFO - Avatars fetched successfully
+2025-05-07 17:01:06,210 - config - INFO - Voices fetched successfully
+2025-05-07 17:01:19,106 - config - INFO - File uploaded successfully: Sample.pptx
+2025-05-07 17:01:19,414 - config - INFO - File processed successfully: Sample.pptx
+2025-05-07 17:01:21,780 - config - INFO - Extracted slide 1 with title: None
+2025-05-07 17:01:21,782 - config - INFO - Extracted slide 2 with title: None
+2025-05-07 17:01:21,791 - config - INFO - Extracted slide 3 with title: None
+2025-05-07 17:01:21,792 - config - INFO - Cleaned up original file: temp_uploads\5ff67ddb-18e8-4620-9ff2-55fe5f4b63ab.pptx
+2025-05-07 17:01:30,945 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746626490/logos/3bbd82e5-daf6-4fc4-b62b-a76b7cfaa9cb.png
+2025-05-07 17:02:10,116 - config - INFO - Generated 11 scenes for file 5ff67ddb-18e8-4620-9ff2-55fe5f4b63ab.pptx.
+2025-05-07 17:02:37,948 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746626557/generated_images/g8jyqqemx6h0fqfci70s.png
+2025-05-07 17:02:40,086 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746626559/generated_images/nvzeksbcqdjjfahbqdgk.png
+2025-05-07 17:02:43,229 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746626562/generated_images/zfn83k7hfea1zkf7ffic.png
+2025-05-07 17:02:45,121 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746626564/generated_images/wwsh5hl71akbkxcttyyo.png
+2025-05-07 17:02:47,343 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746626566/generated_images/spwxu1fjuaus4nyhwztq.png
+2025-05-07 17:02:49,455 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746626568/generated_images/fff5yy6knlnthwti6maz.png
+2025-05-07 17:03:16,908 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746626596/generated_images/vn41mcz3ryc5rijqhexv.png
+2025-05-07 17:03:19,036 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746626598/generated_images/cgmcf7uwc7lqn69rztv1.png
+2025-05-07 17:03:20,747 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746626600/generated_images/jvldrg1teyvaxthprslj.png
+2025-05-07 17:03:22,619 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746626602/generated_images/e4lxtj3480pydgo1nmld.png
+2025-05-07 17:03:24,719 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746626604/generated_images/qmkff1vxpjsv8ym9rvma.png
+2025-05-07 17:07:08,759 - config - INFO - Video request submitted: b9a023ed942a4a2682de07c5cdd9b9ba
+2025-05-07 17:07:09,664 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: waiting
+2025-05-07 17:07:15,612 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:07:21,617 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:07:27,622 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:07:33,562 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:07:39,531 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:07:45,499 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:07:51,433 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:07:57,386 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:08:03,353 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:08:09,475 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:08:15,408 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:08:21,376 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:08:27,324 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:08:33,281 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:08:39,212 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:08:45,148 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:08:51,048 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:08:57,002 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:09:02,937 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:09:08,993 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:09:14,959 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:09:20,897 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:09:26,804 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:09:32,725 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:09:38,670 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:09:44,582 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:09:50,541 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:09:56,461 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:10:02,453 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:10:08,414 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:10:14,439 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:10:20,386 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:10:26,343 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:10:32,293 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:10:38,312 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:10:44,231 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:10:50,151 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:10:56,087 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:11:02,014 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:11:07,943 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:11:13,875 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:11:19,833 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:11:25,825 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:11:31,754 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:11:37,705 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:11:59,341 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:12:05,352 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:12:11,297 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:12:17,241 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:12:38,507 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:12:44,552 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:12:50,518 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:12:56,446 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:13:02,429 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:13:08,367 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:13:14,299 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:13:20,266 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:13:26,224 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:13:32,183 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:13:38,139 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:13:44,243 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:13:50,182 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:13:56,094 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:14:02,031 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:14:07,991 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:14:13,947 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:14:19,880 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:14:25,861 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:14:31,806 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:14:37,763 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:14:43,717 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:14:49,767 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:14:55,751 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:15:01,721 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:15:07,672 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:15:13,628 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:15:19,625 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:15:25,583 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:15:31,515 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:15:37,457 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:15:43,450 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:15:49,519 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:15:55,556 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:16:01,513 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:16:07,487 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:16:13,403 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:16:19,335 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:16:25,273 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:16:31,223 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:16:37,135 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:16:43,065 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:16:49,008 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:16:55,035 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:17:00,967 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:17:06,892 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:17:12,820 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:17:18,737 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:17:24,679 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:17:30,621 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:17:36,547 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:17:42,459 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:17:48,422 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:17:54,381 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:18:00,441 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:18:06,434 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:18:12,378 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:18:18,331 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:18:24,238 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:18:30,144 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:18:36,105 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:18:42,042 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:18:48,016 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:18:53,939 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:18:59,982 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:19:05,875 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:19:11,817 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:19:17,753 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:19:23,702 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:19:29,687 - config - INFO - Checking status for b9a023ed942a4a2682de07c5cdd9b9ba: processing
+2025-05-07 17:19:34,689 - config - ERROR - Video generation timed out for b9a023ed942a4a2682de07c5cdd9b9ba
+2025-05-07 17:19:34,690 - config - ERROR - Internal server error: 500: {'success': False, 'video_id': 'b9a023ed942a4a2682de07c5cdd9b9ba', 'error': 'Video generation timed out'}

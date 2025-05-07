@@ -148,10 +148,11 @@ export const generateVideo = async (scenes, avatarId, voiceId, onProgress) => {
     voice_id: voiceId,
   };
 
+  let interval;
   try {
     // Simulate progress (e.g., increment from 0% to 90% over 10 seconds)
     let progress = 0;
-    const interval = setInterval(() => {
+    interval = setInterval(() => {
       if (progress < 90) {
         progress += 10; // Increment by 10% every second
         onProgress({ progress, status: "processing" });
@@ -176,15 +177,29 @@ export const generateVideo = async (scenes, avatarId, voiceId, onProgress) => {
       };
     } else {
       const errorMsg =
-        response.data.error || response.data.detail || "Unknown backend error";
+        response.data.detail?.error ||
+        response.data.error ||
+        "Unknown backend error";
       onProgress({ progress: 0, status: "failed", error: errorMsg });
       message.error(`Video generation failed: ${errorMsg}`);
       throw new Error(errorMsg);
     }
   } catch (error) {
-    const errorMsg = error.response?.data?.detail || error.message;
+    clearInterval(interval); // Stop progress simulation on error
+    let errorMsg;
+    if (error.response?.data?.detail?.error) {
+      errorMsg = error.response.data.detail.error;
+    } else if (error.response?.data?.error) {
+      errorMsg = error.response.data.error;
+    } else if (typeof error.response?.data?.detail === "string") {
+      // Handle case where detail is a string (e.g., old response format)
+      errorMsg = error.response.data.detail;
+    } else {
+      errorMsg = error.message || "Failed to generate video";
+    }
     onProgress({ progress: 0, status: "failed", error: errorMsg });
     message.error(`Video generation failed: ${errorMsg}`);
+    console.error("Video generation error:", error.response || error);
     throw error;
   }
 };
