@@ -6,6 +6,7 @@ export const usePresentation = () => {
   const [fileList, setFileList] = useState([]);
   const [uploading, setUploading] = useState(false);
   const [uploadedFileId, setUploadedFileId] = useState(null);
+  const [aspectRatio, setAspectRatio] = useState("16:9");
   const [isExtracting, setIsExtracting] = useState(false);
   const [extractionData, setExtractionData] = useState(null);
   const [isGeneratingScenes, setIsGeneratingScenes] = useState(false);
@@ -167,7 +168,13 @@ export const usePresentation = () => {
     try {
       const results = await Promise.allSettled(
         scenes.map((scene) =>
-          api.generateImage(scene.image_prompt, scene.scene_id, logoId, logoURL)
+          api.generateImage(
+            scene.image_prompt,
+            scene.scene_id,
+            logoId,
+            logoURL,
+            aspectRatio
+          )
         )
       );
 
@@ -224,7 +231,8 @@ export const usePresentation = () => {
         scene.image_prompt,
         scene.scene_id,
         logoId,
-        logoURL
+        logoURL,
+        aspectRatio
       );
       setStoryboardScenes((prev) =>
         prev.map((s) =>
@@ -294,38 +302,41 @@ export const usePresentation = () => {
   };
 
   const handleGenerateVideo = async () => {
-    if (!selectedAvatar || !selectedVoice) {
-      message.error("Please select an avatar and voice");
-      return;
-    }
-
-    const scenesWithImages = storyboardScenes.filter(
-      (scene) => scene.generated_image_url
-    );
-    if (scenesWithImages.length === 0) {
-      message.error("No scenes with generated images found.");
-      return;
-    }
-    if (scenesWithImages.length !== storyboardScenes.length) {
-      message.warn("Some scenes are missing images and will be skipped.");
-    }
-
-    setIsGeneratingVideo(true);
-    setVideoResult(null);
-
     try {
-      const videoId = await api.generateVideo(
-        scenesWithImages,
+      const result = await api.generateVideo(
+        storyboardScenes,
         selectedAvatar,
-        selectedVoice
+        selectedVoice,
+        ({ progress, status, error }) => {
+          setVideoResult((prev) => ({
+            ...prev,
+            progress,
+            status,
+            error: error || null,
+          }));
+        }
       );
-      setVideoResult(videoId);
-    } finally {
-      setIsGeneratingVideo(false);
+      setVideoResult({
+        videoId: result.videoId,
+        videoUrl: result.videoUrl,
+        status: "completed",
+        progress: 100,
+        error: null,
+      });
+    } catch (error) {
+      setVideoResult({
+        videoId: null,
+        videoUrl: null,
+        status: "failed",
+        progress: 0,
+        error: error.message,
+      });
     }
   };
 
   return {
+    aspectRatio,
+    setAspectRatio,
     fileList,
     uploading,
     uploadedFileId,

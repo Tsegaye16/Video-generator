@@ -52,7 +52,7 @@ class ImageGenerationResponse(BaseModel):
 
 class VideoGenerationRequest(BaseModel):
     scenes: List[Scene]
-    avatar_id: str
+    avatar_id:Optional[str] = None
     voice_id: str
 
 class LogoUploadResponse(BaseModel):

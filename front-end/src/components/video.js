@@ -1,5 +1,3 @@
-
-import { useState, useEffect } from "react";
 import {
   Button,
   Card,
@@ -8,115 +6,67 @@ import {
   Progress,
   Alert,
   Typography,
+  Row,
+  Col,
 } from "antd";
 import { DownloadOutlined, EyeOutlined } from "@ant-design/icons";
-import axios from "axios";
+import { useEffect } from "react";
 
 const { Text } = Typography;
 
-const VideoResult = ({ videoId }) => {
-  const [status, setStatus] = useState("processing");
-  const [downloadUrl, setDownloadUrl] = useState(null);
-  const [progress, setProgress] = useState(0);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    if (!videoId) {
-      console.log("VideoResult: No videoId provided, skipping status check.");
-      return;
-    }
-
-    console.log(`VideoResult: Starting status polling for videoId=${videoId}`);
-
-    const checkStatus = async () => {
-      try {
-        console.log(`VideoResult: Checking status for videoId=${videoId}`);
-        const response = await axios.get(
-          `http://localhost:8000/api/video-status/${videoId}`,
-          {
-            timeout: 10000, // 10-second timeout for status check
-          }
-        );
-        console.log(`VideoResult:`, response);
-        if (response.data.success) {
-          const { status: newStatus, download_url } = response.data;
-          setStatus(newStatus);
-          setDownloadUrl(download_url);
-
-          // Update progress based on status
-          if (newStatus === "completed") {
-            setProgress(100);
-            console.log(
-              `VideoResult: Status completed for videoId=${videoId}, stopping polling.`
-            );
-          } else if (newStatus === "processing") {
-            setProgress(50);
-          } else if (newStatus === "failed") {
-            setProgress(0);
-            setError(response.data.error || "Video generation failed.");
-            console.log(
-              `VideoResult: Status failed for videoId=${videoId}, stopping polling.`
-            );
-          }
-        } else {
-          setError(response.data.error || "Failed to check status");
-          console.log(
-            `VideoResult: Failed to check status for videoId=${videoId}:`,
-            response.data.error
-          );
-        }
-      } catch (err) {
-        const errorMsg =
-          err.response?.data?.detail ||
-          err.message ||
-          "Error checking video status";
-        setError(errorMsg);
-        console.error(
-          `VideoResult: Error checking status for videoId=${videoId}:`,
-          errorMsg,
-          err
-        );
-      }
-    };
-
-    // Check immediately
-    checkStatus();
-
-    // Poll every 5 seconds until status is completed or failed
-    const interval = setInterval(() => {
-      if (status === "completed" || status === "failed") {
-        console.log(
-          `VideoResult: Polling stopped for videoId=${videoId}, status=${status}`
-        );
-        clearInterval(interval);
-        return;
-      }
-      checkStatus();
-    }, 5000);
-
-    // Cleanup interval on unmount or videoId change
-    return () => {
-      console.log(`VideoResult: Cleaning up interval for videoId=${videoId}`);
-      clearInterval(interval);
-    };
-  }, [videoId, status]); // Include status in dependencies to re-evaluate polling
-
-  const handleDownload = () => {
-    if (!downloadUrl) {
+const VideoResult = ({ videoId, videoUrl, status, progress, error }) => {
+  console.log("Status:", status);
+  const handleDownload = async () => {
+    if (!videoUrl) {
       message.error("No download URL available.");
       return;
     }
 
-    console.log(
-      `VideoResult: Initiating download for videoId=${videoId}, url=${downloadUrl}`
-    );
-    const link = document.createElement("a");
-    link.href = downloadUrl;
-    link.download = `presentation-video-${videoId}.mp4`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    try {
+      console.log(
+        `VideoResult: Initiating download for videoId=${videoId}, url=${videoUrl}`
+      );
+
+      // Fetch the video as a blob
+      const response = await fetch(videoUrl, {
+        method: "GET",
+        headers: {
+          // Add any necessary headers, e.g., for authentication if required
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`Failed to fetch video: ${response.statusText}`);
+      }
+
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+
+      // Create a temporary link to trigger download
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      link.download = `presentation-video-${videoId}.mp4`;
+      document.body.appendChild(link);
+      link.click();
+
+      // Clean up
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(blobUrl);
+
+      message.success("Video download started!");
+    } catch (err) {
+      console.error("Download error:", err);
+      message.error("Failed to download video. Please try again.");
+    }
   };
+
+  useEffect(() => {
+    if (status === "completed" && videoUrl) {
+      message.success("Video is ready to view!");
+    } else if (status === "failed" && error) {
+      message.error(error);
+    }
+  }, [status, videoUrl, error]);
 
   return (
     <Card title="Video Generation Result" style={{ marginTop: 20 }}>
@@ -124,45 +74,56 @@ const VideoResult = ({ videoId }) => {
         <div>
           <Text strong>Status:</Text>
           <Text style={{ marginLeft: 8, textTransform: "capitalize" }}>
-            {status}
+            {status || "unknown"}
           </Text>
         </div>
 
         <Progress
           percent={progress}
-          status={status === "failed" ? "exception" : "active"}
+          status={
+            status === "failed"
+              ? "exception"
+              : status === "completed"
+              ? "success"
+              : "active"
+          }
         />
 
-        {status === "completed" && downloadUrl && (
+        {status === "completed" && videoUrl && (
           <div style={{ marginTop: 16 }}>
             <video
               controls
-              src={downloadUrl}
-              style={{ width: "100%", maxWidth: 600, marginBottom: 16 }}
+              src={videoUrl}
+              style={{ width: "100%", marginBottom: 16 }}
             />
 
-            <Space>
-              <Button
-                type="primary"
-                icon={<EyeOutlined />}
-                onClick={() => {
-                  console.log(
-                    `VideoResult: Opening fullscreen for videoId=${videoId}`
-                  );
-                  window.open(downloadUrl, "_blank");
-                }}
-              >
-                View Fullscreen
-              </Button>
-
-              <Button icon={<DownloadOutlined />} onClick={handleDownload}>
-                Download MP4
-              </Button>
-            </Space>
+            <Row justify="space-between" align="middle">
+              <Col>
+                <Button
+                  type="primary"
+                  icon={<EyeOutlined />}
+                  onClick={() => {
+                    console.log(
+                      `VideoResult: Opening fullscreen for videoId=${videoId}`
+                    );
+                    window.open(videoUrl, "_blank");
+                  }}
+                >
+                  View Fullscreen
+                </Button>
+              </Col>
+              <Col>
+                <Button icon={<DownloadOutlined />} onClick={handleDownload}>
+                  Download MP4
+                </Button>
+              </Col>
+            </Row>
           </div>
         )}
 
-        {error && <Alert message={error} type="error" showIcon />}
+        {status === "failed" && error && (
+          <Alert message={error} type="error" showIcon />
+        )}
       </Space>
     </Card>
   );

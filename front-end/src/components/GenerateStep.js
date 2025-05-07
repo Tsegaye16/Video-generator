@@ -1,3 +1,4 @@
+// src/components/GenerateStep.jsx
 import {
   Button,
   Switch,
@@ -8,11 +9,13 @@ import {
   Upload,
   Avatar,
   Row,
+  Select,
 } from "antd";
 import { UploadOutlined, MinusOutlined } from "@ant-design/icons";
 import { StyledCard } from "../styles/AppStyle";
 
 const { Title, Text, Paragraph } = Typography;
+const { Option } = Select;
 
 const GenerateStep = ({
   isGeneratingScenes,
@@ -28,8 +31,10 @@ const GenerateStep = ({
   logoURL,
   setLogoURL,
   handleLogoUpload,
+  aspectRatio, // New prop for aspect ratio
+  setAspectRatio, // New prop to update aspect ratio
 }) => {
-  console.log("Logo ID:", logoId); // Debugging line to check logoId
+  console.log("Logo ID:", logoId);
   return (
     <>
       <StyledCard
@@ -100,9 +105,23 @@ const GenerateStep = ({
           {showAdvanced && (
             <Card size="small" style={{ marginBottom: 16 }}>
               <Space direction="vertical" style={{ width: "100%" }}>
-                <Text strong>Generation Style</Text>
+                <Text strong>Generation Parameters</Text>
+                <Space align="baseline">
+                  <Text>Aspect Ratio:</Text>
+                  <Select
+                    value={aspectRatio}
+                    onChange={setAspectRatio}
+                    style={{ width: 120 }}
+                    placeholder="Select aspect ratio"
+                  >
+                    <Option value="16:9">16:9 (Widescreen)</Option>
+                    <Option value="4:3">4:3 (Standard)</Option>
+                    <Option value="1:1">1:1 (Square)</Option>
+                    <Option value="9:16">9:16 (Vertical)</Option>
+                  </Select>
+                </Space>
                 <Text type="secondary">
-                  Coming soon - customize AI parameters
+                  Select the aspect ratio for generated images.
                 </Text>
               </Space>
             </Card>
@@ -112,7 +131,7 @@ const GenerateStep = ({
             type="primary"
             onClick={handleGenerateScenes}
             loading={isGeneratingScenes}
-            disabled={!logoId} // Disable button until logo is uploaded
+            disabled={!logoId}
             size="large"
             block
           >

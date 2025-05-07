@@ -20,6 +20,7 @@ class Settings:
     ALLOWED_EXTENSIONS = {".pptx", ".ppt"}
     LOG_DIR = "logs"
     origins = ["*"]
+    base_prompt = "Create a cinematic background scene based on: '{prompt}'. Style: photorealistic, high definition, cinematic lighting, professional composition. Optimize for 16:9 aspect ratio with balanced visual weight."
 
 # Ensure the log directory exists
 os.makedirs(Settings.LOG_DIR, exist_ok=True)

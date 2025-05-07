@@ -148,16 +148,6 @@ const SceneCard = ({
             }
             style={{ marginBottom: 16 }}
           />
-
-          <Text strong>Additional Notes</Text>
-          <TextArea
-            rows={3}
-            placeholder="Add any additional notes for this scene..."
-            value={scene.notes || ""}
-            onChange={(e) =>
-              handleSceneChange(scene.scene_id, "notes", e.target.value)
-            }
-          />
         </Col>
       </Row>
     </StyledCard>

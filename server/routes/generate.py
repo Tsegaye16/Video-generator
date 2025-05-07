@@ -105,16 +105,21 @@ async def generate_image(request: ImageGenerationRequest):
     if not request.scene_id:
         logger.error("scene_id is required for image generation.")
         raise HTTPException(status_code=400, detail="scene_id is required for image generation")
-    
+
     try:
+        # Construct the prompt with the base prompt and user's input
+        
+        full_prompt = settings.base_prompt.format(prompt=request.prompt)
+
         # Generate image using the AI model
         client = genai.Client(api_key=settings.GOOGLE_API_KEY)
         response = client.models.generate_content(
             model="gemini-2.0-flash-exp-image-generation",
-            contents=request.prompt,
-            config=genai.types.GenerateContentConfig(response_modalities=['TEXT', 'IMAGE'])
+            contents=full_prompt,
+            config=genai.types.GenerateContentConfig(response_modalities=['TEXT', 'IMAGE']),
+
         )
-        
+
         # Extract image data
         image_data = None
         for part in response.candidates[0].content.parts:
@@ -124,28 +129,28 @@ async def generate_image(request: ImageGenerationRequest):
         if image_data is None:
             logger.error("No image data received from the model.")
             raise HTTPException(status_code=500, detail="No image data received from the model.")
-        
+
         # Retrieve logo URL based on logo_id
         logo_id = request.logo_id
         logo_url = request.logo_url  # Assuming logo_url is passed in the request
-         # You need to implement this
+        # You need to implement this
         if not logo_url:
             logger.warning(f"Logo with ID '{logo_id}' not found.")
             raise HTTPException(status_code=404, detail=f"Logo with ID '{logo_id}' not found.")
-        
+
         # Merge the background image with the logo
         merged_image_data = await merge_with_logo(image_data, logo_url)
         if merged_image_data is None:
             logger.error("Failed to merge image with logo.")
             raise HTTPException(status_code=500, detail="Failed to merge image with logo.")
-        
+
         # Upload the merged image to Cloudinary
         upload_result = cloudinary.uploader.upload(
             BytesIO(merged_image_data),
             folder="generated_images"
         )
         public_image_url = upload_result['secure_url']
-        
+
         logger.info(f"Image generated and uploaded successfully: {public_image_url}")
         return ImageGenerationResponse(
             scene_id=request.scene_id,
@@ -155,3 +160,4 @@ async def generate_image(request: ImageGenerationRequest):
     except Exception as e:
         logger.error(f"Error generating image: {e}")
         raise HTTPException(status_code=500, detail=f"Image generation failed: {str(e)}")
+    

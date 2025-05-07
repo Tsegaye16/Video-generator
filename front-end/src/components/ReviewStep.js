@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import {
   Button,
   Space,
@@ -56,6 +56,18 @@ const ReviewStep = ({
   videoResult,
 }) => {
   const carouselRef = useRef();
+  const [internalSelectedAvatar, setInternalSelectedAvatar] =
+    useState(selectedAvatar);
+
+  useEffect(() => {
+    // Keep the internal state in sync with the prop
+    setInternalSelectedAvatar(selectedAvatar);
+  }, [selectedAvatar]);
+
+  const handleAvatarChange = (value) => {
+    setInternalSelectedAvatar(value);
+    setSelectedAvatar(value); // Update the parent's state as well
+  };
 
   return (
     <>
@@ -171,11 +183,12 @@ const ReviewStep = ({
       <Card style={{ marginTop: 24 }}>
         <Form.Item label="Select Avatar">
           <Select
-            value={selectedAvatar}
-            onChange={setSelectedAvatar}
-            placeholder="Select an avatar"
+            value={internalSelectedAvatar}
+            onChange={handleAvatarChange}
+            placeholder="Select an avatar (Optional)"
             optionFilterProp="children"
             showSearch
+            allowClear // Add allowClear to enable deselecting
             filterOption={(input, option) =>
               (option?.children ?? "")
                 .toLowerCase()
@@ -232,7 +245,11 @@ const ReviewStep = ({
         </Form.Item>
       </Card>
 
-      <Row justify="center" gutter={16} style={{ marginTop: 24 }}>
+      <Row
+        justify="space-between"
+        align="middle"
+        style={{ marginTop: 14, width: "100%" }}
+      >
         <Col>
           <Popconfirm
             title="Are you sure you want to start over?"
@@ -245,18 +262,33 @@ const ReviewStep = ({
             <Button size="large">Start Over</Button>
           </Popconfirm>
         </Col>
+
         <Col>
           <Button
             type="primary"
             size="large"
-            onClick={handleGenerateVideo}
+            onClick={() => handleGenerateVideo(internalSelectedAvatar)} // Pass the internal state
             icon={<VideoCameraOutlined />}
+            disabled={!selectedVoice} // Disable if no voice is selected
           >
-            Generate Video
+            {videoResult?.videoUrl ? "Regenerate Video" : "Generate Video"}
           </Button>
         </Col>
-        {videoResult && <VideoResult videoId={videoResult} />}
       </Row>
+
+      {videoResult && (
+        <Row justify="center" style={{ width: "100%", marginTop: 4 }}>
+          <Col span={12}>
+            <VideoResult
+              videoId={videoResult.videoId}
+              videoUrl={videoResult.videoUrl}
+              status={videoResult.status}
+              progress={videoResult.progress}
+              error={videoResult.error}
+            />
+          </Col>
+        </Row>
+      )}
     </>
   );
 };

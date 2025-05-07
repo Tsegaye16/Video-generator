@@ -1,4 +1,4 @@
-import { Upload, Progress, Space, Typography } from "antd";
+import { Upload, Progress, Space, Typography, message } from "antd"; // Import message for notifications
 import { UploadOutlined } from "@ant-design/icons";
 import { StyledCard } from "../styles/AppStyle";
 
@@ -11,6 +11,29 @@ const UploadStep = ({
   beforeUploadCheck,
   handleCustomUploadRequest,
 }) => {
+  // Function to validate file type
+  const validateFileType = (file) => {
+    const validFormats = [".ppt", ".pptx"];
+    const fileExtension = file.name
+      .substring(file.name.lastIndexOf("."))
+      .toLowerCase();
+    if (!validFormats.includes(fileExtension)) {
+      message.error("Invalid file format! Please upload a .ppt or .pptx file.");
+      return false;
+    }
+    return true;
+  };
+
+  // Modified beforeUploadCheck to include file type validation
+  const enhancedBeforeUploadCheck = (file) => {
+    // Perform file type validation
+    if (!validateFileType(file)) {
+      return Upload.LIST_IGNORE; // Prevent upload if invalid format
+    }
+    // Call the original beforeUploadCheck if provided
+    return beforeUploadCheck ? beforeUploadCheck(file) : true;
+  };
+
   return (
     <StyledCard
       title={
@@ -32,9 +55,9 @@ const UploadStep = ({
           customRequest={handleCustomUploadRequest}
           fileList={fileList}
           onChange={handleUploadChange}
-          beforeUpload={beforeUploadCheck}
+          beforeUpload={enhancedBeforeUploadCheck} // Use enhanced validation
           maxCount={1}
-          accept=".ppt,.pptx"
+          accept=".ppt,.pptx" // Restrict file picker to .ppt, .pptx
           disabled={uploading}
           style={{ padding: "20px" }}
         >
@@ -44,7 +67,7 @@ const UploadStep = ({
               Click or drag file to this area
             </Typography.Text>
             <Typography.Text type="secondary">
-              Support for single PowerPoint file
+              Support for single PowerPoint file (.ppt or .pptx)
             </Typography.Text>
           </Space>
         </Upload.Dragger>

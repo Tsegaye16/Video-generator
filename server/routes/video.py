@@ -3,6 +3,7 @@ from models import VideoGenerationRequest
 from config import settings, logger
 import requests
 import json
+import time
 
 router = APIRouter()
 
@@ -57,32 +58,35 @@ async def get_voices():
         logger.error(f"Internal server error: {e}")
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
 
+
+
 @router.post("/api/generate-video")
 async def generate_video(request: VideoGenerationRequest):
     try:
         video_inputs = []
         for scene in request.scenes:
-            video_input = {
-                "character": {
+            video_input = {}
+            if request.avatar_id is not None:
+                video_input["character"] = {
                     "type": "avatar",
-                    "avatar_id": request.avatar_id,
+                    "avatar_id": request.avatar_idd,
                     "scale": 0.60,
                     "avatar_style": "normal",
                     "offset": {"x": 0.36, "y": 0.21}
-                },
-                "voice": {
-                    "type": "text",
-                    "voice_id": request.voice_id,
-                    "input_text": scene.speech_script,
-                    "speed": 1.0
-                },
-                "background": {
-                    "type": "image",
-                    "url": scene.image_url,
-                    "fit": "cover"
                 }
+            video_input["voice"] = {
+                "type": "text",
+                "voice_id": request.voice_id,
+                "input_text": scene.speech_script,
+                "speed": 1.0
+            }
+            video_input["background"] = {
+                "type": "image",
+                "url": scene.image_url,
+                "fit": "cover"
             }
             video_inputs.append(video_input)
+
         payload = {
             "video_inputs": video_inputs,
             "dimension": {
@@ -90,66 +94,62 @@ async def generate_video(request: VideoGenerationRequest):
                 "height": 720
             }
         }
+
         headers = {
             "accept": "application/json",
             "content-type": "application/json",
             "x-api-key": settings.HEYGEN_API_KEY
         }
+
         response = requests.post(
             "https://api.heygen.com/v2/video/generate",
             json=payload,
             headers=headers
         )
-      
-        if response.status_code == 200:
-            video_data = response.json()
 
-            logger.info(f"Video generated successfully: {video_data.get('data', {}).get('video_id')}")
-            return {
-                'success': True,
-                'video_id': video_data.get('data', {}).get('video_id'),
-                'status_url': f"https://api.heygen.com/v1/video_status.get?video_id={video_data.get('data', {}).get('video_id')}"
-            }
-        else:
+        if response.status_code != 200:
             logger.error(f"HeyGen API error: {response.text}")
-            
             return {
                 'success': False,
                 'error': 'HeyGen API error',
                 'status_code': response.status_code,
                 'details': response.text
             }, 500
+
+        video_data = response.json()
+        video_id = video_data.get("data", {}).get("video_id")
+
+        logger.info(f"Video request submitted: {video_id}")
+
+        # Polling status
+        status_url = f"https://api.heygen.com/v1/video_status.get?video_id={video_id}"
+
+        while True:
+            status_response = requests.get(status_url, headers=headers)
+            status_data = status_response.json()
+            status = status_data.get("data", {}).get("status")
+
+            logger.info(f"Checking status for {video_id}: {status}")
+
+            if status == "completed":
+                video_url = status_data["data"].get("video_url")
+                return {
+                    'success': True,
+                    'video_id': video_id,
+                    'video_url': video_url
+                }
+            elif status == "failed":
+                return {
+                    'success': False,
+                    'video_id': video_id,
+                    'error': 'Video generation failed'
+                }
+
+            time.sleep(5)  # Wait 5 seconds before next check
+
     except requests.exceptions.RequestException as e:
         logger.error(f"HeyGen API request failed: {e}")
         raise HTTPException(status_code=500, detail=f"HeyGen API request failed: {str(e)}")
     except Exception as e:
         logger.error(f"Internal server error: {e}")
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
-
-@router.get("/api/video-status/{video_id}")
-async def get_video_status(video_id: str):
-    try:
-        headers = {
-            "accept": "application/json",
-            "x-api-key": settings.HEYGEN_API_KEY
-        }
-        response = requests.get(
-            f"https://api.heygen.com/v1/video_status.get?video_id={video_id}",
-            headers=headers
-        )
-        print("Response:",response.text)
-        response.raise_for_status()
-        status_data = response.json()
-
-        logger.info(f"Video status fetched successfully: {video_id}")
-        return {
-            "success": True,
-            "status": status_data.get("data", {}).get("status"),
-            "download_url": status_data.get("data", {}).get("video_url")
-        }
-    except Exception as e:
-        logger.error(f"Failed to fetch video status: {str(e)}")
-        return {
-            "success": False,
-            "error": str(e)
-        }

@@ -34,16 +34,14 @@ const App = () => {
   const {
     fileList,
     uploading,
-
     isExtracting,
-
     isGeneratingScenes,
     storyboardScenes,
     isGeneratingImages,
     logoFile,
     setLogoFile,
     logoPreviewUrl,
-    logoId, // Add logoId
+    logoId,
     logoURL,
     currentStep,
     imageZoom,
@@ -53,7 +51,6 @@ const App = () => {
     voices,
     selectedAvatar,
     selectedVoice,
-
     videoResult,
     handleUploadChange,
     beforeUploadCheck,
@@ -71,8 +68,10 @@ const App = () => {
     setActiveSceneIndex,
     setSelectedAvatar,
     setSelectedVoice,
-    setLogoId, // Add setLogoId
+    setLogoId,
     setLogoURL,
+    aspectRatio, // Add aspectRatio
+    setAspectRatio, // Add setAspectRatio
   } = usePresentation();
 
   const [showHelpModal, setShowHelpModal] = useState(false);
@@ -142,6 +141,8 @@ const App = () => {
               logoURL={logoURL}
               setLogoURL={setLogoURL}
               handleLogoUpload={handleLogoUpload}
+              aspectRatio={aspectRatio} // Pass aspectRatio
+              setAspectRatio={setAspectRatio} // Pass setAspectRatio
             />
           )}
 

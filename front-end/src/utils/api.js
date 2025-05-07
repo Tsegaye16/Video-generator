@@ -86,13 +86,20 @@ export const generateScenes = async (extractionData) => {
   }
 };
 
-export const generateImage = async (prompt, sceneId, logoId, logoURL) => {
+export const generateImage = async (
+  prompt,
+  sceneId,
+  logoId,
+  logoURL,
+  aspectRatio
+) => {
   try {
     const response = await axios.post(API_ENDPOINTS.GENERATE_IMAGE, {
       prompt,
       scene_id: sceneId,
       logo_id: logoId,
       logo_url: logoURL,
+      aspect_ratio: aspectRatio,
     });
     return `${response.data.image_url}`;
   } catch (error) {
@@ -130,7 +137,7 @@ export const fetchAvatarsAndVoices = async () => {
   }
 };
 
-export const generateVideo = async (scenes, avatarId, voiceId) => {
+export const generateVideo = async (scenes, avatarId, voiceId, onProgress) => {
   const payload = {
     scenes: scenes.map((scene) => ({
       original_slide_number: scene.original_slide_number,
@@ -142,18 +149,41 @@ export const generateVideo = async (scenes, avatarId, voiceId) => {
   };
 
   try {
+    // Simulate progress (e.g., increment from 0% to 90% over 10 seconds)
+    let progress = 0;
+    const interval = setInterval(() => {
+      if (progress < 90) {
+        progress += 10; // Increment by 10% every second
+        onProgress({ progress, status: "processing" });
+      }
+    }, 1000);
+
     const response = await axios.post(API_ENDPOINTS.GENERATE_VIDEO, payload);
-    if (response.data.success && response.data.video_id) {
-      message.success("Video generation started successfully!");
-      return response.data.video_id;
+    console.log("Video generation response:", response.data);
+
+    clearInterval(interval); // Stop progress simulation
+
+    if (
+      response.data.success &&
+      response.data.video_id &&
+      response.data.video_url
+    ) {
+      onProgress({ progress: 100, status: "completed" });
+      message.success("Video generated successfully!");
+      return {
+        videoId: response.data.video_id,
+        videoUrl: response.data.video_url,
+      };
     } else {
       const errorMsg =
         response.data.error || response.data.detail || "Unknown backend error";
+      onProgress({ progress: 0, status: "failed", error: errorMsg });
       message.error(`Video generation failed: ${errorMsg}`);
       throw new Error(errorMsg);
     }
   } catch (error) {
     const errorMsg = error.response?.data?.detail || error.message;
+    onProgress({ progress: 0, status: "failed", error: errorMsg });
     message.error(`Video generation failed: ${errorMsg}`);
     throw error;
   }
