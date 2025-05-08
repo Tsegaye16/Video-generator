@@ -38,8 +38,6 @@ const SceneCard = ({
   handleRegenerateImage,
   imageZoom,
   handleZoom,
-  logoPreviewUrl,
-  activeSceneIndex,
 }) => {
   const [uploading, setUploading] = useState(false);
 
@@ -91,7 +89,7 @@ const SceneCard = ({
                     shape="circle"
                   />
                 </Tooltip>
-                <Tooltip title="Upload local image">
+                {/* <Tooltip title="Upload local image">
                   <Upload
                     accept="image/*"
                     showUploadList={false}
@@ -105,7 +103,7 @@ const SceneCard = ({
                       loading={uploading}
                     />
                   </Upload>
-                </Tooltip>
+                </Tooltip> */}
               </Space>
             </Col>
           </Row>

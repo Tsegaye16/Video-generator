@@ -338,3 +338,7 @@
 2025-05-08 17:42:42,508 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746715362/generated_images/goc1b7vplavdr7yq92zd.png
 2025-05-08 17:42:44,395 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746715364/generated_images/qtklhtm6ag3rlzfthugd.png
 2025-05-08 17:42:47,252 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746715366/generated_images/ze79mtzglq3jbfvzm03u.png
+2025-05-08 18:16:41,507 - config - ERROR - Image upload failed: cannot access local variable 'image_data' where it is not associated with a value
+2025-05-08 18:16:46,796 - config - ERROR - Image upload failed: cannot access local variable 'image_data' where it is not associated with a value
+2025-05-08 18:17:28,551 - config - ERROR - Image upload failed: cannot access local variable 'image_data' where it is not associated with a value
+2025-05-08 18:18:07,446 - config - ERROR - Image upload failed: cannot access local variable 'image_data' where it is not associated with a value
