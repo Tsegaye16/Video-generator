@@ -76,7 +76,6 @@ async def merge_with_logo(background_image_data: bytes, logo_url: str, output_fo
     try:
         # Open the background image
         background = Image.open(BytesIO(background_image_data)).convert("RGBA")
-        
         # Download the logo from Cloudinary
         async with aiohttp.ClientSession() as session:
             async with session.get(logo_url) as response:
@@ -103,3 +102,6 @@ async def merge_with_logo(background_image_data: bytes, logo_url: str, output_fo
     except Exception as e:
         print(f"Error merging with logo: {e}")
         return None
+
+
+

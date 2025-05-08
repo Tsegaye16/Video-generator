@@ -36,9 +36,10 @@ export const uploadLogo = async (logoFile) => {
   }
 };
 
-export const uploadImage = async (imageFile, onProgress) => {
+export const uploadImage = async (imageFile, logo_url, onProgress) => {
   const formData = new FormData();
   formData.append("image", imageFile);
+  formData.append("logo_url", logo_url); // Assuming logoURL is part of the file object
 
   try {
     const response = await axios.post(API_ENDPOINTS.UPLOAD_IMAGE, formData, {
@@ -77,7 +78,6 @@ export const uploadFile = async (file, onProgress) => {
         onProgress?.(percentCompleted);
       },
     });
-    console.log("File upload response:", response);
     message.success(`${file.name} uploaded successfully!`);
     return response.data.file_id;
   } catch (error) {
@@ -186,11 +186,8 @@ export const generateVideo = async (scenes, avatarId, voiceId, onProgress) => {
         onProgress({ progress, status: "processing" });
       }
     }, 1000);
-    console.log("Generate video payload", payload);
 
     const response = await axios.post(API_ENDPOINTS.GENERATE_VIDEO, payload);
-    console.log("Video generation response:", response.data);
-
     clearInterval(interval);
 
     if (

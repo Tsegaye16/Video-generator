@@ -342,3 +342,128 @@
 2025-05-08 18:16:46,796 - config - ERROR - Image upload failed: cannot access local variable 'image_data' where it is not associated with a value
 2025-05-08 18:17:28,551 - config - ERROR - Image upload failed: cannot access local variable 'image_data' where it is not associated with a value
 2025-05-08 18:18:07,446 - config - ERROR - Image upload failed: cannot access local variable 'image_data' where it is not associated with a value
+2025-05-08 19:52:00,474 - config - INFO - File uploaded successfully: last.pptx
+2025-05-08 19:52:00,674 - config - INFO - File processed successfully: last.pptx
+2025-05-08 19:52:10,618 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-08 19:52:10,716 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-08 19:52:10,718 - config - INFO - Cleaned up original file: temp_uploads\590c886a-d123-4461-860e-97981f2bb376.pptx
+2025-05-08 19:56:07,455 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746723367/logos/1ddc6a98-35ed-46df-b544-10294dbd2796.png
+2025-05-08 20:06:25,506 - config - INFO - File uploaded successfully: last.pptx
+2025-05-08 20:06:25,576 - config - INFO - File processed successfully: last.pptx
+2025-05-08 20:06:27,065 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-08 20:06:27,118 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-08 20:06:27,120 - config - INFO - Cleaned up original file: temp_uploads\bd6e874d-edad-49ff-9c8a-4a0b9d9a7780.pptx
+2025-05-08 20:06:34,508 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746723994/logos/7337f045-f203-4cdf-879e-ad830274a492.png
+2025-05-08 20:06:57,141 - config - INFO - File uploaded successfully: last.pptx
+2025-05-08 20:06:57,183 - config - INFO - File processed successfully: last.pptx
+2025-05-08 20:06:59,372 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-08 20:06:59,378 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-08 20:06:59,378 - config - INFO - Cleaned up original file: temp_uploads\00f0bd9c-cf06-4bed-a017-412ed6b7d6fc.pptx
+2025-05-08 20:07:08,173 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746724028/logos/e0af372a-70ad-45dc-9e6c-c53063f54d7c.png
+2025-05-08 20:07:23,410 - config - INFO - Generated 6 scenes for file 00f0bd9c-cf06-4bed-a017-412ed6b7d6fc.pptx.
+2025-05-08 20:07:56,891 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746724076/generated_images/qsaicwdcarssjf2r9ofb.png
+2025-05-08 20:08:00,911 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746724080/generated_images/crcfppbtsqhrshbgm7k7.png
+2025-05-08 20:08:03,003 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746724082/generated_images/uhndtpuuco1xfmtynqyt.png
+2025-05-08 20:08:04,928 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746724084/generated_images/vdmm4oyrlftlyx6kp5y6.png
+2025-05-08 20:08:06,758 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746724086/generated_images/ki7d2ntjaslduus3y9kx.png
+2025-05-08 20:08:08,700 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746724088/generated_images/hhlqqkneuibwhstes4ra.png
+2025-05-08 20:09:36,704 - config - INFO - Image uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746724176/images/76ed141f-caeb-4dcd-8ffb-92bd8c28c07b.png
+2025-05-08 20:10:04,423 - config - INFO - File uploaded successfully: last.pptx
+2025-05-08 20:10:04,452 - config - INFO - File processed successfully: last.pptx
+2025-05-08 20:10:05,783 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-08 20:10:05,792 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-08 20:10:05,793 - config - INFO - Cleaned up original file: temp_uploads\9add1482-8436-48de-b2fa-c17eef0d00fb.pptx
+2025-05-08 20:10:28,727 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746724228/logos/b6bbd915-8491-4bac-adba-292b043c9c82.png
+2025-05-08 20:12:44,189 - config - INFO - File uploaded successfully: last.pptx
+2025-05-08 20:12:44,222 - config - INFO - File processed successfully: last.pptx
+2025-05-08 20:12:46,491 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-08 20:12:46,525 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-08 20:12:46,526 - config - INFO - Cleaned up original file: temp_uploads\e978c7e9-0c30-451b-8e48-912b05998b09.pptx
+2025-05-08 20:13:18,206 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746724397/logos/cac6d1fa-0101-4673-9b4d-3c7938958868.png
+2025-05-08 20:13:34,791 - config - INFO - Generated 5 scenes for file e978c7e9-0c30-451b-8e48-912b05998b09.pptx.
+2025-05-08 20:14:03,488 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746724443/generated_images/m8efggdpjjxdnayrw5if.png
+2025-05-08 20:14:06,470 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746724446/generated_images/plvmlh1qnn1gc17lbnwi.png
+2025-05-08 20:14:09,208 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746724449/generated_images/aytthqv9tcvzijclmemp.png
+2025-05-08 20:14:11,190 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746724450/generated_images/p0jkzvgi5qlocz7rwu9k.png
+2025-05-08 20:14:12,872 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746724452/generated_images/ozs9h6bn4txxfb6lvuko.png
+2025-05-08 20:14:27,746 - config - INFO - Image uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746724467/images/03814b24-f96e-4c1c-95d7-56ff62caebc4.png
+2025-05-08 20:57:15,506 - config - INFO - File uploaded successfully: last.pptx
+2025-05-08 20:57:15,585 - config - INFO - File processed successfully: last.pptx
+2025-05-08 20:57:17,917 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-08 20:57:17,965 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-08 20:57:17,966 - config - INFO - Cleaned up original file: temp_uploads\c7c9484d-9ffb-4248-94aa-36e084666cdb.pptx
+2025-05-08 20:57:27,840 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746727047/logos/373c20ee-19be-4ed4-a471-5ad96b1545c9.png
+2025-05-08 20:57:42,251 - config - INFO - Generated 5 scenes for file c7c9484d-9ffb-4248-94aa-36e084666cdb.pptx.
+2025-05-08 20:58:55,099 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746727134/generated_images/ccmfmp6vxiadj4aiz3wx.png
+2025-05-08 20:58:57,241 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746727137/generated_images/fesjpdlzsnryuvtxahbe.png
+2025-05-08 20:58:59,229 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746727138/generated_images/ejj9nt89j1crqsg5rm9c.png
+2025-05-08 20:59:00,965 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746727140/generated_images/w2rccjbpevt5g7fhao53.png
+2025-05-08 20:59:04,235 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746727144/generated_images/i82322tfbu4czluovzcg.png
+2025-05-08 21:04:51,502 - config - INFO - File uploaded successfully: last.pptx
+2025-05-08 21:04:51,535 - config - INFO - File processed successfully: last.pptx
+2025-05-08 21:05:05,288 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-08 21:05:05,402 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-08 21:05:05,411 - config - INFO - Cleaned up original file: temp_uploads\bfe93ae9-6cbe-4ba2-9c9d-a2728d0b4d59.pptx
+2025-05-08 21:05:15,327 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746727515/logos/b15ee457-0f70-40ab-b127-42f06d6dd9cb.png
+2025-05-08 21:10:36,554 - config - INFO - Generated 6 scenes for file bfe93ae9-6cbe-4ba2-9c9d-a2728d0b4d59.pptx.
+2025-05-08 21:11:09,526 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746727869/generated_images/uqvgvdhqiwakjplzwnhj.png
+2025-05-08 21:11:11,709 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746727871/generated_images/dqynrwseflxof1ebo1t0.png
+2025-05-08 21:11:13,437 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746727873/generated_images/n9a35hvvyxkdyqwhyklf.png
+2025-05-08 21:11:14,936 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746727874/generated_images/cl15o2f5w6as0tdxwerx.png
+2025-05-08 21:11:16,400 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746727876/generated_images/f3addqkkuoswdzfcmczk.png
+2025-05-08 21:11:17,855 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746727877/generated_images/dh021ohlmt07nnud8agu.png
+2025-05-08 21:17:04,266 - config - INFO - File uploaded successfully: last.pptx
+2025-05-08 21:17:04,358 - config - INFO - File processed successfully: last.pptx
+2025-05-08 21:17:05,955 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-08 21:17:05,962 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-08 21:17:05,962 - config - INFO - Cleaned up original file: temp_uploads\063b9373-f1fe-4820-83b2-e70fb27a404d.pptx
+2025-05-08 21:17:16,851 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746728236/logos/f6105852-4701-4896-8cad-8ddffe33ede8.png
+2025-05-08 21:22:27,555 - config - INFO - File uploaded successfully: last.pptx
+2025-05-08 21:22:27,598 - config - INFO - File processed successfully: last.pptx
+2025-05-08 21:22:29,375 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-08 21:22:29,378 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-08 21:22:29,379 - config - INFO - Cleaned up original file: temp_uploads\ba1e9e29-da9b-43f6-8655-216ffc4af1c7.pptx
+2025-05-08 21:22:36,492 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746728556/logos/5d7ee97b-3873-43d1-b9f2-260288a86fab.png
+2025-05-08 21:24:24,480 - config - INFO - File uploaded successfully: last.pptx
+2025-05-08 21:24:24,504 - config - INFO - File processed successfully: last.pptx
+2025-05-08 21:24:28,055 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-08 21:24:28,062 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-08 21:24:28,063 - config - INFO - Cleaned up original file: temp_uploads\464477ae-7e99-455c-af9a-650ed54575b3.pptx
+2025-05-08 21:24:35,906 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746728675/logos/0e640260-c47b-4ac0-b6c1-f767d1dfe4a6.png
+2025-05-08 21:26:12,746 - config - INFO - File uploaded successfully: last.pptx
+2025-05-08 21:26:12,768 - config - INFO - File processed successfully: last.pptx
+2025-05-08 21:26:14,443 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-08 21:26:14,447 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-08 21:26:14,448 - config - INFO - Cleaned up original file: temp_uploads\2f84fa4d-325e-4878-9baf-fed3552cc494.pptx
+2025-05-08 21:26:23,951 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746728783/logos/8661130b-ed4e-4049-aa54-b47d32a2d87b.png
+2025-05-08 21:28:18,979 - config - INFO - File uploaded successfully: last.pptx
+2025-05-08 21:28:19,014 - config - INFO - File processed successfully: last.pptx
+2025-05-08 21:28:20,411 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-08 21:28:20,416 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-08 21:28:20,417 - config - INFO - Cleaned up original file: temp_uploads\f2902e64-33df-495c-98d6-7b5c4c8f97d5.pptx
+2025-05-08 21:28:27,248 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746728906/logos/4873ccc2-c1bc-453b-86ba-83309368cecc.png
+2025-05-08 21:29:01,726 - config - INFO - Generated 5 scenes for file f2902e64-33df-495c-98d6-7b5c4c8f97d5.pptx.
+2025-05-08 21:29:34,779 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746728974/generated_images/set7wepbphyrrx2fh4b0.png
+2025-05-08 21:29:36,245 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746728976/generated_images/j9ygprga2g1fsdzqdiez.png
+2025-05-08 21:29:37,517 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746728977/generated_images/gdh5e9ctt8maovm9jf1m.png
+2025-05-08 21:29:39,922 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746728979/generated_images/xb367wpwz7d1m2u1yazz.png
+2025-05-08 21:29:42,280 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746728982/generated_images/z4g6q5pdvcmmqis9hyqb.png
+2025-05-08 21:43:48,926 - config - ERROR - Failed to upload image to Cloudinary: Missing required parameter - file
+2025-05-08 21:44:12,346 - config - ERROR - Failed to upload image to Cloudinary: Missing required parameter - file
+2025-05-08 21:44:39,467 - config - ERROR - Failed to upload image to Cloudinary: Missing required parameter - file
+2025-05-08 21:45:36,120 - config - ERROR - Failed to upload image to Cloudinary: Missing required parameter - file
+2025-05-08 21:49:58,651 - config - ERROR - Failed to upload image to Cloudinary: Unexpected error - MaxRetryError('TCPKeepAliveHTTPSConnectionPool(host=\'api.cloudinary.com\', port=443): Max retries exceeded with url: /v1_1/daweb5icr/image/upload (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D251667920>: Failed to resolve \'api.cloudinary.com\' ([Errno 11001] getaddrinfo failed)"))')
+2025-05-08 21:54:14,191 - config - ERROR - Failed to upload image to Cloudinary: Unexpected error - MaxRetryError('TCPKeepAliveHTTPSConnectionPool(host=\'api.cloudinary.com\', port=443): Max retries exceeded with url: /v1_1/daweb5icr/image/upload (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000014D4D299D90>: Failed to resolve \'api.cloudinary.com\' ([Errno 11001] getaddrinfo failed)"))')
+2025-05-08 21:59:00,917 - config - INFO - Image uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746730740/images/8baa3410-b600-428b-a817-6dd2d099951b.png
+2025-05-08 22:03:17,659 - config - INFO - File uploaded successfully: last.pptx
+2025-05-08 22:03:17,737 - config - INFO - File processed successfully: last.pptx
+2025-05-08 22:03:19,347 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-08 22:03:19,365 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-08 22:03:19,366 - config - INFO - Cleaned up original file: temp_uploads\4bf4849d-f76c-4da9-a056-c343e0379035.pptx
+2025-05-08 22:03:43,440 - config - INFO - Logo uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746731023/logos/5be814a6-e652-4e16-abaa-bbff355fbebb.png
+2025-05-08 22:03:51,137 - config - INFO - Generated 4 scenes for file 4bf4849d-f76c-4da9-a056-c343e0379035.pptx.
+2025-05-08 22:04:41,105 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746731080/generated_images/m1olcailcvt010fkpc4x.png
+2025-05-08 22:04:55,404 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746731094/generated_images/juwigcllhtqaoft39q3i.png
+2025-05-08 22:05:05,912 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746731105/generated_images/o8ljj3aeqbn4umiznvhu.png
+2025-05-08 22:05:15,161 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746731114/generated_images/pc8vyvyyx5psedueujru.png
+2025-05-08 22:06:05,057 - config - INFO - Image uploaded successfully to Cloudinary: https://res.cloudinary.com/daweb5icr/image/upload/v1746731164/images/f19fc08c-3d73-423c-9656-2b2036cedc22.png

@@ -13,8 +13,11 @@ export const usePresentation = () => {
   const [storyboardScenes, setStoryboardScenes] = useState([]);
   const [isGeneratingImages, setIsGeneratingImages] = useState(false);
   const [logoFile, setLogoFile] = useState(null);
+  const [imageFile, setImageFile] = useState(null);
   const [logoPreviewUrl, setLogoPreviewUrl] = useState(null);
+  const [imagePreviewUrl, setImagePreviewUrl] = useState(null);
   const [logoId, setLogoId] = useState(null);
+  const [imageId, setImageId] = useState(null);
   const [logoURL, setLogoURL] = useState(null);
 
   const [currentStep, setCurrentStep] = useState(0);
@@ -79,6 +82,7 @@ export const usePresentation = () => {
     setStoryboardScenes([]);
     setIsGeneratingImages(false);
     setLogoFile(null);
+    setImageFile(null);
     setLogoPreviewUrl(null);
     setLogoId(null);
     setCurrentStep(0);
@@ -131,7 +135,6 @@ export const usePresentation = () => {
       const fileId = await api.uploadFile(file, (percent) => {
         setFileList([{ ...file, percent }]);
       });
-      console.log("File uploaded successfully:", fileId);
       setUploadedFileId(fileId);
     } finally {
       setUploading(false);
@@ -293,7 +296,7 @@ export const usePresentation = () => {
 
     try {
       const data = await api.uploadLogo(file);
-      console.log("Logo uploaded successfully:", data.logo_url);
+      localStorage.setItem("logo_url", data.logo_url);
       setLogoId(data.logo_id);
       setLogoURL(data.logo_url);
     } catch (error) {
@@ -305,7 +308,37 @@ export const usePresentation = () => {
 
     return false;
   };
+  const handleImageUpload = async (file) => {
+    const isJpgOrPng = file.type === "image/jpeg" || file.type === "image/png";
+    if (!isJpgOrPng) {
+      message.error("Only JPG/PNG images are allowed!");
+      return false;
+    }
 
+    const isLt2M = file.size / 1024 / 1024 < 2;
+    if (!isLt2M) {
+      message.error("Logo must be smaller than 2MB!");
+      return false;
+    }
+
+    setImageFile(file);
+    const reader = new FileReader();
+    reader.onload = (e) => setImagePreviewUrl(e.target.result);
+    reader.readAsDataURL(file);
+
+    try {
+      const data = await api.uploadImage(file);
+      setImageId(data.logo_id);
+      setLogoURL(data.logo_url);
+    } catch (error) {
+      setImageFile(null);
+      setImagePreviewUrl(null);
+      setImageId(null);
+      return false;
+    }
+
+    return false;
+  };
   const handleZoom = (direction) => {
     setImageZoom((prev) => {
       const newZoom =

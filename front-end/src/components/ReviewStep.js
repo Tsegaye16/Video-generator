@@ -54,6 +54,7 @@ const ReviewStep = ({
   selectedVoice,
   setSelectedVoice,
   videoResult,
+  logoURL,
 }) => {
   const carouselRef = useRef();
   const [internalSelectedAvatar, setInternalSelectedAvatar] =
@@ -149,6 +150,7 @@ const ReviewStep = ({
               logoPreviewUrl={logoPreviewUrl}
               logoId={logoId}
               activeSceneIndex={activeSceneIndex}
+              logoURL={logoURL}
             />
           ))}
         </StyledCarousel>

@@ -17,40 +17,6 @@ import uuid
 router = APIRouter()
 #GOOGLE_API_KEY = os.getenv("GOOGLE_GENAI_API_KEY")
 
-@router.post("/api/upload-image", response_model=dict)
-async def upload_image(
-    image: UploadFile = File(...),
-    logo_id: Optional[str] = None,
-    logo_url: Optional[str] = None
-):
-    try:
-        # Read the uploaded image
-        
-       
-        
-        # If logo is provided, merge with the uploaded image
-        if logo_url:
-            print(f"Logo URL: {logo_url}")
-            merged_image_data = await merge_with_logo(BytesIO(image_data), logo_url)
-            if merged_image_data:
-                image_data = merged_image_data
-        
-        # Upload to Cloudinary
-        upload_result = cloudinary.uploader.upload(
-            BytesIO(image_data),
-            public_id=f"uploaded_{str(uuid.uuid4())}",
-            folder="user_uploads"
-        )
-        
-        return {
-            "success": True,
-            "image_url": upload_result['secure_url'],
-            "public_id": upload_result['public_id']
-        }
-        
-    except Exception as e:
-        logger.error(f"Image upload failed: {e}")
-        raise HTTPException(status_code=500, detail=f"Image upload failed: {str(e)}")
 
 @router.post("/api/generate-scenes", response_model=SceneGenerationResponse)
 async def generate_scenes(request: SceneGenerationRequest):

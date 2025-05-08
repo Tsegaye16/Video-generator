@@ -59,3 +59,6 @@ class LogoUploadResponse(BaseModel):
     logo_id: str
     logo_url: str
 
+class ImageUploadResponse(BaseModel):
+    image_id: str
+    image_url: str

@@ -1,5 +1,5 @@
 // src/App.jsx
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Layout,
   Space,
@@ -74,7 +74,7 @@ const App = () => {
     setAspectRatio, // Add setAspectRatio
   } = usePresentation();
 
-  const [showHelpModal, setShowHelpModal] = useState(false);
+  const [showHelpModal, setShowHelpModal] = useState(false); // State to hold the logo URL
   const {
     token: { colorPrimary },
   } = theme.useToken();
@@ -172,6 +172,7 @@ const App = () => {
               selectedVoice={selectedVoice}
               setSelectedVoice={setSelectedVoice}
               videoResult={videoResult}
+              logoUrl={logoURL}
             />
           )}
         </Space>

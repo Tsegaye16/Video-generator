@@ -20,8 +20,6 @@ const { Option } = Select;
 const GenerateStep = ({
   isGeneratingScenes,
   handleGenerateScenes,
-  showAdvanced,
-  setShowAdvanced,
   logoFile,
   setLogoFile,
   logoPreviewUrl,
@@ -34,7 +32,6 @@ const GenerateStep = ({
   aspectRatio, // New prop for aspect ratio
   setAspectRatio, // New prop to update aspect ratio
 }) => {
-  console.log("Logo ID:", logoId);
   return (
     <>
       <StyledCard
@@ -50,7 +47,6 @@ const GenerateStep = ({
             We'll create a video storyboard with AI-generated visuals based on
             your slides. Please upload a logo to proceed with image generation.
           </Paragraph>
-
           <Row justify="center" style={{ marginBottom: 24 }}>
             <Space direction="vertical" align="center">
               <Text strong>Upload Logo (Required for Image Generation)</Text>
@@ -79,6 +75,7 @@ const GenerateStep = ({
                     setLogoFile(null);
                     setLogoPreviewUrl(null);
                     setLogoId(null);
+                    setLogoURL(null);
                   }}
                   icon={<MinusOutlined />}
                 >
@@ -87,46 +84,6 @@ const GenerateStep = ({
               )}
             </Space>
           </Row>
-
-          <div style={{ marginBottom: 16 }}>
-            <Switch
-              checked={showAdvanced}
-              onChange={setShowAdvanced}
-              checkedChildren="Advanced"
-              unCheckedChildren="Basic"
-            />
-            {showAdvanced && (
-              <Text type="secondary" style={{ marginLeft: 8 }}>
-                Customize generation parameters
-              </Text>
-            )}
-          </div>
-
-          {showAdvanced && (
-            <Card size="small" style={{ marginBottom: 16 }}>
-              <Space direction="vertical" style={{ width: "100%" }}>
-                <Text strong>Generation Parameters</Text>
-                <Space align="baseline">
-                  <Text>Aspect Ratio:</Text>
-                  <Select
-                    value={aspectRatio}
-                    onChange={setAspectRatio}
-                    style={{ width: 120 }}
-                    placeholder="Select aspect ratio"
-                  >
-                    <Option value="16:9">16:9 (Widescreen)</Option>
-                    <Option value="4:3">4:3 (Standard)</Option>
-                    <Option value="1:1">1:1 (Square)</Option>
-                    <Option value="9:16">9:16 (Vertical)</Option>
-                  </Select>
-                </Space>
-                <Text type="secondary">
-                  Select the aspect ratio for generated images.
-                </Text>
-              </Space>
-            </Card>
-          )}
-
           <Button
             type="primary"
             onClick={handleGenerateScenes}
@@ -137,7 +94,6 @@ const GenerateStep = ({
           >
             {isGeneratingScenes ? "Generating..." : "Generate Storyboard"}
           </Button>
-
           {isGeneratingScenes && (
             <Space
               direction="vertical"

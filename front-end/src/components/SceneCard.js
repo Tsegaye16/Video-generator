@@ -38,16 +38,25 @@ const SceneCard = ({
   handleRegenerateImage,
   imageZoom,
   handleZoom,
+  logoURL,
 }) => {
   const [uploading, setUploading] = useState(false);
 
   const handleImageUpload = async (file) => {
     setUploading(true);
     try {
-      const response = await uploadImage(file, (progress) => {});
-      console.log("Updated image Response:", response);
+      const response = await uploadImage(
+        file,
+        localStorage.getItem("logo_url"),
+        (progress) => {}
+      );
+
       // Update the scene with the new image URL from backend
-      handleSceneChange(scene.scene_id, "local_image_url", response.image_url);
+      handleSceneChange(
+        scene.scene_id,
+        "generated_image_url",
+        response.image_url
+      );
       message.success("Image uploaded successfully!");
     } catch (error) {
       console.error("Image upload failed:", error);
@@ -89,7 +98,7 @@ const SceneCard = ({
                     shape="circle"
                   />
                 </Tooltip>
-                {/* <Tooltip title="Upload local image">
+                <Tooltip title="Upload local image">
                   <Upload
                     accept="image/*"
                     showUploadList={false}
@@ -103,7 +112,7 @@ const SceneCard = ({
                       loading={uploading}
                     />
                   </Upload>
-                </Tooltip> */}
+                </Tooltip>
               </Space>
             </Col>
           </Row>
@@ -123,7 +132,7 @@ const SceneCard = ({
             )}
 
             {!(scene.isGenerating || uploading) &&
-              (scene.local_image_url || scene.generated_image_url) && (
+              scene.generated_image_url && (
                 <>
                   <ZoomControls>
                     <Button
@@ -142,7 +151,7 @@ const SceneCard = ({
                   </ZoomControls>
 
                   <AntImage
-                    src={scene.local_image_url || scene.generated_image_url}
+                    src={scene.generated_image_url}
                     alt={`Visual for scene ${index + 1}`}
                     style={{
                       width: `${imageZoom * 100}%`,

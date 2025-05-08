@@ -44,15 +44,6 @@ const VideoResult = ({
   error,
   errorCode,
 }) => {
-  console.log(
-    "VideoResult - Status:",
-    status,
-    "Error:",
-    error,
-    "ErrorCode:",
-    errorCode
-  );
-
   const handleDownload = async () => {
     if (!videoUrl) {
       message.error("No download URL available.");
@@ -60,10 +51,6 @@ const VideoResult = ({
     }
 
     try {
-      console.log(
-        `VideoResult: Initiating download for videoId=${videoId}, url=${videoUrl}`
-      );
-
       const response = await fetch(videoUrl, {
         method: "GET",
         headers: {},
@@ -136,9 +123,6 @@ const VideoResult = ({
                   type="primary"
                   icon={<EyeOutlined />}
                   onClick={() => {
-                    console.log(
-                      `VideoResult: Opening fullscreen for videoId=${videoId}`
-                    );
                     window.open(videoUrl, "_blank");
                   }}
                 >
