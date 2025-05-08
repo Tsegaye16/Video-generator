@@ -16,6 +16,7 @@ export const usePresentation = () => {
   const [logoPreviewUrl, setLogoPreviewUrl] = useState(null);
   const [logoId, setLogoId] = useState(null);
   const [logoURL, setLogoURL] = useState(null);
+
   const [currentStep, setCurrentStep] = useState(0);
   const [imageZoom, setImageZoom] = useState(1);
   const [showAdvanced, setShowAdvanced] = useState(false);
@@ -32,10 +33,24 @@ export const usePresentation = () => {
   // Fetch avatars and voices on mount
   useEffect(() => {
     const fetchResources = async () => {
-      const { avatars, voices } = await api.fetchAvatarsAndVoices();
-      setAvatars(avatars);
-      setVoices(voices);
+      const { fetchedAvatars, fetchedVoices } =
+        await api.fetchAvatarsAndVoices();
+      // Add "None" option
+      fetchedAvatars?.unshift({
+        avatar_id: "WithoutAvatar_id",
+        avatar_name: "Without Avatar",
+        gender: "female",
+        preview_image_url: "",
+        preview_video_url: "",
+        premium: false,
+        type: null,
+        tags: null,
+        default_voice_id: null,
+      });
+      setAvatars(fetchedAvatars);
+      setVoices(fetchedVoices);
       if (avatars.length > 0) setSelectedAvatar(avatars[0].avatar_id);
+
       if (voices.length > 0) setSelectedVoice(voices[0].voice_id);
     };
     fetchResources();

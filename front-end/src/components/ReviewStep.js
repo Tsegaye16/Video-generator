@@ -65,8 +65,8 @@ const ReviewStep = ({
   }, [selectedAvatar]);
 
   const handleAvatarChange = (value) => {
-    setInternalSelectedAvatar(value);
-    setSelectedAvatar(value); // Update the parent's state as well
+    setInternalSelectedAvatar(value); // Handle the special case for "Without Avatar"
+    setSelectedAvatar(value === "WithoutAvatar_id" ? null : value); // Update the parent's state as well
   };
 
   return (
@@ -147,6 +147,7 @@ const ReviewStep = ({
               imageZoom={imageZoom}
               handleZoom={handleZoom}
               logoPreviewUrl={logoPreviewUrl}
+              logoId={logoId}
               activeSceneIndex={activeSceneIndex}
             />
           ))}
@@ -190,35 +191,37 @@ const ReviewStep = ({
             showSearch
             allowClear // Add allowClear to enable deselecting
             filterOption={(input, option) =>
-              (option?.children ?? "")
+              (option?.avatar_name ?? "")
                 .toLowerCase()
                 .includes(input.toLowerCase())
             }
           >
-            {avatars.map((avatar) => (
+            {avatars?.map((avatar) => (
               <Option
-                key={avatar.avatar_id}
-                value={avatar.avatar_id}
-                disabled={avatar.premium}
+                key={avatar?.avatar_id}
+                value={avatar?.avatar_id}
+                disabled={avatar?.premium}
               >
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <img
-                    src={avatar.preview_image_url}
-                    alt={avatar.name}
-                    style={{
-                      width: 30,
-                      height: 30,
-                      marginRight: 8,
-                      borderRadius: "50%",
-                      objectFit: "cover",
-                    }}
-                    onError={(e) => {
-                      e.target.src = "https://via.placeholder.com/40";
-                    }}
-                  />
+                  {avatar?.preview_image_url && (
+                    <img
+                      src={avatar?.preview_image_url}
+                      alt={avatar?.name}
+                      style={{
+                        width: 30,
+                        height: 30,
+                        marginRight: 8,
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                      }}
+                      onError={(e) => {
+                        e.target.src = "https://via.placeholder.com/40";
+                      }}
+                    />
+                  )}
                   <div>
-                    {avatar.avatar_name}
-                    {avatar.premium && (
+                    {avatar?.avatar_name}
+                    {avatar?.premium && (
                       <Tag color="gold" style={{ marginLeft: 8 }}>
                         Premium
                       </Tag>

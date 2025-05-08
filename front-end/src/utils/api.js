@@ -16,6 +16,7 @@ export const API_ENDPOINTS = {
   GET_VOICES: `${API_BASE_URL}/get_voices`,
   GENERATE_VIDEO: `${API_BASE_URL}/generate-video`,
   UPLOAD_LOGO: `${API_BASE_URL}/upload-logo`,
+  UPLOAD_IMAGE: `${API_BASE_URL}/upload-image`,
 };
 
 export const uploadLogo = async (logoFile) => {
@@ -24,13 +25,41 @@ export const uploadLogo = async (logoFile) => {
 
   try {
     const response = await axios.post(API_ENDPOINTS.UPLOAD_LOGO, formData);
-    console.log("Logo upload response:", response.data);
+
     message.success("Logo uploaded successfully!");
-    console.log("Logo ID:", response); // Debugging line to check logoId
+
     return response.data;
   } catch (error) {
     const errorMsg = error.response?.data?.detail || error.message;
     message.error(`Logo upload failed: ${errorMsg}`);
+    throw error;
+  }
+};
+
+export const uploadImage = async (imageFile, onProgress) => {
+  const formData = new FormData();
+  formData.append("image", imageFile);
+
+  try {
+    const response = await axios.post(API_ENDPOINTS.UPLOAD_IMAGE, formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+      onUploadProgress: (progressEvent) => {
+        if (onProgress) {
+          const percentCompleted = Math.round(
+            (progressEvent.loaded * 100) / progressEvent.total
+          );
+          onProgress(percentCompleted);
+        }
+      },
+    });
+
+    message.success("Image uploaded successfully!");
+    return response.data; // Should contain image URL or ID from backend
+  } catch (error) {
+    const errorMsg = error.response?.data?.detail || error.message;
+    message.error(`Image upload failed: ${errorMsg}`);
     throw error;
   }
 };
@@ -116,8 +145,8 @@ export const fetchAvatarsAndVoices = async () => {
       axios.get(API_ENDPOINTS.GET_VOICES),
     ]);
 
-    const avatars = avatarsRes.data?.data || [];
-    const voices = voicesRes.data?.data || [];
+    const fetchedAvatars = avatarsRes.data?.data || [];
+    const fetchedVoices = voicesRes.data?.data || [];
 
     if (!avatarsRes.data?.data) {
       console.warn(
@@ -129,7 +158,7 @@ export const fetchAvatarsAndVoices = async () => {
       console.warn("Voices data not found in expected format:", voicesRes.data);
     }
 
-    return { avatars, voices };
+    return { fetchedAvatars, fetchedVoices };
   } catch (error) {
     console.error("Failed to fetch resources:", error);
     message.error("Failed to fetch avatars and voices.");
@@ -157,6 +186,7 @@ export const generateVideo = async (scenes, avatarId, voiceId, onProgress) => {
         onProgress({ progress, status: "processing" });
       }
     }, 1000);
+    console.log("Generate video payload", payload);
 
     const response = await axios.post(API_ENDPOINTS.GENERATE_VIDEO, payload);
     console.log("Video generation response:", response.data);

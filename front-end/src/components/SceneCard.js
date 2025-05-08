@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   Button,
   Space,
@@ -8,8 +9,15 @@ import {
   Input,
   Spin,
   Tooltip,
+  Upload,
+  message,
 } from "antd";
-import { SyncOutlined, PlusOutlined, MinusOutlined } from "@ant-design/icons";
+import {
+  SyncOutlined,
+  PlusOutlined,
+  MinusOutlined,
+  UploadOutlined,
+} from "@ant-design/icons";
 import {
   StyledCard,
   SceneImageContainer,
@@ -17,6 +25,7 @@ import {
   SceneCounter,
 } from "../styles/AppStyle";
 import AntImage from "antd/lib/image";
+import { uploadImage } from "../utils/api";
 
 const { Text } = Typography;
 const { TextArea } = Input;
@@ -29,9 +38,28 @@ const SceneCard = ({
   handleRegenerateImage,
   imageZoom,
   handleZoom,
-  logoPreviewUrl, // Kept for compatibility but not used
+  logoPreviewUrl,
   activeSceneIndex,
 }) => {
+  const [uploading, setUploading] = useState(false);
+
+  const handleImageUpload = async (file) => {
+    setUploading(true);
+    try {
+      const response = await uploadImage(file, (progress) => {});
+      console.log("Updated image Response:", response);
+      // Update the scene with the new image URL from backend
+      handleSceneChange(scene.scene_id, "local_image_url", response.image_url);
+      message.success("Image uploaded successfully!");
+    } catch (error) {
+      console.error("Image upload failed:", error);
+      message.error("Image upload failed");
+    } finally {
+      setUploading(false);
+    }
+    return false; // Prevent default upload behavior
+  };
+
   return (
     <StyledCard
       title={
@@ -52,16 +80,33 @@ const SceneCard = ({
               <Text strong>Background Visual</Text>
             </Col>
             <Col>
-              <Tooltip title="Regenerate image">
-                <Button
-                  icon={<SyncOutlined />}
-                  onClick={() => handleRegenerateImage(scene.scene_id)}
-                  loading={scene.isGenerating}
-                  disabled={scene.isGenerating}
-                  size="small"
-                  shape="circle"
-                />
-              </Tooltip>
+              <Space>
+                <Tooltip title="Regenerate image">
+                  <Button
+                    icon={<SyncOutlined />}
+                    onClick={() => handleRegenerateImage(scene.scene_id)}
+                    loading={scene.isGenerating}
+                    disabled={scene.isGenerating}
+                    size="small"
+                    shape="circle"
+                  />
+                </Tooltip>
+                <Tooltip title="Upload local image">
+                  <Upload
+                    accept="image/*"
+                    showUploadList={false}
+                    beforeUpload={handleImageUpload}
+                    disabled={uploading}
+                  >
+                    <Button
+                      icon={<UploadOutlined />}
+                      size="small"
+                      shape="circle"
+                      loading={uploading}
+                    />
+                  </Upload>
+                </Tooltip>
+              </Space>
             </Col>
           </Row>
 
@@ -70,51 +115,57 @@ const SceneCard = ({
               Scene {index + 1}/{totalScenes}
             </SceneCounter>
 
-            {scene.isGenerating && (
+            {(scene.isGenerating || uploading) && (
               <Space direction="vertical" align="center">
                 <Spin size="large" />
-                <Text type="secondary">Generating image...</Text>
+                <Text type="secondary">
+                  {uploading ? "Uploading image..." : "Generating image..."}
+                </Text>
               </Space>
             )}
 
-            {!scene.isGenerating && scene.generated_image_url && (
-              <>
-                <ZoomControls>
-                  <Button
-                    icon={<PlusOutlined />}
-                    onClick={() => handleZoom("in")}
-                    size="small"
-                    disabled={imageZoom >= 2}
-                  />
-                  <Button
-                    icon={<MinusOutlined />}
-                    onClick={() => handleZoom("out")}
-                    size="small"
-                    disabled={imageZoom <= 0.5}
-                    style={{ marginLeft: 4 }}
-                  />
-                </ZoomControls>
+            {!(scene.isGenerating || uploading) &&
+              (scene.local_image_url || scene.generated_image_url) && (
+                <>
+                  <ZoomControls>
+                    <Button
+                      icon={<PlusOutlined />}
+                      onClick={() => handleZoom("in")}
+                      size="small"
+                      disabled={imageZoom >= 2}
+                    />
+                    <Button
+                      icon={<MinusOutlined />}
+                      onClick={() => handleZoom("out")}
+                      size="small"
+                      disabled={imageZoom <= 0.5}
+                      style={{ marginLeft: 4 }}
+                    />
+                  </ZoomControls>
 
-                <AntImage
-                  src={scene.generated_image_url}
-                  alt={`Visual for scene ${index + 1}`}
-                  style={{
-                    width: `${imageZoom * 100}%`,
-                    height: "auto",
-                    maxHeight: "400px",
-                    transition: "all 0.3s ease",
-                  }}
-                  preview={{ mask: <span>Preview</span> }}
-                />
-              </>
-            )}
+                  <AntImage
+                    src={scene.local_image_url || scene.generated_image_url}
+                    alt={`Visual for scene ${index + 1}`}
+                    style={{
+                      width: `${imageZoom * 100}%`,
+                      height: "auto",
+                      maxHeight: "400px",
+                      transition: "all 0.3s ease",
+                    }}
+                    preview={{ mask: <span>Preview</span> }}
+                  />
+                </>
+              )}
 
-            {!scene.isGenerating && !scene.generated_image_url && (
-              <Text type="secondary">
-                {scene.imageGenError || "Image not available"}
-              </Text>
-            )}
+            {!(scene.isGenerating || uploading) &&
+              !scene.local_image_url &&
+              !scene.generated_image_url && (
+                <Text type="secondary">
+                  {scene.imageGenError || "Image not available"}
+                </Text>
+              )}
           </SceneImageContainer>
+
           <TextArea
             rows={3}
             placeholder="Customize the image generation prompt..."
@@ -124,6 +175,7 @@ const SceneCard = ({
             }
             style={{ marginBottom: 16 }}
           />
+
           {scene.imageGenError && (
             <Alert
               message={scene.imageGenError}
