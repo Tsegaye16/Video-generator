@@ -150,11 +150,10 @@ export const generateVideo = async (scenes, avatarId, voiceId, onProgress) => {
 
   let interval;
   try {
-    // Simulate progress (e.g., increment from 0% to 90% over 10 seconds)
     let progress = 0;
     interval = setInterval(() => {
       if (progress < 90) {
-        progress += 10; // Increment by 10% every second
+        progress += 10;
         onProgress({ progress, status: "processing" });
       }
     }, 1000);
@@ -162,7 +161,7 @@ export const generateVideo = async (scenes, avatarId, voiceId, onProgress) => {
     const response = await axios.post(API_ENDPOINTS.GENERATE_VIDEO, payload);
     console.log("Video generation response:", response.data);
 
-    clearInterval(interval); // Stop progress simulation
+    clearInterval(interval);
 
     if (
       response.data.success &&
@@ -176,30 +175,40 @@ export const generateVideo = async (scenes, avatarId, voiceId, onProgress) => {
         videoUrl: response.data.video_url,
       };
     } else {
-      const errorMsg =
-        response.data.detail?.error ||
-        response.data.error ||
-        "Unknown backend error";
-      onProgress({ progress: 0, status: "failed", error: errorMsg });
+      const errorDetails = response.data.detail || response.data;
+      const errorMsg = errorDetails.error || "Unknown backend error";
+      const errorCode =
+        errorDetails.error_code || errorDetails.http_status || null;
+      onProgress({
+        progress: 0,
+        status: "failed",
+        error: errorMsg,
+        errorCode,
+      });
       message.error(`Video generation failed: ${errorMsg}`);
       throw new Error(errorMsg);
     }
   } catch (error) {
-    clearInterval(interval); // Stop progress simulation on error
-    let errorMsg;
-    if (error.response?.data?.detail?.error) {
-      errorMsg = error.response.data.detail.error;
-    } else if (error.response?.data?.error) {
-      errorMsg = error.response.data.error;
-    } else if (typeof error.response?.data?.detail === "string") {
-      // Handle case where detail is a string (e.g., old response format)
-      errorMsg = error.response.data.detail;
+    clearInterval(interval);
+    let errorMsg = "Failed to generate video";
+    let errorCode = null;
+
+    if (error.response?.data) {
+      const errorData = error.response.data.detail || error.response.data;
+      errorMsg = errorData.error || errorData.message || errorMsg;
+      errorCode = errorData.error_code || errorData.http_status || null;
     } else {
-      errorMsg = error.message || "Failed to generate video";
+      errorMsg = error.message || errorMsg;
     }
-    onProgress({ progress: 0, status: "failed", error: errorMsg });
+
+    onProgress({
+      progress: 0,
+      status: "failed",
+      error: errorMsg,
+      errorCode,
+    });
     message.error(`Video generation failed: ${errorMsg}`);
     console.error("Video generation error:", error.response || error);
-    throw error;
+    throw new Error(errorMsg);
   }
 };

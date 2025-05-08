@@ -15,13 +15,14 @@ import { useEffect } from "react";
 const { Text } = Typography;
 
 // Map HeyGen error messages to user-friendly versions
-const mapErrorMessage = (error) => {
+const mapErrorMessage = (error, errorCode) => {
   if (!error) return "An unknown error occurred.";
+
+  if (errorCode === 40119 || error.includes("Video is too long")) {
+    return "The video duration exceeds the limit (60 minutes). Please shorten the scenes or upgrade your HeyGen plan.";
+  }
   if (error.includes("Daily rate limit exceeded")) {
     return "You've reached the daily limit for video generation. Please try again tomorrow or upgrade your HeyGen plan.";
-  }
-  if (error.includes("Video is too long")) {
-    return "The video duration exceeds the limit (60 minutes). Please shorten the scenes or upgrade your HeyGen plan.";
   }
   if (error.includes("Invalid API key")) {
     return "There was an issue with the API key. Please contact support.";
@@ -29,11 +30,28 @@ const mapErrorMessage = (error) => {
   if (error.includes("timed out")) {
     return "Video generation took too long. Please try again later.";
   }
-  return error; // Fallback to the original error message
+  if (errorCode === 404 || error.includes("Video status not found")) {
+    return "The video could not be found. It may have expired or the request was invalid. Please try generating the video again.";
+  }
+  return `${error}${errorCode ? ` (Error Code: ${errorCode})` : ""}`;
 };
 
-const VideoResult = ({ videoId, videoUrl, status, progress, error }) => {
-  console.log("VideoResult - Status:", status, "Error:", error);
+const VideoResult = ({
+  videoId,
+  videoUrl,
+  status,
+  progress,
+  error,
+  errorCode,
+}) => {
+  console.log(
+    "VideoResult - Status:",
+    status,
+    "Error:",
+    error,
+    "ErrorCode:",
+    errorCode
+  );
 
   const handleDownload = async () => {
     if (!videoUrl) {
@@ -46,12 +64,9 @@ const VideoResult = ({ videoId, videoUrl, status, progress, error }) => {
         `VideoResult: Initiating download for videoId=${videoId}, url=${videoUrl}`
       );
 
-      // Fetch the video as a blob
       const response = await fetch(videoUrl, {
         method: "GET",
-        headers: {
-          // Add any necessary headers, e.g., for authentication if required
-        },
+        headers: {},
       });
 
       if (!response.ok) {
@@ -61,14 +76,12 @@ const VideoResult = ({ videoId, videoUrl, status, progress, error }) => {
       const blob = await response.blob();
       const blobUrl = window.URL.createObjectURL(blob);
 
-      // Create a temporary link to trigger download
       const link = document.createElement("a");
       link.href = blobUrl;
       link.download = `presentation-video-${videoId}.mp4`;
       document.body.appendChild(link);
       link.click();
 
-      // Clean up
       document.body.removeChild(link);
       window.URL.revokeObjectURL(blobUrl);
 
@@ -83,10 +96,10 @@ const VideoResult = ({ videoId, videoUrl, status, progress, error }) => {
     if (status === "completed" && videoUrl) {
       message.success("Video is ready to view!");
     } else if (status === "failed" && error) {
-      const userFriendlyError = mapErrorMessage(error);
+      const userFriendlyError = mapErrorMessage(error, errorCode);
       message.error(userFriendlyError);
     }
-  }, [status, videoUrl, error]);
+  }, [status, videoUrl, error, errorCode]);
 
   return (
     <Card title="Video Generation Result" style={{ marginTop: 20 }}>
@@ -142,7 +155,11 @@ const VideoResult = ({ videoId, videoUrl, status, progress, error }) => {
         )}
 
         {status === "failed" && error && (
-          <Alert message={mapErrorMessage(error)} type="error" showIcon />
+          <Alert
+            message={mapErrorMessage(error, errorCode)}
+            type="error"
+            showIcon
+          />
         )}
       </Space>
     </Card>

@@ -303,16 +303,18 @@ export const usePresentation = () => {
 
   const handleGenerateVideo = async () => {
     try {
+      setIsGeneratingVideo(true);
       const result = await api.generateVideo(
         storyboardScenes,
         selectedAvatar,
         selectedVoice,
-        ({ progress, status, error }) => {
+        ({ progress, status, error, errorCode }) => {
           setVideoResult((prev) => ({
             ...prev,
             progress,
             status,
             error: error || null,
+            errorCode: errorCode || null,
           }));
         }
       );
@@ -322,15 +324,24 @@ export const usePresentation = () => {
         status: "completed",
         progress: 100,
         error: null,
+        errorCode: null,
       });
     } catch (error) {
+      const errorMsg = error.message || "Failed to generate video";
+      const errorCode =
+        error.response?.data?.detail?.error_code ||
+        error.response?.data?.detail?.http_status ||
+        null;
       setVideoResult({
         videoId: null,
         videoUrl: null,
         status: "failed",
         progress: 0,
-        error: error.message,
+        error: errorMsg,
+        errorCode,
       });
+    } finally {
+      setIsGeneratingVideo(false);
     }
   };
 

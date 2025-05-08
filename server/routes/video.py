@@ -146,66 +146,93 @@ async def generate_video(request: VideoGenerationRequest):
         status_url = f"https://api.heygen.com/v1/video_status.get?video_id={video_id}"
 
         while True:
-            status_response = requests.get(status_url, headers=headers)
-            if status_response.status_code != 200:
-                logger.error(f"HeyGen status check failed: {status_response.text}")
-                raise HTTPException(
-                    status_code=500,
-                    detail={
-                        "success": False,
-                        "error": "Failed to check video status",
-                        "details": status_response.text
+            try:
+                status_response = requests.get(status_url, headers=headers)
+                status_response.raise_for_status()  # Raises an exception for 4xx/5xx status codes
+
+                status_data = status_response.json()
+                logger.debug(f"Status response: {status_data}")
+
+                status = status_data.get("data", {}).get("status")
+                logger.info(f"Checking status for {video_id}: {status}")
+
+                if status == "completed":
+                    video_url = status_data["data"].get("video_url")
+                    if not video_url:
+                        logger.error(f"No video_url in completed status: {status_data}")
+                        raise HTTPException(
+                            status_code=500,
+                            detail={
+                                "success": False,
+                                "error": "Video generation completed but no video URL provided",
+                                "details": "Missing video_url in response"
+                            }
+                        )
+                    return {
+                        "success": True,
+                        "video_id": video_id,
+                        "video_url": video_url
                     }
-                )
 
-            status_data = status_response.json()
-            logger.debug(f"Status response: {status_data}")
-            status = status_data.get("data", {}).get("status")
+                elif status == "failed":
+                    error_info = status_data["data"].get("error", {})
+                    error_message = error_info.get("detail") or error_info.get("message") or "Unknown error"
+                    error_code = error_info.get("code", "Unknown")
+                    logger.error(f"Video generation failed for {video_id}: {error_message} (Code: {error_code})")
+                    raise HTTPException(
+                        status_code=422,  # Client-related error
+                        detail={
+                            "success": False,
+                            "video_id": video_id,
+                            "error": error_message,
+                            "error_code": error_code
+                        }
+                    )
 
-            logger.info(f"Checking status for {video_id}: {status}")
+                elif status in ["pending", "waiting", "processing"]:
+                    time.sleep(5)  # Wait 5 seconds before next check
 
-            if status == "completed":
-                video_url = status_data["data"].get("video_url")
-                if not video_url:
-                    logger.error(f"No video_url in completed status: {status_data}")
+                else:
+                    logger.error(f"Unknown status for {video_id}: {status}")
                     raise HTTPException(
                         status_code=500,
                         detail={
                             "success": False,
-                            "error": "Video generation completed but no video URL provided",
-                            "details": "Missing video_url in response"
+                            "video_id": video_id,
+                            "error": f"Unknown video status: {status}"
                         }
                     )
-                return {
-                    "success": True,
-                    "video_id": video_id,
-                    "video_url": video_url
-                }
-            elif status == "failed":
-                error_info = status_data["data"].get("error", {})
-                error_message = error_info.get("detail") or error_info.get("message") or "Unknown error"
-                logger.error(f"Video generation failed for {video_id}: {error_message}")
-                raise HTTPException(
-                    status_code=422,  # Client-related error
-                    detail={
-                        "success": False,
-                        "video_id": video_id,
-                        "error": error_message
-                    }
-                )
-            elif status in ["pending", "waiting", "processing"]:
-                time.sleep(5)  # Wait 5 seconds before next check
-            else:
-                logger.error(f"Unknown status for {video_id}: {status}")
+
+            except requests.exceptions.HTTPError as e:
+                status_code = e.response.status_code if e.response else None
+                error_details = e.response.text if e.response else str(e)
+                error_message = "Failed to check video status"
+                
+                if status_code == 404:
+                    error_message = "Video status not found. The video ID may be invalid or expired."
+                    logger.error(f"HeyGen API returned 404 for video_id {video_id}: {error_details}")
+                else:
+                    logger.error(f"HeyGen status check failed: {error_details}")
+
                 raise HTTPException(
                     status_code=500,
                     detail={
                         "success": False,
-                        "video_id": video_id,
-                        "error": f"Unknown video status: {status}"
+                        "error": error_message,
+                        "details": error_details,
+                        "http_status": status_code  # Include for debugging
                     }
                 )
 
+            except requests.exceptions.RequestException as e:
+                logger.error(f"HeyGen API request failed: {e}")
+                raise HTTPException(
+                    status_code=500,
+                    detail={
+                        "success": False,
+                        "error": f"HeyGen API request failed: {str(e)}"
+                    }
+                )
     except HTTPException as e:
         raise e  # Re-raise HTTPException to preserve the specific error
     except requests.exceptions.RequestException as e:
