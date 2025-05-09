@@ -13,6 +13,7 @@ import {
   Select,
   Tag,
   Card,
+  Tooltip,
 } from "antd";
 import {
   VideoCameraOutlined,
@@ -57,17 +58,41 @@ const ReviewStep = ({
   logoURL,
 }) => {
   const carouselRef = useRef();
+  const videoResultRef = useRef(null);
   const [internalSelectedAvatar, setInternalSelectedAvatar] =
     useState(selectedAvatar);
+  const [isGeneratingVideo, setIsGeneratingVideo] = useState(false);
 
   useEffect(() => {
     // Keep the internal state in sync with the prop
     setInternalSelectedAvatar(selectedAvatar);
   }, [selectedAvatar]);
 
+  useEffect(() => {
+    // Reset isGeneratingVideo when video generation is complete or failed
+    if (
+      videoResult?.status === "completed" ||
+      videoResult?.status === "failed"
+    ) {
+      setIsGeneratingVideo(false);
+    }
+    // Auto-scroll to video result when it appears
+    if (videoResult && videoResultRef.current) {
+      videoResultRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }, [videoResult]);
+
   const handleAvatarChange = (value) => {
     setInternalSelectedAvatar(value); // Handle the special case for "Without Avatar"
     setSelectedAvatar(value === "WithoutAvatar_id" ? null : value); // Update the parent's state as well
+  };
+
+  const handleGenerateVideoClick = () => {
+    setIsGeneratingVideo(true); // Set generating state
+    handleGenerateVideo(internalSelectedAvatar);
   };
 
   return (
@@ -88,46 +113,9 @@ const ReviewStep = ({
       >
         <Space direction="vertical" style={{ width: "100%" }}>
           <Typography.Paragraph>
-            Review and edit the generated scenes. You can optionally update the
-            logo if needed.
+            Review and edit the generated scenes. Select an avatar and voice to
+            customize your video.
           </Typography.Paragraph>
-
-          <Row justify="center" style={{ marginBottom: 24 }}>
-            <Space direction="vertical" align="center">
-              <Text strong>Update Logo (Optional)</Text>
-              <Upload
-                name="logo"
-                listType="picture-card"
-                className="logo-uploader"
-                showUploadList={false}
-                beforeUpload={handleLogoUpload}
-                accept="image/png, image/jpeg"
-              >
-                {logoPreviewUrl ? (
-                  <Avatar src={logoPreviewUrl} size={100} shape="square" />
-                ) : (
-                  <div>
-                    <UploadOutlined style={{ fontSize: 24 }} />
-                    <div style={{ marginTop: 8 }}>Upload Logo</div>
-                  </div>
-                )}
-              </Upload>
-              {logoPreviewUrl && (
-                <Button
-                  size="small"
-                  danger
-                  onClick={() => {
-                    setLogoFile(null);
-                    setLogoPreviewUrl(null);
-                    setLogoId(null);
-                  }}
-                  icon={<MinusOutlined />}
-                >
-                  Remove Logo
-                </Button>
-              )}
-            </Space>
-          </Row>
         </Space>
       </StyledCard>
 
@@ -147,8 +135,6 @@ const ReviewStep = ({
               handleRegenerateImage={handleRegenerateImage}
               imageZoom={imageZoom}
               handleZoom={handleZoom}
-              logoPreviewUrl={logoPreviewUrl}
-              logoId={logoId}
               activeSceneIndex={activeSceneIndex}
               logoURL={logoURL}
             />
@@ -182,16 +168,59 @@ const ReviewStep = ({
           size="large"
         />
       </div>
+      <Row
+        justify="space-between"
+        align="middle"
+        style={{ marginTop: 0, marginBottom: 4, width: "100%" }}
+      >
+        <Col>
+          <Popconfirm
+            title="Are you sure you want to start over?"
+            description="This will reset all your current progress."
+            icon={<QuestionCircleOutlined style={{ color: "#ff4d4f" }} />}
+            onConfirm={resetState}
+            okText="Yes"
+            cancelText="No"
+            disabled={isGeneratingVideo}
+          >
+            <Button size="large" disabled={isGeneratingVideo}>
+              Start Over
+            </Button>
+          </Popconfirm>
+        </Col>
 
-      <Card style={{ marginTop: 24 }}>
-        <Form.Item label="Select Avatar">
+        <Col>
+          <Button
+            type="primary"
+            size="large"
+            onClick={handleGenerateVideoClick}
+            icon={<VideoCameraOutlined />}
+            disabled={!selectedVoice || isGeneratingVideo || isGeneratingImages}
+          >
+            {videoResult?.videoUrl ? "Regenerate Video" : "Generate Video"}
+          </Button>
+        </Col>
+      </Row>
+      <Card style={{ marginTop: 4 }}>
+        <Form.Item
+          label={
+            <Tooltip title="Generate video with avatar will take 30 mins or more and will be notified once generated.">
+              <span>
+                Select Avatar{" "}
+                <QuestionCircleOutlined
+                  style={{ marginLeft: 4, color: "#1890ff" }}
+                />
+              </span>
+            </Tooltip>
+          }
+        >
           <Select
             value={internalSelectedAvatar}
             onChange={handleAvatarChange}
             placeholder="Select an avatar (Optional)"
             optionFilterProp="children"
             showSearch
-            allowClear // Add allowClear to enable deselecting
+            allowClear
             filterOption={(input, option) =>
               (option?.avatar_name ?? "")
                 .toLowerCase()
@@ -235,7 +264,18 @@ const ReviewStep = ({
           </Select>
         </Form.Item>
 
-        <Form.Item label="Select Voice">
+        <Form.Item
+          label={
+            <Tooltip title="The video will be generated with the selected voice.">
+              <span>
+                Select Voice{" "}
+                <QuestionCircleOutlined
+                  style={{ marginLeft: 4, color: "#1890ff" }}
+                />
+              </span>
+            </Tooltip>
+          }
+        >
           <Select
             value={selectedVoice}
             onChange={setSelectedVoice}
@@ -250,47 +290,18 @@ const ReviewStep = ({
         </Form.Item>
       </Card>
 
-      <Row
-        justify="space-between"
-        align="middle"
-        style={{ marginTop: 14, width: "100%" }}
-      >
-        <Col>
-          <Popconfirm
-            title="Are you sure you want to start over?"
-            description="This will reset all your current progress."
-            icon={<QuestionCircleOutlined style={{ color: "#ff4d4f" }} />}
-            onConfirm={resetState}
-            okText="Yes"
-            cancelText="No"
-          >
-            <Button size="large">Start Over</Button>
-          </Popconfirm>
-        </Col>
-
-        <Col>
-          <Button
-            type="primary"
-            size="large"
-            onClick={() => handleGenerateVideo(internalSelectedAvatar)} // Pass the internal state
-            icon={<VideoCameraOutlined />}
-            disabled={!selectedVoice} // Disable if no voice is selected
-          >
-            {videoResult?.videoUrl ? "Regenerate Video" : "Generate Video"}
-          </Button>
-        </Col>
-      </Row>
-
       {videoResult && (
         <Row justify="center" style={{ width: "100%", marginTop: 4 }}>
           <Col span={12}>
-            <VideoResult
-              videoId={videoResult.videoId}
-              videoUrl={videoResult.videoUrl}
-              status={videoResult.status}
-              progress={videoResult.progress}
-              error={videoResult.error}
-            />
+            <div ref={videoResultRef}>
+              <VideoResult
+                videoId={videoResult.videoId}
+                videoUrl={videoResult.videoUrl}
+                status={videoResult.status}
+                progress={videoResult.progress}
+                error={videoResult.error}
+              />
+            </div>
           </Col>
         </Row>
       )}

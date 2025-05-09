@@ -10,6 +10,7 @@ const fadeIn = keyframes`
 export const AppContainer = styled(Layout.Content)`
   padding: 24px 48px;
   max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
   background: #fff;
   min-height: 100vh;

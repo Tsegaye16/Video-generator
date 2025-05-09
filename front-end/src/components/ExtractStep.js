@@ -1,47 +1,34 @@
-import { Button, Progress, Space, Typography } from "antd";
-import { StyledCard } from "../styles/AppStyle";
+import { Button, Space, Typography, Row, Col } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
 
-const { Title, Paragraph } = Typography;
+const { Title } = Typography;
 
 const ExtractStep = ({ isExtracting, handleExtractContent, fileList }) => {
   return (
-    <StyledCard
-      title={
-        <Title level={4} style={{ margin: 0 }}>
-          Extract Content
-        </Title>
-      }
-      bordered={false}
-    >
-      <Space direction="vertical" style={{ width: "100%" }}>
-        <Paragraph>
-          We'll analyze your PowerPoint and extract the text content to create a
-          storyboard.
-        </Paragraph>
-
-        <Button
-          type="primary"
-          onClick={handleExtractContent}
-          loading={isExtracting}
+    <Row justify="center" style={{ width: "100%" }}>
+      <Col span={24}>
+        <Space
+          direction="vertical"
           size="large"
-          block
+          style={{ width: "100%", textAlign: "center" }}
         >
-          {isExtracting ? "Extracting..." : "Extract Content"}
-        </Button>
-
-        {isExtracting && (
-          <Space
-            direction="vertical"
-            style={{ width: "100%", textAlign: "center" }}
+          <Title level={4}>Extract Content</Title>
+          <Typography.Paragraph>
+            Click the button below to extract content from your uploaded{" "}
+            {fileList.length > 0 ? fileList[0].name : "file"}.
+          </Typography.Paragraph>
+          <Button
+            type="primary"
+            size="large"
+            onClick={handleExtractContent}
+            disabled={isExtracting || fileList.length === 0}
+            icon={isExtracting ? <LoadingOutlined /> : null}
           >
-            <Progress percent={50} status="active" showInfo={false} />
-            <Typography.Text type="secondary">
-              Processing your slides...
-            </Typography.Text>
-          </Space>
-        )}
-      </Space>
-    </StyledCard>
+            {isExtracting ? "Extracting..." : "Extract Content"}
+          </Button>
+        </Space>
+      </Col>
+    </Row>
   );
 };
 
