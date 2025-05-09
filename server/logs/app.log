@@ -190,3 +190,20 @@
 2025-05-09 13:45:20,406 - config - INFO - Extracted slide 2 with title: Why Use 3D?
 2025-05-09 13:45:20,408 - config - INFO - Cleaned up original file: temp_uploads\00cdaf79-94f9-4e16-a51e-c01c2a5066aa.pptx
 2025-05-09 13:45:25,845 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-09 13:45:29,768 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/bcfcf43f766747b383defd18b652e8e0/original
+2025-05-09 13:45:39,649 - config - INFO - Generated 5 scenes for file 00cdaf79-94f9-4e16-a51e-c01c2a5066aa.pptx.
+2025-05-09 13:45:44,448 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/bcfcf43f766747b383defd18b652e8e0/original
+2025-05-09 13:45:49,573 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/bcfcf43f766747b383defd18b652e8e0/original
+2025-05-09 13:45:55,425 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/bcfcf43f766747b383defd18b652e8e0/original
+2025-05-09 13:46:00,359 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/bcfcf43f766747b383defd18b652e8e0/original
+2025-05-09 13:46:04,760 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/bcfcf43f766747b383defd18b652e8e0/original
+2025-05-09 13:46:09,576 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:46:12,329 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/8159dd87807e49c999bf59a64c3405b4/original
+2025-05-09 13:46:12,749 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:46:15,634 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c78d24b01d4a4e688b4362cdbcb6354d/original
+2025-05-09 13:46:16,140 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:46:18,811 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/709bbb98c56f4d2ca4ab718372688873/original
+2025-05-09 13:46:19,231 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:46:21,884 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d85d8189251f470395161c35774ccf8e/original
+2025-05-09 13:46:22,271 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:46:25,010 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0b96812f8b8a42779840e28a89dca10c/original
