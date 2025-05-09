@@ -1,0 +1,4 @@
+/server/logs/(*)
+server/__pycache__/
+server/data
+server/routes/__pycache__

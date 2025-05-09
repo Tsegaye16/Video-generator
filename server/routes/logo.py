@@ -73,17 +73,17 @@ async def upload_image(logo_url: str = Form(...), image: UploadFile = File(...))
         logger.warning(f"Invalid image file type: {image.filename}")
         raise HTTPException(status_code=400, detail="Only JPG/PNG images are allowed.")
 
-    
+    content_type="image/png"
     try:
         # Set HeyGen API endpoint and headers
         url = "https://upload.heygen.com/v1/asset"
         headers = {
-            "Content-Type": image.content_type,  # Dynamically set based on file
+            "Content-Type": content_type,  # Dynamically set based on file
             "X-Api-Key": settings.HEYGEN_API_KEY,
         }
 
         # Log the upload attempt
-        logger.info(f"Uploading image: {image.filename} (type: {image.content_type})")
+        logger.info(f"Uploading image: {image.filename} (type: {content_type})")
 
         if logo_url:
             # Read image content and merge with logo
