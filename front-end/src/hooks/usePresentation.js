@@ -308,37 +308,7 @@ export const usePresentation = () => {
 
     return false;
   };
-  const handleImageUpload = async (file) => {
-    const isJpgOrPng = file.type === "image/jpeg" || file.type === "image/png";
-    if (!isJpgOrPng) {
-      message.error("Only JPG/PNG images are allowed!");
-      return false;
-    }
 
-    const isLt2M = file.size / 1024 / 1024 < 2;
-    if (!isLt2M) {
-      message.error("Logo must be smaller than 2MB!");
-      return false;
-    }
-
-    setImageFile(file);
-    const reader = new FileReader();
-    reader.onload = (e) => setImagePreviewUrl(e.target.result);
-    reader.readAsDataURL(file);
-
-    try {
-      const data = await api.uploadImage(file);
-      setImageId(data.logo_id);
-      setLogoURL(data.logo_url);
-    } catch (error) {
-      setImageFile(null);
-      setImagePreviewUrl(null);
-      setImageId(null);
-      return false;
-    }
-
-    return false;
-  };
   const handleZoom = (direction) => {
     setImageZoom((prev) => {
       const newZoom =

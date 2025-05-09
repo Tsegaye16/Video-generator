@@ -2,8 +2,7 @@ from fastapi import APIRouter, HTTPException
 from models import VideoGenerationRequest
 from config import settings, logger
 import requests
-import json
-import time
+
 
 router = APIRouter()
 

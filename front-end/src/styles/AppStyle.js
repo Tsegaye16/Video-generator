@@ -1,4 +1,3 @@
-// src/styles/AppStyle.js
 import styled, { keyframes } from "styled-components";
 import { Carousel, Card, Layout } from "antd";
 

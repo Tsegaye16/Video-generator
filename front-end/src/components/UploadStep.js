@@ -1,4 +1,4 @@
-import { Upload, Progress, Space, Typography, message } from "antd"; // Import message for notifications
+import { Upload, Progress, Space, Typography, message } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import { StyledCard } from "../styles/AppStyle";
 
@@ -11,7 +11,6 @@ const UploadStep = ({
   beforeUploadCheck,
   handleCustomUploadRequest,
 }) => {
-  // Function to validate file type
   const validateFileType = (file) => {
     const validFormats = [".ppt", ".pptx"];
     const fileExtension = file.name

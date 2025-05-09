@@ -38,7 +38,6 @@ const SceneCard = ({
   handleRegenerateImage,
   imageZoom,
   handleZoom,
-  logoURL,
 }) => {
   const [uploading, setUploading] = useState(false);
 
@@ -47,8 +46,7 @@ const SceneCard = ({
     try {
       const response = await uploadImage(
         file,
-        localStorage.getItem("logo_url"),
-        (progress) => {}
+        localStorage.getItem("logo_url")
       );
 
       // Update the scene with the new image URL from backend
@@ -76,13 +74,9 @@ const SceneCard = ({
         </Space>
       }
     >
-      <Row gutter={[24, 16]}>
+      <Row gutter={[12, 8]}>
         <Col xs={24} md={12}>
-          <Row
-            justify="space-between"
-            align="middle"
-            style={{ marginBottom: 8 }}
-          >
+          <Row justify="space-between spa" align="middle">
             <Col>
               <Text strong>Background Visual</Text>
             </Col>
@@ -205,7 +199,7 @@ const SceneCard = ({
             onChange={(e) =>
               handleSceneChange(scene.scene_id, "speech_script", e.target.value)
             }
-            style={{ marginBottom: 16 }}
+            style={{ marginTop: "3px" }}
           />
         </Col>
       </Row>

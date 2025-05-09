@@ -89,7 +89,7 @@ const VideoResult = ({
   }, [status, videoUrl, error, errorCode]);
 
   return (
-    <Card title="Video Generation Result" style={{ marginTop: 20 }}>
+    <Card title="Video Generation Result" style={{ marginTop: 0 }}>
       <Space direction="vertical" style={{ width: "100%" }}>
         <div>
           <Text strong>Status:</Text>

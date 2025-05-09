@@ -5,8 +5,6 @@ import {
   Typography,
   Row,
   Col,
-  Upload,
-  Avatar,
   Badge,
   Popconfirm,
   Form,
@@ -17,11 +15,9 @@ import {
 } from "antd";
 import {
   VideoCameraOutlined,
-  MinusOutlined,
   LeftOutlined,
   RightOutlined,
   QuestionCircleOutlined,
-  UploadOutlined,
 } from "@ant-design/icons";
 import { StyledCard, StyledCarousel } from "../styles/AppStyle";
 import SceneCard from "./SceneCard";
@@ -32,13 +28,7 @@ const { Option } = Select;
 
 const ReviewStep = ({
   storyboardScenes,
-  logoPreviewUrl,
-  logoFile,
-  setLogoFile,
-  logoId,
-  setLogoId,
-  handleLogoUpload,
-  setLogoPreviewUrl,
+
   handleSceneChange,
   handleRegenerateImage,
   imageZoom,
@@ -119,7 +109,7 @@ const ReviewStep = ({
         </Space>
       </StyledCard>
 
-      <div style={{ position: "relative", padding: "0 40px" }}>
+      <div style={{ position: "relative" }}>
         <StyledCarousel
           ref={carouselRef}
           dots={{ className: "custom-dots" }}
@@ -147,7 +137,7 @@ const ReviewStep = ({
           style={{
             position: "absolute",
             top: "50%",
-            left: "0px",
+            left: "-40px",
             transform: "translateY(-50%)",
             zIndex: 1,
           }}
@@ -160,7 +150,7 @@ const ReviewStep = ({
           style={{
             position: "absolute",
             top: "50%",
-            right: "0px",
+            left: "100%",
             transform: "translateY(-50%)",
             zIndex: 1,
           }}
@@ -171,7 +161,12 @@ const ReviewStep = ({
       <Row
         justify="space-between"
         align="middle"
-        style={{ marginTop: 0, marginBottom: 4, width: "100%" }}
+        style={{
+          marginTop: 0,
+          width: "100%",
+          position: "relative",
+          top: "-20px",
+        }}
       >
         <Col>
           <Popconfirm
@@ -201,94 +196,92 @@ const ReviewStep = ({
           </Button>
         </Col>
       </Row>
-      <Card style={{ marginTop: 4 }}>
-        <Form.Item
-          label={
-            <Tooltip title="Generate video with avatar will take 30 mins or more and will be notified once generated.">
-              <span>
-                Select Avatar{" "}
-                <QuestionCircleOutlined
-                  style={{ marginLeft: 4, color: "#1890ff" }}
-                />
-              </span>
-            </Tooltip>
+      <Form.Item
+        label={
+          <Tooltip title="Generate video with avatar will take 30 mins or more and will be notified once generated.">
+            <span>
+              Select Avatar{" "}
+              <QuestionCircleOutlined
+                style={{ marginLeft: 4, color: "#1890ff" }}
+              />
+            </span>
+          </Tooltip>
+        }
+      >
+        <Select
+          value={internalSelectedAvatar}
+          onChange={handleAvatarChange}
+          placeholder="Select an avatar (Optional)"
+          optionFilterProp="children"
+          showSearch
+          allowClear
+          filterOption={(input, option) =>
+            (option?.avatar_name ?? "")
+              .toLowerCase()
+              .includes(input.toLowerCase())
           }
         >
-          <Select
-            value={internalSelectedAvatar}
-            onChange={handleAvatarChange}
-            placeholder="Select an avatar (Optional)"
-            optionFilterProp="children"
-            showSearch
-            allowClear
-            filterOption={(input, option) =>
-              (option?.avatar_name ?? "")
-                .toLowerCase()
-                .includes(input.toLowerCase())
-            }
-          >
-            {avatars?.map((avatar) => (
-              <Option
-                key={avatar?.avatar_id}
-                value={avatar?.avatar_id}
-                disabled={avatar?.premium}
-              >
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  {avatar?.preview_image_url && (
-                    <img
-                      src={avatar?.preview_image_url}
-                      alt={avatar?.name}
-                      style={{
-                        width: 30,
-                        height: 30,
-                        marginRight: 8,
-                        borderRadius: "50%",
-                        objectFit: "cover",
-                      }}
-                      onError={(e) => {
-                        e.target.src = "https://via.placeholder.com/40";
-                      }}
-                    />
+          {avatars?.map((avatar) => (
+            <Option
+              key={avatar?.avatar_id}
+              value={avatar?.avatar_id}
+              disabled={avatar?.premium}
+            >
+              <div style={{ display: "flex", alignItems: "center" }}>
+                {avatar?.preview_image_url && (
+                  <img
+                    src={avatar?.preview_image_url}
+                    alt={avatar?.name}
+                    style={{
+                      width: 30,
+                      height: 30,
+                      marginRight: 8,
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                    }}
+                    onError={(e) => {
+                      e.target.src = "https://via.placeholder.com/40";
+                    }}
+                  />
+                )}
+                <div>
+                  {avatar?.avatar_name}
+                  {avatar?.premium && (
+                    <Tag color="gold" style={{ marginLeft: 8 }}>
+                      Premium
+                    </Tag>
                   )}
-                  <div>
-                    {avatar?.avatar_name}
-                    {avatar?.premium && (
-                      <Tag color="gold" style={{ marginLeft: 8 }}>
-                        Premium
-                      </Tag>
-                    )}
-                  </div>
                 </div>
-              </Option>
-            ))}
-          </Select>
-        </Form.Item>
+              </div>
+            </Option>
+          ))}
+        </Select>
+      </Form.Item>
 
-        <Form.Item
-          label={
-            <Tooltip title="The video will be generated with the selected voice.">
-              <span>
-                Select Voice{" "}
-                <QuestionCircleOutlined
-                  style={{ marginLeft: 4, color: "#1890ff" }}
-                />
-              </span>
-            </Tooltip>
-          }
+      <Form.Item
+        label={
+          <Tooltip title="The video will be generated with the selected voice.">
+            <span>
+              Select Voice{" "}
+              <QuestionCircleOutlined
+                style={{ marginLeft: 4, color: "#1890ff" }}
+              />
+            </span>
+          </Tooltip>
+        }
+      >
+        <Select
+          value={selectedVoice}
+          onChange={setSelectedVoice}
+          placeholder="Select a voice"
         >
-          <Select
-            value={selectedVoice}
-            onChange={setSelectedVoice}
-            placeholder="Select a voice"
-          >
-            {voices?.map((voice) => (
-              <Option key={voice.voice_id} value={voice.voice_id}>
-                {voice.name} ({voice.gender || "unknown"})
-              </Option>
-            ))}
-          </Select>
-        </Form.Item>
-      </Card>
+          {voices?.map((voice) => (
+            <Option key={voice.voice_id} value={voice.voice_id}>
+              {voice.name} ({voice.gender || "unknown"})
+            </Option>
+          ))}
+        </Select>
+      </Form.Item>
 
       {videoResult && (
         <Row justify="center" style={{ width: "100%", marginTop: 4 }}>

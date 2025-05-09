@@ -1,9 +1,9 @@
 from fastapi import APIRouter, File, UploadFile, HTTPException, Form
 from models import ImageUploadResponse, LogoUploadResponse
 from config import settings, logger
-import cloudinary.uploader
+
 import requests
-import uuid
+
 
 from utils import merge_with_logo
 

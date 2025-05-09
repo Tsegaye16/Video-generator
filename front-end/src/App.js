@@ -1,5 +1,5 @@
 // src/App.jsx
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   Layout,
   Space,
@@ -82,7 +82,7 @@ const App = () => {
   return (
     <Layout>
       <AppContainer>
-        <Space direction="vertical" size="large" style={{ width: "100%" }}>
+        <Space direction="vertical" style={{ width: "100%" }}>
           <Row justify="space-between" align="middle">
             <Space align="center">
               <VideoCameraOutlined

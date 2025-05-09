@@ -62,8 +62,7 @@ pip install -r requirements.txt
    ```
    HEYGEN_API_KEY=<your_heygen_api_key>
    GOOGLE_GENAI_API_KEY=<your_google_genai_api_key>
-   CLOUDINARY_CLOUD_NAME=<your_cloudinary_cloud_name>
-   CLOUDINARY_API_KEY=<your_cloudinary_api_key>
+     CLOUDINARY_API_KEY=<your_cloudinary_api_key>
    CLOUDINARY_API_SECRET=<your_cloudinary_api_secret>
    ```
 

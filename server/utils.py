@@ -1,19 +1,19 @@
 import os
 import aiohttp
-import shutil
-import uuid
+
 import io
 from io import BytesIO
-import json
+
 from PIL import Image
 from pptx import Presentation
 from pptx.exc import PackageNotFoundError
-from pptx.enum.shapes import MSO_SHAPE_TYPE
+
 from config import settings
 import google.generativeai as genai
 from models import SlideData,  TableData
 from typing import Any,  List
 import logging
+
 
 logger = logging.getLogger(__name__)
 
@@ -26,7 +26,6 @@ def get_slide_count(file_path: str) -> int:
     except Exception as e:
         raise ValueError(f"Error processing PowerPoint file: {e}")
 
-from typing import List, Optional
 
 
 
@@ -68,11 +67,12 @@ def format_slide_content_for_llm(slide: SlideData, extracted_content_path: str) 
                     parts.append(genai.Part.from_data(img_bytes.getvalue(), mime_type=mime_type))
                     parts.append(f"\nImage Description (from file: {img_info.filename}): ")
                 else:
-                    print(f"Warning: Could not determine MIME type for image {img_info.filename}")
+                    pass
+                   
             except Exception as e:
-                print(f"Warning: Could not load image {img_path} for LLM. Error: {e}")
+                pass
         else:
-            print(f"Warning: Image file not found at {img_path}")
+            pass
     return parts
 
 async def merge_with_logo(background_image_data: bytes, logo_url: str, output_format: str = "PNG") -> bytes:

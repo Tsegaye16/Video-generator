@@ -1,6 +1,5 @@
-from pydantic import BaseModel, Field
-from typing import List, Optional, Dict, Any
-
+from pydantic import BaseModel
+from typing import List, Optional
 class ExtractRequest(BaseModel):
     file_id: str
 

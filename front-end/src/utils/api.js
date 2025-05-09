@@ -40,7 +40,7 @@ export const uploadLogo = async (logoFile) => {
 export const uploadImage = async (imageFile, logo_url, onProgress) => {
   const formData = new FormData();
   formData.append("image", imageFile);
-  formData.append("logo_url", logo_url); // Assuming logoURL is part of the file object
+  formData.append("logo_url", logo_url);
 
   try {
     const response = await axios.post(API_ENDPOINTS.UPLOAD_IMAGE, formData, {

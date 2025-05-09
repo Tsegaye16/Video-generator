@@ -8,9 +8,7 @@ load_dotenv()
 class Settings:
     GOOGLE_API_KEY = os.getenv("GOOGLE_GENAI_API_KEY")
     HEYGEN_API_KEY = os.getenv('HEYGEN_API_KEY')
-    CLOUDINARY_CLOUD_NAME = os.getenv("CLOUDINARY_CLOUD_NAME")
-    CLOUDINARY_API_KEY = os.getenv("CLOUDINARY_API_KEY")
-    CLOUDINARY_API_SECRET = os.getenv("CLOUDINARY_API_SECRET")
+   
     TEMP_UPLOAD_DIR = "temp_uploads"
     EXTRACTED_CONTENT_DIR = os.path.join(TEMP_UPLOAD_DIR, "extracted")
     LOGO_DIR = os.path.join(TEMP_UPLOAD_DIR, "logos")

@@ -1,36 +1,21 @@
-// src/components/GenerateStep.jsx
-import {
-  Button,
-  Switch,
-  Space,
-  Progress,
-  Typography,
-  Card,
-  Upload,
-  Avatar,
-  Row,
-  Select,
-} from "antd";
+import { Button, Space, Progress, Typography, Upload, Avatar, Row } from "antd";
 import { UploadOutlined, MinusOutlined } from "@ant-design/icons";
 import { StyledCard } from "../styles/AppStyle";
 
 const { Title, Text, Paragraph } = Typography;
-const { Option } = Select;
 
 const GenerateStep = ({
   isGeneratingScenes,
   handleGenerateScenes,
-  logoFile,
+
   setLogoFile,
   logoPreviewUrl,
   setLogoPreviewUrl,
   logoId,
   setLogoId,
-  logoURL,
+
   setLogoURL,
   handleLogoUpload,
-  aspectRatio, // New prop for aspect ratio
-  setAspectRatio, // New prop to update aspect ratio
 }) => {
   return (
     <>

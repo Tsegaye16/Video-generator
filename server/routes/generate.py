@@ -2,20 +2,16 @@ from fastapi import APIRouter, HTTPException
 from models import SceneGenerationRequest, SceneGenerationResponse, Scene, ImageGenerationRequest, ImageGenerationResponse
 from utils import format_slide_content_for_llm, merge_with_logo
 from config import settings, logger
-
 import json
 import google.generativeai as genarativeai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
-
-
 from google import genai
-
 import requests
 from typing import List
 
 
 router = APIRouter()
-#GOOGLE_API_KEY = os.getenv("GOOGLE_GENAI_API_KEY")
+
 
 
 @router.post("/api/generate-scenes", response_model=SceneGenerationResponse)
