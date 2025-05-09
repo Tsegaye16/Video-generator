@@ -21,7 +21,7 @@ const mapErrorMessage = (error, errorCode) => {
   if (errorCode === 40119 || error.includes("Video is too long")) {
     return "The video duration exceeds the limit (60 minutes). Please shorten the scenes or upgrade your HeyGen plan.";
   }
-  if (error.includes("Daily rate limit exceeded")) {
+  if (error.includes("Insufficient credit")) {
     return "You've reached the daily limit for video generation. Please try again tomorrow or upgrade your HeyGen plan.";
   }
   if (error.includes("Invalid API key")) {

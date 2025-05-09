@@ -17,6 +17,7 @@ export const API_ENDPOINTS = {
   GENERATE_VIDEO: `${API_BASE_URL}/generate-video`,
   UPLOAD_LOGO: `${API_BASE_URL}/upload-logo`,
   UPLOAD_IMAGE: `${API_BASE_URL}/upload-image`,
+  VIDEO_STATUS: `${API_BASE_URL}/video-status`,
 };
 
 export const uploadLogo = async (logoFile) => {
@@ -177,35 +178,19 @@ export const generateVideo = async (scenes, avatarId, voiceId, onProgress) => {
     voice_id: voiceId,
   };
 
-  let interval;
   try {
-    let progress = 0;
-    interval = setInterval(() => {
-      if (progress < 90) {
-        progress += 10;
-        onProgress({ progress, status: "processing" });
-      }
-    }, 1000);
+    // Initiate video generation
+    const generateResponse = await axios.post(
+      API_ENDPOINTS.GENERATE_VIDEO,
+      payload
+    );
 
-    const response = await axios.post(API_ENDPOINTS.GENERATE_VIDEO, payload);
-    clearInterval(interval);
-
-    if (
-      response.data.success &&
-      response.data.video_id &&
-      response.data.video_url
-    ) {
-      onProgress({ progress: 100, status: "completed" });
-      message.success("Video generated successfully!");
-      return {
-        videoId: response.data.video_id,
-        videoUrl: response.data.video_url,
-      };
-    } else {
-      const errorDetails = response.data.detail || response.data;
-      const errorMsg = errorDetails.error || "Unknown backend error";
-      const errorCode =
-        errorDetails.error_code || errorDetails.http_status || null;
+    if (!generateResponse.data.success || !generateResponse.data.video_id) {
+      const errorDetails =
+        generateResponse.data.detail || generateResponse.data;
+      const errorMsg =
+        errorDetails.error || "Failed to initiate video generation";
+      const errorCode = errorDetails.error_code || null;
       onProgress({
         progress: 0,
         status: "failed",
@@ -215,8 +200,91 @@ export const generateVideo = async (scenes, avatarId, voiceId, onProgress) => {
       message.error(`Video generation failed: ${errorMsg}`);
       throw new Error(errorMsg);
     }
+
+    const videoId = generateResponse.data.video_id;
+    let progress = 0;
+
+    // Start progress simulation
+    const progressInterval = setInterval(() => {
+      if (progress < 90) {
+        progress += 5;
+        onProgress({ progress, status: "processing" });
+      }
+    }, 1000);
+
+    // Poll video status every 3 seconds
+    while (true) {
+      try {
+        const statusResponse = await axios.get(
+          `${API_ENDPOINTS.VIDEO_STATUS}/${videoId}`
+        );
+        const statusData = statusResponse.data;
+
+        if (statusData.status === "completed") {
+          clearInterval(progressInterval);
+          onProgress({
+            progress: 100,
+            status: "completed",
+          });
+          message.success("Video generated successfully!");
+          return {
+            videoId: statusData.video_id,
+            videoUrl: statusData.video_url,
+          };
+        } else if (statusData.status === "failed") {
+          clearInterval(progressInterval);
+          const errorMsg = statusData.error || "Video generation failed";
+          const errorCode = statusData.error_code || null;
+          onProgress({
+            progress: 0,
+            status: "failed",
+            error: errorMsg,
+            errorCode,
+          });
+          message.error(`Video generation failed: ${errorMsg}`);
+          throw new Error(errorMsg);
+        } else if (statusData.status === "error") {
+          clearInterval(progressInterval);
+          const errorMsg = statusData.error || "Failed to check video status";
+          const errorCode =
+            statusData.error_code || statusData.http_status || null;
+          onProgress({
+            progress: 0,
+            status: "failed",
+            error: errorMsg,
+            errorCode,
+          });
+          message.error(`Video generation failed: ${errorMsg}`);
+          throw new Error(errorMsg);
+        }
+
+        // Wait 3 seconds before next status check
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+      } catch (statusError) {
+        clearInterval(progressInterval);
+        let errorMsg = "Failed to check video status";
+        let errorCode = null;
+
+        if (statusError.response?.data) {
+          const errorData =
+            statusError.response.data.detail || statusError.response.data;
+          errorMsg = errorData.error || errorData.message || errorMsg;
+          errorCode = errorData.error_code || errorData.http_status || null;
+        } else {
+          errorMsg = statusError.message || errorMsg;
+        }
+
+        onProgress({
+          progress: 0,
+          status: "failed",
+          error: errorMsg,
+          errorCode,
+        });
+        message.error(`Video generation failed: ${errorMsg}`);
+        throw new Error(errorMsg);
+      }
+    }
   } catch (error) {
-    clearInterval(interval);
     let errorMsg = "Failed to generate video";
     let errorCode = null;
 
