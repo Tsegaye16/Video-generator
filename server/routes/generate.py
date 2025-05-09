@@ -1,18 +1,18 @@
-from fastapi import APIRouter, HTTPException, File, UploadFile
+from fastapi import APIRouter, HTTPException
 from models import SceneGenerationRequest, SceneGenerationResponse, Scene, ImageGenerationRequest, ImageGenerationResponse
 from utils import format_slide_content_for_llm, merge_with_logo
 from config import settings, logger
-import os
+
 import json
 import google.generativeai as genarativeai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
-import google as genaiImg
-from google.genai import types
+
+
 from google import genai
-import cloudinary.uploader
-from io import BytesIO
-from typing import List, Optional
-import uuid
+
+import requests
+from typing import List
+
 
 router = APIRouter()
 #GOOGLE_API_KEY = os.getenv("GOOGLE_GENAI_API_KEY")
@@ -110,7 +110,6 @@ async def generate_image(request: ImageGenerationRequest):
 
     try:
         # Construct the prompt with the base prompt and user's input
-        
         full_prompt = settings.base_prompt.format(prompt=request.prompt)
 
         # Generate image using the AI model
@@ -119,7 +118,6 @@ async def generate_image(request: ImageGenerationRequest):
             model="gemini-2.0-flash-exp-image-generation",
             contents=full_prompt,
             config=genai.types.GenerateContentConfig(response_modalities=['TEXT', 'IMAGE']),
-
         )
 
         # Extract image data
@@ -132,34 +130,69 @@ async def generate_image(request: ImageGenerationRequest):
             logger.error("No image data received from the model.")
             raise HTTPException(status_code=500, detail="No image data received from the model.")
 
-        # Retrieve logo URL based on logo_id
-        logo_id = request.logo_id
-        logo_url = request.logo_url  # Assuming logo_url is passed in the request
-        # You need to implement this
-        if not logo_url:
-            logger.warning(f"Logo with ID '{logo_id}' not found.")
-            raise HTTPException(status_code=404, detail=f"Logo with ID '{logo_id}' not found.")
+        # Retrieve logo URL
+        logo_url = request.logo_url
+        if not logo_url and request.logo_id:
+            logger.warning(f"Logo with ID '{request.logo_id}' not found.")
+            raise HTTPException(status_code=404, detail=f"Logo with ID '{request.logo_id}' not found.")
 
-        # Merge the background image with the logo
-        merged_image_data = await merge_with_logo(image_data, logo_url)
-        if merged_image_data is None:
-            logger.error("Failed to merge image with logo.")
-            raise HTTPException(status_code=500, detail="Failed to merge image with logo.")
+        # Merge the background image with the logo (if logo_url is provided)
+        final_image_data = image_data
+        content_type = "image/png"  # Default for Gemini-generated images (adjust if needed)
+        if logo_url:
+            logger.info(f"Merging image with logo: {logo_url}")
+            final_image_data = await merge_with_logo(image_data, logo_url)
+            if final_image_data is None:
+                logger.error("Failed to merge image with logo.")
+                raise HTTPException(status_code=500, detail="Failed to merge image with logo.")
+            content_type = "image/png"  # merge_with_logo outputs PNG
 
-        # Upload the merged image to Cloudinary
-        upload_result = cloudinary.uploader.upload(
-            BytesIO(merged_image_data),
-            folder="generated_images"
-        )
-        public_image_url = upload_result['secure_url']
+        # Upload the image to HeyGen
+        url = "https://upload.heygen.com/v1/asset"
+        headers = {
+            "Content-Type": content_type,
+            "X-Api-Key": settings.HEYGEN_API_KEY,
+        }
 
-        logger.info(f"Image generated and uploaded successfully: {public_image_url}")
+        logger.info(f"Uploading image to HeyGen (Content-Type: {content_type})")
+        response = requests.post(url, headers=headers, data=final_image_data)
+
+        # Check HTTP status code
+        if response.status_code != 200:
+            error_msg = f"HeyGen API error: {response.status_code} - {response.text}"
+            logger.error(error_msg)
+            if response.status_code == 400 and "Content type not match" in response.text:
+                raise HTTPException(status_code=400, detail="Content type mismatch in HeyGen upload")
+            raise HTTPException(status_code=500, detail=f"HeyGen API error: {response.status_code}")
+
+        # Parse the JSON response
+        response_data = response.json()
+        logger.debug(f"HeyGen response: {response_data}")
+
+        # Check if the API call was successful (code == 100)
+        if response_data.get("code") != 100:
+            error_msg = f"HeyGen API error: {response_data.get('message', 'Unknown error')}"
+            logger.error(error_msg)
+            if response_data.get("code") == 400543:
+                raise HTTPException(status_code=400, detail="Content type mismatch in HeyGen upload")
+            raise HTTPException(status_code=500, detail=error_msg)
+
+        # Extract the image URL
+        image_url = response_data.get("data", {}).get("url")
+        if not image_url:
+            logger.error("No URL found in HeyGen response")
+            raise HTTPException(status_code=500, detail="Invalid response from HeyGen: No URL found")
+
+        logger.info(f"Image generated and uploaded successfully: {image_url}")
         return ImageGenerationResponse(
             scene_id=request.scene_id,
-            image_url=public_image_url,
+            image_url=image_url,
             logo_url=logo_url,
         )
+
+    except requests.RequestException as e:
+        logger.error(f"Failed to upload image to HeyGen: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to upload image: {str(e)}")
     except Exception as e:
         logger.error(f"Error generating image: {e}")
         raise HTTPException(status_code=500, detail=f"Image generation failed: {str(e)}")
-    

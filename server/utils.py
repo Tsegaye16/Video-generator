@@ -13,6 +13,9 @@ from config import settings
 import google.generativeai as genai
 from models import SlideData,  TableData
 from typing import Any,  List
+import logging
+
+logger = logging.getLogger(__name__)
 
 def get_slide_count(file_path: str) -> int:
     try:
@@ -72,36 +75,44 @@ def format_slide_content_for_llm(slide: SlideData, extracted_content_path: str) 
             print(f"Warning: Image file not found at {img_path}")
     return parts
 
-async def merge_with_logo(background_image_data: bytes, logo_url: str, output_format: str = "PNG"):
+async def merge_with_logo(background_image_data: bytes, logo_url: str, output_format: str = "PNG") -> bytes:
     try:
         # Open the background image
         background = Image.open(BytesIO(background_image_data)).convert("RGBA")
-        # Download the logo from Cloudinary
+        logger.debug(f"Background image opened: {background.size}, mode: {background.mode}")
+
+        # Download the logo from the provided URL
         async with aiohttp.ClientSession() as session:
             async with session.get(logo_url) as response:
                 if response.status != 200:
-                    raise Exception(f"Failed to download logo from {logo_url}")
+                    logger.error(f"Failed to download logo from {logo_url}: {response.status}")
+                    raise Exception(f"Failed to download logo: {response.status}")
                 logo_data = await response.read()
-        
+                logger.debug(f"Logo downloaded: {len(logo_data)} bytes")
+
         # Open and process the logo
         logo = Image.open(BytesIO(logo_data)).convert("RGBA")
-        logo = logo.resize((90, 90))
-        
+        logo = logo.resize((90, 90), Image.LANCZOS)  # Use LANCZOS for high-quality resizing
+        logger.debug(f"Logo resized: {logo.size}, mode: {logo.mode}")
+
         # Merge the images
-        x = background.width - logo.width
+        x = background.width - logo.width  # Top-right corner
         y = 0
         composite = Image.new("RGBA", background.size)
         composite.paste(background, (0, 0))
-        composite.paste(logo, (x, y), logo)
-        
+        composite.paste(logo, (x, y), logo)  # Use logo as mask for transparency
+        logger.debug(f"Images merged: composite size {composite.size}")
+
         # Save the merged image to a buffer
         merged_buffer = BytesIO()
         composite.save(merged_buffer, format=output_format)
         merged_buffer.seek(0)
-        return merged_buffer.getvalue()
-    except Exception as e:
-        print(f"Error merging with logo: {e}")
-        return None
+        result = merged_buffer.getvalue()
+        logger.info(f"Merged image created: {len(result)} bytes, format: {output_format}")
+        return result
 
+    except Exception as e:
+        logger.error(f"Error merging with logo: {e}")
+        return None
 
 

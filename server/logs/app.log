@@ -71,3 +71,122 @@
 2025-05-09 11:30:05,731 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746779404/generated_images/h6mr4ofalwk6pqbbeuxj.png
 2025-05-09 11:30:07,609 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746779406/generated_images/rrrkzloio2sv6anvx70u.png
 2025-05-09 11:30:09,921 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746779408/generated_images/xhukrga2k0gqzwyb0deg.png
+2025-05-09 12:54:44,629 - config - INFO - File uploaded successfully: last.pptx
+2025-05-09 12:54:44,665 - config - INFO - File processed successfully: last.pptx
+2025-05-09 12:54:46,632 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-09 12:54:46,665 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-09 12:54:46,667 - config - INFO - Cleaned up original file: temp_uploads\c9d8ae54-2790-46b9-bcb5-bda97acf9442.pptx
+2025-05-09 12:54:56,310 - config - ERROR - Failed to upload logo to Cloudinary: 'Response' object is not subscriptable
+2025-05-09 12:58:31,253 - config - ERROR - Failed to upload logo to Cloudinary: 'Response' object is not subscriptable
+2025-05-09 12:59:48,608 - config - INFO - File uploaded successfully: last.pptx
+2025-05-09 12:59:48,645 - config - INFO - File processed successfully: last.pptx
+2025-05-09 12:59:51,005 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-09 12:59:51,031 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-09 12:59:51,031 - config - INFO - Cleaned up original file: temp_uploads\4ddb95a7-286e-41cc-a694-4eba62e3a0cc.pptx
+2025-05-09 13:00:00,553 - config - ERROR - Failed to upload logo to Cloudinary: 'Response' object is not subscriptable
+2025-05-09 13:01:52,146 - config - ERROR - Failed to upload logo to Cloudinary: 'Response' object is not subscriptable
+2025-05-09 13:07:25,279 - config - ERROR - Failed to upload logo to HeyGen: 'Response' object is not subscriptable
+2025-05-09 13:17:10,534 - config - INFO - File uploaded successfully: last.pptx
+2025-05-09 13:17:10,570 - config - INFO - File processed successfully: last.pptx
+2025-05-09 13:17:12,537 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-09 13:17:12,574 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-09 13:17:12,574 - config - INFO - Cleaned up original file: temp_uploads\a209c9bb-4b64-499b-ad4c-2211a4645d9c.pptx
+2025-05-09 13:17:18,050 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-09 13:17:21,695 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/7706f68adced48c899ff1df174b51dd5/original
+2025-05-09 13:21:06,797 - config - INFO - Generated 5 scenes for file a209c9bb-4b64-499b-ad4c-2211a4645d9c.pptx.
+2025-05-09 13:21:42,128 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746786101/generated_images/nmknrwp6iriyuxw7qmzy.png
+2025-05-09 13:21:44,369 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746786103/generated_images/u0zmrvnxxeqx2kwv2h1m.png
+2025-05-09 13:21:46,125 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746786105/generated_images/ynoxjdylmboiyw748hiu.png
+2025-05-09 13:21:48,025 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746786107/generated_images/sath7hb1cwrhiuizmjby.png
+2025-05-09 13:21:49,733 - config - INFO - Image generated and uploaded successfully: https://res.cloudinary.com/daweb5icr/image/upload/v1746786109/generated_images/mb70gib1igdusa3jf5dz.png
+2025-05-09 13:27:13,706 - config - INFO - Uploading image: image_2025-03-18_09-31-07.png (type: image/png)
+2025-05-09 13:27:13,706 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/7706f68adced48c899ff1df174b51dd5/original
+2025-05-09 13:27:15,558 - config - INFO - Uploading merged image to HeyGen
+2025-05-09 13:27:18,336 - config - INFO - Image uploaded successfully to HeyGen: https://resource2.heygen.ai/image/98f94db445bc4ad4b010300bb33d311b/original
+2025-05-09 13:31:56,030 - config - INFO - File uploaded successfully: last.pptx
+2025-05-09 13:31:56,073 - config - INFO - File processed successfully: last.pptx
+2025-05-09 13:32:00,913 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-09 13:32:00,943 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-09 13:32:00,944 - config - INFO - Cleaned up original file: temp_uploads\5647d801-e75f-41bb-9602-b5368be87970.pptx
+2025-05-09 13:32:05,670 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-09 13:32:09,271 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/04c654c5bc2546d6a1c567dafe67a79a/original
+2025-05-09 13:32:14,908 - config - INFO - Generated 5 scenes for file 5647d801-e75f-41bb-9602-b5368be87970.pptx.
+2025-05-09 13:32:18,942 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/04c654c5bc2546d6a1c567dafe67a79a/original
+2025-05-09 13:32:24,026 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/04c654c5bc2546d6a1c567dafe67a79a/original
+2025-05-09 13:32:27,649 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/04c654c5bc2546d6a1c567dafe67a79a/original
+2025-05-09 13:32:32,177 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/04c654c5bc2546d6a1c567dafe67a79a/original
+2025-05-09 13:32:36,671 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/04c654c5bc2546d6a1c567dafe67a79a/original
+2025-05-09 13:32:42,201 - config - INFO - Uploading image to HeyGen
+2025-05-09 13:32:44,882 - config - ERROR - HeyGen API error: 400 - {"code":400543,"message":"Content type not match image/jpeg != image/png"}
+
+2025-05-09 13:32:44,883 - config - ERROR - Error generating image: 500: HeyGen API error: 400
+2025-05-09 13:32:45,361 - config - INFO - Uploading image to HeyGen
+2025-05-09 13:32:47,704 - config - ERROR - HeyGen API error: 400 - {"code":400543,"message":"Content type not match image/jpeg != image/png"}
+
+2025-05-09 13:32:47,704 - config - ERROR - Error generating image: 500: HeyGen API error: 400
+2025-05-09 13:32:48,098 - config - INFO - Uploading image to HeyGen
+2025-05-09 13:32:50,687 - config - ERROR - HeyGen API error: 400 - {"code":400543,"message":"Content type not match image/jpeg != image/png"}
+
+2025-05-09 13:32:50,688 - config - ERROR - Error generating image: 500: HeyGen API error: 400
+2025-05-09 13:32:51,188 - config - INFO - Uploading image to HeyGen
+2025-05-09 13:32:53,530 - config - ERROR - HeyGen API error: 400 - {"code":400543,"message":"Content type not match image/jpeg != image/png"}
+
+2025-05-09 13:32:53,530 - config - ERROR - Error generating image: 500: HeyGen API error: 400
+2025-05-09 13:32:54,009 - config - INFO - Uploading image to HeyGen
+2025-05-09 13:32:56,385 - config - ERROR - HeyGen API error: 400 - {"code":400543,"message":"Content type not match image/jpeg != image/png"}
+
+2025-05-09 13:32:56,385 - config - ERROR - Error generating image: 500: HeyGen API error: 400
+2025-05-09 13:40:33,010 - config - INFO - File uploaded successfully: last.pptx
+2025-05-09 13:40:33,038 - config - INFO - File processed successfully: last.pptx
+2025-05-09 13:40:37,465 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-09 13:40:37,493 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-09 13:40:37,494 - config - INFO - Cleaned up original file: temp_uploads\b9312bd7-9724-48a9-a13a-db05fc63586a.pptx
+2025-05-09 13:40:42,853 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-09 13:40:46,543 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/42d9dcfa53af472b963848e4b12a838f/original
+2025-05-09 13:40:51,881 - config - INFO - Generated 5 scenes for file b9312bd7-9724-48a9-a13a-db05fc63586a.pptx.
+2025-05-09 13:40:56,027 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/42d9dcfa53af472b963848e4b12a838f/original
+2025-05-09 13:41:01,363 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/42d9dcfa53af472b963848e4b12a838f/original
+2025-05-09 13:41:07,466 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/42d9dcfa53af472b963848e4b12a838f/original
+2025-05-09 13:41:11,837 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/42d9dcfa53af472b963848e4b12a838f/original
+2025-05-09 13:41:17,229 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/42d9dcfa53af472b963848e4b12a838f/original
+2025-05-09 13:41:22,538 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:41:24,847 - config - ERROR - HeyGen API error: 401 - {"code":400112,"message":"Unauthorized"}
+
+2025-05-09 13:41:24,848 - config - ERROR - Error generating image: 500: HeyGen API error: 401
+2025-05-09 13:41:25,595 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:41:27,560 - config - ERROR - HeyGen API error: 401 - {"code":400112,"message":"Unauthorized"}
+
+2025-05-09 13:41:27,561 - config - ERROR - Error generating image: 500: HeyGen API error: 401
+2025-05-09 13:41:27,958 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:41:29,946 - config - ERROR - HeyGen API error: 401 - {"code":400112,"message":"Unauthorized"}
+
+2025-05-09 13:41:29,947 - config - ERROR - Error generating image: 500: HeyGen API error: 401
+2025-05-09 13:41:30,267 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:41:32,355 - config - ERROR - HeyGen API error: 401 - {"code":400112,"message":"Unauthorized"}
+
+2025-05-09 13:41:32,356 - config - ERROR - Error generating image: 500: HeyGen API error: 401
+2025-05-09 13:41:33,067 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:41:35,217 - config - ERROR - HeyGen API error: 401 - {"code":400112,"message":"Unauthorized"}
+
+2025-05-09 13:41:35,217 - config - ERROR - Error generating image: 500: HeyGen API error: 401
+2025-05-09 13:42:02,054 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/42d9dcfa53af472b963848e4b12a838f/original
+2025-05-09 13:42:03,996 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:42:07,110 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/501931a6319d45f1991e7ef1bafdfae1/original
+2025-05-09 13:42:26,950 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/42d9dcfa53af472b963848e4b12a838f/original
+2025-05-09 13:42:29,079 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:42:31,981 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/54861c68f81443d1988426e35a62367e/original
+2025-05-09 13:42:54,142 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/42d9dcfa53af472b963848e4b12a838f/original
+2025-05-09 13:42:55,932 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:42:58,713 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b54177b1438b49b99a06c560e5153132/original
+2025-05-09 13:43:17,943 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/42d9dcfa53af472b963848e4b12a838f/original
+2025-05-09 13:43:20,244 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:43:23,400 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/38c9de559e4e459da9a2ad3553ac422d/original
+2025-05-09 13:43:39,430 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/42d9dcfa53af472b963848e4b12a838f/original
+2025-05-09 13:43:41,467 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-09 13:43:44,587 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/ca466dc260d74016b7a8456d32b03ce2/original
+2025-05-09 13:45:18,451 - config - INFO - File uploaded successfully: last.pptx
+2025-05-09 13:45:18,490 - config - INFO - File processed successfully: last.pptx
+2025-05-09 13:45:20,386 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-09 13:45:20,406 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-09 13:45:20,408 - config - INFO - Cleaned up original file: temp_uploads\00cdaf79-94f9-4e16-a51e-c01c2a5066aa.pptx
+2025-05-09 13:45:25,845 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
