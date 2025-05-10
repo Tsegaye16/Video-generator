@@ -30,6 +30,13 @@ import { uploadImage } from "../utils/api";
 const { Text } = Typography;
 const { TextArea } = Input;
 
+// Utility function to get ordinal suffix (e.g., 1st, 2nd, 3rd, 4th)
+const getOrdinalSuffix = (n) => {
+  const s = ["th", "st", "nd", "rd"];
+  const v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+};
+
 const SceneCard = ({
   scene,
   index,
@@ -76,7 +83,7 @@ const SceneCard = ({
     >
       <Row gutter={[12, 8]}>
         <Col xs={24} md={12}>
-          <Row justify="space-between spa" align="middle">
+          <Row justify="space-between" align="middle">
             <Col>
               <Text strong>Background Visual</Text>
             </Col>
@@ -87,7 +94,7 @@ const SceneCard = ({
                     icon={<SyncOutlined />}
                     onClick={() => handleRegenerateImage(scene.scene_id)}
                     loading={scene.isGenerating}
-                    disabled={scene.isGenerating}
+                    disabled={scene.isGenerating || uploading || scene.isQueued}
                     size="small"
                     shape="circle"
                   />
@@ -97,13 +104,14 @@ const SceneCard = ({
                     accept="image/*"
                     showUploadList={false}
                     beforeUpload={handleImageUpload}
-                    disabled={uploading}
+                    disabled={uploading || scene.isGenerating || scene.isQueued}
                   >
                     <Button
                       icon={<UploadOutlined />}
                       size="small"
                       shape="circle"
                       loading={uploading}
+                      disabled={scene.isGenerating || scene.isQueued}
                     />
                   </Upload>
                 </Tooltip>
@@ -120,12 +128,22 @@ const SceneCard = ({
               <Space direction="vertical" align="center">
                 <Spin size="large" />
                 <Text type="secondary">
-                  {uploading ? "Uploading image..." : "Generating image..."}
+                  {uploading ? "Uploading image..." : "Image in progress..."}
                 </Text>
               </Space>
             )}
 
-            {!(scene.isGenerating || uploading) &&
+            {!(scene.isGenerating || uploading) && scene.isQueued && (
+              <Space direction="vertical" align="center">
+                <Spin size="small" />
+                <Text type="secondary">
+                  Generating{" "}
+                  {getOrdinalSuffix(scene.generationProgress.current)} image
+                </Text>
+              </Space>
+            )}
+
+            {!(scene.isGenerating || uploading || scene.isQueued) &&
               scene.generated_image_url && (
                 <>
                   <ZoomControls>
@@ -158,12 +176,10 @@ const SceneCard = ({
                 </>
               )}
 
-            {!(scene.isGenerating || uploading) &&
-              !scene.local_image_url &&
-              !scene.generated_image_url && (
-                <Text type="secondary">
-                  {scene.imageGenError || "Image not available"}
-                </Text>
+            {!(scene.isGenerating || uploading || scene.isQueued) &&
+              !scene.generated_image_url &&
+              !scene.imageGenError && (
+                <Text type="secondary">Image not generated</Text>
               )}
           </SceneImageContainer>
 

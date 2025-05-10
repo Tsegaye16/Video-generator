@@ -3,7 +3,7 @@ import {
   Card,
   Space,
   message,
-  Progress,
+  Spin,
   Alert,
   Typography,
   Row,
@@ -40,7 +40,7 @@ const VideoResult = ({
   videoId,
   videoUrl,
   status,
-  progress,
+
   error,
   errorCode,
 }) => {
@@ -98,16 +98,12 @@ const VideoResult = ({
           </Text>
         </div>
 
-        <Progress
-          percent={progress}
-          status={
-            status === "failed"
-              ? "exception"
-              : status === "completed"
-              ? "success"
-              : "active"
-          }
-        />
+        {status === "processing" && (
+          <Space direction="vertical" align="center" style={{ marginTop: 16 }}>
+            <Spin size="large" />
+            <Text type="secondary">Generating video...</Text>
+          </Space>
+        )}
 
         {status === "completed" && videoUrl && (
           <div style={{ marginTop: 16 }}>
@@ -143,6 +139,7 @@ const VideoResult = ({
             message={mapErrorMessage(error, errorCode)}
             type="error"
             showIcon
+            style={{ marginTop: 16 }}
           />
         )}
       </Space>

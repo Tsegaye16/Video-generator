@@ -10,7 +10,6 @@ import {
   Form,
   Select,
   Tag,
-  Card,
   Tooltip,
 } from "antd";
 import {
@@ -291,7 +290,6 @@ const ReviewStep = ({
                 videoId={videoResult.videoId}
                 videoUrl={videoResult.videoUrl}
                 status={videoResult.status}
-                progress={videoResult.progress}
                 error={videoResult.error}
               />
             </div>

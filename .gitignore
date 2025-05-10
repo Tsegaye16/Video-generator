@@ -2,3 +2,4 @@
 server/__pycache__/
 server/data
 server/routes/__pycache__
+/server/temp_uploads/

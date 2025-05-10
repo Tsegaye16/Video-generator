@@ -15,9 +15,9 @@ export const usePresentation = () => {
   const [logoFile, setLogoFile] = useState(null);
   const [imageFile, setImageFile] = useState(null);
   const [logoPreviewUrl, setLogoPreviewUrl] = useState(null);
-  const [imagePreviewUrl, setImagePreviewUrl] = useState(null);
+
   const [logoId, setLogoId] = useState(null);
-  const [imageId, setImageId] = useState(null);
+
   const [logoURL, setLogoURL] = useState(null);
 
   const [currentStep, setCurrentStep] = useState(0);
@@ -175,46 +175,95 @@ export const usePresentation = () => {
     }
 
     setIsGeneratingImages(true);
+    // Initialize storyboard scenes with isQueued, isGenerating, and generationProgress
     setStoryboardScenes(
       scenes.map((scene) => ({
         ...scene,
-        isGenerating: true,
+        isQueued: true, // All scenes are queued initially
+        isGenerating: false, // No scene is generating yet
         generated_image_url: null,
+        imageGenError: null, // Ensure no stale errors
+        generationProgress: {
+          current: 0, // No scene is being processed yet
+          total: scenes.length, // Total number of scenes
+        },
       }))
     );
 
+    let updatedScenes = [...scenes]; // Define updatedScenes at the top
+
     try {
-      const results = await Promise.allSettled(
-        scenes.map((scene) =>
-          api.generateImage(
+      // Process each scene sequentially
+      for (let index = 0; index < scenes.length; index++) {
+        const scene = scenes[index];
+        // Update the current scene to isGenerating: true, keep others as is
+        updatedScenes = updatedScenes.map((s, i) => ({
+          ...s,
+          isGenerating: i === index, // Only the current scene is generating
+          // Keep isQueued: true for unprocessed scenes, false for processed
+          isQueued: i >= index, // Queued if index is current or future
+          generationProgress: {
+            current: index + 1, // Current scene being processed (1-based index)
+            total: scenes.length,
+          },
+        }));
+        console.log(`Before generating scene ${index + 1}:`, updatedScenes);
+        setStoryboardScenes([...updatedScenes]);
+
+        try {
+          const imageUrl = await api.generateImage(
             scene.image_prompt,
             scene.scene_id,
             logoId,
             logoURL,
             aspectRatio
-          )
-        )
-      );
-
-      const updatedScenes = scenes.map((scene, index) => {
-        const result = results[index];
-        if (result.status === "fulfilled") {
-          return {
-            ...scene,
-            generated_image_url: result.value,
-            isGenerating: false,
-          };
-        } else {
-          return {
-            ...scene,
-            isGenerating: false,
-            imageGenError: result.reason.message,
-          };
+          );
+          // Update the scene with the generated image URL
+          updatedScenes = updatedScenes.map((s, i) =>
+            i === index
+              ? {
+                  ...s,
+                  generated_image_url: imageUrl,
+                  isGenerating: false,
+                  isQueued: false, // No longer queued
+                  imageGenError: null, // Clear any previous error
+                  generationProgress: {
+                    current: index + 1,
+                    total: scenes.length,
+                  },
+                }
+              : s
+          );
+        } catch (error) {
+          // Handle error for this specific scene
+          updatedScenes = updatedScenes.map((s, i) =>
+            i === index
+              ? {
+                  ...s,
+                  isGenerating: false,
+                  isQueued: false, // No longer queued
+                  imageGenError: error.message,
+                  generationProgress: {
+                    current: index + 1,
+                    total: scenes.length,
+                  },
+                }
+              : s
+          );
         }
-      });
-
-      setStoryboardScenes(updatedScenes);
+        console.log(`After generating scene ${index + 1}:`, updatedScenes);
+        setStoryboardScenes([...updatedScenes]);
+      }
     } finally {
+      // Clear generationProgress and isQueued for all scenes, preserving other properties
+      updatedScenes = updatedScenes.map((scene) => ({
+        ...scene,
+        isQueued: false,
+        isGenerating: false, // Ensure no scenes are marked as generating
+        generationProgress: null, // Reset progress
+      }));
+      console.log("Final scenes:", updatedScenes);
+      setStoryboardScenes(updatedScenes);
       setIsGeneratingImages(false);
     }
   };
