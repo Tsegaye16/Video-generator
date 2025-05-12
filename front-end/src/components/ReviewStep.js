@@ -45,6 +45,7 @@ const ReviewStep = ({
   setSelectedVoice,
   videoResult,
   logoURL,
+  generatedImagesCount,
 }) => {
   const carouselRef = useRef();
   const videoResultRef = useRef(null);
@@ -126,6 +127,7 @@ const ReviewStep = ({
               handleZoom={handleZoom}
               activeSceneIndex={activeSceneIndex}
               logoURL={logoURL}
+              generatedImagesCount={generatedImagesCount}
             />
           ))}
         </StyledCarousel>

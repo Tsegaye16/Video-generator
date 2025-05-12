@@ -191,7 +191,6 @@ export const usePresentation = () => {
     );
 
     let updatedScenes = [...scenes]; // Define updatedScenes at the top
-
     try {
       // Process each scene sequentially
       for (let index = 0; index < scenes.length; index++) {
@@ -251,7 +250,7 @@ export const usePresentation = () => {
               : s
           );
         }
-        console.log(`After generating scene ${index + 1}:`, updatedScenes);
+
         setStoryboardScenes([...updatedScenes]);
       }
     } finally {
@@ -262,7 +261,7 @@ export const usePresentation = () => {
         isGenerating: false, // Ensure no scenes are marked as generating
         generationProgress: null, // Reset progress
       }));
-      console.log("Final scenes:", updatedScenes);
+
       setStoryboardScenes(updatedScenes);
       setIsGeneratingImages(false);
     }
@@ -412,6 +411,11 @@ export const usePresentation = () => {
     }
   };
 
+  // Calculate the number of generated images
+  const generatedImagesCount = storyboardScenes.filter(
+    (scene) => scene.generated_image_url && !scene.imageGenError
+  ).length;
+
   return {
     aspectRatio,
     setAspectRatio,
@@ -456,5 +460,6 @@ export const usePresentation = () => {
     handleZoom,
     handleGenerateVideo,
     resetState,
+    generatedImagesCount,
   };
 };

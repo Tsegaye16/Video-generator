@@ -1,0 +1,482 @@
+2025-05-10 09:13:09,994 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-10 09:13:10,100 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-10 09:13:13,024 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-10 09:13:13,185 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-10 09:13:13,208 - config - INFO - Extracted slide 3 with title: None
+2025-05-10 09:13:13,220 - config - INFO - Extracted slide 4 with title: None
+2025-05-10 09:13:13,224 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-10 09:13:13,225 - config - INFO - Cleaned up original file: temp_uploads\ae664783-4a59-4d3d-b16b-eb272b0f2ad8.pptx
+2025-05-10 09:13:19,254 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 09:13:22,880 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/e4588afb745e4ffbb03fef2cd74f3770/original
+2025-05-10 09:23:56,187 - config - INFO - File uploaded successfully: last.pptx
+2025-05-10 09:23:56,221 - config - INFO - File processed successfully: last.pptx
+2025-05-10 09:23:58,390 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-10 09:23:58,485 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-10 09:23:58,486 - config - INFO - Cleaned up original file: temp_uploads\4fefba05-38e6-4df2-bec4-e8c7f62737b7.pptx
+2025-05-10 09:24:02,845 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 09:24:06,465 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/176f689af67b4a2bbbe75c82e9df4977/original
+2025-05-10 09:28:22,807 - config - INFO - File uploaded successfully: last.pptx
+2025-05-10 09:28:22,834 - config - INFO - File processed successfully: last.pptx
+2025-05-10 09:28:24,807 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-10 09:28:24,812 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-10 09:28:24,813 - config - INFO - Cleaned up original file: temp_uploads\8d0677cd-3602-47f7-a266-e2d76a3aa8a4.pptx
+2025-05-10 09:28:29,356 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 09:28:33,378 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/80bff04f6dae433991eada9166b7dcab/original
+2025-05-10 09:28:38,900 - config - INFO - Generated 4 scenes for file 8d0677cd-3602-47f7-a266-e2d76a3aa8a4.pptx.
+2025-05-10 09:28:45,401 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/80bff04f6dae433991eada9166b7dcab/original
+2025-05-10 09:28:48,645 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:28:51,701 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e6bf5731092940afb22679b78f5450e1/original
+2025-05-10 09:28:56,090 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/80bff04f6dae433991eada9166b7dcab/original
+2025-05-10 09:28:58,167 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:29:01,010 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/337a11df6fe2441cb91556a138e54a04/original
+2025-05-10 09:29:05,744 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/80bff04f6dae433991eada9166b7dcab/original
+2025-05-10 09:29:07,783 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:29:10,886 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/284529c390b2462aba3f10825a34363c/original
+2025-05-10 09:29:15,219 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/80bff04f6dae433991eada9166b7dcab/original
+2025-05-10 09:29:17,354 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:29:26,873 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f4d2ca132b7c4e179df0bd30490086ab/original
+2025-05-10 09:33:52,719 - config - INFO - File uploaded successfully: last.pptx
+2025-05-10 09:33:52,758 - config - INFO - File processed successfully: last.pptx
+2025-05-10 09:33:54,519 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-10 09:33:54,591 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-10 09:33:54,592 - config - INFO - Cleaned up original file: temp_uploads\1207a47f-aa2b-40bf-8902-d2fc51d891ed.pptx
+2025-05-10 09:33:58,935 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 09:34:02,571 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/b701c60355414c3396afcc62c7b06652/original
+2025-05-10 09:34:10,917 - config - INFO - Generated 5 scenes for file 1207a47f-aa2b-40bf-8902-d2fc51d891ed.pptx.
+2025-05-10 09:34:15,610 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/b701c60355414c3396afcc62c7b06652/original
+2025-05-10 09:34:18,195 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:34:20,967 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/36992a0288204d1bb0e75bed011a7969/original
+2025-05-10 09:34:24,992 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/b701c60355414c3396afcc62c7b06652/original
+2025-05-10 09:34:26,801 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:34:29,393 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/3a0587774afd433083f6cf2710563d82/original
+2025-05-10 09:34:34,277 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/b701c60355414c3396afcc62c7b06652/original
+2025-05-10 09:34:36,165 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:34:38,900 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1748b6c14ce745de8c04499bd24338a9/original
+2025-05-10 09:34:43,916 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/b701c60355414c3396afcc62c7b06652/original
+2025-05-10 09:34:45,806 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:34:48,705 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/ab4cd2f186fc419b98f943fb7ef3b926/original
+2025-05-10 09:34:53,092 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/b701c60355414c3396afcc62c7b06652/original
+2025-05-10 09:34:54,892 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:34:57,518 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0d50e1fbb3804b5796c1756c4acf6971/original
+2025-05-10 09:36:53,453 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/b701c60355414c3396afcc62c7b06652/original
+2025-05-10 09:36:55,278 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:36:58,079 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f43301de1bae44cdabcb02ae5ef1d864/original
+2025-05-10 09:38:25,316 - config - INFO - File uploaded successfully: last.pptx
+2025-05-10 09:38:25,351 - config - INFO - File processed successfully: last.pptx
+2025-05-10 09:38:28,655 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-10 09:38:28,661 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-10 09:38:28,662 - config - INFO - Cleaned up original file: temp_uploads\1c9edec7-387d-44c4-a973-446fa725abf0.pptx
+2025-05-10 09:38:33,133 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 09:38:39,384 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/8a027a541dfb43b0a4857f426d6dec6f/original
+2025-05-10 09:38:44,152 - config - INFO - Generated 4 scenes for file 1c9edec7-387d-44c4-a973-446fa725abf0.pptx.
+2025-05-10 09:38:48,614 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8a027a541dfb43b0a4857f426d6dec6f/original
+2025-05-10 09:38:51,152 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:38:53,930 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0add060119d84624a9a0a2ef118632ee/original
+2025-05-10 09:38:58,458 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8a027a541dfb43b0a4857f426d6dec6f/original
+2025-05-10 09:39:00,586 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:39:03,610 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/727368fdb1e94f54a3e17a900426890c/original
+2025-05-10 09:39:07,394 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8a027a541dfb43b0a4857f426d6dec6f/original
+2025-05-10 09:39:09,563 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:39:12,074 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a1e2d88fe51449b285294640d034fb1f/original
+2025-05-10 09:39:17,594 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8a027a541dfb43b0a4857f426d6dec6f/original
+2025-05-10 09:39:19,886 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:39:22,695 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/96e93cb801624ec6bf4966c190728ad5/original
+2025-05-10 09:46:04,542 - config - INFO - File uploaded successfully: last.pptx
+2025-05-10 09:46:04,570 - config - INFO - File processed successfully: last.pptx
+2025-05-10 09:46:06,471 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-10 09:46:06,479 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-10 09:46:06,480 - config - INFO - Cleaned up original file: temp_uploads\b1b7c638-2cdd-49e5-b8c2-f7c3dec0a303.pptx
+2025-05-10 09:46:11,244 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 09:46:14,834 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/73c03b292b094b1daa6302d7f2f67259/original
+2025-05-10 09:46:24,855 - config - INFO - Generated 5 scenes for file b1b7c638-2cdd-49e5-b8c2-f7c3dec0a303.pptx.
+2025-05-10 09:46:29,094 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/73c03b292b094b1daa6302d7f2f67259/original
+2025-05-10 09:46:31,657 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:46:34,386 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/2c6c4df27a2c4ad5807932d1db067b50/original
+2025-05-10 09:46:38,191 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/73c03b292b094b1daa6302d7f2f67259/original
+2025-05-10 09:46:40,446 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:46:43,174 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/2cc44427ddf749279bdda8b8ae6a9823/original
+2025-05-10 09:46:47,444 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/73c03b292b094b1daa6302d7f2f67259/original
+2025-05-10 09:46:49,505 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:46:52,240 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d335f0ba972a414bb4dfa292c74103f7/original
+2025-05-10 09:46:56,911 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/73c03b292b094b1daa6302d7f2f67259/original
+2025-05-10 09:46:58,966 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:47:01,448 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/96e051a4ce8e4442b3e47d7287c0cc56/original
+2025-05-10 09:47:05,773 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/73c03b292b094b1daa6302d7f2f67259/original
+2025-05-10 09:47:07,708 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:47:10,251 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/53396608fb554972bf0cc28b6f36dfbf/original
+2025-05-10 09:51:01,575 - config - INFO - File uploaded successfully: last.pptx
+2025-05-10 09:51:01,610 - config - INFO - File processed successfully: last.pptx
+2025-05-10 09:51:03,297 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-10 09:51:03,305 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-10 09:51:03,306 - config - INFO - Cleaned up original file: temp_uploads\784327b1-0eab-492e-bc69-d7a966b39e45.pptx
+2025-05-10 09:51:07,863 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 09:51:11,809 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/44937d9585764d0c94c414cc5e252935/original
+2025-05-10 09:51:18,030 - config - INFO - Generated 6 scenes for file 784327b1-0eab-492e-bc69-d7a966b39e45.pptx.
+2025-05-10 09:51:22,229 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/44937d9585764d0c94c414cc5e252935/original
+2025-05-10 09:51:24,704 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:51:27,242 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/494b35e1c8c0496390b699194610791e/original
+2025-05-10 09:51:32,269 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/44937d9585764d0c94c414cc5e252935/original
+2025-05-10 09:51:34,525 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:51:37,425 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/74a0bd9432c849a3bf8b7de57be4e167/original
+2025-05-10 09:51:42,621 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/44937d9585764d0c94c414cc5e252935/original
+2025-05-10 09:51:44,913 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:51:47,654 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b548d9d535f44608a1eda917b14f5001/original
+2025-05-10 09:51:52,170 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/44937d9585764d0c94c414cc5e252935/original
+2025-05-10 09:51:54,312 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:51:56,960 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a2ffc063bb844a51bd17528485fb46ab/original
+2025-05-10 09:52:00,793 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/44937d9585764d0c94c414cc5e252935/original
+2025-05-10 09:52:02,829 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:52:05,497 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/5b56779ed34b4bdda184dc02eea3712b/original
+2025-05-10 09:52:09,724 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/44937d9585764d0c94c414cc5e252935/original
+2025-05-10 09:52:11,976 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:52:14,826 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f51e6cd796c7488db27d6d5fa3b4f392/original
+2025-05-10 09:55:32,393 - config - INFO - File uploaded successfully: last.pptx
+2025-05-10 09:55:32,414 - config - INFO - File processed successfully: last.pptx
+2025-05-10 09:55:34,186 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-10 09:55:34,192 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-10 09:55:34,193 - config - INFO - Cleaned up original file: temp_uploads\740d1073-756e-40a5-af78-644cb767d2a3.pptx
+2025-05-10 09:55:39,513 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 09:55:43,288 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/39fd0a19c5a64e2891720527369d3418/original
+2025-05-10 09:55:49,437 - config - INFO - Generated 6 scenes for file 740d1073-756e-40a5-af78-644cb767d2a3.pptx.
+2025-05-10 09:55:54,196 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/39fd0a19c5a64e2891720527369d3418/original
+2025-05-10 09:55:56,787 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:55:59,523 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0e4505e41af44e58ae2cee45d9ec156b/original
+2025-05-10 09:56:04,319 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/39fd0a19c5a64e2891720527369d3418/original
+2025-05-10 09:56:06,653 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:56:09,428 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/11dc60297b4145a49800e78caf0613ba/original
+2025-05-10 09:56:13,399 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/39fd0a19c5a64e2891720527369d3418/original
+2025-05-10 09:56:15,465 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:56:18,351 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1ba91500e6604f07bd6eefb57c381dd2/original
+2025-05-10 09:56:24,245 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/39fd0a19c5a64e2891720527369d3418/original
+2025-05-10 09:56:26,548 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:56:29,528 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/ca817a0c69f8410184da9bdccf3c3c73/original
+2025-05-10 09:56:35,917 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/39fd0a19c5a64e2891720527369d3418/original
+2025-05-10 09:56:37,807 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:56:40,576 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/dd1526209a494e95872223bbc03e1977/original
+2025-05-10 09:56:45,136 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/39fd0a19c5a64e2891720527369d3418/original
+2025-05-10 09:56:46,869 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 09:56:49,536 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b64dd4bb699e4653aa38ebcc9bf9f03b/original
+2025-05-10 10:03:14,848 - config - INFO - File uploaded successfully: last.pptx
+2025-05-10 10:03:14,895 - config - INFO - File processed successfully: last.pptx
+2025-05-10 10:03:17,942 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-10 10:03:17,946 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-10 10:03:17,947 - config - INFO - Cleaned up original file: temp_uploads\2d92fa42-b584-4737-8731-735ad4bb2554.pptx
+2025-05-10 10:03:21,723 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 10:03:25,339 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/5f46e193c9b645a1a0841458572c23c7/original
+2025-05-10 10:03:30,825 - config - INFO - Generated 5 scenes for file 2d92fa42-b584-4737-8731-735ad4bb2554.pptx.
+2025-05-10 10:03:35,473 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/5f46e193c9b645a1a0841458572c23c7/original
+2025-05-10 10:03:38,108 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:03:40,929 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d4451364f15e4115abb79dd85876bebe/original
+2025-05-10 10:03:45,244 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/5f46e193c9b645a1a0841458572c23c7/original
+2025-05-10 10:03:47,409 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:03:50,205 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/03254809a54440fd90fd77c5374fea60/original
+2025-05-10 10:03:54,821 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/5f46e193c9b645a1a0841458572c23c7/original
+2025-05-10 10:03:56,842 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:03:59,652 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/7c03a949f0a64c02a697aee158f97094/original
+2025-05-10 10:04:03,843 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/5f46e193c9b645a1a0841458572c23c7/original
+2025-05-10 10:04:05,927 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:04:08,499 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/25458ac0daaf4f1daf1e80036bb32420/original
+2025-05-10 10:04:13,205 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/5f46e193c9b645a1a0841458572c23c7/original
+2025-05-10 10:04:15,129 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:04:17,734 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/47cc6ed610464ce683e02ccdf4bdddcf/original
+2025-05-10 10:19:44,694 - config - INFO - File uploaded successfully: last.pptx
+2025-05-10 10:19:44,746 - config - INFO - File processed successfully: last.pptx
+2025-05-10 10:19:46,938 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-10 10:19:46,943 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-10 10:19:46,944 - config - INFO - Cleaned up original file: temp_uploads\4c5cae62-fdf8-4ca9-b03c-93e980a1828b.pptx
+2025-05-10 10:19:51,051 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 10:19:54,685 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/c893b8414b734851bb60977e06635e4d/original
+2025-05-10 10:20:00,296 - config - INFO - Generated 6 scenes for file 4c5cae62-fdf8-4ca9-b03c-93e980a1828b.pptx.
+2025-05-10 10:20:05,053 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/c893b8414b734851bb60977e06635e4d/original
+2025-05-10 10:20:07,573 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:20:14,755 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/bd073b8713894a6e995da7a9b8b43fb8/original
+2025-05-10 10:20:18,996 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/c893b8414b734851bb60977e06635e4d/original
+2025-05-10 10:20:21,727 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:20:24,658 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f1175bef133b47d9be66665d98cd0e26/original
+2025-05-10 10:20:29,135 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/c893b8414b734851bb60977e06635e4d/original
+2025-05-10 10:20:30,976 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:20:33,759 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a318d5d3f3994cdf8462c166bfede71e/original
+2025-05-10 10:20:38,878 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/c893b8414b734851bb60977e06635e4d/original
+2025-05-10 10:20:41,169 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:20:44,157 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/7390d45854404f71839eb83b0b3ac9fa/original
+2025-05-10 10:20:47,707 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/c893b8414b734851bb60977e06635e4d/original
+2025-05-10 10:20:49,779 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:20:52,479 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e7254a2ed53e4c07a611232889589999/original
+2025-05-10 10:20:56,690 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/c893b8414b734851bb60977e06635e4d/original
+2025-05-10 10:20:58,703 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:21:01,568 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/3652be5b88f44ba9ab156f6814623050/original
+2025-05-10 10:23:50,315 - config - INFO - File uploaded successfully: last.pptx
+2025-05-10 10:23:50,338 - config - INFO - File processed successfully: last.pptx
+2025-05-10 10:23:56,509 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-10 10:23:56,513 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-10 10:23:56,514 - config - INFO - Cleaned up original file: temp_uploads\792c46b4-5eb9-48e5-8aa6-58128b069908.pptx
+2025-05-10 10:24:01,746 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 10:24:05,293 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/91d544f6c82a43aaa5e730b3727e2ef9/original
+2025-05-10 10:24:11,491 - config - INFO - Generated 6 scenes for file 792c46b4-5eb9-48e5-8aa6-58128b069908.pptx.
+2025-05-10 10:24:16,525 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/91d544f6c82a43aaa5e730b3727e2ef9/original
+2025-05-10 10:24:19,247 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:24:22,112 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/003ec400b5404b51af0b200602243aba/original
+2025-05-10 10:24:27,280 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/91d544f6c82a43aaa5e730b3727e2ef9/original
+2025-05-10 10:24:29,332 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:24:32,096 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/fe566e3e7f074d8c8a991dcb66c8a819/original
+2025-05-10 10:24:36,180 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/91d544f6c82a43aaa5e730b3727e2ef9/original
+2025-05-10 10:24:38,329 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:24:40,876 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/2bb135b68d804aac913131c8979faf54/original
+2025-05-10 10:24:46,636 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/91d544f6c82a43aaa5e730b3727e2ef9/original
+2025-05-10 10:24:49,212 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:24:53,064 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/98e5d32764fb42688cbf5ba131a847a8/original
+2025-05-10 10:24:56,835 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/91d544f6c82a43aaa5e730b3727e2ef9/original
+2025-05-10 10:24:58,776 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:25:01,787 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/919b531c7d914f2a834a5aa95db33fef/original
+2025-05-10 10:25:06,526 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/91d544f6c82a43aaa5e730b3727e2ef9/original
+2025-05-10 10:25:08,826 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 10:25:11,505 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/580d725b83d74c12b5f50abfb96efd00/original
+2025-05-10 10:29:24,081 - config - INFO - File uploaded successfully: last.pptx
+2025-05-10 10:29:24,105 - config - INFO - File processed successfully: last.pptx
+2025-05-10 10:29:38,427 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
+2025-05-10 10:29:38,431 - config - INFO - Extracted slide 2 with title: Why Use 3D?
+2025-05-10 10:29:38,432 - config - INFO - Cleaned up original file: temp_uploads\0ef118dc-724e-4f93-b54c-7b8b6847a801.pptx
+2025-05-10 11:09:46,224 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-10 11:09:46,276 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-10 11:09:56,871 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-10 11:09:56,991 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-10 11:09:57,008 - config - INFO - Extracted slide 3 with title: None
+2025-05-10 11:09:57,014 - config - INFO - Extracted slide 4 with title: None
+2025-05-10 11:09:57,018 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-10 11:09:57,019 - config - INFO - Cleaned up original file: temp_uploads\6d49690b-927e-447e-991a-3bcef40a2bb3.pptx
+2025-05-10 11:10:05,766 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 11:10:09,365 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/95c46c97042944a1aff1d37693112cf0/original
+2025-05-10 11:10:24,386 - config - INFO - Generated 16 scenes for file 6d49690b-927e-447e-991a-3bcef40a2bb3.pptx.
+2025-05-10 11:13:24,590 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-10 11:13:24,642 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-10 11:13:31,221 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-10 11:13:31,233 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-10 11:13:31,249 - config - INFO - Extracted slide 3 with title: None
+2025-05-10 11:13:31,255 - config - INFO - Extracted slide 4 with title: None
+2025-05-10 11:13:31,257 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-10 11:13:31,258 - config - INFO - Cleaned up original file: temp_uploads\ec8d24d8-1cb2-49e4-8d80-95296ef22fc1.pptx
+2025-05-10 11:13:38,095 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 11:13:41,690 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/8fca89d1f1d446f0870362674292a930/original
+2025-05-10 11:13:58,763 - config - INFO - Generated 14 scenes for file ec8d24d8-1cb2-49e4-8d80-95296ef22fc1.pptx.
+2025-05-10 11:15:56,991 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-10 11:15:57,034 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-10 11:15:59,106 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-10 11:15:59,121 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-10 11:15:59,139 - config - INFO - Extracted slide 3 with title: None
+2025-05-10 11:15:59,145 - config - INFO - Extracted slide 4 with title: None
+2025-05-10 11:15:59,150 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-10 11:15:59,150 - config - INFO - Cleaned up original file: temp_uploads\a570a856-e08c-4a6f-a7da-88d78b5a2b2f.pptx
+2025-05-10 11:16:05,948 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 11:16:09,473 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/b53b7608706942619ef7abc72deca218/original
+2025-05-10 11:16:23,771 - config - INFO - Generated 14 scenes for file a570a856-e08c-4a6f-a7da-88d78b5a2b2f.pptx.
+2025-05-10 11:19:23,213 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-10 11:19:23,252 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-10 11:19:28,849 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-10 11:19:28,860 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-10 11:19:28,876 - config - INFO - Extracted slide 3 with title: None
+2025-05-10 11:19:28,882 - config - INFO - Extracted slide 4 with title: None
+2025-05-10 11:19:28,916 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-10 11:19:28,916 - config - INFO - Cleaned up original file: temp_uploads\8128a349-8c27-444b-995e-117ca8cae4dc.pptx
+2025-05-10 11:19:36,191 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 11:19:39,798 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:19:52,600 - config - INFO - Generated 17 scenes for file 8128a349-8c27-444b-995e-117ca8cae4dc.pptx.
+2025-05-10 11:19:57,228 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:20:01,738 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:20:04,722 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:20:07,684 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/9c33e158a90c4faeae417afd62024041/original
+2025-05-10 11:20:08,247 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:20:11,425 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/597976c003824fd68ab029d8fa58fd59/original
+2025-05-10 11:20:17,738 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:20:22,014 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:20:24,644 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:20:27,476 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/7e2e07eebe434cc2aa1f4981f89ac5cd/original
+2025-05-10 11:20:27,856 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:20:30,645 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e01bcd981e6d4180a23d74e6516033b5/original
+2025-05-10 11:20:36,769 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:20:41,515 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:20:43,954 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:20:47,004 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/3a31ebc8e4684026b18b1fc14221455f/original
+2025-05-10 11:20:47,540 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:20:50,389 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0775347fa7af4739acbb1027962219ea/original
+2025-05-10 11:20:55,151 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:20:59,163 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:21:01,478 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:21:04,302 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/fca1368799284096ab543e3440443142/original
+2025-05-10 11:21:04,746 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:21:07,592 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b4c475eadd1445f7844adf256041753f/original
+2025-05-10 11:21:13,194 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:21:18,313 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:21:20,629 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:21:23,317 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a5690f8a29434a399a10b69d7834e1b5/original
+2025-05-10 11:21:23,821 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:21:26,410 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c185541646b640a08afe904ad9c34212/original
+2025-05-10 11:21:32,274 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:21:35,822 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:21:37,955 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:21:40,622 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/de86c27d9944446fb17996a982cdc118/original
+2025-05-10 11:21:40,985 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:21:43,492 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d3c6ae04ae734173b8d17f19b5e751fc/original
+2025-05-10 11:21:49,342 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:21:53,247 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:21:55,561 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:21:58,912 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/4673f168088749a19fb5ade8cc5c1576/original
+2025-05-10 11:21:59,415 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:22:02,237 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c8a5e3d94f9c4eb6a412a1be63a9dc8f/original
+2025-05-10 11:22:07,178 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:22:11,853 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:22:14,160 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:22:16,884 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/3635e32f4764472094265b035ce57b37/original
+2025-05-10 11:22:17,234 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:22:20,246 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/2c3991cd8674450f8266b9ade9f1bb04/original
+2025-05-10 11:22:24,851 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/a94c38b935514f7d8a8887f3d5cb34d0/original
+2025-05-10 11:22:36,048 - config - ERROR - Failed to merge image with logo.
+2025-05-10 11:22:36,048 - config - ERROR - Error generating image: 500: Failed to merge image with logo.
+2025-05-10 11:43:53,184 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-10 11:43:53,253 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-10 11:44:08,982 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-10 11:44:09,036 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-10 11:44:09,121 - config - INFO - Extracted slide 3 with title: None
+2025-05-10 11:44:09,153 - config - INFO - Extracted slide 4 with title: None
+2025-05-10 11:44:09,166 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-10 11:44:09,168 - config - INFO - Cleaned up original file: temp_uploads\ec85f8b4-87b5-4a52-9d91-8277336a50c1.pptx
+2025-05-10 11:44:13,732 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 11:44:13,735 - config - ERROR - Failed to upload logo to HeyGen: HTTPSConnectionPool(host='upload.heygen.com', port=443): Max retries exceeded with url: /v1/asset (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001F77EBDA990>: Failed to resolve 'upload.heygen.com' ([Errno 11001] getaddrinfo failed)"))
+2025-05-10 11:48:04,510 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-10 11:48:04,556 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-10 11:48:06,117 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-10 11:48:06,138 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-10 11:48:06,169 - config - INFO - Extracted slide 3 with title: None
+2025-05-10 11:48:06,174 - config - INFO - Extracted slide 4 with title: None
+2025-05-10 11:48:06,179 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-10 11:48:06,180 - config - INFO - Cleaned up original file: temp_uploads\4aefecde-6f2e-4653-8ecc-8d6476e060ad.pptx
+2025-05-10 11:48:10,332 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 11:48:14,165 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:48:24,384 - config - INFO - Generated 15 scenes for file 4aefecde-6f2e-4653-8ecc-8d6476e060ad.pptx.
+2025-05-10 11:48:28,803 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:48:31,196 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:48:34,224 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/07b60bff2fde481f880ab81ab3a97e10/original
+2025-05-10 11:48:38,760 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:48:40,916 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:48:43,895 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/81c54b7717844575b5338ab287d40430/original
+2025-05-10 11:48:48,424 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:48:50,543 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:48:53,233 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/51514161a4424a148d9e417bedaa9e2c/original
+2025-05-10 11:48:58,842 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:49:00,811 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:49:03,708 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/66f382b11fe6415e9e98280d955aef9f/original
+2025-05-10 11:49:08,203 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:49:09,963 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:49:12,656 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b6c9d6e0ec824ae48c92155dcbcc2d34/original
+2025-05-10 11:49:17,039 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:49:18,927 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:49:21,599 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e3e6d9e46085422282a0406db7d81e30/original
+2025-05-10 11:49:25,780 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:49:27,965 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:49:30,534 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/dfa9fce1df2f434183bb4b28f1eaf54e/original
+2025-05-10 11:49:35,084 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:49:37,055 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:49:39,936 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/47afb85d0d12441cb2da4b5e72a3b21e/original
+2025-05-10 11:49:43,921 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:49:46,299 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:49:48,882 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f261f2073b1647a9b21ffc0a7248758c/original
+2025-05-10 11:49:53,066 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:49:54,922 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:49:57,712 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/ed5a556b5093425eb1e3aea40f301328/original
+2025-05-10 11:50:02,399 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:50:04,188 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:50:06,994 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/51c5e32da30444e78323a6de59cd80db/original
+2025-05-10 11:50:11,938 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:50:13,666 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:50:16,251 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/38a95c056c69481a920295fc666d7b88/original
+2025-05-10 11:50:21,023 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:50:22,733 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:50:25,289 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/4d9b54b5e8b047cabc0eb59ff7857f3c/original
+2025-05-10 11:50:29,768 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:50:31,435 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:50:34,182 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/cdbaa9bd77724364bbfd28ac384221ea/original
+2025-05-10 11:50:38,449 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/72289908f72043f098d32690bb1e4d28/original
+2025-05-10 11:50:40,259 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:50:42,942 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/47080d40e3024f47b6057421bc9963ad/original
+2025-05-10 11:52:30,551 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-10 11:52:30,613 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-10 11:52:32,707 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-10 11:52:32,722 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-10 11:52:32,757 - config - INFO - Extracted slide 3 with title: None
+2025-05-10 11:52:32,765 - config - INFO - Extracted slide 4 with title: None
+2025-05-10 11:52:32,770 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-10 11:52:32,771 - config - INFO - Cleaned up original file: temp_uploads\724c2057-3b05-483a-95be-e3dc73265c2a.pptx
+2025-05-10 11:52:37,953 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
+2025-05-10 11:52:41,537 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:52:51,546 - config - INFO - Generated 12 scenes for file 724c2057-3b05-483a-95be-e3dc73265c2a.pptx.
+2025-05-10 11:52:55,505 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:52:59,501 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:53:02,283 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:53:05,182 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/7e5dee70f8ad4baf8dcb29be9fbd0b3f/original
+2025-05-10 11:53:05,613 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:53:08,417 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/470c176df3b74ad7b892c59c16b75dce/original
+2025-05-10 11:53:13,486 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:53:18,071 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:53:20,333 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:53:23,144 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/7f743080aedc4420a28dd29e7a9fbe8c/original
+2025-05-10 11:53:23,631 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:53:26,496 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/95f175532ffd43e1bc24b9027c3abbea/original
+2025-05-10 11:53:32,275 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:53:37,420 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:53:39,619 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:53:42,320 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/7e87ec2e6391483cbcf59603bafedf56/original
+2025-05-10 11:53:42,729 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:53:45,909 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/01d7a3d9538a42c9a402a6de110af23f/original
+2025-05-10 11:53:51,924 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:53:55,584 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:53:57,600 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:54:00,358 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e044bc6dab98494fbc52f502dc5a748c/original
+2025-05-10 11:54:01,390 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:54:03,963 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/095fbf2e1dfe4893b91a323cfe4e75d7/original
+2025-05-10 11:54:09,040 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:54:13,873 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:54:16,098 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:54:18,786 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0f8e01d9b3c4436e9f21a7053328e253/original
+2025-05-10 11:54:19,250 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:54:21,997 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/58c48a1503f54305b2979ca72115103f/original
+2025-05-10 11:54:27,219 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:54:31,468 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:54:33,799 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:54:36,333 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/17ae650b0d0e4f1eaa9f548a0e27e424/original
+2025-05-10 11:54:36,747 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:54:39,305 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/646c3f73a9274cf18db472d2f3bd42bf/original
+2025-05-10 11:54:44,874 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:54:46,644 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:54:49,567 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b3c925a0a8984bfb9226ca45443ab002/original
+2025-05-10 11:54:53,658 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:54:55,525 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:54:58,158 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1d58519dd1b5453f94b19f7b3fb9b59e/original
+2025-05-10 11:55:02,306 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:55:04,254 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:55:07,159 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/639416035d67493282dd2faeb81aacee/original
+2025-05-10 11:55:12,746 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:55:14,505 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:55:17,343 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/7637dac856fd45be888c3acbbbb4f02a/original
+2025-05-10 11:55:21,238 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:55:23,254 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:55:25,994 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/09742e7279374b318498442ca8d3d63d/original
+2025-05-10 11:55:30,674 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:55:32,486 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:55:35,153 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b9cdc473692c4e0d9e3593d4ae860ebc/original
+2025-05-10 11:55:39,622 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:55:41,367 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:55:43,879 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/32b89945dc3945f29c85ec4e295eca7e/original
+2025-05-10 11:55:48,982 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:55:50,779 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:55:53,729 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/59f126c4a1af41e5a48abd9f96702c89/original
+2025-05-10 11:55:59,062 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:56:00,883 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:56:03,773 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/2646f78b39844ff1b924a5ff846de6c2/original
+2025-05-10 11:56:08,422 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:56:10,236 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:56:13,191 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b1cf37bda0a448eaba9ad6da7f7ee7e0/original
+2025-05-10 11:56:18,369 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:56:20,078 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:56:22,629 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/80361d6aa5704a6ab4212ad3db267586/original
+2025-05-10 11:56:26,926 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/099a21715216435e9f35a1d803d5b420/original
+2025-05-10 11:56:28,616 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-10 11:56:31,124 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/4b47c83ae48f48209df19d7cf499f070/original

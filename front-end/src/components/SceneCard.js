@@ -45,6 +45,7 @@ const SceneCard = ({
   handleRegenerateImage,
   imageZoom,
   handleZoom,
+  generatedImagesCount,
 }) => {
   const [uploading, setUploading] = useState(false);
 
@@ -86,6 +87,11 @@ const SceneCard = ({
           <Row justify="space-between" align="middle">
             <Col>
               <Text strong>Background Visual</Text>
+            </Col>
+            <Col>
+              <Text type="secondary">
+                {generatedImagesCount}/{totalScenes} images are generated
+              </Text>
             </Col>
             <Col>
               <Space>

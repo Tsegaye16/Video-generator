@@ -72,6 +72,7 @@ const App = () => {
     setLogoURL,
     aspectRatio, // Add aspectRatio
     setAspectRatio, // Add setAspectRatio
+    generatedImagesCount,
   } = usePresentation();
 
   const [showHelpModal, setShowHelpModal] = useState(false); // State to hold the logo URL
@@ -173,6 +174,7 @@ const App = () => {
               setSelectedVoice={setSelectedVoice}
               videoResult={videoResult}
               logoUrl={logoURL}
+              generatedImagesCount={generatedImagesCount}
             />
           )}
         </Space>
