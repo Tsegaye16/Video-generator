@@ -191,7 +191,12 @@ const ReviewStep = ({
             size="large"
             onClick={handleGenerateVideoClick}
             icon={<VideoCameraOutlined />}
-            disabled={!selectedVoice || isGeneratingVideo || isGeneratingImages}
+            disabled={
+              !selectedVoice ||
+              isGeneratingVideo ||
+              isGeneratingImages ||
+              generatedImagesCount !== storyboardScenes.length
+            }
           >
             {videoResult?.videoUrl ? "Regenerate Video" : "Generate Video"}
           </Button>

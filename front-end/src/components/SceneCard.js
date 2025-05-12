@@ -46,6 +46,7 @@ const SceneCard = ({
   imageZoom,
   handleZoom,
   generatedImagesCount,
+  errorCount,
 }) => {
   const [uploading, setUploading] = useState(false);
 
@@ -185,7 +186,9 @@ const SceneCard = ({
             {!(scene.isGenerating || uploading || scene.isQueued) &&
               !scene.generated_image_url &&
               !scene.imageGenError && (
-                <Text type="secondary">Image not generated</Text>
+                <Text type="secondary">
+                  Image not generated. Please regenerate it
+                </Text>
               )}
           </SceneImageContainer>
 
