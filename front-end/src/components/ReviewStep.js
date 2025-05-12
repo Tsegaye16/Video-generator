@@ -216,10 +216,22 @@ const ReviewStep = ({
           optionFilterProp="children"
           showSearch
           allowClear
-          filterOption={(input, option) =>
-            (option?.avatar_name ?? "")
-              .toLowerCase()
-              .includes(input.toLowerCase())
+          filterOption={(input, option) => {
+            // Search in both avatar name and premium tag
+            const children = option?.children?.props?.children;
+            const avatarName = children?.[1]?.props?.children?.[0] || "";
+            const premiumTag =
+              children?.[1]?.props?.children?.[1]?.props?.children || "";
+
+            return (
+              avatarName.toLowerCase().includes(input.toLowerCase()) ||
+              premiumTag.toLowerCase().includes(input.toLowerCase())
+            );
+          }}
+          notFoundContent={
+            <div style={{ padding: 8, textAlign: "center" }}>
+              No avatars found matching your search
+            </div>
           }
         >
           {avatars?.map((avatar) => (
@@ -275,10 +287,22 @@ const ReviewStep = ({
           value={selectedVoice}
           onChange={setSelectedVoice}
           placeholder="Select a voice"
+          showSearch
+          optionFilterProp="children"
+          filterOption={(input, option) => {
+            // Search in name, gender, and language
+            const text = option?.children?.toString().toLowerCase() || "";
+            return text.includes(input.toLowerCase());
+          }}
+          notFoundContent={
+            <div style={{ padding: 8, textAlign: "center" }}>
+              No voices found matching your search
+            </div>
+          }
         >
           {voices?.map((voice) => (
             <Option key={voice.voice_id} value={voice.voice_id}>
-              {voice.name} ({voice.gender || "unknown"})
+              {voice.name} ({voice.gender || "unknown"}) - {voice.language}
             </Option>
           ))}
         </Select>
