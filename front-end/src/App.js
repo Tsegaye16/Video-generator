@@ -43,6 +43,7 @@ const App = () => {
     logoPreviewUrl,
     logoId,
     logoURL,
+    tableImageUrls,
     currentStep,
     imageZoom,
     showAdvanced,
@@ -156,6 +157,7 @@ const App = () => {
               logoFile={logoFile}
               setLogoFile={setLogoFile}
               logoId={logoId}
+              tableImageUrls={tableImageUrls}
               setLogoId={setLogoId}
               handleLogoUpload={handleLogoUpload}
               handleRemoveLogo={handleRemoveLogo}

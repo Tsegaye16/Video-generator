@@ -27,7 +27,7 @@ const { Option } = Select;
 
 const ReviewStep = ({
   storyboardScenes,
-
+  tableImageUrls,
   handleSceneChange,
   handleRegenerateImage,
   imageZoom,
@@ -127,6 +127,7 @@ const ReviewStep = ({
               handleZoom={handleZoom}
               activeSceneIndex={activeSceneIndex}
               logoURL={logoURL}
+              tableImageUrls={tableImageUrls}
               generatedImagesCount={generatedImagesCount}
             />
           ))}

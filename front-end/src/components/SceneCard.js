@@ -17,20 +17,22 @@ import {
   PlusOutlined,
   MinusOutlined,
   UploadOutlined,
+  PictureOutlined,
 } from "@ant-design/icons";
 import {
   StyledCard,
   SceneImageContainer,
   ZoomControls,
   SceneCounter,
+  StyledCarouselTableImage,
 } from "../styles/AppStyle";
 import AntImage from "antd/lib/image";
 import { uploadImage } from "../utils/api";
+import { overlayAndUploadImage } from "../utils/imageProcessing"; // Import the new utility
 
 const { Text } = Typography;
 const { TextArea } = Input;
 
-// Utility function to get ordinal suffix (e.g., 1st, 2nd, 3rd, 4th)
 const getOrdinalSuffix = (n) => {
   const s = ["th", "st", "nd", "rd"];
   const v = n % 100;
@@ -46,9 +48,10 @@ const SceneCard = ({
   imageZoom,
   handleZoom,
   generatedImagesCount,
-  errorCount,
+  tableImageUrls,
 }) => {
   const [uploading, setUploading] = useState(false);
+  const [overlaying, setOverlaying] = useState(false); // Track overlay/upload state
 
   const handleImageUpload = async (file) => {
     setUploading(true);
@@ -57,8 +60,6 @@ const SceneCard = ({
         file,
         localStorage.getItem("logo_url")
       );
-
-      // Update the scene with the new image URL from backend
       handleSceneChange(
         scene.scene_id,
         "generated_image_url",
@@ -71,7 +72,27 @@ const SceneCard = ({
     } finally {
       setUploading(false);
     }
-    return false; // Prevent default upload behavior
+    return false;
+  };
+
+  const handleAddToScene = async (scene, scene_id, tableImageUrl) => {
+    console.log("Current scene Image URL:", scene);
+    console.log("current Table Image URL:", tableImageUrl);
+    if (!scene) {
+      message.error("No background image available for this scene.");
+      return;
+    }
+
+    setOverlaying(true);
+    try {
+      const newImageUrl = await overlayAndUploadImage(scene, tableImageUrl);
+      handleSceneChange(scene_id, "generated_image_url", newImageUrl);
+      message.success("Table image added to scene background successfully!");
+    } catch (error) {
+      message.error("Failed to add table image to scene.");
+    } finally {
+      setOverlaying(false);
+    }
   };
 
   return (
@@ -131,26 +152,36 @@ const SceneCard = ({
               Scene {index + 1}/{totalScenes}
             </SceneCounter>
 
-            {(scene.isGenerating || uploading) && (
+            {(scene.isGenerating || uploading || overlaying) && (
               <Space direction="vertical" align="center">
                 <Spin size="large" />
                 <Text type="secondary">
-                  {uploading ? "Uploading image..." : "Image in progress..."}
+                  {uploading
+                    ? "Uploading image..."
+                    : overlaying
+                    ? "Adding table image to scene..."
+                    : "Image in progress..."}
                 </Text>
               </Space>
             )}
 
-            {!(scene.isGenerating || uploading) && scene.isQueued && (
-              <Space direction="vertical" align="center">
-                <Spin size="small" />
-                <Text type="secondary">
-                  Generating{" "}
-                  {getOrdinalSuffix(scene.generationProgress.current)} image
-                </Text>
-              </Space>
-            )}
+            {!(scene.isGenerating || uploading || overlaying) &&
+              scene.isQueued && (
+                <Space direction="vertical" align="center">
+                  <Spin size="small" />
+                  <Text type="secondary">
+                    Generating{" "}
+                    {getOrdinalSuffix(scene.generationProgress.current)} image
+                  </Text>
+                </Space>
+              )}
 
-            {!(scene.isGenerating || uploading || scene.isQueued) &&
+            {!(
+              scene.isGenerating ||
+              uploading ||
+              overlaying ||
+              scene.isQueued
+            ) &&
               scene.generated_image_url && (
                 <>
                   <ZoomControls>
@@ -183,7 +214,12 @@ const SceneCard = ({
                 </>
               )}
 
-            {!(scene.isGenerating || uploading || scene.isQueued) &&
+            {!(
+              scene.isGenerating ||
+              uploading ||
+              overlaying ||
+              scene.isQueued
+            ) &&
               !scene.generated_image_url &&
               !scene.imageGenError && (
                 <Text type="secondary">
@@ -226,6 +262,79 @@ const SceneCard = ({
             }
             style={{ marginTop: "3px" }}
           />
+
+          <Text strong style={{ display: "block", marginTop: 16 }}>
+            Table Images
+          </Text>
+
+          {Object.values(tableImageUrls).flat().length === 0 ? (
+            <Text type="secondary">No table images available.</Text>
+          ) : (
+            <StyledCarouselTableImage arrows dots={false}>
+              {Object.values(tableImageUrls)
+                .flat()
+                .map((url, idx) => (
+                  <div
+                    key={idx}
+                    style={{
+                      position: "relative",
+                      padding: "8px 8px 40px 8px",
+                      textAlign: "center",
+                    }}
+                  >
+                    <AntImage
+                      src={url}
+                      alt={`Table image ${idx + 1}`}
+                      style={{
+                        width: "100%",
+                        height: "150px",
+                        objectFit: "cover",
+                        borderRadius: "8px",
+                        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
+                      }}
+                    />
+                    <Tooltip title="Add to scene background">
+                      <Button
+                        type="primary"
+                        shape="round"
+                        icon={<PictureOutlined />}
+                        size="small"
+                        loading={overlaying}
+                        disabled={
+                          overlaying ||
+                          uploading ||
+                          scene.isGenerating ||
+                          scene.isQueued ||
+                          scene.generated_image_url === null
+                        }
+                        style={{
+                          position: "absolute",
+                          bottom: "12px",
+                          left: "50%",
+                          transform: "translateX(-50%)",
+                          backgroundColor: "rgba(24, 144, 255, 0.9)",
+                          border: "none",
+                          zIndex: 10,
+                          boxShadow: "0 1px 4px rgba(0, 0, 0, 0.2)",
+                        }}
+                        aria-label={`Add table image ${
+                          idx + 1
+                        } to scene background`}
+                        onClick={() =>
+                          handleAddToScene(
+                            scene.generated_image_url,
+                            scene.scene_id,
+                            url
+                          )
+                        }
+                      >
+                        Add to Scene
+                      </Button>
+                    </Tooltip>
+                  </div>
+                ))}
+            </StyledCarouselTableImage>
+          )}
         </Col>
       </Row>
     </StyledCard>

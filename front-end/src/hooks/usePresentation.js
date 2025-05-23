@@ -19,7 +19,7 @@ export const usePresentation = () => {
   const [logoId, setLogoId] = useState(null);
 
   const [logoURL, setLogoURL] = useState(null);
-
+  const [tableImageUrls, setTableImageUrls] = useState({});
   const [currentStep, setCurrentStep] = useState(0);
   const [imageZoom, setImageZoom] = useState(1);
   const [showAdvanced, setShowAdvanced] = useState(false);
@@ -85,6 +85,8 @@ export const usePresentation = () => {
     setImageFile(null);
     setLogoPreviewUrl(null);
     setLogoId(null);
+    setLogoURL(null);
+    setTableImageUrls({});
     setCurrentStep(0);
     setImageZoom(1);
     setShowAdvanced(false);
@@ -154,14 +156,14 @@ export const usePresentation = () => {
 
   const handleGenerateScenes = async () => {
     if (!extractionData) return;
-    // if (!logoId) {
-    //   message.error("Please upload a logo before generating the storyboard.");
-    //   return;
-    // }
+
     setIsGeneratingScenes(true);
     try {
-      const scenes = await api.generateScenes(extractionData);
-      console.log("Generated scenes:", scenes);
+      const response = await api.generateScenes(extractionData);
+
+      const { scenes, table_image_urls } = response;
+      console.log("Generated table image:", table_image_urls);
+      setTableImageUrls(table_image_urls);
       await generateInitialImages(scenes);
     } finally {
       setIsGeneratingScenes(false);
@@ -431,6 +433,7 @@ export const usePresentation = () => {
     setLogoFile, // Add setLogoFile
     logoPreviewUrl,
     logoId,
+    tableImageUrls,
     currentStep,
     imageZoom,
     showAdvanced,

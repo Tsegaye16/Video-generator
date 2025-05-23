@@ -3,3 +3,16 @@ server/__pycache__/
 server/data
 server/routes/__pycache__
 /server/temp_uploads/
+/server/__pycache__/
+/server/.idea/
+/node_modules
+composite-debug.png
+composite-result.png
+debug-composite.png
+error-report.json
+imageOverlay.js
+output.png
+package-lock.json
+package.json
+.api
+/frontend/.api

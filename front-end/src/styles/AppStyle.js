@@ -117,3 +117,42 @@ export const SceneCounter = styled.div`
   border-radius: 4px;
   font-size: 12px;
 `;
+
+export const StyledCarouselTableImage = styled(Carousel)`
+  position: relative;
+  margin-top: 12px;
+
+  .slick-slide {
+    text-align: center;
+    position: relative;
+    overflow: visible; /* Ensure buttons aren’t clipped */
+  }
+
+  .slick-arrow {
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    color: rgba(0, 0, 0, 0.45);
+
+    &::before {
+      font-size: 0px;
+      color: black;
+    }
+
+    &:hover::before {
+      color: ${(props) => props.theme.token?.colorPrimary || "#1890ff"};
+    }
+  }
+
+  .slick-prev {
+    left: 62px;
+  }
+
+  .slick-next {
+    right: 62px;
+  }
+
+  .slick-dots {
+    display: none !important;
+  }
+`;

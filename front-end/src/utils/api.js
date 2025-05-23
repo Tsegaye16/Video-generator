@@ -109,7 +109,10 @@ export const generateScenes = async (extractionData) => {
     });
     message.success("Storyboard scenes generated!");
     console.log("Generated scenes:", response.data);
-    return response.data.scenes;
+    return {
+      scenes: response.data.scenes || [],
+      table_image_urls: response.data.table_image_urls || {},
+    };
   } catch (error) {
     const errorMsg = error.response?.data?.detail || error.message;
     message.error(`Generation error: ${errorMsg}`);
