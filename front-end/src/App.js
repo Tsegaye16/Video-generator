@@ -60,6 +60,7 @@ const App = () => {
     handleSceneChange,
     handleRegenerateImage,
     handleLogoUpload,
+    handleRemoveLogo,
     handleZoom,
     handleGenerateVideo,
     resetState,
@@ -142,6 +143,7 @@ const App = () => {
               logoURL={logoURL}
               setLogoURL={setLogoURL}
               handleLogoUpload={handleLogoUpload}
+              handleRemoveLogo={handleRemoveLogo}
               aspectRatio={aspectRatio} // Pass aspectRatio
               setAspectRatio={setAspectRatio} // Pass setAspectRatio
             />
@@ -156,6 +158,7 @@ const App = () => {
               logoId={logoId}
               setLogoId={setLogoId}
               handleLogoUpload={handleLogoUpload}
+              handleRemoveLogo={handleRemoveLogo}
               setLogoPreviewUrl={setLogoPreviewUrl}
               handleSceneChange={handleSceneChange}
               handleRegenerateImage={handleRegenerateImage}

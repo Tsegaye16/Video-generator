@@ -8,14 +8,10 @@ const GenerateStep = ({
   isGeneratingScenes,
   handleGenerateScenes,
 
-  setLogoFile,
   logoPreviewUrl,
-  setLogoPreviewUrl,
-  logoId,
-  setLogoId,
 
-  setLogoURL,
   handleLogoUpload,
+  handleRemoveLogo,
 }) => {
   return (
     <>
@@ -34,7 +30,7 @@ const GenerateStep = ({
           </Paragraph>
           <Row justify="center" style={{ marginBottom: 24 }}>
             <Space direction="vertical" align="center">
-              <Text strong>Upload Logo (Required for Image Generation)</Text>
+              <Text strong>Upload Logo (Optional)</Text>
               <Upload
                 name="logo"
                 listType="picture-card"
@@ -56,12 +52,7 @@ const GenerateStep = ({
                 <Button
                   size="small"
                   danger
-                  onClick={() => {
-                    setLogoFile(null);
-                    setLogoPreviewUrl(null);
-                    setLogoId(null);
-                    setLogoURL(null);
-                  }}
+                  onClick={handleRemoveLogo}
                   icon={<MinusOutlined />}
                 >
                   Remove Logo
@@ -73,7 +64,6 @@ const GenerateStep = ({
             type="primary"
             onClick={handleGenerateScenes}
             loading={isGeneratingScenes}
-            disabled={!logoId}
             size="large"
             block
           >

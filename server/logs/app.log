@@ -1,481 +1,972 @@
-2025-05-12 06:50:50,529 - config - INFO - File uploaded successfully: last.pptx
-2025-05-12 06:50:50,605 - config - INFO - File processed successfully: last.pptx
-2025-05-12 06:50:52,457 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
-2025-05-12 06:50:52,514 - config - INFO - Extracted slide 2 with title: Why Use 3D?
-2025-05-12 06:50:52,515 - config - INFO - Cleaned up original file: temp_uploads\6e4d2fba-3200-4b46-abb0-3052bafdaa3a.pptx
-2025-05-12 06:50:57,162 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 06:50:59,555 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/2a413f3a9de2475682156fa1a00acf86/original
-2025-05-12 06:51:06,703 - config - INFO - Generated 6 scenes for file 6e4d2fba-3200-4b46-abb0-3052bafdaa3a.pptx.
-2025-05-12 06:51:10,923 - config - ERROR - Error generating image: 500 INTERNAL. {'error': {'code': 500, 'message': 'An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting', 'status': 'INTERNAL'}}
-2025-05-12 06:51:15,021 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/2a413f3a9de2475682156fa1a00acf86/original
-2025-05-12 06:51:17,888 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 06:51:19,676 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/10ea9a24eef442fc906fe05f35360cbd/original
-2025-05-12 06:51:23,870 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/2a413f3a9de2475682156fa1a00acf86/original
-2025-05-12 06:51:25,373 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 06:51:27,138 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/79ce2d3cf918469b8521a32b3a335270/original
-2025-05-12 06:51:31,925 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/2a413f3a9de2475682156fa1a00acf86/original
-2025-05-12 06:51:33,809 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 06:51:35,777 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/74d53abeecfd4e13ae82729f7f82caa8/original
-2025-05-12 06:51:40,005 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/2a413f3a9de2475682156fa1a00acf86/original
-2025-05-12 06:51:41,334 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 06:51:43,000 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/06b9b4cb253a41f9b668592d1d312d40/original
-2025-05-12 06:51:46,707 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/2a413f3a9de2475682156fa1a00acf86/original
-2025-05-12 06:51:47,987 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 06:51:49,768 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c82004ae190549cc9a7fbef73e13aa20/original
-2025-05-12 06:51:58,739 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/2a413f3a9de2475682156fa1a00acf86/original
-2025-05-12 06:52:00,425 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 06:52:02,181 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/54a57930837b483f9b0f3fd9f29cf568/original
-2025-05-12 06:55:10,278 - config - INFO - File uploaded successfully: last.pptx
-2025-05-12 06:55:10,502 - config - INFO - File processed successfully: last.pptx
-2025-05-12 06:55:13,415 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
-2025-05-12 06:55:13,420 - config - INFO - Extracted slide 2 with title: Why Use 3D?
-2025-05-12 06:55:13,420 - config - INFO - Cleaned up original file: temp_uploads\54b0dee4-cba1-407f-a8d8-5b2b1d1a84ab.pptx
-2025-05-12 06:55:17,926 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 06:55:20,058 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/eb48252d7efd4431832d8b422f5b5a10/original
-2025-05-12 06:55:31,614 - config - INFO - Generated 4 scenes for file 54b0dee4-cba1-407f-a8d8-5b2b1d1a84ab.pptx.
-2025-05-12 06:55:36,071 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/eb48252d7efd4431832d8b422f5b5a10/original
-2025-05-12 06:55:38,053 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 06:55:39,876 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a9c612f9bbd34ad3900233d2d0e97f68/original
-2025-05-12 06:55:44,563 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/eb48252d7efd4431832d8b422f5b5a10/original
-2025-05-12 06:55:45,937 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 06:55:47,610 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d060fd6a538e4aeea3cdcc4c5ee6bee4/original
-2025-05-12 06:55:52,059 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/eb48252d7efd4431832d8b422f5b5a10/original
-2025-05-12 06:55:53,614 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 06:55:55,314 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d2ee33cd4bbb43738296d1630e0a7ba3/original
-2025-05-12 06:56:00,185 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/eb48252d7efd4431832d8b422f5b5a10/original
-2025-05-12 06:56:01,612 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 06:56:03,741 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d6a72e1cb67c446c8b202e301efebbef/original
-2025-05-12 07:03:33,145 - config - INFO - File uploaded successfully: last.pptx
-2025-05-12 07:03:33,191 - config - INFO - File processed successfully: last.pptx
-2025-05-12 07:03:34,625 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
-2025-05-12 07:03:34,638 - config - INFO - Extracted slide 2 with title: Why Use 3D?
-2025-05-12 07:03:34,639 - config - INFO - Cleaned up original file: temp_uploads\5987f006-4050-44c3-9633-3a0b7403452e.pptx
-2025-05-12 07:03:38,854 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 07:03:41,255 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/e22fa190bee64677b8553de619aa342c/original
-2025-05-12 07:03:47,802 - config - INFO - Generated 6 scenes for file 5987f006-4050-44c3-9633-3a0b7403452e.pptx.
-2025-05-12 07:03:51,473 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/e22fa190bee64677b8553de619aa342c/original
-2025-05-12 07:03:53,418 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:03:55,276 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/84b97d3b13f7486a93f86b3607e5cf3d/original
-2025-05-12 07:04:02,753 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/e22fa190bee64677b8553de619aa342c/original
-2025-05-12 07:04:04,700 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:04:06,572 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e4eea0ee0176469d914ae6f45ac51ca0/original
-2025-05-12 07:04:11,379 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/e22fa190bee64677b8553de619aa342c/original
-2025-05-12 07:04:12,871 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:04:14,601 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1bfd74a1715843558f947e97898b83d7/original
-2025-05-12 07:04:18,718 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/e22fa190bee64677b8553de619aa342c/original
-2025-05-12 07:04:20,566 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:04:22,214 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/71b41a2ae7694f23a86be3212242ec76/original
-2025-05-12 07:04:26,851 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/e22fa190bee64677b8553de619aa342c/original
-2025-05-12 07:04:28,890 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:04:30,665 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/50712f64a11248b3a1ec81dc48e252a2/original
-2025-05-12 07:04:34,670 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/e22fa190bee64677b8553de619aa342c/original
-2025-05-12 07:04:36,144 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:04:37,954 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/5473892f641b4f14b6e43d4887db2fa8/original
-2025-05-12 07:05:00,249 - config - INFO - File uploaded successfully: last.pptx
-2025-05-12 07:05:00,288 - config - INFO - File processed successfully: last.pptx
-2025-05-12 07:05:02,293 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
-2025-05-12 07:05:02,300 - config - INFO - Extracted slide 2 with title: Why Use 3D?
-2025-05-12 07:05:02,301 - config - INFO - Cleaned up original file: temp_uploads\a52d5438-49c0-484a-a98e-1e795da69cbd.pptx
-2025-05-12 07:05:06,839 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 07:05:09,522 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/f0392e7b3b2b4bea8eec51fd809053ab/original
-2025-05-12 07:05:15,245 - config - INFO - Generated 5 scenes for file a52d5438-49c0-484a-a98e-1e795da69cbd.pptx.
-2025-05-12 07:05:19,250 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f0392e7b3b2b4bea8eec51fd809053ab/original
-2025-05-12 07:05:21,307 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:05:23,072 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/6094d71f0fac4e35bcc6db20c9466ec0/original
-2025-05-12 07:05:27,014 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f0392e7b3b2b4bea8eec51fd809053ab/original
-2025-05-12 07:05:28,391 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:05:33,673 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a96fa411e64446db9cec3dfdd172324d/original
-2025-05-12 07:05:37,964 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f0392e7b3b2b4bea8eec51fd809053ab/original
-2025-05-12 07:05:39,413 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:05:41,470 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c618156f206942c58abbcf65b76143e3/original
-2025-05-12 07:05:45,900 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f0392e7b3b2b4bea8eec51fd809053ab/original
-2025-05-12 07:05:47,517 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:05:49,342 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b14da8c66d10481395c5dd402db70b0b/original
-2025-05-12 07:05:53,062 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f0392e7b3b2b4bea8eec51fd809053ab/original
-2025-05-12 07:05:54,700 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:05:56,354 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b44777ac809b4a5db239015f2d3f783a/original
-2025-05-12 07:08:01,464 - config - INFO - File uploaded successfully: last.pptx
-2025-05-12 07:08:01,503 - config - INFO - File processed successfully: last.pptx
-2025-05-12 07:08:28,850 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
-2025-05-12 07:08:28,855 - config - INFO - Extracted slide 2 with title: Why Use 3D?
-2025-05-12 07:08:28,856 - config - INFO - Cleaned up original file: temp_uploads\5852cfdc-aa1a-43eb-98a9-7200ae133ba1.pptx
-2025-05-12 07:08:33,403 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 07:08:35,511 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/ab6f9442d38a475e8f0b48d2ddf1f49a/original
-2025-05-12 07:08:41,375 - config - INFO - Generated 6 scenes for file 5852cfdc-aa1a-43eb-98a9-7200ae133ba1.pptx.
-2025-05-12 07:08:46,016 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/ab6f9442d38a475e8f0b48d2ddf1f49a/original
-2025-05-12 07:08:48,079 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:08:50,015 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/761b9fb102924df28764e7d3c92608c0/original
-2025-05-12 07:08:54,308 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/ab6f9442d38a475e8f0b48d2ddf1f49a/original
-2025-05-12 07:08:56,153 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:08:58,000 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/216e1a7c281541bdac58c274676246ad/original
-2025-05-12 07:09:02,691 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/ab6f9442d38a475e8f0b48d2ddf1f49a/original
-2025-05-12 07:09:04,535 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:09:06,276 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/642768ec82e04a3e9875889bb7cbbac7/original
-2025-05-12 07:09:11,489 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/ab6f9442d38a475e8f0b48d2ddf1f49a/original
-2025-05-12 07:09:13,648 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:09:15,576 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a8e9a380e77a41eb8661c65515592a39/original
-2025-05-12 07:09:19,614 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/ab6f9442d38a475e8f0b48d2ddf1f49a/original
-2025-05-12 07:09:21,231 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:09:22,950 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/134348f796114d8699de9b9066d90a89/original
-2025-05-12 07:09:27,561 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/ab6f9442d38a475e8f0b48d2ddf1f49a/original
-2025-05-12 07:09:29,108 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:09:30,869 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f07c0e582fa445afa9bd237f0a5eb4c1/original
-2025-05-12 07:11:23,396 - config - INFO - File uploaded successfully: last.pptx
-2025-05-12 07:11:23,427 - config - INFO - File processed successfully: last.pptx
-2025-05-12 07:11:27,947 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
-2025-05-12 07:11:27,955 - config - INFO - Extracted slide 2 with title: Why Use 3D?
-2025-05-12 07:11:27,956 - config - INFO - Cleaned up original file: temp_uploads\1662fba5-78fc-4aa9-8053-7d05d6d838e1.pptx
-2025-05-12 07:11:33,192 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 07:11:35,551 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/d966af4350b74be48835dfc7d59f021b/original
-2025-05-12 07:11:40,991 - config - INFO - Generated 4 scenes for file 1662fba5-78fc-4aa9-8053-7d05d6d838e1.pptx.
-2025-05-12 07:11:45,226 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/d966af4350b74be48835dfc7d59f021b/original
-2025-05-12 07:11:47,430 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:11:49,139 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0ab21ead20e54e56b63f773a12524b1d/original
-2025-05-12 07:11:53,108 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/d966af4350b74be48835dfc7d59f021b/original
-2025-05-12 07:11:54,636 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:11:56,535 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a116e2f417894af9b33bb6658af011a0/original
-2025-05-12 07:12:00,457 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/d966af4350b74be48835dfc7d59f021b/original
-2025-05-12 07:12:02,227 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:12:03,956 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/81735499d0424b8eadd2eeed907b5fe2/original
-2025-05-12 07:12:07,964 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/d966af4350b74be48835dfc7d59f021b/original
-2025-05-12 07:12:09,836 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:12:11,569 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/89405308f0da4602a1485d499ed21ed5/original
-2025-05-12 07:35:50,698 - config - INFO - File uploaded successfully: last.pptx
-2025-05-12 07:35:50,755 - config - INFO - File processed successfully: last.pptx
-2025-05-12 07:35:52,595 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
-2025-05-12 07:35:52,602 - config - INFO - Extracted slide 2 with title: Why Use 3D?
-2025-05-12 07:35:52,603 - config - INFO - Cleaned up original file: temp_uploads\08f8568e-7482-4e66-84ef-700330a0bfaa.pptx
-2025-05-12 07:35:57,407 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 07:35:59,849 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/d78f212e6e7c4d368c0f7317023c3ad1/original
-2025-05-12 07:36:05,117 - config - INFO - Generated 4 scenes for file 08f8568e-7482-4e66-84ef-700330a0bfaa.pptx.
-2025-05-12 07:36:09,186 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/d78f212e6e7c4d368c0f7317023c3ad1/original
-2025-05-12 07:36:11,407 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:36:13,464 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/2a6526ce75ec4b0696e27266eaeaa3b7/original
-2025-05-12 07:36:18,085 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/d78f212e6e7c4d368c0f7317023c3ad1/original
-2025-05-12 07:36:19,786 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:36:21,706 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c55ed21cace54e38b4a8d1b73d819733/original
-2025-05-12 07:36:25,636 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/d78f212e6e7c4d368c0f7317023c3ad1/original
-2025-05-12 07:36:27,146 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:36:28,865 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/35d453da04b04fa7becbfea52dc6c117/original
-2025-05-12 07:36:33,593 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/d78f212e6e7c4d368c0f7317023c3ad1/original
-2025-05-12 07:36:34,987 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:36:41,582 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/ceb13cd239dd40078e53e97af525479d/original
-2025-05-12 07:37:26,725 - config - INFO - File uploaded successfully: last.pptx
-2025-05-12 07:37:26,755 - config - INFO - File processed successfully: last.pptx
-2025-05-12 07:37:45,573 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
-2025-05-12 07:37:45,578 - config - INFO - Extracted slide 2 with title: Why Use 3D?
-2025-05-12 07:37:45,579 - config - INFO - Cleaned up original file: temp_uploads\22839cd0-4ada-4b9e-a9f3-e50895d7eb02.pptx
-2025-05-12 07:37:49,520 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 07:37:52,024 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/98830ae539fb459cb9fe373145197b6b/original
-2025-05-12 07:38:06,108 - config - INFO - Generated 6 scenes for file 22839cd0-4ada-4b9e-a9f3-e50895d7eb02.pptx.
-2025-05-12 07:38:10,085 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/98830ae539fb459cb9fe373145197b6b/original
-2025-05-12 07:38:12,629 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:38:14,576 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/28811901b8554bb1bfe334745ae56778/original
-2025-05-12 07:38:20,051 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/98830ae539fb459cb9fe373145197b6b/original
-2025-05-12 07:38:21,521 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:38:23,236 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1e18023991844b94b49b56e39de20a79/original
-2025-05-12 07:38:27,195 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/98830ae539fb459cb9fe373145197b6b/original
-2025-05-12 07:38:29,058 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:38:30,916 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/6908dc70aa52487ab36db89fdcce995c/original
-2025-05-12 07:38:35,514 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/98830ae539fb459cb9fe373145197b6b/original
-2025-05-12 07:38:37,083 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:38:38,790 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b6808cc7cc074f438089a61c0e4689fe/original
-2025-05-12 07:38:43,258 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/98830ae539fb459cb9fe373145197b6b/original
-2025-05-12 07:38:44,993 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:38:46,862 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0dc2291a1b6e4a86b470cc480281b0b9/original
-2025-05-12 07:38:50,633 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/98830ae539fb459cb9fe373145197b6b/original
-2025-05-12 07:38:52,108 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 07:38:54,150 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/30950d30895a4e79a75b15b83230ea4d/original
-2025-05-12 15:05:43,125 - config - INFO - File uploaded successfully: last.pptx
-2025-05-12 15:05:43,200 - config - INFO - File processed successfully: last.pptx
-2025-05-12 15:05:44,334 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
-2025-05-12 15:05:44,406 - config - INFO - Extracted slide 2 with title: Why Use 3D?
-2025-05-12 15:05:44,408 - config - INFO - Cleaned up original file: temp_uploads\a8805b12-611b-4af0-8d4a-8c64fd747398.pptx
-2025-05-12 15:05:48,785 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 15:05:51,228 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/9501c7f509d646dfa63e017ea509f9e4/original
-2025-05-12 15:05:57,833 - config - INFO - Generated 4 scenes for file a8805b12-611b-4af0-8d4a-8c64fd747398.pptx.
-2025-05-12 15:06:03,716 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/9501c7f509d646dfa63e017ea509f9e4/original
-2025-05-12 15:06:06,894 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 15:06:08,808 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/98cb2462a56649a5b934cdcba9ee39b7/original
-2025-05-12 15:06:12,899 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/9501c7f509d646dfa63e017ea509f9e4/original
-2025-05-12 15:06:14,585 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 15:06:18,529 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/853d4a4c76b74846a1fcb70c6a5f1ca7/original
-2025-05-12 15:06:22,326 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/9501c7f509d646dfa63e017ea509f9e4/original
-2025-05-12 15:06:23,850 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 15:06:25,266 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/71d79d064e2642d59ce24249fd9cc40f/original
-2025-05-12 15:06:29,319 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/9501c7f509d646dfa63e017ea509f9e4/original
-2025-05-12 15:06:31,084 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 15:06:34,724 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/42b9b1090dde45919696a6853710ca2b/original
-2025-05-12 15:13:03,848 - config - INFO - File uploaded successfully: last.pptx
-2025-05-12 15:13:03,875 - config - INFO - File processed successfully: last.pptx
-2025-05-12 15:13:05,681 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
-2025-05-12 15:13:05,687 - config - INFO - Extracted slide 2 with title: Why Use 3D?
-2025-05-12 15:13:05,687 - config - INFO - Cleaned up original file: temp_uploads\56bb1692-6865-46bc-a231-2e009b1ae95e.pptx
-2025-05-12 15:13:12,229 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 15:13:15,095 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/9de6b0584dbd4c54b28dbb7ba16dcc63/original
-2025-05-12 15:13:21,451 - config - INFO - Generated 5 scenes for file 56bb1692-6865-46bc-a231-2e009b1ae95e.pptx.
-2025-05-12 15:13:26,131 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/9de6b0584dbd4c54b28dbb7ba16dcc63/original
-2025-05-12 15:13:29,156 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 15:13:31,651 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/ca3dd6740bb94b5c81058078e8adf04b/original
-2025-05-12 15:13:36,736 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/9de6b0584dbd4c54b28dbb7ba16dcc63/original
-2025-05-12 15:13:39,278 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 15:13:45,002 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0f4e2661e89b45c69a622e30515aee7a/original
-2025-05-12 15:13:48,829 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/9de6b0584dbd4c54b28dbb7ba16dcc63/original
-2025-05-12 15:13:50,543 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 15:13:52,522 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/06461d40a1ba4d649cb289fea8764e06/original
-2025-05-12 15:13:57,249 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/9de6b0584dbd4c54b28dbb7ba16dcc63/original
-2025-05-12 15:13:59,086 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 15:14:01,546 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/99056ddd72334118859de9a11ad0de04/original
-2025-05-12 15:14:06,049 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/9de6b0584dbd4c54b28dbb7ba16dcc63/original
-2025-05-12 15:14:07,840 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 15:14:19,262 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1aea2bb4b5164a8c9eedec3fee7876c5/original
-2025-05-12 17:06:21,342 - config - INFO - File uploaded successfully: last.pptx
-2025-05-12 17:06:21,825 - config - INFO - File processed successfully: last.pptx
-2025-05-12 17:06:45,761 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
-2025-05-12 17:06:45,777 - config - INFO - Extracted slide 2 with title: Why Use 3D?
-2025-05-12 17:06:45,779 - config - INFO - Cleaned up original file: temp_uploads\ff901be7-ee15-4cb3-9141-6bb21978a38c.pptx
-2025-05-12 17:06:51,579 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 17:06:54,071 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/b950ee3ab511468f9313715ff1751c2c/original
-2025-05-12 17:07:02,282 - config - INFO - Generated 4 scenes for file ff901be7-ee15-4cb3-9141-6bb21978a38c.pptx.
-2025-05-12 17:07:06,792 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/b950ee3ab511468f9313715ff1751c2c/original
-2025-05-12 17:07:09,370 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:07:11,265 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/01f931a17110437f838c3e7a32a23560/original
-2025-05-12 17:07:16,138 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/b950ee3ab511468f9313715ff1751c2c/original
-2025-05-12 17:07:18,940 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:07:21,032 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c93d5227f5504407b35f5d09b1be9d08/original
-2025-05-12 17:07:25,210 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/b950ee3ab511468f9313715ff1751c2c/original
-2025-05-12 17:07:28,748 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:07:31,954 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/ffcb742f240d4a809372b0007eaa41f7/original
-2025-05-12 17:07:35,995 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/b950ee3ab511468f9313715ff1751c2c/original
-2025-05-12 17:07:38,203 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:07:40,136 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/aa9be9fa98be4b1b844eee2423698c87/original
-2025-05-12 17:12:41,904 - config - INFO - File uploaded successfully: Sample2.pptx
-2025-05-12 17:12:42,358 - config - INFO - File processed successfully: Sample2.pptx
-2025-05-12 17:12:49,597 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
-2025-05-12 17:12:50,730 - config - INFO - Extracted slide 2 with title: Executive Summary
-2025-05-12 17:12:50,815 - config - INFO - Extracted slide 3 with title: None
-2025-05-12 17:12:50,829 - config - INFO - Extracted slide 4 with title: None
-2025-05-12 17:12:50,837 - config - INFO - Extracted slide 5 with title: Thank You
-2025-05-12 17:12:50,838 - config - INFO - Cleaned up original file: temp_uploads\86d43e8c-e78e-4c74-8cc1-ef86041994ca.pptx
-2025-05-12 17:12:59,032 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 17:13:01,380 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:13:13,346 - config - INFO - Generated 14 scenes for file 86d43e8c-e78e-4c74-8cc1-ef86041994ca.pptx.
-2025-05-12 17:13:17,244 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:13:19,743 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:13:26,480 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/3fb9f36795384d6fb076dde6de075860/original
-2025-05-12 17:13:30,544 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:13:32,406 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:13:34,471 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/354dd6a413be4b8c9d5ca443c14be750/original
-2025-05-12 17:13:38,559 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:13:40,835 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:13:42,780 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c2716f0087864f31acc1c4ae21516001/original
-2025-05-12 17:13:48,108 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:13:50,479 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:13:52,603 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/8803eaf14bf9410f85a36a2ccb267bfd/original
-2025-05-12 17:13:56,741 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:13:58,915 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:14:00,666 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0b14c3f3820c41ef9580320baf59115f/original
-2025-05-12 17:14:05,051 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:14:06,827 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:14:08,756 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a3f1e23db7bc425f8acce3038acc8d1d/original
-2025-05-12 17:14:13,126 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:14:15,134 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:14:16,986 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/91b2c501be4e427c88440ba2e53694c3/original
-2025-05-12 17:14:21,297 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:14:23,028 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:14:25,159 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/676c6f02b28c485cb4dca27c9ea9c745/original
-2025-05-12 17:14:28,829 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:14:31,090 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:14:33,016 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/9379f4dc1f1644a9a18eebba438004c9/original
-2025-05-12 17:14:37,956 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:14:40,295 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:14:42,098 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/13d9c105c2114b8bb14bff83850a1367/original
-2025-05-12 17:14:46,936 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:14:49,055 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:14:51,050 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/83d056af790344fe908d948c58b258cd/original
-2025-05-12 17:14:55,633 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:14:57,711 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:14:59,595 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/8e047af4459c489e94e5df43a5f7fe30/original
-2025-05-12 17:15:03,985 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:15:06,341 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:15:08,168 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a5a84602ace3483ca04a42129d67e861/original
-2025-05-12 17:15:12,684 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/f60002e4e45145c7a2084fbf7279505d/original
-2025-05-12 17:15:14,949 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:15:16,843 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/7328f471b86b481493d767b7729f889d/original
-2025-05-12 17:26:13,496 - config - INFO - File uploaded successfully: last.pptx
-2025-05-12 17:26:13,544 - config - INFO - File processed successfully: last.pptx
-2025-05-12 17:26:15,641 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
-2025-05-12 17:26:15,653 - config - INFO - Extracted slide 2 with title: Why Use 3D?
-2025-05-12 17:26:15,654 - config - INFO - Cleaned up original file: temp_uploads\7ddd3ee2-6429-416b-9fbb-1ec23221271b.pptx
-2025-05-12 17:26:21,622 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 17:26:24,097 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/c54ac62e4c6f4fb483b0fcbdd2ada880/original
-2025-05-12 17:26:29,646 - config - INFO - Generated 4 scenes for file 7ddd3ee2-6429-416b-9fbb-1ec23221271b.pptx.
-2025-05-12 17:26:34,002 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/c54ac62e4c6f4fb483b0fcbdd2ada880/original
-2025-05-12 17:26:36,720 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:26:38,763 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f97a1eb5beb842f3a13f580513450ee0/original
-2025-05-12 17:26:43,254 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/c54ac62e4c6f4fb483b0fcbdd2ada880/original
-2025-05-12 17:26:45,422 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:26:47,603 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/db4ed3c0b1fe4e60a2465d8db13ed2de/original
-2025-05-12 17:26:52,812 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/c54ac62e4c6f4fb483b0fcbdd2ada880/original
-2025-05-12 17:26:55,825 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:26:58,336 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c3b2b5348fc149cbb56a4d0321a5fefa/original
-2025-05-12 17:27:03,716 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/c54ac62e4c6f4fb483b0fcbdd2ada880/original
-2025-05-12 17:27:06,676 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:27:08,817 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/06725df8229d4fdaa544a20312b39264/original
-2025-05-12 17:27:55,294 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/c54ac62e4c6f4fb483b0fcbdd2ada880/original
-2025-05-12 17:27:57,380 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:27:59,435 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/54661acf9e6c432399c54ddd303d3dd2/original
-2025-05-12 17:29:43,127 - config - INFO - File uploaded successfully: Sample2.pptx
-2025-05-12 17:29:43,241 - config - INFO - File processed successfully: Sample2.pptx
-2025-05-12 17:30:15,085 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
-2025-05-12 17:30:15,111 - config - INFO - Extracted slide 2 with title: Executive Summary
-2025-05-12 17:30:15,152 - config - INFO - Extracted slide 3 with title: None
-2025-05-12 17:30:15,169 - config - INFO - Extracted slide 4 with title: None
-2025-05-12 17:30:15,174 - config - INFO - Extracted slide 5 with title: Thank You
-2025-05-12 17:30:15,177 - config - INFO - Cleaned up original file: temp_uploads\46f65042-fd66-4a98-ab2a-50c1879dd9e4.pptx
-2025-05-12 17:30:20,124 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 17:30:22,836 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:30:34,541 - config - INFO - Generated 14 scenes for file 46f65042-fd66-4a98-ab2a-50c1879dd9e4.pptx.
-2025-05-12 17:30:38,645 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:30:41,164 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:30:43,304 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/eef1d4a88e974a9ebf781e7a566b96c7/original
-2025-05-12 17:30:48,051 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:30:50,401 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:30:52,181 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/2b01693755354ddb95e5e8c60ab7a371/original
-2025-05-12 17:30:57,484 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:30:59,148 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:31:05,672 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d5155b999e01410a9536684534ac38a6/original
-2025-05-12 17:31:10,049 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:31:12,107 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:31:14,077 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/5915b91bc2bc4b10afc2f00db616b370/original
-2025-05-12 17:31:19,254 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:31:21,362 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:31:23,352 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/965ce89caf8e4e58b94511dd15d0731a/original
-2025-05-12 17:31:28,631 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:31:30,595 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:31:32,560 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/792e60d77586432a9e2ee56253b9bb73/original
-2025-05-12 17:31:37,087 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:31:38,754 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:31:41,095 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0d0cda0790a04328995fe9a9b3114738/original
-2025-05-12 17:31:45,292 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:31:46,993 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:31:48,708 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/3cb2daf223df42b193ba3dc0f83b4b1b/original
-2025-05-12 17:31:53,785 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:31:55,887 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:31:57,865 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d38c6b4fce0a43f08f35c2b199f1e1bd/original
-2025-05-12 17:32:03,270 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:32:06,536 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:32:08,871 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e0478f63ef5c48ffb09fdb12e1c8416b/original
-2025-05-12 17:32:13,442 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:32:15,492 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:32:17,240 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/356dffcf220144aeb47ccafddf5741ec/original
-2025-05-12 17:32:21,802 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:32:23,553 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:32:25,890 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/001a4f109649414f8fcaa9991efe12c7/original
-2025-05-12 17:32:29,943 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:32:31,968 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:32:33,999 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/fc8bc1e89f79446b84d0f712a79f4a4e/original
-2025-05-12 17:32:38,372 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/8d4d4c19494d454aa59566c11c0d18ff/original
-2025-05-12 17:32:40,448 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:32:42,357 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/81b24b800fb84c33bbd619bf740b338e/original
-2025-05-12 17:49:10,716 - config - INFO - File uploaded successfully: Sample2.pptx
-2025-05-12 17:49:10,772 - config - INFO - File processed successfully: Sample2.pptx
-2025-05-12 17:49:12,699 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
-2025-05-12 17:49:12,714 - config - INFO - Extracted slide 2 with title: Executive Summary
-2025-05-12 17:49:12,731 - config - INFO - Extracted slide 3 with title: None
-2025-05-12 17:49:12,738 - config - INFO - Extracted slide 4 with title: None
-2025-05-12 17:49:12,760 - config - INFO - Extracted slide 5 with title: Thank You
-2025-05-12 17:49:12,760 - config - INFO - Cleaned up original file: temp_uploads\533e48ac-3a5a-49dc-a3db-5f6c06f267af.pptx
-2025-05-12 17:49:17,843 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 17:49:20,711 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:49:31,927 - config - INFO - Generated 14 scenes for file 533e48ac-3a5a-49dc-a3db-5f6c06f267af.pptx.
-2025-05-12 17:49:36,893 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:49:39,234 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:49:41,035 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a8bfd792a1524dd6acb516dc72bbddf8/original
-2025-05-12 17:49:44,892 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:49:46,368 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:49:48,195 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/ac823bcd60bf45a08b12f754944f36a0/original
-2025-05-12 17:49:52,971 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:49:54,805 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:49:57,994 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1791c12e6fa443e09b10682dec4af49e/original
-2025-05-12 17:50:02,096 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:50:03,786 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:50:05,821 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e3bed75ae0944c0885455e2ef69d62da/original
-2025-05-12 17:50:10,511 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:50:12,339 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:50:14,777 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/77f0ea10883c4bfc9fa308924fafe1f5/original
-2025-05-12 17:50:19,644 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:50:21,945 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:50:23,965 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1dda3b35d9b64536b93b0c8206f4cd65/original
-2025-05-12 17:50:28,959 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:50:30,552 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:50:32,485 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b98c072a60434bf986b00f40caa7f4de/original
-2025-05-12 17:50:36,397 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:50:38,008 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:50:39,976 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d2eaa06595e541ce9e8d9a86ac7a360d/original
-2025-05-12 17:50:57,537 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:50:59,121 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:51:04,680 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/6c5b24b2c82149ac9e5611bbb363c205/original
-2025-05-12 17:51:09,630 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:51:11,471 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:51:13,620 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/6ea4a19e34cc4136a94252d866bf1bd3/original
-2025-05-12 17:51:17,745 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:51:19,359 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:51:21,284 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/5135144dbf3e4b418a8efbb845b2f373/original
-2025-05-12 17:51:26,712 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:51:28,546 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:51:36,794 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b78635636d5e4a2b9fdd1a949f90f6c7/original
-2025-05-12 17:51:43,758 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:51:46,829 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:51:48,977 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/6898595bfeab46dda56794151570ef17/original
-2025-05-12 17:51:53,122 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/4e569acb189148478e50cc463cbd4c66/original
-2025-05-12 17:51:54,789 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:51:57,027 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e28f3b24c8db4ea5a7b23d0d89e4fe60/original
-2025-05-12 17:53:29,724 - config - INFO - File uploaded successfully: last.pptx
-2025-05-12 17:53:29,848 - config - INFO - File processed successfully: last.pptx
-2025-05-12 17:53:48,341 - config - INFO - Extracted slide 1 with title: Bring Your Presentations to Life with 3D
-2025-05-12 17:53:48,492 - config - INFO - Extracted slide 2 with title: Why Use 3D?
-2025-05-12 17:53:48,493 - config - INFO - Cleaned up original file: temp_uploads\983513a7-1cf8-4163-ad3b-3b4c863d1137.pptx
-2025-05-12 17:53:56,503 - config - INFO - Uploading logo: 23809d0c-5a42-43b3-9b94-871758f5b01e.png (type: image/png)
-2025-05-12 17:53:59,315 - config - INFO - Logo uploaded successfully to HeyGen: https://resource2.heygen.ai/image/20ac0402593547cd800eaa49762f0424/original
-2025-05-12 17:54:05,178 - config - INFO - Generated 4 scenes for file 983513a7-1cf8-4163-ad3b-3b4c863d1137.pptx.
-2025-05-12 17:54:10,610 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/20ac0402593547cd800eaa49762f0424/original
-2025-05-12 17:54:12,666 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:54:14,072 - config - ERROR - HeyGen API error: 404 - <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+2025-05-23 00:10:35,120 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 00:10:35,225 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 00:10:45,333 - config - INFO - Extracted slide 1 with 1 images and 0 tables
+2025-05-23 00:10:52,899 - config - ERROR - HeyGen upload failed for image slide_2_img_0.wmf: {"code":400543,"message":"Content type not match image/x-wmf != application/octet-stream"}
+
+2025-05-23 00:10:52,902 - config - INFO - Extracted slide 2 with 0 images and 3 tables
+2025-05-23 00:10:55,281 - config - ERROR - HeyGen upload failed for image slide_3_img_0.wmf: {"code":400543,"message":"Content type not match image/x-wmf != application/octet-stream"}
+
+2025-05-23 00:10:55,897 - config - ERROR - HeyGen upload failed for image slide_3_img_1.wmf: {"code":400543,"message":"Content type not match image/x-wmf != application/octet-stream"}
+
+2025-05-23 00:10:56,487 - config - ERROR - HeyGen upload failed for image slide_3_img_2.wmf: {"code":400543,"message":"Content type not match image/x-wmf != application/octet-stream"}
+
+2025-05-23 00:10:59,490 - config - INFO - Extracted slide 3 with 0 images and 3 tables
+2025-05-23 00:11:02,233 - config - INFO - Extracted slide 4 with 0 images and 2 tables
+2025-05-23 00:11:03,147 - config - INFO - Extracted slide 5 with 1 images and 0 tables
+2025-05-23 00:21:18,481 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 00:21:18,545 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 00:21:22,112 - config - INFO - Extracted slide 1 with 1 images and 0 tables
+2025-05-23 00:21:28,022 - config - ERROR - WMF to PNG conversion failed: MagickWand shared library not found.
+You probably had not installed ImageMagick library.
+Try to install:
+  https://docs.wand-py.org/en/latest/guide/install.html#install-imagemagick-on-windows
+2025-05-23 00:21:28,023 - config - ERROR - Skipping WMF image slide_2_img_0.wmf due to conversion failure
+2025-05-23 00:21:28,024 - config - INFO - Extracted slide 2 with 1 images and 3 tables
+2025-05-23 00:21:30,950 - config - ERROR - WMF to PNG conversion failed: MagickWand shared library not found.
+You probably had not installed ImageMagick library.
+Try to install:
+  https://docs.wand-py.org/en/latest/guide/install.html#install-imagemagick-on-windows
+2025-05-23 00:21:30,951 - config - ERROR - Skipping WMF image slide_3_img_0.wmf due to conversion failure
+2025-05-23 00:21:31,975 - config - ERROR - WMF to PNG conversion failed: MagickWand shared library not found.
+You probably had not installed ImageMagick library.
+Try to install:
+  https://docs.wand-py.org/en/latest/guide/install.html#install-imagemagick-on-windows
+2025-05-23 00:21:31,975 - config - ERROR - Skipping WMF image slide_3_img_1.wmf due to conversion failure
+2025-05-23 00:21:32,958 - config - ERROR - WMF to PNG conversion failed: MagickWand shared library not found.
+You probably had not installed ImageMagick library.
+Try to install:
+  https://docs.wand-py.org/en/latest/guide/install.html#install-imagemagick-on-windows
+2025-05-23 00:21:32,959 - config - ERROR - Skipping WMF image slide_3_img_2.wmf due to conversion failure
+2025-05-23 00:21:37,235 - config - INFO - Extracted slide 3 with 3 images and 3 tables
+2025-05-23 00:21:40,780 - config - INFO - Extracted slide 4 with 0 images and 2 tables
+2025-05-23 00:21:41,691 - config - INFO - Extracted slide 5 with 1 images and 0 tables
+2025-05-23 00:22:07,527 - config - ERROR - Error generating scenes: 'list' object has no attribute 'get'
+2025-05-23 00:51:30,479 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 00:51:30,576 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 00:51:33,734 - config - INFO - Uploading asset to HeyGen (Content-Type: image/png, size: 20477 bytes)
+2025-05-23 00:51:34,859 - config - INFO - Asset uploaded successfully to HeyGen: https://resource2.heygen.ai/image/7b219f0fa9b54e2c8e1ab42adeb4d083/original
+2025-05-23 00:51:34,861 - config - INFO - Extracted text/images from slide 1 (python-pptx pass)
+2025-05-23 00:51:35,069 - config - INFO - Uploading asset to HeyGen (Content-Type: image/x-wmf, size: 446852 bytes)
+2025-05-23 00:51:36,442 - config - ERROR - HeyGen API error during asset upload: 400 - {"code":400543,"message":"Content type not match image/x-wmf != application/octet-stream"}
+
+2025-05-23 00:51:36,444 - config - INFO - Extracted text/images from slide 2 (python-pptx pass)
+2025-05-23 00:51:36,501 - config - INFO - Uploading asset to HeyGen (Content-Type: image/x-wmf, size: 5272 bytes)
+2025-05-23 00:51:37,130 - config - ERROR - HeyGen API error during asset upload: 400 - {"code":400543,"message":"Content type not match image/x-wmf != application/octet-stream"}
+
+2025-05-23 00:51:37,134 - config - INFO - Uploading asset to HeyGen (Content-Type: image/x-wmf, size: 5272 bytes)
+2025-05-23 00:51:37,708 - config - ERROR - HeyGen API error during asset upload: 400 - {"code":400543,"message":"Content type not match image/x-wmf != application/octet-stream"}
+
+2025-05-23 00:51:37,711 - config - INFO - Uploading asset to HeyGen (Content-Type: image/x-wmf, size: 5272 bytes)
+2025-05-23 00:51:38,292 - config - ERROR - HeyGen API error during asset upload: 400 - {"code":400543,"message":"Content type not match image/x-wmf != application/octet-stream"}
+
+2025-05-23 00:51:38,361 - config - INFO - Extracted text/images from slide 3 (python-pptx pass)
+2025-05-23 00:51:38,392 - config - INFO - Extracted text/images from slide 4 (python-pptx pass)
+2025-05-23 00:51:38,396 - config - INFO - Uploading asset to HeyGen (Content-Type: image/png, size: 20477 bytes)
+2025-05-23 00:51:39,456 - config - INFO - Asset uploaded successfully to HeyGen: https://resource2.heygen.ai/image/f2119113bf4f46a0a81b0934fb0a0039/original
+2025-05-23 00:51:39,459 - config - INFO - Extracted text/images from slide 5 (python-pptx pass)
+2025-05-23 00:51:43,211 - config - ERROR - Error processing table image for slide 2, table index 0: IShape.SaveAsImage() takes 1 positional argument but 2 were given
+2025-05-23 00:51:43,212 - config - ERROR - Error processing table image for slide 2, table index 1: IShape.SaveAsImage() takes 1 positional argument but 2 were given
+2025-05-23 00:51:43,213 - config - ERROR - Error processing table image for slide 2, table index 2: IShape.SaveAsImage() takes 1 positional argument but 2 were given
+2025-05-23 00:51:43,216 - config - ERROR - Error processing table image for slide 3, table index 0: IShape.SaveAsImage() takes 1 positional argument but 2 were given
+2025-05-23 00:51:43,217 - config - ERROR - Error processing table image for slide 3, table index 1: IShape.SaveAsImage() takes 1 positional argument but 2 were given
+2025-05-23 00:51:43,218 - config - ERROR - Error processing table image for slide 3, table index 2: IShape.SaveAsImage() takes 1 positional argument but 2 were given
+2025-05-23 00:51:43,221 - config - ERROR - Error processing table image for slide 4, table index 0: IShape.SaveAsImage() takes 1 positional argument but 2 were given
+2025-05-23 00:51:43,222 - config - ERROR - Error processing table image for slide 4, table index 1: IShape.SaveAsImage() takes 1 positional argument but 2 were given
+2025-05-23 00:51:43,223 - config - INFO - Processed table images using Spire.Presentation for b33ef9d9-fc6e-4b6d-ba77-464de06cc23e.pptx
+2025-05-23 00:51:43,224 - config - INFO - Cleaned up original .pptx file: temp_uploads\b33ef9d9-fc6e-4b6d-ba77-464de06cc23e.pptx
+2025-05-23 00:51:43,225 - config - INFO - Extraction complete for file b33ef9d9-fc6e-4b6d-ba77-464de06cc23e.pptx. Extracted 5 slides.
+2025-05-23 00:52:53,522 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 00:52:53,640 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 00:54:52,226 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 00:54:52,342 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 00:54:55,284 - config - ERROR - Error extracting content from temp_uploads\7c09a1fc-b8d8-4567-ade1-38398827bcef.pptx (linked to original 7c09a1fc-b8d8-4567-ade1-38398827bcef.pptx): name '_upload_to_heygen_sync' is not defined
+2025-05-23 00:54:55,285 - config - INFO - Cleaned up original .pptx file: temp_uploads\7c09a1fc-b8d8-4567-ade1-38398827bcef.pptx
+2025-05-23 00:56:02,524 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 00:56:02,629 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 00:56:16,823 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 00:56:17,038 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 00:56:17,088 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 00:56:17,109 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 00:56:17,115 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 00:56:17,118 - config - INFO - Cleaned up original file: temp_uploads\aff3dc2c-af83-431c-b750-b66ecd130229.pptx
+2025-05-23 00:56:27,860 - config - INFO - Generated 12 scenes for file aff3dc2c-af83-431c-b750-b66ecd130229.pptx.
+2025-05-23 00:56:36,734 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 00:56:38,857 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c1e52754985a4e8fa13bf53b4515906c/original
+2025-05-23 00:56:44,872 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 00:56:46,912 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/2a79b0ae74a149d48c5944bb9bf309da/original
+2025-05-23 00:56:54,177 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 00:56:56,085 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d0123c6b5d3847abb1cba9b6e6c44b7f/original
+2025-05-23 00:57:01,475 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 00:57:03,350 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/9029c8bbc80f46fd901b05514113fe38/original
+2025-05-23 00:57:08,183 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 00:57:10,096 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/806162034adc43f8a416ef59d4cbfe36/original
+2025-05-23 00:57:15,424 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 00:57:17,299 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/9a4183fbec96429cbc11638218d280fb/original
+2025-05-23 00:57:21,645 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 00:57:23,504 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c1d6e35412784a5395fcb7e05b20780d/original
+2025-05-23 00:57:27,278 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 00:57:29,276 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a3aea59a74b445919d0aadbb933f441b/original
+2025-05-23 00:57:34,623 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 00:57:36,455 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1079b3dfab684cf6b61e375dd3cea1aa/original
+2025-05-23 00:57:40,744 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 00:57:43,302 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/37f15ddd44cb4d3cb777bc25b93ad63c/original
+2025-05-23 00:57:53,806 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 00:57:55,595 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f701b1faa6dc4fc3a6aa6363f5cb803e/original
+2025-05-23 00:58:02,275 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 00:58:04,028 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/65747e8c12624cc3b01d8f8becffbe43/original
+2025-05-23 01:02:08,291 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:02:08,344 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:02:10,599 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 01:02:10,632 - config - ERROR - Error converting table to image: slide layout index out of range
+2025-05-23 01:02:10,656 - config - ERROR - Error converting table to image: slide layout index out of range
+2025-05-23 01:02:10,685 - config - ERROR - Error converting table to image: slide layout index out of range
+2025-05-23 01:02:10,863 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 01:02:10,900 - config - ERROR - Error converting table to image: slide layout index out of range
+2025-05-23 01:02:10,935 - config - ERROR - Error converting table to image: slide layout index out of range
+2025-05-23 01:02:10,963 - config - ERROR - Error converting table to image: slide layout index out of range
+2025-05-23 01:02:10,964 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 01:02:10,995 - config - ERROR - Error converting table to image: slide layout index out of range
+2025-05-23 01:02:11,021 - config - ERROR - Error converting table to image: slide layout index out of range
+2025-05-23 01:02:11,025 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 01:02:11,031 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 01:02:23,007 - config - INFO - Generated 9 scenes for file 47f5e08b-7594-4519-bb3b-ce75ccc84d1f.pptx.
+2025-05-23 01:02:27,058 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:02:28,928 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/71b00cb145bb419f85928630375a682f/original
+2025-05-23 01:02:35,826 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:02:37,635 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/11c37e2d73f14a3eb4a8e9e48ff56e81/original
+2025-05-23 01:02:42,626 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:02:44,550 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/bb6a44a53ef84ef5aa3c30f9c505a98a/original
+2025-05-23 01:02:48,129 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:02:49,887 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/81a2f4a391d24b4794afaa0c6c36b153/original
+2025-05-23 01:02:53,911 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:02:55,689 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b86d9e9529414b28bdea7b2976ce39b8/original
+2025-05-23 01:03:01,537 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:03:03,324 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/cfa144f265b440eb9bd2afede87006f9/original
+2025-05-23 01:03:07,839 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:03:09,625 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/21d87b6859f240edb39762721de4f73e/original
+2025-05-23 01:03:13,652 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:03:15,615 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/651aaddb76544f6cb0add243fbfa1b05/original
+2025-05-23 01:03:23,834 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:03:25,702 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/7cd931ea804647479a6617980129fc86/original
+2025-05-23 01:07:29,753 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:07:29,801 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:07:31,601 - config - ERROR - Error extracting content from 24b0cb37-0c6b-43f2-9c7b-265a485ae770.pptx: slide layout index out of range
+2025-05-23 01:08:39,636 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:08:39,693 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:08:42,798 - config - ERROR - Error extracting content from 969222c6-d9b9-430a-b233-14258467a048.pptx: slide layout index out of range
+2025-05-23 01:10:59,075 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:10:59,117 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:11:05,841 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 01:11:05,854 - config - ERROR - Error converting table to image for slide 2: '_RowCollection' object has no attribute 'count'
+2025-05-23 01:11:05,865 - config - ERROR - Error converting table to image for slide 2: '_RowCollection' object has no attribute 'count'
+2025-05-23 01:11:05,874 - config - ERROR - Error converting table to image for slide 2: '_RowCollection' object has no attribute 'count'
+2025-05-23 01:11:05,943 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 01:11:05,955 - config - ERROR - Error converting table to image for slide 3: '_RowCollection' object has no attribute 'count'
+2025-05-23 01:11:05,971 - config - ERROR - Error converting table to image for slide 3: '_RowCollection' object has no attribute 'count'
+2025-05-23 01:11:05,984 - config - ERROR - Error converting table to image for slide 3: '_RowCollection' object has no attribute 'count'
+2025-05-23 01:11:05,988 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 01:11:06,001 - config - ERROR - Error converting table to image for slide 4: '_RowCollection' object has no attribute 'count'
+2025-05-23 01:11:06,012 - config - ERROR - Error converting table to image for slide 4: '_RowCollection' object has no attribute 'count'
+2025-05-23 01:11:06,015 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 01:11:06,017 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 01:11:20,124 - config - INFO - Generated 14 scenes for file a3f2df0a-bb49-4326-ab0a-05de3356975c.pptx.
+2025-05-23 01:11:27,343 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:11:29,283 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1887be3124dc4da2bd2b4e9d7f885aed/original
+2025-05-23 01:11:33,852 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:11:35,807 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/3c92c3fb866648e4b138ecbe8cad4133/original
+2025-05-23 01:11:39,592 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:11:41,332 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d7c0929f3c89414993680fe247c1156d/original
+2025-05-23 01:11:46,231 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:11:52,445 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/794a738027df4b6fbe427c8a870d0b64/original
+2025-05-23 01:11:56,500 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:11:58,257 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/29fc14fd227e4f0b85e2228a2e858406/original
+2025-05-23 01:12:02,164 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:12:03,922 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/866f5cb025424d2ca651cba1d8fbb192/original
+2025-05-23 01:12:09,776 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:12:11,797 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e73cf76a86b34d62b8f33c607b181c29/original
+2025-05-23 01:12:15,921 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:12:17,578 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c97f898e21bb4a3ba9b7d9befb4c3a09/original
+2025-05-23 01:12:21,688 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:12:23,427 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/92754523a77749dc84c41a4e0f742754/original
+2025-05-23 01:12:27,429 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:12:29,274 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d1e3281351d84944b9ab7ebd1cf17033/original
+2025-05-23 01:12:33,639 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:12:35,357 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/532dcb136b4145e0bd3dd1f7329fef70/original
+2025-05-23 01:12:39,040 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:12:40,778 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/ac1df91c03134435a8561621ff79dad7/original
+2025-05-23 01:12:49,399 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:12:51,564 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/82f71325b7784ecd856fd2e0502b4b68/original
+2025-05-23 01:12:59,530 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 01:13:01,332 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/fa6b028881034f0e8813fe6970996db8/original
+2025-05-23 01:20:04,543 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:20:04,599 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:20:07,298 - config - ERROR - Error extracting content from cec3aca5-c4f0-4b17-8b5b-830e08e62087.pptx: name 'extracted_slide_data' is not defined
+2025-05-23 01:23:07,754 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:23:07,796 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:23:10,760 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 01:23:10,778 - config - ERROR - Error converting table to image for slide 2: fill type _NoFill has no foreground color, call .solid() or .patterned() first
+2025-05-23 01:23:10,793 - config - ERROR - Error converting table to image for slide 2: fill type _NoFill has no foreground color, call .solid() or .patterned() first
+2025-05-23 01:23:10,810 - config - ERROR - Error converting table to image for slide 2: fill type _NoFill has no foreground color, call .solid() or .patterned() first
+2025-05-23 01:23:10,876 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 01:23:10,893 - config - ERROR - Error converting table to image for slide 3: fill type _NoFill has no foreground color, call .solid() or .patterned() first
+2025-05-23 01:23:10,920 - config - ERROR - Error converting table to image for slide 3: fill type _NoneFill has no foreground color, call .solid() or .patterned() first
+2025-05-23 01:23:10,941 - config - ERROR - Error converting table to image for slide 3: fill type _NoneFill has no foreground color, call .solid() or .patterned() first
+2025-05-23 01:23:10,944 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 01:23:10,964 - config - ERROR - Error converting table to image for slide 4: fill type _NoFill has no foreground color, call .solid() or .patterned() first
+2025-05-23 01:23:10,977 - config - ERROR - Error converting table to image for slide 4: fill type _NoFill has no foreground color, call .solid() or .patterned() first
+2025-05-23 01:23:10,979 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 01:23:10,983 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 01:25:58,722 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:25:58,776 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:26:02,567 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 01:26:02,590 - config - ERROR - Error converting table to image for slide 2: 'Slide' object has no attribute 'export'
+2025-05-23 01:26:02,610 - config - ERROR - Error converting table to image for slide 2: 'Slide' object has no attribute 'export'
+2025-05-23 01:26:02,651 - config - ERROR - Error converting table to image for slide 2: 'Slide' object has no attribute 'export'
+2025-05-23 01:26:02,720 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 01:26:02,760 - config - ERROR - Error converting table to image for slide 3: 'Slide' object has no attribute 'export'
+2025-05-23 01:26:02,817 - config - ERROR - Error converting table to image for slide 3: 'Slide' object has no attribute 'export'
+2025-05-23 01:26:02,876 - config - ERROR - Error converting table to image for slide 3: 'Slide' object has no attribute 'export'
+2025-05-23 01:26:02,879 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 01:26:02,916 - config - ERROR - Error converting table to image for slide 4: 'Slide' object has no attribute 'export'
+2025-05-23 01:26:02,944 - config - ERROR - Error converting table to image for slide 4: 'Slide' object has no attribute 'export'
+2025-05-23 01:26:02,947 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 01:26:02,949 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 01:27:11,555 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:27:11,595 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:27:17,562 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 01:27:27,400 - config - ERROR - Error saving slide as image: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:27,400 - config - ERROR - Error converting table to image for slide 2: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:27,762 - config - ERROR - Error saving slide as image: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:27,762 - config - ERROR - Error converting table to image for slide 2: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:28,168 - config - ERROR - Error saving slide as image: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:28,168 - config - ERROR - Error converting table to image for slide 2: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:28,262 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 01:27:28,692 - config - ERROR - Error saving slide as image: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:28,692 - config - ERROR - Error converting table to image for slide 3: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:29,168 - config - ERROR - Error saving slide as image: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:29,169 - config - ERROR - Error converting table to image for slide 3: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:29,632 - config - ERROR - Error saving slide as image: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:29,632 - config - ERROR - Error converting table to image for slide 3: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:29,643 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 01:27:30,697 - config - ERROR - Error saving slide as image: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:30,698 - config - ERROR - Error converting table to image for slide 4: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:32,037 - config - ERROR - Error saving slide as image: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:32,037 - config - ERROR - Error converting table to image for slide 4: argument 1: TypeError: unicode string expected instead of Presentation instance
+2025-05-23 01:27:32,065 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 01:27:32,071 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 01:29:23,747 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:29:23,858 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:29:26,818 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 01:29:28,568 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:28,569 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:29,174 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:29,174 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:29,784 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:29,786 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:30,054 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 01:29:30,732 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:30,733 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:31,377 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:31,377 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:32,044 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:32,044 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:32,057 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 01:29:32,655 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:32,656 - config - ERROR - Error converting table to image for slide 4: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:33,294 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:33,294 - config - ERROR - Error converting table to image for slide 4: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:29:33,305 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 01:29:33,309 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 01:31:16,378 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:31:16,458 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:31:19,074 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 01:31:19,170 - config - ERROR - Error converting table to image for slide 2: cannot access local variable 'table_img_path' where it is not associated with a value
+2025-05-23 01:31:19,240 - config - ERROR - Error converting table to image for slide 2: cannot access local variable 'table_img_path' where it is not associated with a value
+2025-05-23 01:31:19,361 - config - ERROR - Error converting table to image for slide 2: cannot access local variable 'table_img_path' where it is not associated with a value
+2025-05-23 01:31:19,520 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 01:31:19,648 - config - ERROR - Error converting table to image for slide 3: cannot access local variable 'table_img_path' where it is not associated with a value
+2025-05-23 01:31:19,814 - config - ERROR - Error converting table to image for slide 3: cannot access local variable 'table_img_path' where it is not associated with a value
+2025-05-23 01:31:20,008 - config - ERROR - Error converting table to image for slide 3: cannot access local variable 'table_img_path' where it is not associated with a value
+2025-05-23 01:31:20,026 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 01:31:20,168 - config - ERROR - Error converting table to image for slide 4: cannot access local variable 'table_img_path' where it is not associated with a value
+2025-05-23 01:31:20,300 - config - ERROR - Error converting table to image for slide 4: cannot access local variable 'table_img_path' where it is not associated with a value
+2025-05-23 01:31:20,308 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 01:31:20,314 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 01:42:11,350 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:42:11,435 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:42:13,638 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 01:42:13,727 - config - ERROR - Error converting table to image for slide 2: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:42:13,802 - config - ERROR - Error converting table to image for slide 2: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:42:13,931 - config - ERROR - Error converting table to image for slide 2: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:42:14,081 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 01:42:14,222 - config - ERROR - Error converting table to image for slide 3: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:42:14,483 - config - ERROR - Error converting table to image for slide 3: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:42:14,693 - config - ERROR - Error converting table to image for slide 3: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:42:14,712 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 01:42:14,837 - config - ERROR - Error converting table to image for slide 4: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:42:15,023 - config - ERROR - Error converting table to image for slide 4: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:42:15,029 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 01:42:15,034 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 01:51:37,381 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:51:37,469 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:51:40,122 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 01:51:40,218 - config - ERROR - Error converting table to image for slide 2: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:51:40,295 - config - ERROR - Error converting table to image for slide 2: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:51:40,440 - config - ERROR - Error converting table to image for slide 2: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:51:40,602 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 01:51:40,753 - config - ERROR - Error converting table to image for slide 3: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:51:40,964 - config - ERROR - Error converting table to image for slide 3: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:51:41,146 - config - ERROR - Error converting table to image for slide 3: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:51:41,161 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 01:51:41,277 - config - ERROR - Error converting table to image for slide 4: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:51:41,385 - config - ERROR - Error converting table to image for slide 4: expected str, bytes or os.PathLike object, not NoneType
+2025-05-23 01:51:41,393 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 01:51:41,399 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 01:53:23,008 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:53:23,122 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:53:26,667 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 01:53:28,316 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:28,316 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:28,837 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:28,838 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:29,343 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:29,343 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:29,443 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 01:53:29,973 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:29,974 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:30,749 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:30,749 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:31,446 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:31,446 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:31,464 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 01:53:32,068 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:32,069 - config - ERROR - Error converting table to image for slide 4: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:32,737 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:32,737 - config - ERROR - Error converting table to image for slide 4: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:53:32,755 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 01:53:32,760 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 01:54:59,996 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 01:55:00,098 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 01:55:02,200 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 01:55:03,826 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:03,826 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:04,331 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:04,332 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:05,181 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:05,183 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:05,311 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 01:55:05,809 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:05,810 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:06,328 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:06,329 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:06,915 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:06,916 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:06,931 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 01:55:07,705 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:07,706 - config - ERROR - Error converting table to image for slide 4: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:08,282 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:08,283 - config - ERROR - Error converting table to image for slide 4: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 01:55:08,305 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 01:55:08,311 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 06:34:17,747 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 06:34:17,821 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 06:34:20,366 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 06:34:22,929 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:22,929 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:23,408 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:23,409 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:23,939 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:23,940 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:24,113 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 06:34:25,237 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:25,238 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:26,221 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:26,253 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:26,830 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:26,831 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:26,841 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 06:34:27,552 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:27,552 - config - ERROR - Error converting table to image for slide 4: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:27,993 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:27,993 - config - ERROR - Error converting table to image for slide 4: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:34:28,002 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 06:34:28,005 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 06:36:26,775 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 06:36:26,825 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 06:36:29,939 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 06:36:29,979 - config - INFO - Temp Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx
+2025-05-23 06:36:29,979 - config - INFO - Table Image Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_2_table_0.png
+2025-05-23 06:36:29,979 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx, Output Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_2_table_0.png
+2025-05-23 06:36:30,921 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:30,922 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:30,970 - config - INFO - Temp Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx
+2025-05-23 06:36:30,970 - config - INFO - Table Image Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_2_table_0.png
+2025-05-23 06:36:30,970 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx, Output Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_2_table_0.png
+2025-05-23 06:36:31,380 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:31,380 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:31,455 - config - INFO - Temp Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx
+2025-05-23 06:36:31,456 - config - INFO - Table Image Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_2_table_0.png
+2025-05-23 06:36:31,456 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx, Output Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_2_table_0.png
+2025-05-23 06:36:31,856 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:31,856 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:31,934 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 06:36:31,999 - config - INFO - Temp Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx
+2025-05-23 06:36:32,000 - config - INFO - Table Image Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_3_table_0.png
+2025-05-23 06:36:32,000 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx, Output Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_3_table_0.png
+2025-05-23 06:36:32,375 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:32,375 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:32,467 - config - INFO - Temp Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx
+2025-05-23 06:36:32,467 - config - INFO - Table Image Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_3_table_0.png
+2025-05-23 06:36:32,468 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx, Output Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_3_table_0.png
+2025-05-23 06:36:33,177 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:33,177 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:33,332 - config - INFO - Temp Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx
+2025-05-23 06:36:33,333 - config - INFO - Table Image Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_3_table_0.png
+2025-05-23 06:36:33,333 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx, Output Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_3_table_0.png
+2025-05-23 06:36:34,003 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:34,004 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:34,016 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 06:36:34,089 - config - INFO - Temp Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx
+2025-05-23 06:36:34,089 - config - INFO - Table Image Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_4_table_0.png
+2025-05-23 06:36:34,090 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx, Output Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_4_table_0.png
+2025-05-23 06:36:34,477 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:34,477 - config - ERROR - Error converting table to image for slide 4: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:34,536 - config - INFO - Temp Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx
+2025-05-23 06:36:34,536 - config - INFO - Table Image Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_4_table_0.png
+2025-05-23 06:36:34,536 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\temp_presentation.pptx, Output Path: temp_uploads\extracted\60ade4b3-aa2e-4c5e-893a-41e2ad4f8a1e\slide_4_table_0.png
+2025-05-23 06:36:34,967 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:34,967 - config - ERROR - Error converting table to image for slide 4: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:36:34,976 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 06:36:34,980 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 06:39:52,554 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 06:39:52,597 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 06:40:06,091 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 06:40:06,126 - config - INFO - Temp Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx
+2025-05-23 06:40:06,126 - config - INFO - Table Image Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_2_table_0.png
+2025-05-23 06:40:06,126 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx, Output Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_2_table_0.png
+2025-05-23 06:40:06,978 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:06,979 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:07,020 - config - INFO - Temp Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx
+2025-05-23 06:40:07,021 - config - INFO - Table Image Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_2_table_0.png
+2025-05-23 06:40:07,021 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx, Output Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_2_table_0.png
+2025-05-23 06:40:07,401 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:07,402 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:07,526 - config - INFO - Temp Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx
+2025-05-23 06:40:07,527 - config - INFO - Table Image Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_2_table_0.png
+2025-05-23 06:40:07,527 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx, Output Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_2_table_0.png
+2025-05-23 06:40:08,148 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:08,148 - config - ERROR - Error converting table to image for slide 2: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:08,265 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 06:40:08,352 - config - INFO - Temp Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx
+2025-05-23 06:40:08,353 - config - INFO - Table Image Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_3_table_0.png
+2025-05-23 06:40:08,353 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx, Output Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_3_table_0.png
+2025-05-23 06:40:08,839 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:08,840 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:09,114 - config - INFO - Temp Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx
+2025-05-23 06:40:09,114 - config - INFO - Table Image Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_3_table_0.png
+2025-05-23 06:40:09,115 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx, Output Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_3_table_0.png
+2025-05-23 06:40:09,624 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:09,625 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:09,709 - config - INFO - Temp Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx
+2025-05-23 06:40:09,709 - config - INFO - Table Image Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_3_table_0.png
+2025-05-23 06:40:09,710 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx, Output Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_3_table_0.png
+2025-05-23 06:40:10,087 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:10,088 - config - ERROR - Error converting table to image for slide 3: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:10,101 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 06:40:10,160 - config - INFO - Temp Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx
+2025-05-23 06:40:10,160 - config - INFO - Table Image Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_4_table_0.png
+2025-05-23 06:40:10,161 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx, Output Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_4_table_0.png
+2025-05-23 06:40:10,591 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:10,592 - config - ERROR - Error converting table to image for slide 4: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:10,651 - config - INFO - Temp Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx
+2025-05-23 06:40:10,652 - config - INFO - Table Image Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_4_table_0.png
+2025-05-23 06:40:10,652 - config - INFO - Attempting to save slide as image: Presentation Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\temp_presentation.pptx, Output Path: temp_uploads\extracted\3541f920-e2e9-433a-9e1e-e3181f20fd42\slide_4_table_0.png
+2025-05-23 06:40:11,055 - config - ERROR - Error saving slide as image: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:11,055 - config - ERROR - Error converting table to image for slide 4: (-2147024893, 'The system cannot find the path specified.', (None, None, None, 0, None))
+2025-05-23 06:40:11,062 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 06:40:11,064 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 06:44:23,889 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 06:44:23,952 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 06:44:26,111 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 06:44:26,194 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 06:44:26,252 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 06:44:26,263 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 06:44:26,393 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 06:44:26,394 - config - INFO - Cleaned up original file: temp_uploads\9cfda58d-cc7a-4990-9bb6-8b19e66ecd63.pptx
+2025-05-23 06:45:00,009 - config - INFO - Generated 13 scenes for file 9cfda58d-cc7a-4990-9bb6-8b19e66ecd63.pptx.
+2025-05-23 06:45:05,478 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 06:45:07,509 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/3f710e9c942d4116ad399fd2127dd743/original
+2025-05-23 06:45:12,203 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 06:45:14,247 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e2dc3eb196d24f55b71e2f24cb0337b7/original
+2025-05-23 06:45:21,152 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 06:45:23,090 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/620cc1fe01454287a97ae81906c1b4e3/original
+2025-05-23 06:45:32,771 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 06:45:34,709 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/83f2863749644741be2c405364ac3b7a/original
+2025-05-23 06:45:39,147 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 06:45:40,985 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/4849dd4105814258b181034e25dc6c70/original
+2025-05-23 06:45:49,927 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 06:45:51,786 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/fd5669470a5d4698a06cc8356a469d80/original
+2025-05-23 06:45:59,716 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 06:46:01,419 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/7be2067fdf3b4fceaa185ffbd0a91dd1/original
+2025-05-23 06:46:07,873 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 06:46:09,694 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/7c85e58b5f204f71892481671b6c5962/original
+2025-05-23 06:46:18,482 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 06:46:20,136 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/45c68231de184fc1ac11c6f992c8691d/original
+2025-05-23 06:46:28,480 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 06:46:30,243 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/38fff941a221436f9573e31615a6988e/original
+2025-05-23 06:46:34,769 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 06:46:36,664 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/06045858e36940a68921b308239c92a7/original
+2025-05-23 06:46:43,017 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 06:46:45,229 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/24c4ae5de0db48b4b4e3052e856cd568/original
+2025-05-23 06:46:49,609 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 06:46:51,795 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/73b8699b28534e538fd82b0bb0b17410/original
+2025-05-23 06:51:32,736 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 06:51:32,802 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 06:51:45,584 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 06:51:47,871 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 06:51:48,880 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 06:51:49,491 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 06:51:49,494 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 06:51:49,495 - config - INFO - Cleaned up original file: temp_uploads\7c612a22-0a67-4cd6-9760-95477e98f4cf.pptx
+2025-05-23 07:08:49,756 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 07:08:49,838 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 07:08:52,045 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 07:08:53,831 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 07:08:56,386 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 07:08:57,689 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 07:08:57,694 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 07:08:57,695 - config - INFO - Cleaned up original file: temp_uploads\52eb2ea4-1e94-4189-98bc-099f7c04ea43.pptx
+2025-05-23 07:09:49,125 - config - INFO - Generated 9 scenes for file 52eb2ea4-1e94-4189-98bc-099f7c04ea43.pptx.
+2025-05-23 07:10:01,373 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:10:03,256 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/bbd1e6f6123649a1b4797c51858e385a/original
+2025-05-23 07:10:07,605 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:10:09,511 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/107d0e1704dc41a6b9ca5bdec9a1097b/original
+2025-05-23 07:10:17,682 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:10:19,520 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/148d4a0642c343599e853b89e2fa6d53/original
+2025-05-23 07:10:26,845 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:10:28,677 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d58ad8b0debb4de297b53fbff660208f/original
+2025-05-23 07:10:34,669 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:10:36,620 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/6c2861047152412c8a5617209110852c/original
+2025-05-23 07:10:41,483 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:10:43,307 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/7c5703a0a3a6485f88979f6e61af0c63/original
+2025-05-23 07:10:51,221 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:10:52,924 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/6fe2e9702bfe4f9e82e0648f194207f3/original
+2025-05-23 07:10:57,964 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:10:59,885 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/09fc38bf0f1d4f8ea56d5b4f739a5d43/original
+2025-05-23 07:11:05,577 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:11:10,123 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/5c5c8495ab134a2bab0c2f95d72b7d89/original
+2025-05-23 07:12:21,879 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 07:12:22,054 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 07:12:25,928 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 07:12:27,231 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 07:12:28,390 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 07:12:29,056 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 07:12:29,059 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 07:12:29,060 - config - INFO - Cleaned up original file: temp_uploads\b569b4f2-567a-41b0-983f-968a9425c409.pptx
+2025-05-23 07:13:00,739 - config - INFO - Generated 9 scenes for file b569b4f2-567a-41b0-983f-968a9425c409.pptx.
+2025-05-23 07:13:04,689 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:13:06,503 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/875343f1cc3e45bf98d30f8d0011cdc5/original
+2025-05-23 07:13:10,902 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:13:13,030 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c90cd2e45f424b58bbf39f3ea2575c76/original
+2025-05-23 07:13:17,310 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:13:18,997 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/43c7867cf43b4b2ea1b60fccb3b27023/original
+2025-05-23 07:13:24,039 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:13:25,806 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/41537c9388614ab391abbc696605be84/original
+2025-05-23 07:13:30,407 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:13:32,268 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/fdfcb194e86f4ca393bace3fbc238c75/original
+2025-05-23 07:13:36,855 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:13:38,898 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/bd392ee01add41bcbc32f7e82e52982e/original
+2025-05-23 07:13:43,161 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:13:45,186 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f807dc2aa57048349e4c0346f5c89b41/original
+2025-05-23 07:13:55,929 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:13:57,711 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/91f68c9165b144e6a139a342b8bd6819/original
+2025-05-23 07:14:08,580 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:14:10,527 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/357babdf80cc4a38aa27e250632dc050/original
+2025-05-23 07:24:38,040 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 07:24:38,155 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 07:28:06,553 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 07:28:07,602 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 07:28:08,811 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 07:28:09,458 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 07:28:09,460 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 07:28:09,461 - config - INFO - Cleaned up original file: temp_uploads\00df1f43-8b7d-4b69-89c2-fac7741bf612.pptx
+2025-05-23 07:28:41,526 - config - INFO - Generated 9 scenes for file 00df1f43-8b7d-4b69-89c2-fac7741bf612.pptx.
+2025-05-23 07:28:46,183 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:28:48,178 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/4d94e7dfd1f1418d9473b0ea3615aa97/original
+2025-05-23 07:28:53,124 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:28:54,885 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f1cecb64ccba4c07ac7363a2709e4b9a/original
+2025-05-23 07:29:01,367 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:29:03,411 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a88663c278fa46de97e67294751a8ce6/original
+2025-05-23 07:29:08,271 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:29:10,317 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/88a1dbe4e4364f9bb0dadcbf59acd671/original
+2025-05-23 07:29:15,563 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:29:17,777 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/4a0b51263403415a84e14c4c67494a46/original
+2025-05-23 07:29:22,012 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:29:23,760 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/95e2e82a88ef46578e5451c3e596eafa/original
+2025-05-23 07:29:28,378 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:29:30,401 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/61733b36c12845deb3d7cdaa3f28856b/original
+2025-05-23 07:29:34,705 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:29:36,498 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/cdccd817816243be8d533742abee79e5/original
+2025-05-23 07:29:41,349 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:29:43,027 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/926f481068aa4a3cbbc93bd21946396a/original
+2025-05-23 07:37:14,692 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 07:37:14,768 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 07:37:19,816 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 07:37:21,643 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 07:37:24,444 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 07:37:25,752 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 07:37:25,759 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 07:37:25,760 - config - INFO - Cleaned up original file: temp_uploads\a6687ace-33c5-4b4a-b487-6a6245df564f.pptx
+2025-05-23 07:37:47,797 - config - INFO - Generated 13 scenes for file a6687ace-33c5-4b4a-b487-6a6245df564f.pptx.
+2025-05-23 07:37:54,421 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:37:56,332 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d2589a5ccc42438ab9a9fe93eaf22334/original
+2025-05-23 07:38:00,655 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:38:02,372 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/ff53faaaca2345e19968df115d356891/original
+2025-05-23 07:38:11,497 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:38:13,715 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/47b4527826f9445ea7e629de9ade4008/original
+2025-05-23 07:38:22,395 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:38:24,469 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/93a9544786164cd9b3102de5dcb01a72/original
+2025-05-23 07:38:34,233 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:38:36,015 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/25aa81e354394f3c9ba88e6307f289ca/original
+2025-05-23 07:38:40,069 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:38:41,871 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/17bb326d097c40f59180b402ea41188e/original
+2025-05-23 07:38:50,310 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:38:52,198 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/2fa112f39b604591ab57538c50cf9d09/original
+2025-05-23 07:38:56,400 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:38:58,263 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/4ed3f145e8b34d1a9ee53a60d000018c/original
+2025-05-23 07:39:06,613 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:39:08,383 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b1a631c6f56f4aa588b98b7e37a27186/original
+2025-05-23 07:39:16,860 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:39:18,630 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/78616418443b485a931c1bd8cb373ea4/original
+2025-05-23 07:39:32,251 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:39:38,430 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/93c6508b5c384694b038afbe34fe921d/original
+2025-05-23 07:39:45,739 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:39:47,841 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d36ba8b9da6e4a0b980fb1546e2e393b/original
+2025-05-23 07:40:21,780 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 07:40:21,890 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 07:40:23,889 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 07:40:25,718 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 07:40:28,392 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 07:40:29,618 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 07:40:29,623 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 07:40:29,624 - config - INFO - Cleaned up original file: temp_uploads\4489ba92-6867-441d-91e1-532faac6eee1.pptx
+2025-05-23 07:40:50,668 - config - INFO - Generated 10 scenes for file 4489ba92-6867-441d-91e1-532faac6eee1.pptx.
+2025-05-23 07:40:55,648 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:40:57,420 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/9289be0056fa4c5e928954a1f72a8462/original
+2025-05-23 07:41:03,287 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:41:05,151 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/cd570783c85949a29a42082652fcafd6/original
+2025-05-23 07:41:14,223 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:41:15,935 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/37c0511c20004cc6b84651a31641b19c/original
+2025-05-23 07:41:20,458 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:41:22,214 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/82fc5221d6054cb6804557ecc11763d7/original
+2025-05-23 07:41:28,837 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:41:30,584 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d22468909a0e4872b4e2876badeabe0a/original
+2025-05-23 07:41:34,585 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:41:36,365 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e9f5a7c7713e4d91a3c294cd5d0f2568/original
+2025-05-23 07:41:41,315 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:41:47,718 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1e0eebc06a55488bb33b29227a0b10a8/original
+2025-05-23 07:41:51,652 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:41:53,534 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1eaf2eab7a33434ba511bc63fdeebeca/original
+2025-05-23 07:41:57,656 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:42:02,979 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e3a464e2c4c540c081f6cd872bf9d3f8/original
+2025-05-23 07:42:09,404 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 07:42:11,196 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/cce1d7c8a56346f29559c319a91ee668/original
+2025-05-23 07:48:57,808 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 07:48:57,915 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 07:50:55,334 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 07:50:57,225 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 07:50:59,448 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 07:51:00,908 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 07:51:00,914 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 07:51:00,915 - config - INFO - Cleaned up original file: temp_uploads\ba5fd669-2615-4662-8b7b-9981f53d58ad.pptx
+2025-05-23 07:53:06,294 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 07:53:06,370 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 07:53:38,669 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 07:53:40,445 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 07:53:42,926 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 07:53:44,157 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 07:53:44,162 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 07:53:44,164 - config - INFO - Cleaned up original file: temp_uploads\b72bb973-279a-4877-b34d-04628f59e56b.pptx
+2025-05-23 07:56:48,770 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 07:56:48,872 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 07:56:53,930 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 07:56:55,700 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 07:56:58,276 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 07:56:59,510 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 07:56:59,514 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 07:56:59,515 - config - INFO - Cleaned up original file: temp_uploads\73d4a576-9892-4e2b-b52c-b3668c1b32f4.pptx
+2025-05-23 07:58:49,448 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 07:58:49,552 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 07:58:51,339 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 07:58:53,625 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 07:58:56,510 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 07:58:57,934 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 07:58:57,939 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 07:58:57,941 - config - INFO - Cleaned up original file: temp_uploads\eda68589-a598-43b9-aefc-6075083902be.pptx
+2025-05-23 08:00:51,695 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 08:00:51,814 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 08:00:55,327 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 08:00:56,973 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 08:00:58,651 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 08:00:59,935 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 08:00:59,939 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 08:00:59,941 - config - INFO - Cleaned up original file: temp_uploads\34aec512-2ea7-4958-9671-badd92cef4b5.pptx
+2025-05-23 08:01:49,944 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 08:01:50,013 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 08:01:51,490 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 08:01:53,262 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 08:01:55,735 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 08:01:56,943 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 08:01:56,945 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 08:01:56,946 - config - INFO - Cleaned up original file: temp_uploads\ce3ba602-0882-403c-980f-51a98b89d021.pptx
+2025-05-23 08:01:58,805 - config - INFO - Starting table image processing...
+2025-05-23 08:01:59,583 - config - ERROR - HeyGen upload failed for slide_2_table_0.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <title>404 Not Found</title>
 <h1>Not Found</h1>
 <p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
 
-2025-05-12 17:54:14,073 - config - ERROR - Error generating image: 500: HeyGen API error: 404
-2025-05-12 17:54:18,746 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/20ac0402593547cd800eaa49762f0424/original
-2025-05-12 17:54:20,291 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:54:24,087 - config - ERROR - HeyGen API error: 404 - <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+2025-05-23 08:02:00,883 - config - ERROR - HeyGen upload failed for slide_2_table_1.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <title>404 Not Found</title>
 <h1>Not Found</h1>
 <p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
 
-2025-05-12 17:54:24,088 - config - ERROR - Error generating image: 500: HeyGen API error: 404
-2025-05-12 17:54:30,823 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/20ac0402593547cd800eaa49762f0424/original
-2025-05-12 17:54:33,588 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:54:36,555 - config - ERROR - HeyGen API error: 404 - <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+2025-05-23 08:02:01,826 - config - ERROR - HeyGen upload failed for slide_2_table_2.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <title>404 Not Found</title>
 <h1>Not Found</h1>
 <p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
 
-2025-05-12 17:54:36,556 - config - ERROR - Error generating image: 500: HeyGen API error: 404
-2025-05-12 17:54:41,202 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/20ac0402593547cd800eaa49762f0424/original
-2025-05-12 17:54:43,147 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:54:49,248 - config - ERROR - HeyGen API error: 404 - <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+2025-05-23 08:02:02,752 - config - ERROR - HeyGen upload failed for slide_3_table_0.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <title>404 Not Found</title>
 <h1>Not Found</h1>
 <p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
 
-2025-05-12 17:54:49,249 - config - ERROR - Error generating image: 500: HeyGen API error: 404
-2025-05-12 17:55:27,010 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/20ac0402593547cd800eaa49762f0424/original
-2025-05-12 17:55:29,479 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:55:31,502 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/57c045d7e8e244ab80a0d277ad994ab7/original
-2025-05-12 17:55:45,874 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/20ac0402593547cd800eaa49762f0424/original
-2025-05-12 17:55:47,874 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
-2025-05-12 17:55:51,314 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c41e80b8f93b468bae89b54794791d0a/original
-2025-05-12 17:55:55,543 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/20ac0402593547cd800eaa49762f0424/original
-2025-05-12 17:55:59,669 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/20ac0402593547cd800eaa49762f0424/original
+2025-05-23 08:02:03,677 - config - ERROR - HeyGen upload failed for slide_3_table_1.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-23 08:02:04,622 - config - ERROR - HeyGen upload failed for slide_3_table_2.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-23 08:02:05,556 - config - ERROR - HeyGen upload failed for slide_4_table_0.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-23 08:02:06,488 - config - ERROR - HeyGen upload failed for slide_4_table_1.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-23 08:02:06,489 - config - INFO - Successfully processed 0 table images
+2025-05-23 08:02:06,489 - config - INFO - Starting scene generation...
+2025-05-23 08:02:08,318 - config - ERROR - Error processing slide 1: 'list' object has no attribute 'get'
+2025-05-23 08:02:10,007 - config - ERROR - Error processing slide 2: 'list' object has no attribute 'get'
+2025-05-23 08:02:11,358 - config - ERROR - Error processing slide 3: 'list' object has no attribute 'get'
+2025-05-23 08:02:13,902 - config - INFO - Generated 5 scenes
+2025-05-23 08:02:18,011 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:02:19,827 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f9a38a442cde4a2d9cee17a7a08b2aa8/original
+2025-05-23 08:02:24,196 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:02:25,976 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e3c54cfa17f2423d81109c26face1cf6/original
+2025-05-23 08:02:31,238 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:02:33,235 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/ef67ea779a59440880593e3ee683d0b7/original
+2025-05-23 08:03:00,058 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:03:01,857 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/6b40ccdebdb2418f9f66aa296caf4f50/original
+2025-05-23 08:06:40,577 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 08:06:40,643 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 08:06:42,227 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 08:06:43,857 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 08:06:46,392 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 08:06:47,425 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 08:06:47,429 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 08:06:47,431 - config - INFO - Cleaned up original file: temp_uploads\a0e958ce-0b3a-415d-b5ba-ad961f37c7c0.pptx
+2025-05-23 08:06:53,268 - config - INFO - Starting table image processing...
+2025-05-23 08:06:54,093 - config - ERROR - HeyGen upload failed for slide_2_table_0.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-23 08:06:54,846 - config - ERROR - HeyGen upload failed for slide_2_table_1.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-23 08:06:55,791 - config - ERROR - HeyGen upload failed for slide_2_table_2.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-23 08:06:56,875 - config - ERROR - HeyGen upload failed for slide_3_table_0.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-23 08:06:57,823 - config - ERROR - HeyGen upload failed for slide_3_table_1.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-23 08:06:58,777 - config - ERROR - HeyGen upload failed for slide_3_table_2.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-23 08:06:59,681 - config - ERROR - HeyGen upload failed for slide_4_table_0.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-23 08:07:00,586 - config - ERROR - HeyGen upload failed for slide_4_table_1.png: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2025-05-23 08:07:00,586 - config - INFO - Successfully processed 0 table images
+2025-05-23 08:07:00,587 - config - INFO - Starting scene generation...
+2025-05-23 08:07:02,230 - config - ERROR - Error processing slide 1: 'list' object has no attribute 'get'
+2025-05-23 08:07:04,861 - config - ERROR - Error processing slide 2: 'list' object has no attribute 'get'
+2025-05-23 08:07:06,316 - config - ERROR - Error processing slide 3: 'list' object has no attribute 'get'
+2025-05-23 08:07:07,407 - config - ERROR - Error processing slide 4: 'list' object has no attribute 'get'
+2025-05-23 08:07:08,276 - config - INFO - Generated 5 scenes
+2025-05-23 08:07:12,685 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:07:14,808 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/52d274e0036744df9a7d64d8762f3b30/original
+2025-05-23 08:07:21,962 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:07:24,010 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c909d3d0480e4a1dbdb9f5be70656c07/original
+2025-05-23 08:07:28,434 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:07:30,212 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/79b9d312755f43e0ba79c40aed7c68fe/original
+2025-05-23 08:07:36,472 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:07:38,311 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/3792261b635840cc9f4500c6677cd935/original
+2025-05-23 08:07:42,305 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:07:44,057 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a84ae65b92e84017b12d9038f2839128/original
+2025-05-23 08:09:41,341 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 08:09:41,431 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 08:09:43,549 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 08:09:45,330 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 08:09:47,769 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 08:09:49,046 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 08:09:49,050 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 08:09:49,051 - config - INFO - Cleaned up original file: temp_uploads\5d0a66b2-f45d-42a4-a8fc-d0b74ab7735f.pptx
+2025-05-23 08:10:16,249 - config - INFO - Generated 11 scenes for file 5d0a66b2-f45d-42a4-a8fc-d0b74ab7735f.pptx.
+2025-05-23 08:10:24,289 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:10:26,364 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/190d50e1296042dc8182ead24c42347f/original
+2025-05-23 08:10:31,554 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:10:33,589 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/25979bd234774462ab7d19f257373543/original
+2025-05-23 08:10:39,587 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:10:41,428 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/39395a4dc98342009a42f5010c2541f4/original
+2025-05-23 08:10:45,403 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:10:47,123 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/e9793eb10c514f368fc92b8f55eadc04/original
+2025-05-23 08:10:52,330 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:10:54,544 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/ccb8a994e44c4581997d9c2a7b33dcf4/original
+2025-05-23 08:10:59,048 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:11:05,337 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/cf92aa0358cc443fa596a7e8547e0421/original
+2025-05-23 08:11:09,822 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:11:14,967 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/8495b8502a6c4b2a8fd00e69b4f33530/original
+2025-05-23 08:11:18,999 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:11:20,991 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/76b79b3dd989432b948f8fd5586a5893/original
+2025-05-23 08:11:26,210 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:11:28,079 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/9500914f757e4ca99dff95813320e198/original
+2025-05-23 08:11:37,315 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:11:39,661 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/cad2f54b8a8f49409c5d963f01dab112/original
+2025-05-23 08:11:46,514 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:11:48,336 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f5256af21b8f4d7a891866864615a36c/original
+2025-05-23 08:20:48,988 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 08:20:49,051 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 08:20:52,738 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 08:20:54,487 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 08:20:56,929 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 08:20:58,230 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 08:20:58,234 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 08:20:58,235 - config - INFO - Cleaned up original file: temp_uploads\10deacd2-9fd4-4ad5-9149-5fbcb015a16c.pptx
+2025-05-23 08:21:30,977 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:21:32,891 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0bbc7c56834e4596b16d42f4d828dd25/original
+2025-05-23 08:21:40,162 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:21:42,274 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/a85512abf10a47ccadf9ed63451c14fd/original
+2025-05-23 08:21:47,553 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:21:49,512 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f9d6ae47ba464141a19abd2599edfa01/original
+2025-05-23 08:21:57,973 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:21:59,739 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/58aff17eb4ab488b81a53120bf723a7a/original
+2025-05-23 08:22:25,020 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:22:26,855 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/8d3a5ec6603249a3971fc7dbccd57c5c/original
+2025-05-23 08:22:33,422 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:22:38,775 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1976012594414c409ac54969a7d09c1e/original
+2025-05-23 08:22:45,804 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:22:47,881 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/96bcce99319a47899ef728f76dfd04d3/original
+2025-05-23 08:22:56,336 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:22:58,020 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/bf32cdaf615d400bba9adb84b98f4cac/original
+2025-05-23 08:23:09,482 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:23:15,499 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/426dedc8564244a79a151af28a937445/original
+2025-05-23 08:23:19,199 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:23:20,777 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/3edcaf7ff5334c9cb5c9771092ab5df7/original
+2025-05-23 08:33:37,361 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-23 08:33:37,487 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-23 08:34:50,731 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-23 08:34:52,471 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-23 08:34:54,822 - config - INFO - Extracted slide 3 with title: None
+2025-05-23 08:34:56,013 - config - INFO - Extracted slide 4 with title: None
+2025-05-23 08:34:56,017 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-23 08:34:56,018 - config - INFO - Cleaned up original file: temp_uploads\82034b3d-60b0-4f2d-9b15-9136db3a68a0.pptx
+2025-05-23 08:34:57,910 - config - INFO - Processing slide 1
+2025-05-23 08:34:59,628 - config - INFO - Generated scene slide_1_scene_1 for slide 1
+2025-05-23 08:34:59,628 - config - INFO - Processing slide 2
+2025-05-23 08:35:00,125 - config - INFO - Processing table image: temp_uploads\extracted\82034b3d-60b0-4f2d-9b15-9136db3a68a0\slide_2_table_0.png
+2025-05-23 08:35:02,468 - config - INFO - HeyGen API response status for slide_2_table_0.png: 200
+2025-05-23 08:35:02,470 - config - INFO - Successfully uploaded table image: https://resource2.heygen.ai/image/09ba6240fab4406c903f81e56e0f61f9/original
+2025-05-23 08:35:02,470 - config - INFO - Processing table image: temp_uploads\extracted\82034b3d-60b0-4f2d-9b15-9136db3a68a0\slide_2_table_1.png
+2025-05-23 08:35:03,646 - config - INFO - HeyGen API response status for slide_2_table_1.png: 200
+2025-05-23 08:35:03,647 - config - INFO - Successfully uploaded table image: https://resource2.heygen.ai/image/5966b69d853d494d817d350036ce2868/original
+2025-05-23 08:35:03,648 - config - INFO - Processing table image: temp_uploads\extracted\82034b3d-60b0-4f2d-9b15-9136db3a68a0\slide_2_table_2.png
+2025-05-23 08:35:04,687 - config - INFO - HeyGen API response status for slide_2_table_2.png: 200
+2025-05-23 08:35:04,688 - config - INFO - Successfully uploaded table image: https://resource2.heygen.ai/image/2edc45f3aa31412b893c4c1d166a23d7/original
+2025-05-23 08:35:07,470 - config - INFO - Generated scene slide_2_scene_1 for slide 2
+2025-05-23 08:35:07,470 - config - INFO - Generated scene slide_2_scene_2 for slide 2
+2025-05-23 08:35:07,471 - config - INFO - Generated scene slide_2_scene_3 for slide 2
+2025-05-23 08:35:07,472 - config - INFO - Generated scene slide_2_scene_4 for slide 2
+2025-05-23 08:35:07,472 - config - INFO - Generated scene slide_2_scene_5 for slide 2
+2025-05-23 08:35:07,472 - config - INFO - Processing slide 3
+2025-05-23 08:35:07,689 - config - INFO - Processing table image: temp_uploads\extracted\82034b3d-60b0-4f2d-9b15-9136db3a68a0\slide_3_table_0.png
+2025-05-23 08:35:08,731 - config - INFO - HeyGen API response status for slide_3_table_0.png: 200
+2025-05-23 08:35:08,732 - config - INFO - Successfully uploaded table image: https://resource2.heygen.ai/image/0c8a65590d90408d8c13d5f4e26b4e9e/original
+2025-05-23 08:35:08,733 - config - INFO - Processing table image: temp_uploads\extracted\82034b3d-60b0-4f2d-9b15-9136db3a68a0\slide_3_table_1.png
+2025-05-23 08:35:09,762 - config - INFO - HeyGen API response status for slide_3_table_1.png: 200
+2025-05-23 08:35:09,763 - config - INFO - Successfully uploaded table image: https://resource2.heygen.ai/image/ea91e470bf044df89c2779f431a853ce/original
+2025-05-23 08:35:09,764 - config - INFO - Processing table image: temp_uploads\extracted\82034b3d-60b0-4f2d-9b15-9136db3a68a0\slide_3_table_2.png
+2025-05-23 08:35:10,812 - config - INFO - HeyGen API response status for slide_3_table_2.png: 200
+2025-05-23 08:35:10,814 - config - INFO - Successfully uploaded table image: https://resource2.heygen.ai/image/bda1b51ea3c24810902db13bfddc9d76/original
+2025-05-23 08:35:12,184 - config - INFO - Generated scene slide_3_scene_1 for slide 3
+2025-05-23 08:35:12,185 - config - INFO - Generated scene slide_3_scene_2 for slide 3
+2025-05-23 08:35:12,186 - config - INFO - Processing slide 4
+2025-05-23 08:35:12,401 - config - INFO - Processing table image: temp_uploads\extracted\82034b3d-60b0-4f2d-9b15-9136db3a68a0\slide_4_table_0.png
+2025-05-23 08:35:13,614 - config - INFO - HeyGen API response status for slide_4_table_0.png: 200
+2025-05-23 08:35:13,615 - config - INFO - Successfully uploaded table image: https://resource2.heygen.ai/image/5a8ee909b6ff464b85b8ee56cb8da9ff/original
+2025-05-23 08:35:13,616 - config - INFO - Processing table image: temp_uploads\extracted\82034b3d-60b0-4f2d-9b15-9136db3a68a0\slide_4_table_1.png
+2025-05-23 08:35:14,749 - config - INFO - HeyGen API response status for slide_4_table_1.png: 200
+2025-05-23 08:35:14,750 - config - INFO - Successfully uploaded table image: https://resource2.heygen.ai/image/6d62c34498734dca898e217f1a15f92f/original
+2025-05-23 08:35:16,192 - config - INFO - Generated scene slide_4_scene_1 for slide 4
+2025-05-23 08:35:16,194 - config - INFO - Generated scene slide_4_scene_2 for slide 4
+2025-05-23 08:35:16,194 - config - INFO - Processing slide 5
+2025-05-23 08:35:17,251 - config - INFO - Generated scene slide_5_scene_1 for slide 5
+2025-05-23 08:35:17,252 - config - INFO - Generated 11 scenes for file_id 82034b3d-60b0-4f2d-9b15-9136db3a68a0.pptx
+2025-05-23 08:35:21,826 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:35:23,839 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/c237cff41f6c4c8bb2774afea7823f92/original
+2025-05-23 08:35:33,530 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:35:35,301 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/46bf2790dcf048a68f0eba0721fee397/original
+2025-05-23 08:35:42,378 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:35:44,231 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/2758ac29b4a34ef6afa9a5796ce7b751/original
+2025-05-23 08:35:51,694 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:35:53,519 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/d58548ca94af4944a61b0c2105a706d7/original
+2025-05-23 08:35:58,680 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:36:00,925 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f1a42e357c754250a75300b664c7dafb/original
+2025-05-23 08:36:12,265 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:36:14,378 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/934cac49a36c4df0bff7e46a70b90e4d/original
+2025-05-23 08:36:22,327 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:36:24,485 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/6898e879250d4085a28d8313daf4911e/original
+2025-05-23 08:36:31,443 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:36:33,404 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/1e6d3a30bfd5482785768fb5fe1fca77/original
+2025-05-23 08:36:42,953 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:36:44,761 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/8765f674e34e4fe8ac51b0e88f31f00c/original
+2025-05-23 08:36:50,937 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:36:52,893 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/8388a167f51e4e80a92fcdeee05e2f91/original
+2025-05-23 08:36:58,085 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-23 08:36:59,709 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/3487c60b4d194549ad23ba4e6d0e7082/original

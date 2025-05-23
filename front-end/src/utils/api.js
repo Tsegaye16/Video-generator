@@ -108,6 +108,7 @@ export const generateScenes = async (extractionData) => {
       extraction_data: extractionData,
     });
     message.success("Storyboard scenes generated!");
+    console.log("Generated scenes:", response.data);
     return response.data.scenes;
   } catch (error) {
     const errorMsg = error.response?.data?.detail || error.message;

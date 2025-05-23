@@ -154,13 +154,14 @@ export const usePresentation = () => {
 
   const handleGenerateScenes = async () => {
     if (!extractionData) return;
-    if (!logoId) {
-      message.error("Please upload a logo before generating the storyboard.");
-      return;
-    }
+    // if (!logoId) {
+    //   message.error("Please upload a logo before generating the storyboard.");
+    //   return;
+    // }
     setIsGeneratingScenes(true);
     try {
       const scenes = await api.generateScenes(extractionData);
+      console.log("Generated scenes:", scenes);
       await generateInitialImages(scenes);
     } finally {
       setIsGeneratingScenes(false);
@@ -169,10 +170,6 @@ export const usePresentation = () => {
 
   const generateInitialImages = async (scenes) => {
     if (!scenes?.length) return;
-    if (!logoId) {
-      message.error("Please upload a logo before generating images.");
-      return;
-    }
 
     setIsGeneratingImages(true);
     // Initialize storyboard scenes with isQueued, isGenerating, and generationProgress
@@ -213,8 +210,8 @@ export const usePresentation = () => {
           const imageUrl = await api.generateImage(
             scene.image_prompt,
             scene.scene_id,
-            logoId,
-            logoURL,
+            logoId || null,
+            logoURL || null,
             aspectRatio
           );
           // Update the scene with the generated image URL
@@ -276,11 +273,6 @@ export const usePresentation = () => {
   };
 
   const handleRegenerateImage = async (sceneId) => {
-    if (!logoId) {
-      message.error("Please upload a logo before regenerating images.");
-      return;
-    }
-
     const scene = storyboardScenes.find((s) => s.scene_id === sceneId);
     if (!scene) return;
 
@@ -296,8 +288,8 @@ export const usePresentation = () => {
       const imageUrl = await api.generateImage(
         scene.image_prompt,
         scene.scene_id,
-        logoId,
-        logoURL,
+        logoId || null,
+        logoURL || null,
         aspectRatio
       );
       setStoryboardScenes((prev) =>
@@ -355,6 +347,14 @@ export const usePresentation = () => {
     }
 
     return false;
+  };
+
+  const handleRemoveLogo = () => {
+    setLogoFile(null);
+    setLogoPreviewUrl(null);
+    setLogoId(null);
+    setLogoURL(null);
+    localStorage.removeItem("logo_url");
   };
 
   const handleZoom = (direction) => {
@@ -457,6 +457,7 @@ export const usePresentation = () => {
     handleSceneChange,
     handleRegenerateImage,
     handleLogoUpload,
+    handleRemoveLogo,
     handleZoom,
     handleGenerateVideo,
     resetState,

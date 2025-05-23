@@ -1,5 +1,6 @@
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List, Optional, Dict
+
 class ExtractRequest(BaseModel):
     file_id: str
 
@@ -37,21 +38,22 @@ class SceneGenerationRequest(BaseModel):
 class SceneGenerationResponse(BaseModel):
     file_id: str
     scenes: List[Scene]
+    table_image_urls: Dict[int, List[str]]  # New field: slide_number -> list of table image URLs
 
 class ImageGenerationRequest(BaseModel):
     prompt: str
     scene_id: str
-    logo_id: str
-    logo_url: str
+    logo_id: Optional[str] = None
+    logo_url: Optional[str] = None
 
 class ImageGenerationResponse(BaseModel):
     scene_id: str
-    image_url: str
-    logo_url:str
+    image_url: Optional[str] = None
+    logo_url: Optional[str] = None
 
 class VideoGenerationRequest(BaseModel):
     scenes: List[Scene]
-    avatar_id:Optional[str] = None
+    avatar_id: Optional[str] = None
     voice_id: str
 
 class LogoUploadResponse(BaseModel):

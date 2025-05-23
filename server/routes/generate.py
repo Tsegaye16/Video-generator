@@ -3,6 +3,7 @@ from models import SceneGenerationRequest, SceneGenerationResponse, Scene, Image
 from utils import format_slide_content_for_llm, merge_with_logo
 from config import settings, logger
 import json
+import os
 import google.generativeai as genarativeai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from google import genai
@@ -19,67 +20,123 @@ async def generate_scenes(request: SceneGenerationRequest):
     if not settings.GOOGLE_API_KEY:
         logger.error("Gemini API Key not configured on server.")
         raise HTTPException(status_code=500, detail="Gemini API Key not configured on server.")
+
+    if not settings.HEYGEN_API_KEY:
+        logger.error("HeyGen API Key not configured on server.")
+        raise HTTPException(status_code=500, detail="HeyGen API Key not configured on server.")
+
     extraction_data = request.extraction_data
     all_scenes: List[Scene] = []
+    table_image_urls: Dict[int, List[str]] = {}  # slide_number -> list of table image URLs
     extracted_content_path = extraction_data.extracted_content_path
     genarativeai.configure(api_key=settings.GOOGLE_API_KEY)
     model = genarativeai.GenerativeModel(
         'gemini-2.0-flash',
         generation_config=genarativeai.GenerationConfig(response_mime_type="application/json"),
-
         safety_settings={
             HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
             HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
             HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
             HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
         }
-
     )
-    system_prompt = """
-You are an AI assistant creating a video script storyboard from PowerPoint slide content.
-Analyze the provided text, table summaries, and images for each slide.
-Your goal is to break down the slide's information into one or more logical "scenes".
-For each scene, generate:
-1.  `speech_script`: A concise narration (1-2 sentences, conversational tone) summarizing the key point of that scene.
-2.  `image_prompt`: A descriptive text prompt (max 30 words) for an AI image generator to create a relevant, professional-looking background visual for this scene. Focus on the core concept, mood, or key elements. Avoid text in images unless essential.
 
-Structure your output as a JSON object containing a single key "scenes", which is a list of scene objects. Each scene object must have "speech_script" and "image_prompt" keys.
-Example scene object: {"speech_script": "...", "image_prompt": "..."}
-Ensure the narrative flows logically across scenes derived from the same slide.
-Base your output *only* on the provided slide content. Do not add external information.
-"""
+    system_prompt = """
+    You are an AI assistant creating a video script storyboard from PowerPoint slide content.
+    Analyze the provided text, table summaries, and images for each slide.
+    Your goal is to break down the slide's information into one or more logical "scenes".
+    For each scene, generate:
+    1. `speech_script`: A concise narration (1-2 sentences, conversational tone) summarizing the key point of that scene.
+    2. `image_prompt`: A descriptive text prompt (max 30 words) for an AI image generator to create a relevant, professional-looking background visual for this scene. Focus on the core concept, mood, or key elements. Avoid text in images unless essential.
+    Structure your output as a JSON object containing a single key "scenes", which is a list of scene objects. Each scene object must have "speech_script" and "image_prompt" keys.
+    Example scene object: {"speech_script": "...", "image_prompt": "..."}
+    Ensure the narrative flows logically across scenes derived from the same slide.
+    Base your output *only* on the provided slide content. Do not add external information.
+    """
+
     try:
         for slide_data in extraction_data.slides:
+            logger.info(f"Processing slide {slide_data.slide_number}")
             slide_content_parts = format_slide_content_for_llm(slide_data, extracted_content_path)
             prompt_parts = [system_prompt, "\n--- SLIDE CONTENT START ---\n"]
             prompt_parts.extend(slide_content_parts)
             prompt_parts.append("\n--- SLIDE CONTENT END ---\nGenerate scenes based *only* on the content above:")
+
+            # Process table images for this slide
+            slide_table_urls = []
+            for image_info in slide_data.images:
+                if "table" in image_info.filename:
+                    image_path = os.path.join(extracted_content_path, image_info.filename)
+                    logger.info(f"Processing table image: {image_path}")
+                    if not os.path.exists(image_path):
+                        logger.error(f"Table image file not found: {image_path}")
+                        continue
+                    try:
+                        with open(image_path, "rb") as image_file:
+                            image_data = image_file.read()
+                        headers = {
+                            "Content-Type": "image/png",
+                            "X-Api-Key": settings.HEYGEN_API_KEY,
+                        }
+                        response = requests.post("https://upload.heygen.com/v1/asset",
+                                                headers=headers,
+                                                data=image_data)
+                        logger.info(f"HeyGen API response status for {image_info.filename}: {response.status_code}")
+                        if response.status_code == 200:
+                            response_data = response.json()
+                            logger.debug(f"HeyGen API response: {response_data}")
+                            if response_data.get("code") == 100:
+                                image_url = response_data.get("data", {}).get("url")
+                                if image_url:
+                                    slide_table_urls.append(image_url)
+                                    logger.info(f"Successfully uploaded table image: {image_url}")
+                                else:
+                                    logger.error(f"No URL in HeyGen response for {image_info.filename}")
+                            else:
+                                logger.error(f"Invalid HeyGen response code for {image_info.filename}: {response_data.get('code')}")
+                        else:
+                            logger.error(f"HeyGen API request failed for {image_info.filename}: {response.status_code} - {response.text}")
+                    except Exception as e:
+                        logger.error(f"Error uploading table image {image_info.filename}: {e}")
+            table_image_urls[slide_data.slide_number] = slide_table_urls
+
             response = model.generate_content(prompt_parts, stream=False)
             if not response.candidates or not response.candidates[0].content.parts:
                 logger.error(f"Error: No content generated for slide {slide_data.slide_number}.")
                 all_scenes.append(Scene(
                     original_slide_number=slide_data.slide_number,
                     speech_script=f"Error: Could not generate content for slide {slide_data.slide_number}. Review original slide.",
-                    image_prompt="abstract error message background"
+                    image_prompt="abstract error message background",
+                    scene_id=f"slide_{slide_data.slide_number}_error"
                 ))
                 continue
+
             try:
                 generated_json = json.loads(response.text)
                 slide_scenes = generated_json.get("scenes", [])
                 if not slide_scenes:
+                    logger.warning(f"No scenes generated for slide {slide_data.slide_number}.")
                     all_scenes.append(Scene(
                         speech_script=f"Notice: AI could not determine distinct scenes for slide {slide_data.slide_number}.",
                         image_prompt="simple placeholder graphic",
-                        original_slide_number=slide_data.slide_number
+                        original_slide_number=slide_data.slide_number,
+                        scene_id=f"slide_{slide_data.slide_number}_error"
                     ))
                     continue
+
+                scenes_for_slide = []
                 for scene_idx, scene_json in enumerate(slide_scenes, 1):
-                    all_scenes.append(Scene(
+                    scene = Scene(
                         speech_script=scene_json.get("speech_script", "No script generated"),
                         image_prompt=scene_json.get("image_prompt", "generic background"),
                         original_slide_number=slide_data.slide_number,
                         scene_id=f"slide_{slide_data.slide_number}_scene_{scene_idx}"
-                    ))
+                    )
+                    scenes_for_slide.append(scene)
+                    logger.info(f"Generated scene {scene.scene_id} for slide {slide_data.slide_number}")
+
+                all_scenes.extend(scenes_for_slide)
+
             except json.JSONDecodeError as e:
                 logger.error(f"Error decoding JSON for slide {slide_data.slide_number}: {e}")
                 all_scenes.append(Scene(
@@ -88,14 +145,16 @@ Base your output *only* on the provided slide content. Do not add external infor
                     original_slide_number=slide_data.slide_number,
                     scene_id=f"slide_{slide_data.slide_number}_error"
                 ))
+
     except Exception as e:
         logger.error(f"Error generating scenes: {e}")
-        raise HTTPException(status_code=500, detail=f"Error generating scenes: {str(e)}")
-    
-    logger.info(f"Generated {len(all_scenes)} scenes for file {extraction_data.file_id}.")
+        raise HTTPException(status_code=500, detail=f"Scene generation failed: {e}")
+
+    logger.info(f"Generated {len(all_scenes)} scenes for file_id {extraction_data.file_id}")
     return SceneGenerationResponse(
         file_id=extraction_data.file_id,
-        scenes=all_scenes
+        scenes=all_scenes,
+        table_image_urls=table_image_urls
     )
 
 @router.post("/api/generate-image", response_model=ImageGenerationResponse)
