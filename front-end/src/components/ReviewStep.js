@@ -52,21 +52,19 @@ const ReviewStep = ({
   const [internalSelectedAvatar, setInternalSelectedAvatar] =
     useState(selectedAvatar);
   const [isGeneratingVideo, setIsGeneratingVideo] = useState(false);
+  const [activeTableImageIndex, setActiveTableImageIndex] = useState(0); // New state for table image slide index
 
   useEffect(() => {
-    // Keep the internal state in sync with the prop
     setInternalSelectedAvatar(selectedAvatar);
   }, [selectedAvatar]);
 
   useEffect(() => {
-    // Reset isGeneratingVideo when video generation is complete or failed
     if (
       videoResult?.status === "completed" ||
       videoResult?.status === "failed"
     ) {
       setIsGeneratingVideo(false);
     }
-    // Auto-scroll to video result when it appears
     if (videoResult && videoResultRef.current) {
       videoResultRef.current.scrollIntoView({
         behavior: "smooth",
@@ -76,12 +74,12 @@ const ReviewStep = ({
   }, [videoResult]);
 
   const handleAvatarChange = (value) => {
-    setInternalSelectedAvatar(value); // Handle the special case for "Without Avatar"
-    setSelectedAvatar(value === "WithoutAvatar_id" ? null : value); // Update the parent's state as well
+    setInternalSelectedAvatar(value);
+    setSelectedAvatar(value === "WithoutAvatar_id" ? null : value);
   };
 
   const handleGenerateVideoClick = () => {
-    setIsGeneratingVideo(true); // Set generating state
+    setIsGeneratingVideo(true);
     handleGenerateVideo(internalSelectedAvatar);
   };
 
@@ -129,6 +127,8 @@ const ReviewStep = ({
               logoURL={logoURL}
               tableImageUrls={tableImageUrls}
               generatedImagesCount={generatedImagesCount}
+              activeTableImageIndex={activeTableImageIndex} // Pass table image index
+              setActiveTableImageIndex={setActiveTableImageIndex} // Pass setter
             />
           ))}
         </StyledCarousel>
@@ -223,12 +223,10 @@ const ReviewStep = ({
           showSearch
           allowClear
           filterOption={(input, option) => {
-            // Search in both avatar name and premium tag
             const children = option?.children?.props?.children;
             const avatarName = children?.[1]?.props?.children?.[0] || "";
             const premiumTag =
               children?.[1]?.props?.children?.[1]?.props?.children || "";
-
             return (
               avatarName.toLowerCase().includes(input.toLowerCase()) ||
               premiumTag.toLowerCase().includes(input.toLowerCase())
@@ -296,7 +294,6 @@ const ReviewStep = ({
           showSearch
           optionFilterProp="children"
           filterOption={(input, option) => {
-            // Search in name, gender, and language
             const text = option?.children?.toString().toLowerCase() || "";
             return text.includes(input.toLowerCase());
           }}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react"; // Add useRef and useEffect
 import {
   Button,
   Space,
@@ -25,11 +25,11 @@ import {
   ZoomControls,
   SceneCounter,
   StyledCarouselTableImage,
-  TableImageCounter,
+  TableImageCounter, // Ensure this is imported
 } from "../styles/AppStyle";
 import AntImage from "antd/lib/image";
 import { uploadImage } from "../utils/api";
-import { overlayAndUploadImage } from "../utils/imageProcessing"; // Import the new utility
+import { overlayAndUploadImage } from "../utils/imageProcessing";
 
 const { Text } = Typography;
 const { TextArea } = Input;
@@ -50,9 +50,23 @@ const SceneCard = ({
   handleZoom,
   generatedImagesCount,
   tableImageUrls,
+  activeTableImageIndex, // New prop
+  setActiveTableImageIndex, // New prop
 }) => {
   const [uploading, setUploading] = useState(false);
-  const [overlaying, setOverlaying] = useState(false); // Track overlay/upload state
+  const [overlaying, setOverlaying] = useState(false);
+  const tableCarouselRef = useRef(null); // Ref for table image carousel
+
+  // Sync the table carousel with activeTableImageIndex
+  useEffect(() => {
+    if (
+      tableCarouselRef.current &&
+      tableImageUrls &&
+      Object.values(tableImageUrls).flat().length > 0
+    ) {
+      tableCarouselRef.current.goTo(activeTableImageIndex, true); // Go to the shared slide index
+    }
+  }, [activeTableImageIndex, tableImageUrls]);
 
   const handleImageUpload = async (file) => {
     setUploading(true);
@@ -269,7 +283,13 @@ const SceneCard = ({
           {Object.values(tableImageUrls).flat().length === 0 ? (
             <Text type="secondary">No table images available.</Text>
           ) : (
-            <StyledCarouselTableImage arrows dots={false}>
+            <StyledCarouselTableImage
+              ref={tableCarouselRef} // Attach ref
+              arrows
+              dots={false}
+              afterChange={(current) => setActiveTableImageIndex(current)} // Update shared index on slide change
+              initialSlide={activeTableImageIndex} // Set initial slide
+            >
               {Object.values(tableImageUrls)
                 .flat()
                 .map((url, idx) => (
@@ -282,7 +302,8 @@ const SceneCard = ({
                     }}
                   >
                     <TableImageCounter>
-                      {idx + 1}/{Object.values(tableImageUrls).flat().length}
+                      {activeTableImageIndex + 1}/
+                      {Object.values(tableImageUrls).flat().length}
                     </TableImageCounter>
                     <AntImage
                       src={url}
