@@ -6,6 +6,7 @@ server/routes/__pycache__
 /server/__pycache__/
 /server/.idea/
 /front-end/.env
+/server/.env
 /node_modules
 composite-debug.png
 composite-result.png

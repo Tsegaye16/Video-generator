@@ -136,7 +136,7 @@ export const generateScenes = async (extractionData) => {
       extraction_data: extractionData,
     });
     message.success("Storyboard scenes generated!");
-    console.log("Generated scenes:", response.data);
+
     return {
       scenes: response.data.scenes || [],
       table_image_urls: response.data.table_image_urls || {},

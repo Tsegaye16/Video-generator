@@ -162,7 +162,7 @@ export const usePresentation = () => {
       const response = await api.generateScenes(extractionData);
 
       const { scenes, table_image_urls } = response;
-      console.log("Generated table image:", table_image_urls);
+
       setTableImageUrls(table_image_urls);
       await generateInitialImages(scenes);
     } finally {
@@ -205,7 +205,7 @@ export const usePresentation = () => {
             total: scenes.length,
           },
         }));
-        console.log(`Before generating scene ${index + 1}:`, updatedScenes);
+
         setStoryboardScenes([...updatedScenes]);
 
         try {
