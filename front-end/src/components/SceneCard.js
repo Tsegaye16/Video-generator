@@ -25,6 +25,7 @@ import {
   ZoomControls,
   SceneCounter,
   StyledCarouselTableImage,
+  TableImageCounter,
 } from "../styles/AppStyle";
 import AntImage from "antd/lib/image";
 import { uploadImage } from "../utils/api";
@@ -280,17 +281,20 @@ const SceneCard = ({
                       boxSizing: "border-box",
                     }}
                   >
+                    <TableImageCounter>
+                      {idx + 1}/{Object.values(tableImageUrls).flat().length}
+                    </TableImageCounter>
                     <AntImage
                       src={url}
                       alt={`Table image ${idx + 1}`}
                       style={{
-                        width: "100%", // Ensure image takes full width of the slide
-                        maxWidth: "300px", // Set a maximum width for consistency
-                        height: "150px", // Fixed height for all images
-                        objectFit: "contain", // Maintain aspect ratio without cropping
+                        width: "100%",
+                        maxWidth: "300px",
+                        height: "150px",
+                        objectFit: "contain",
                         borderRadius: "8px",
                         boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
-                        margin: "0 auto", // Center the image horizontally
+                        margin: "0 auto",
                       }}
                     />
                     <Tooltip title="Add to scene background">

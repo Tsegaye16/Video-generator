@@ -125,13 +125,13 @@ export const StyledCarouselTableImage = styled(Carousel)`
   .slick-slide {
     text-align: center;
     position: relative;
-    overflow: visible; /* Ensure buttons aren’t clipped */
-    padding: 16px; /* Add padding to create space around images */
+    overflow: visible; /* Ensure buttons and counter aren’t clipped */
+    padding: 16px; /* Space for counter and button */
     box-sizing: border-box;
-    height: 200px; /* Set a fixed height for the slide to ensure consistency */
-    display: flex !important; /* Override default slick-slide display */
-    align-items: center; /* Vertically center the image */
-    justify-content: center; /* Horizontally center the image */
+    height: 200px; /* Fixed height for consistency */
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
   }
 
   .slick-arrow {
@@ -139,14 +139,14 @@ export const StyledCarouselTableImage = styled(Carousel)`
     width: 36px;
     height: 36px;
     color: rgba(0, 0, 0, 0.45);
-    background: rgba(255, 255, 255, 0.8); /* Add background for visibility */
-    border-radius: 50%; /* Make arrows circular */
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
     display: flex !important;
     align-items: center;
     justify-content: center;
 
     &::before {
-      font-size: 20px; /* Increase arrow size for better visibility */
+      font-size: 20px;
       color: black;
     }
 
@@ -156,14 +156,26 @@ export const StyledCarouselTableImage = styled(Carousel)`
   }
 
   .slick-prev {
-    left: 10px; /* Move arrow further left to avoid overlap */
+    left: 10px;
   }
 
   .slick-next {
-    right: 10px; /* Move arrow further right to avoid overlap */
+    right: 10px;
   }
 
   .slick-dots {
     display: none !important;
   }
+`;
+
+export const TableImageCounter = styled.div`
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
 `;
