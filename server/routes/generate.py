@@ -8,12 +8,23 @@ import google.generativeai as genarativeai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from google import genai
 import requests
-from typing import List
+from typing import List, Dict
+from PIL import Image
+import io
 
 
 router = APIRouter()
 
-
+def convert_to_png(image_path):
+    try:
+        with Image.open(image_path) as img:
+            img_byte_arr = io.BytesIO()
+            img.save(img_byte_arr, format='PNG')
+            img_byte_arr = img_byte_arr.getvalue()
+        return img_byte_arr
+    except Exception as e:
+        logger.error(f"Error converting image to PNG: {e}")
+        raise
 
 @router.post("/api/generate-scenes", response_model=SceneGenerationResponse)
 async def generate_scenes(request: SceneGenerationRequest):
@@ -65,39 +76,50 @@ async def generate_scenes(request: SceneGenerationRequest):
             # Process table images for this slide
             slide_table_urls = []
             for image_info in slide_data.images:
-                if "table" in image_info.filename:
-                    image_path = os.path.join(extracted_content_path, image_info.filename)
-                    logger.info(f"Processing table image: {image_path}")
-                    if not os.path.exists(image_path):
-                        logger.error(f"Table image file not found: {image_path}")
-                        continue
-                    try:
-                        with open(image_path, "rb") as image_file:
-                            image_data = image_file.read()
-                        headers = {
-                            "Content-Type": "image/png",
-                            "X-Api-Key": settings.HEYGEN_API_KEY,
-                        }
-                        response = requests.post("https://upload.heygen.com/v1/asset",
-                                                headers=headers,
-                                                data=image_data)
-                        logger.info(f"HeyGen API response status for {image_info.filename}: {response.status_code}")
-                        if response.status_code == 200:
-                            response_data = response.json()
-                            logger.debug(f"HeyGen API response: {response_data}")
-                            if response_data.get("code") == 100:
-                                image_url = response_data.get("data", {}).get("url")
-                                if image_url:
-                                    slide_table_urls.append(image_url)
-                                    logger.info(f"Successfully uploaded table image: {image_url}")
-                                else:
-                                    logger.error(f"No URL in HeyGen response for {image_info.filename}")
-                            else:
-                                logger.error(f"Invalid HeyGen response code for {image_info.filename}: {response_data.get('code')}")
+                image_path = os.path.join(extracted_content_path, image_info.filename)
+                logger.info(f"Processing image: {image_path}")
+                if not os.path.exists(image_path):
+                    logger.error(f"Image file not found: {image_path}")
+                    continue
+
+                # Check file extension
+                file_ext = os.path.splitext(image_info.filename)[1].lower()
+                if file_ext not in ['.jpg', '.jpeg', '.png']:
+                    logger.info(f"Skipping non-JPG/JPEG/PNG image: {image_info.filename}")
+                    continue
+
+                try:
+                    # Read the image data
+                    with open(image_path, "rb") as image_file:
+                        image_data = image_file.read()
+
+                    # Set the Content-Type header based on the file extension
+                    content_type = "image/jpeg" if file_ext in ['.jpg', '.jpeg'] else "image/png"
+
+                    headers = {
+                        "Content-Type": content_type,
+                        "X-Api-Key": settings.HEYGEN_API_KEY,
+                    }
+
+                    response = requests.post(
+                        "https://upload.heygen.com/v1/asset",
+                        headers=headers,
+                        data=image_data
+                    )
+
+                    logger.info(f"HeyGen API response status for {image_info.filename}: {response.status_code}")
+                    if response.status_code == 200:
+                        response_data = response.json()
+                        logger.debug(f"HeyGen API response: {response_data}")
+                        if response_data.get("code") == 100:
+                            asset_url = response_data["data"]["url"]
+                            slide_table_urls.append(asset_url)
                         else:
-                            logger.error(f"HeyGen API request failed for {image_info.filename}: {response.status_code} - {response.text}")
-                    except Exception as e:
-                        logger.error(f"Error uploading table image {image_info.filename}: {e}")
+                            logger.warning(f"Unexpected HeyGen response: {response_data}")
+                    else:
+                        logger.warning(f"Failed to upload {image_info.filename} to HeyGen: {response.content}")
+                except Exception as e:
+                    logger.error(f"Error uploading image {image_info.filename}: {e}")
             table_image_urls[slide_data.slide_number] = slide_table_urls
 
             response = model.generate_content(prompt_parts, stream=False)

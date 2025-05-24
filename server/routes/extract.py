@@ -14,6 +14,11 @@ from spire.presentation import Presentation as SpirePresentation, FileFormat
 
 router = APIRouter()
 
+import textwrap
+
+def wrap_text(text: str, max_width: int = 12) -> str:
+    return '\n'.join(textwrap.wrap(text, width=max_width))
+
 @router.post("/api/extract")
 async def extract_content(request: ExtractRequest):
     file_id = request.file_id
@@ -83,26 +88,51 @@ async def extract_content(request: ExtractRequest):
 
                 if shape.shape_type == MSO_SHAPE_TYPE.TABLE:
                     table = shape.table
-                    table_data_list = [[cell.text.strip() for cell in row.cells] for row in table.rows]
+                    table_data_list = [
+                        [wrap_text(cell.text.strip()) for cell in row.cells]
+                        for row in table.rows
+                    ]
+
                     if table_data_list:
                         fig, ax = plt.subplots()
                         ax.axis('off')
-                        table_img = ax.table(cellText=table_data_list, loc='center', cellLoc='center')
+
+                        table_img = ax.table(
+                            cellText=table_data_list,
+                            cellLoc='center',
+                            loc='center',
+                            colWidths=[1.0 / len(table_data_list[0])] * len(table_data_list[0])
+                        )
+
                         table_img.auto_set_font_size(False)
-                        table_img.set_fontsize(10)
-                        fig.tight_layout()
+                        table_img.set_fontsize(8)
+
+                        for (row, col), cell in table_img.get_celld().items():
+                            cell.set_text_props(ha='center', va='center')  # wrap=True is no longer needed
+                            cell.set_linewidth(0.5)
+                            cell.set_fontsize(8)
+                            cell.set_height(0.1)
+                            cell.PAD = 0.1
+
+                        table_img.auto_set_column_width([i for i in range(len(table_data_list[0]))])
+                        fig.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05)
+
                         img_filename = f"slide_{slide_number}_table_{table_index}.png"
                         img_save_path = os.path.join(specific_extracted_path, img_filename)
-                        fig.savefig(img_save_path, bbox_inches='tight', dpi=200)
+
+                        fig.savefig(img_save_path, dpi=300, bbox_inches='tight', pad_inches=0.02)
                         plt.close(fig)
+
                         with Image.open(img_save_path) as img:
                             width, height = img.size
+
                         current_slide_data.images.append(ImageInfo(
                             filename=img_filename,
-                            content_type='image/png',
+                            content_type="image/png",
                             width_emu=width,
                             height_emu=height
                         ))
+
                         table_index += 1
 
             extracted_slides_data.append(current_slide_data)
@@ -122,7 +152,7 @@ async def extract_content(request: ExtractRequest):
                 logger.info(f"Cleaned up converted file: {converted_file_path}")
         except Exception as e:
             logger.warning(f"Failed to clean up files: {e}")
-
+    
     return ExtractionResponse(
         file_id=file_id,
         extracted_content_path=specific_extracted_path,

@@ -76,8 +76,6 @@ const SceneCard = ({
   };
 
   const handleAddToScene = async (scene, scene_id, tableImageUrl) => {
-    console.log("Current scene Image URL:", scene);
-    console.log("current Table Image URL:", tableImageUrl);
     if (!scene) {
       message.error("No background image available for this scene.");
       return;
@@ -264,7 +262,7 @@ const SceneCard = ({
           />
 
           <Text strong style={{ display: "block", marginTop: 16 }}>
-            Table Images
+            PPT Images
           </Text>
 
           {Object.values(tableImageUrls).flat().length === 0 ? (
@@ -278,19 +276,24 @@ const SceneCard = ({
                     key={idx}
                     style={{
                       position: "relative",
-                      padding: "8px 8px 40px 8px",
+                      padding: "8px",
                       textAlign: "center",
+                      boxSizing:
+                        "border-box" /* Include padding in element's total width and height */,
                     }}
                   >
                     <AntImage
                       src={url}
                       alt={`Table image ${idx + 1}`}
                       style={{
-                        width: "100%",
+                        width: "70%",
+                        maxWidth:
+                          "70%" /* Ensure images don't exceed container width */,
                         height: "150px",
-                        objectFit: "cover",
+                        objectFit: "contain",
                         borderRadius: "8px",
                         boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
+                        margin: "0 auto" /* Center the image */,
                       }}
                     />
                     <Tooltip title="Add to scene background">
