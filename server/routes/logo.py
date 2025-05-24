@@ -66,6 +66,60 @@ async def upload_logo(logo: UploadFile = File(...)):
     finally:
         logo.file.close()
 
+
+@router.post("/api/upload-merged-image", response_model=ImageUploadResponse)
+async def upload_merged_image(merged_image: UploadFile = File(...)):
+    # Validate file type
+    if merged_image.content_type != "image/png":
+        logger.warning(f"Invalid merged image file type: {merged_image.filename}")
+        raise HTTPException(status_code=400, detail="Only PNG images are allowed for merged images.")
+
+    try:
+        # Set HeyGen API endpoint and headers
+        url = "https://upload.heygen.com/v1/asset"
+        headers = {
+            "Content-Type": merged_image.content_type,
+            "X-Api-Key": settings.HEYGEN_API_KEY,
+        }
+
+        # Log the upload attempt
+        logger.info(f"Uploading merged image to HeyGen (type: {merged_image.content_type})")
+
+        # Send the file as binary data
+        response = requests.post(url, headers=headers, data=merged_image.file)
+
+        # Check HTTP status code
+        if response.status_code != 200:
+            logger.error(f"HeyGen API error: {response.status_code} - {response.text}")
+            raise HTTPException(status_code=500, detail=f"HeyGen API error: {response.status_code}")
+
+        # Parse the JSON response
+        response_data = response.json()
+        logger.debug(f"HeyGen response: {response_data}")
+
+        # Check if the API call was successful (code == 100)
+        if response_data.get("code") != 100:
+            logger.error(f"HeyGen API error: {response_data.get('message', 'Unknown error')}")
+            raise HTTPException(status_code=500, detail=f"HeyGen API error: {response_data.get('message', 'Unknown error')}")
+
+        # Extract the image URL
+        image_url = response_data.get("data", {}).get("url")
+        image_id = response_data.get("data", {}).get("id")
+        if not image_url:
+            logger.error("No URL found in HeyGen response")
+            raise HTTPException(status_code=500, detail="Invalid response from HeyGen: No URL found")
+
+        logger.info(f"Merged image uploaded successfully to HeyGen: {image_url}")
+        return ImageUploadResponse(image_id=image_id, image_url=image_url)
+
+    except requests.RequestException as e:
+        logger.error(f"Failed to upload merged image to HeyGen: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to upload image: {str(e)}")
+    except Exception as e:
+        logger.error(f"Unexpected error during merged image upload: {e}")
+        raise HTTPException(status_code=500, detail=f"Unexpected error: {str(e)}")
+    finally:
+        merged_image.file.close()
 @router.post("/api/upload-image", response_model=ImageUploadResponse)
 async def upload_image(logo_url: str = Form(...), image: UploadFile = File(...)):
     # Validate image file type

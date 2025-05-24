@@ -37,6 +37,34 @@ export const uploadLogo = async (logoFile) => {
   }
 };
 
+export const uploadMergedImage = async (imageBlob) => {
+  const formData = new FormData();
+  formData.append("merged_image", imageBlob, "merged.png");
+
+  try {
+    const response = await axios.post(
+      `${API_BASE_URL}/upload-merged-image`,
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+        timeout: 30000,
+      }
+    );
+
+    const imageUrl = response.data?.image_url;
+    if (!imageUrl) {
+      throw new Error("No valid URL returned from backend");
+    }
+
+    return imageUrl;
+  } catch (error) {
+    const errorMsg = error.response?.data?.detail || error.message;
+    message.error(`Merged image upload failed: ${errorMsg}`);
+    throw error;
+  }
+};
 export const uploadImage = async (imageFile, logo_url, onProgress) => {
   const formData = new FormData();
   formData.append("image", imageFile);

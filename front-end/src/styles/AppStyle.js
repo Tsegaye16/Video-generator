@@ -126,6 +126,12 @@ export const StyledCarouselTableImage = styled(Carousel)`
     text-align: center;
     position: relative;
     overflow: visible; /* Ensure buttons aren’t clipped */
+    padding: 16px; /* Add padding to create space around images */
+    box-sizing: border-box;
+    height: 200px; /* Set a fixed height for the slide to ensure consistency */
+    display: flex !important; /* Override default slick-slide display */
+    align-items: center; /* Vertically center the image */
+    justify-content: center; /* Horizontally center the image */
   }
 
   .slick-arrow {
@@ -133,9 +139,14 @@ export const StyledCarouselTableImage = styled(Carousel)`
     width: 36px;
     height: 36px;
     color: rgba(0, 0, 0, 0.45);
+    background: rgba(255, 255, 255, 0.8); /* Add background for visibility */
+    border-radius: 50%; /* Make arrows circular */
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
 
     &::before {
-      font-size: 0px;
+      font-size: 20px; /* Increase arrow size for better visibility */
       color: black;
     }
 
@@ -145,11 +156,11 @@ export const StyledCarouselTableImage = styled(Carousel)`
   }
 
   .slick-prev {
-    left: 62px;
+    left: 10px; /* Move arrow further left to avoid overlap */
   }
 
   .slick-next {
-    right: 62px;
+    right: 10px; /* Move arrow further right to avoid overlap */
   }
 
   .slick-dots {

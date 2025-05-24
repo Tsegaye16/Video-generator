@@ -276,24 +276,21 @@ const SceneCard = ({
                     key={idx}
                     style={{
                       position: "relative",
-                      padding: "8px",
                       textAlign: "center",
-                      boxSizing:
-                        "border-box" /* Include padding in element's total width and height */,
+                      boxSizing: "border-box",
                     }}
                   >
                     <AntImage
                       src={url}
                       alt={`Table image ${idx + 1}`}
                       style={{
-                        width: "70%",
-                        maxWidth:
-                          "70%" /* Ensure images don't exceed container width */,
-                        height: "150px",
-                        objectFit: "contain",
+                        width: "100%", // Ensure image takes full width of the slide
+                        maxWidth: "300px", // Set a maximum width for consistency
+                        height: "150px", // Fixed height for all images
+                        objectFit: "contain", // Maintain aspect ratio without cropping
                         borderRadius: "8px",
                         boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
-                        margin: "0 auto" /* Center the image */,
+                        margin: "0 auto", // Center the image horizontally
                       }}
                     />
                     <Tooltip title="Add to scene background">

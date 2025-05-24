@@ -1,9 +1,6 @@
-// utils/imageProcessing.js
-import axios from "axios";
+import { uploadMergedImage } from "./api";
 
 const CONFIG = {
-  API_KEY: process.env.REACT_APP_HEYGEN_API_KEY,
-  UPLOAD_ENDPOINT: "https://upload.heygen.com/v1/asset",
   FG_WIDTH: 800,
   FG_HEIGHT: 300,
 };
@@ -52,23 +49,10 @@ export const overlayAndUploadImage = async (bgImageUrl, fgImageUrl) => {
       canvas.toBlob((blob) => resolve(blob), "image/png");
     });
 
-    // Upload to HeyGen as raw binary
-    const response = await axios.post(CONFIG.UPLOAD_ENDPOINT, imageBlob, {
-      headers: {
-        "Content-Type": "image/png",
-        "X-Api-Key": CONFIG.API_KEY,
-      },
-      timeout: 30000,
-    });
-
-    const imageUrl = response.data?.data?.url || response.data?.url;
-    if (!imageUrl) {
-      throw new Error("No valid URL returned from HeyGen");
-    }
-
-    return imageUrl;
+    // Upload merged image using the API module
+    return await uploadMergedImage(imageBlob);
   } catch (error) {
-    console.error("Overlay/Upload error:", error.message, error.stack);
+    console.error("Image processing error:", error.message, error.stack);
     throw error;
   }
 };
