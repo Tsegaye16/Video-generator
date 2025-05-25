@@ -1,8 +1,8 @@
 import { uploadMergedImage } from "./api";
 
 const CONFIG = {
-  FG_WIDTH: 800,
-  FG_HEIGHT: 300,
+  FG_WIDTH: 800, // No longer used for resizing
+  FG_HEIGHT: 300, // No longer used for resizing
 };
 
 export const overlayAndUploadImage = async (bgImageUrl, fgImageUrl) => {
@@ -35,13 +35,27 @@ export const overlayAndUploadImage = async (bgImageUrl, fgImageUrl) => {
     // Draw background
     ctx.drawImage(bgImage, 0, 0);
 
-    // Draw foreground centered
+    // Calculate foreground dimensions to fit within background
+    let fgWidth = fgImage.width;
+    let fgHeight = fgImage.height;
+
+    // Scale down foreground if it's larger than background, preserving aspect ratio
+    if (fgWidth > bgImage.width || fgHeight > bgImage.height) {
+      const scale = Math.min(
+        bgImage.width / fgWidth,
+        bgImage.height / fgHeight
+      );
+      fgWidth = fgImage.width * scale;
+      fgHeight = fgImage.height * scale;
+    }
+
+    // Draw foreground centered at calculated size
     ctx.drawImage(
       fgImage,
-      (bgImage.width - CONFIG.FG_WIDTH) / 2,
-      (bgImage.height - CONFIG.FG_HEIGHT) / 2,
-      CONFIG.FG_WIDTH,
-      CONFIG.FG_HEIGHT
+      (bgImage.width - fgWidth) / 2, // Center horizontally
+      (bgImage.height - fgHeight) / 2, // Center vertically
+      fgWidth, // Scaled or original width
+      fgHeight // Scaled or original height
     );
 
     // Convert to Blob

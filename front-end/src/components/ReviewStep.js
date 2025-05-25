@@ -52,19 +52,20 @@ const ReviewStep = ({
   const [internalSelectedAvatar, setInternalSelectedAvatar] =
     useState(selectedAvatar);
   const [isGeneratingVideo, setIsGeneratingVideo] = useState(false);
-  const [activeTableImageIndex, setActiveTableImageIndex] = useState(0); // New state for table image slide index
 
   useEffect(() => {
+    // Keep the internal state in sync with the prop
     setInternalSelectedAvatar(selectedAvatar);
   }, [selectedAvatar]);
 
   useEffect(() => {
+    // Reset isGeneratingVideo when video generation is complete or failed
     if (
       videoResult?.status === "completed" ||
       videoResult?.status === "failed"
     ) {
       setIsGeneratingVideo(false);
-    }
+    } // Auto-scroll to video result when it appears
     if (videoResult && videoResultRef.current) {
       videoResultRef.current.scrollIntoView({
         behavior: "smooth",
@@ -74,12 +75,12 @@ const ReviewStep = ({
   }, [videoResult]);
 
   const handleAvatarChange = (value) => {
-    setInternalSelectedAvatar(value);
-    setSelectedAvatar(value === "WithoutAvatar_id" ? null : value);
+    setInternalSelectedAvatar(value); // Handle the special case for "Without Avatar"
+    setSelectedAvatar(value === "WithoutAvatar_id" ? null : value); // Update the parent's state as well
   };
 
   const handleGenerateVideoClick = () => {
-    setIsGeneratingVideo(true);
+    setIsGeneratingVideo(true); // Set generating state
     handleGenerateVideo(internalSelectedAvatar);
   };
 
@@ -106,7 +107,6 @@ const ReviewStep = ({
           </Typography.Paragraph>
         </Space>
       </StyledCard>
-
       <div style={{ position: "relative" }}>
         <StyledCarousel
           ref={carouselRef}
@@ -127,12 +127,9 @@ const ReviewStep = ({
               logoURL={logoURL}
               tableImageUrls={tableImageUrls}
               generatedImagesCount={generatedImagesCount}
-              activeTableImageIndex={activeTableImageIndex} // Pass table image index
-              setActiveTableImageIndex={setActiveTableImageIndex} // Pass setter
             />
           ))}
         </StyledCarousel>
-
         <Button
           icon={<LeftOutlined />}
           onClick={() => carouselRef.current?.prev()}
@@ -185,7 +182,6 @@ const ReviewStep = ({
             </Button>
           </Popconfirm>
         </Col>
-
         <Col>
           <Button
             type="primary"
@@ -207,7 +203,7 @@ const ReviewStep = ({
         label={
           <Tooltip title="Generate video with avatar will take 30 mins or more and will be notified once generated.">
             <span>
-              Select Avatar{" "}
+              Select Avatar
               <QuestionCircleOutlined
                 style={{ marginLeft: 4, color: "#1890ff" }}
               />
@@ -223,10 +219,12 @@ const ReviewStep = ({
           showSearch
           allowClear
           filterOption={(input, option) => {
+            // Search in both avatar name and premium tag
             const children = option?.children?.props?.children;
             const avatarName = children?.[1]?.props?.children?.[0] || "";
             const premiumTag =
               children?.[1]?.props?.children?.[1]?.props?.children || "";
+
             return (
               avatarName.toLowerCase().includes(input.toLowerCase()) ||
               premiumTag.toLowerCase().includes(input.toLowerCase())
@@ -274,12 +272,11 @@ const ReviewStep = ({
           ))}
         </Select>
       </Form.Item>
-
       <Form.Item
         label={
           <Tooltip title="The video will be generated with the selected voice.">
             <span>
-              Select Voice{" "}
+              Select Voice
               <QuestionCircleOutlined
                 style={{ marginLeft: 4, color: "#1890ff" }}
               />
@@ -294,6 +291,7 @@ const ReviewStep = ({
           showSearch
           optionFilterProp="children"
           filterOption={(input, option) => {
+            // Search in name, gender, and language
             const text = option?.children?.toString().toLowerCase() || "";
             return text.includes(input.toLowerCase());
           }}
@@ -310,7 +308,6 @@ const ReviewStep = ({
           ))}
         </Select>
       </Form.Item>
-
       {videoResult && (
         <Row justify="center" style={{ width: "100%", marginTop: 4 }}>
           <Col span={12}>

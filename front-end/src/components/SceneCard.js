@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"; // Add useRef and useEffect
+import React, { useEffect, useState } from "react";
 import {
   Button,
   Space,
@@ -25,11 +25,11 @@ import {
   ZoomControls,
   SceneCounter,
   StyledCarouselTableImage,
-  TableImageCounter, // Ensure this is imported
+  TableImageCounter,
 } from "../styles/AppStyle";
 import AntImage from "antd/lib/image";
 import { uploadImage } from "../utils/api";
-import { overlayAndUploadImage } from "../utils/imageProcessing";
+import { overlayAndUploadImage } from "../utils/imageProcessing"; // Import the new utility
 
 const { Text } = Typography;
 const { TextArea } = Input;
@@ -50,23 +50,16 @@ const SceneCard = ({
   handleZoom,
   generatedImagesCount,
   tableImageUrls,
-  activeTableImageIndex, // New prop
-  setActiveTableImageIndex, // New prop
 }) => {
   const [uploading, setUploading] = useState(false);
   const [overlaying, setOverlaying] = useState(false);
-  const tableCarouselRef = useRef(null); // Ref for table image carousel
+  const [originalImageUrl, setOriginalImageUrl] = useState(null); // Store the original image URL when it first loads or changes
 
-  // Sync the table carousel with activeTableImageIndex
   useEffect(() => {
-    if (
-      tableCarouselRef.current &&
-      tableImageUrls &&
-      Object.values(tableImageUrls).flat().length > 0
-    ) {
-      tableCarouselRef.current.goTo(activeTableImageIndex, true); // Go to the shared slide index
+    if (scene.generated_image_url && !originalImageUrl) {
+      setOriginalImageUrl(scene.generated_image_url);
     }
-  }, [activeTableImageIndex, tableImageUrls]);
+  }, [scene.generated_image_url]);
 
   const handleImageUpload = async (file) => {
     setUploading(true);
@@ -75,11 +68,9 @@ const SceneCard = ({
         file,
         localStorage.getItem("logo_url")
       );
-      handleSceneChange(
-        scene.scene_id,
-        "generated_image_url",
-        response.image_url
-      );
+      const newImageUrl = response.image_url;
+      handleSceneChange(scene.scene_id, "generated_image_url", newImageUrl);
+      setOriginalImageUrl(newImageUrl); // Store as the new original
       message.success("Image uploaded successfully!");
     } catch (error) {
       console.error("Image upload failed:", error);
@@ -105,6 +96,17 @@ const SceneCard = ({
       message.error("Failed to add table image to scene.");
     } finally {
       setOverlaying(false);
+    }
+  };
+
+  const handleRestoreImage = () => {
+    if (originalImageUrl) {
+      handleSceneChange(
+        scene.scene_id,
+        "generated_image_url",
+        originalImageUrl
+      );
+      message.success("Image restored to original!");
     }
   };
 
@@ -159,12 +161,10 @@ const SceneCard = ({
               </Space>
             </Col>
           </Row>
-
           <SceneImageContainer>
             <SceneCounter>
               Scene {index + 1}/{totalScenes}
             </SceneCounter>
-
             {(scene.isGenerating || uploading || overlaying) && (
               <Space direction="vertical" align="center">
                 <Spin size="large" />
@@ -177,18 +177,16 @@ const SceneCard = ({
                 </Text>
               </Space>
             )}
-
             {!(scene.isGenerating || uploading || overlaying) &&
               scene.isQueued && (
                 <Space direction="vertical" align="center">
                   <Spin size="small" />
                   <Text type="secondary">
-                    Generating{" "}
+                    Generating
                     {getOrdinalSuffix(scene.generationProgress.current)} image
                   </Text>
                 </Space>
               )}
-
             {!(
               scene.isGenerating ||
               uploading ||
@@ -211,8 +209,21 @@ const SceneCard = ({
                       disabled={imageZoom <= 0.5}
                       style={{ marginLeft: 4 }}
                     />
+                    {/* Add Restore button - only show if current image is different from original */}
+                    {originalImageUrl &&
+                      scene.generated_image_url !== originalImageUrl && (
+                        <Tooltip title="Restore original image">
+                          <Button
+                            type="text"
+                            onClick={handleRestoreImage}
+                            size="small"
+                            style={{ marginLeft: 4 }}
+                          >
+                            Restore
+                          </Button>
+                        </Tooltip>
+                      )}
                   </ZoomControls>
-
                   <AntImage
                     src={scene.generated_image_url}
                     alt={`Visual for scene ${index + 1}`}
@@ -226,7 +237,6 @@ const SceneCard = ({
                   />
                 </>
               )}
-
             {!(
               scene.isGenerating ||
               uploading ||
@@ -240,7 +250,6 @@ const SceneCard = ({
                 </Text>
               )}
           </SceneImageContainer>
-
           <TextArea
             rows={3}
             placeholder="Customize the image generation prompt..."
@@ -250,7 +259,6 @@ const SceneCard = ({
             }
             style={{ marginBottom: 16 }}
           />
-
           {scene.imageGenError && (
             <Alert
               message={scene.imageGenError}
@@ -263,7 +271,6 @@ const SceneCard = ({
             />
           )}
         </Col>
-
         <Col xs={24} md={12}>
           <Text strong>Speech Script</Text>
           <TextArea
@@ -275,21 +282,13 @@ const SceneCard = ({
             }
             style={{ marginTop: "3px" }}
           />
-
           <Text strong style={{ display: "block", marginTop: 16 }}>
             PPT Images
           </Text>
-
           {Object.values(tableImageUrls).flat().length === 0 ? (
-            <Text type="secondary">No table images available.</Text>
+            <Text type="secondary">No PPT images available.</Text>
           ) : (
-            <StyledCarouselTableImage
-              ref={tableCarouselRef} // Attach ref
-              arrows
-              dots={false}
-              afterChange={(current) => setActiveTableImageIndex(current)} // Update shared index on slide change
-              initialSlide={activeTableImageIndex} // Set initial slide
-            >
+            <StyledCarouselTableImage arrows dots={false}>
               {Object.values(tableImageUrls)
                 .flat()
                 .map((url, idx) => (
@@ -302,8 +301,7 @@ const SceneCard = ({
                     }}
                   >
                     <TableImageCounter>
-                      {activeTableImageIndex + 1}/
-                      {Object.values(tableImageUrls).flat().length}
+                      {idx + 1}/{Object.values(tableImageUrls).flat().length}
                     </TableImageCounter>
                     <AntImage
                       src={url}

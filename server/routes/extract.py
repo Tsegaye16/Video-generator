@@ -85,7 +85,6 @@ async def extract_content(request: ExtractRequest):
                         height_emu=image.size[1]
                     ))
                     image_index += 1
-
                 if shape.shape_type == MSO_SHAPE_TYPE.TABLE:
                     table = shape.table
                     table_data_list = [
@@ -94,35 +93,50 @@ async def extract_content(request: ExtractRequest):
                     ]
 
                     if table_data_list:
-                        fig, ax = plt.subplots()
-                        ax.axis('off')
+                        # Calculate figure size dynamically based on table dimensions
+                        num_rows = len(table_data_list)
+                        num_cols = len(table_data_list[0]) if table_data_list else 1
+                        fig_width = min(8, num_cols * 1.5)  # Adjust width based on number of columns
+                        fig_height = min(4, num_rows * 1.5)  # Adjust height based on number of rows
+                        fig, ax = plt.subplots(figsize=(fig_width, fig_height))
 
+                        # Turn off axis and set tight layout
+                        ax.axis('off')
+                        plt.box(False)  # Remove border around the figure
+
+                        # Create table with minimal padding
                         table_img = ax.table(
                             cellText=table_data_list,
                             cellLoc='center',
                             loc='center',
-                            colWidths=[1.0 / len(table_data_list[0])] * len(table_data_list[0])
+                            colWidths=[1.0 / num_cols] * num_cols  # Equal column widths
                         )
 
+                        # Customize table appearance
                         table_img.auto_set_font_size(False)
                         table_img.set_fontsize(8)
 
                         for (row, col), cell in table_img.get_celld().items():
-                            cell.set_text_props(ha='center', va='center')  # wrap=True is no longer needed
+                            cell.set_text_props(ha='center', va='center')
                             cell.set_linewidth(0.5)
-                            cell.set_fontsize(8)
-                            cell.set_height(0.1)
-                            cell.PAD = 0.1
+                            cell.set_height(0.1)  # Fixed cell height
+                            cell.set_edgecolor('black')  # Ensure visible borders
+                            cell.PAD = 0.02  # Further reduce cell padding
 
-                        table_img.auto_set_column_width([i for i in range(len(table_data_list[0]))])
-                        fig.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05)
+                        # Auto-adjust column widths
+                        table_img.auto_set_column_width([i for i in range(num_cols)])
 
+                        # Remove all margins
+                        fig.tight_layout(pad=0.0)
+                        fig.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0)
+
+                        # Save the image
                         img_filename = f"slide_{slide_number}_table_{table_index}.png"
                         img_save_path = os.path.join(specific_extracted_path, img_filename)
-
-                        fig.savefig(img_save_path, dpi=300, bbox_inches='tight', pad_inches=0.02)
+                        fig.savefig(img_save_path, dpi=300, bbox_inches='tight', pad_inches=0.01, transparent=True)
                         plt.close(fig)
 
+                        # Get image dimensions
                         with Image.open(img_save_path) as img:
                             width, height = img.size
 
@@ -134,6 +148,7 @@ async def extract_content(request: ExtractRequest):
                         ))
 
                         table_index += 1
+
 
             extracted_slides_data.append(current_slide_data)
             logger.info(f"Extracted slide {slide_number} with title: {current_slide_data.title}")
