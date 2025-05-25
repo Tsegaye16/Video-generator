@@ -709,3 +709,88 @@
 2025-05-25 17:07:24,883 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/21db9e82d5284054a9bf79082dc6dadf/original
 2025-05-25 17:07:30,312 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
 2025-05-25 17:07:32,150 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/6a9899a8bd94466cae896f0cb94b06c7/original
+2025-05-25 17:14:07,563 - config - INFO - File uploaded successfully: Sample2.pptx
+2025-05-25 17:14:07,681 - config - INFO - File processed successfully: Sample2.pptx
+2025-05-25 17:15:15,136 - config - INFO - Extracted slide 1 with title: AI Status and updates 17 Apr 25
+2025-05-25 17:15:17,725 - config - INFO - Extracted slide 2 with title: Executive Summary
+2025-05-25 17:15:21,835 - config - INFO - Extracted slide 3 with title: None
+2025-05-25 17:15:23,605 - config - INFO - Extracted slide 4 with title: None
+2025-05-25 17:15:23,610 - config - INFO - Extracted slide 5 with title: Thank You
+2025-05-25 17:15:23,611 - config - INFO - Cleaned up original file: temp_uploads\2604aafd-05c7-4f51-96eb-0209607c8a7a.pptx
+2025-05-25 17:15:35,671 - config - INFO - Processing slide 1
+2025-05-25 17:15:35,731 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_1_img_0.png
+2025-05-25 17:15:37,223 - config - INFO - HeyGen API response status for slide_1_img_0.png: 200
+2025-05-25 17:15:39,653 - config - INFO - Generated scene slide_1_scene_1 for slide 1
+2025-05-25 17:15:39,667 - config - INFO - Processing slide 2
+2025-05-25 17:15:40,536 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_2_table_0.png
+2025-05-25 17:15:41,768 - config - INFO - HeyGen API response status for slide_2_table_0.png: 200
+2025-05-25 17:15:41,770 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_2_table_1.png
+2025-05-25 17:15:44,165 - config - INFO - HeyGen API response status for slide_2_table_1.png: 200
+2025-05-25 17:15:44,167 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_2_table_2.png
+2025-05-25 17:15:45,297 - config - INFO - HeyGen API response status for slide_2_table_2.png: 200
+2025-05-25 17:15:45,298 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_2_img_0.wmf
+2025-05-25 17:15:45,299 - config - INFO - Skipping non-JPG/JPEG/PNG image: slide_2_img_0.wmf
+2025-05-25 17:15:48,265 - config - INFO - Generated scene slide_2_scene_1 for slide 2
+2025-05-25 17:15:48,266 - config - INFO - Generated scene slide_2_scene_2 for slide 2
+2025-05-25 17:15:48,267 - config - INFO - Generated scene slide_2_scene_3 for slide 2
+2025-05-25 17:15:48,268 - config - INFO - Generated scene slide_2_scene_4 for slide 2
+2025-05-25 17:15:48,269 - config - INFO - Generated scene slide_2_scene_5 for slide 2
+2025-05-25 17:15:48,270 - config - INFO - Generated scene slide_2_scene_6 for slide 2
+2025-05-25 17:15:48,271 - config - INFO - Processing slide 3
+2025-05-25 17:15:49,451 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_3_table_0.png
+2025-05-25 17:15:51,444 - config - INFO - HeyGen API response status for slide_3_table_0.png: 200
+2025-05-25 17:15:51,445 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_3_img_0.wmf
+2025-05-25 17:15:51,446 - config - INFO - Skipping non-JPG/JPEG/PNG image: slide_3_img_0.wmf
+2025-05-25 17:15:51,447 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_3_img_1.wmf
+2025-05-25 17:15:51,448 - config - INFO - Skipping non-JPG/JPEG/PNG image: slide_3_img_1.wmf
+2025-05-25 17:15:51,448 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_3_img_2.wmf
+2025-05-25 17:15:51,449 - config - INFO - Skipping non-JPG/JPEG/PNG image: slide_3_img_2.wmf
+2025-05-25 17:15:51,450 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_3_table_1.png
+2025-05-25 17:15:53,029 - config - INFO - HeyGen API response status for slide_3_table_1.png: 200
+2025-05-25 17:15:53,031 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_3_table_2.png
+2025-05-25 17:15:54,119 - config - INFO - HeyGen API response status for slide_3_table_2.png: 200
+2025-05-25 17:15:55,638 - config - INFO - Generated scene slide_3_scene_1 for slide 3
+2025-05-25 17:15:55,640 - config - INFO - Generated scene slide_3_scene_2 for slide 3
+2025-05-25 17:15:55,641 - config - INFO - Processing slide 4
+2025-05-25 17:15:56,394 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_4_table_0.png
+2025-05-25 17:15:57,500 - config - INFO - HeyGen API response status for slide_4_table_0.png: 200
+2025-05-25 17:15:57,506 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_4_table_1.png
+2025-05-25 17:15:59,189 - config - INFO - HeyGen API response status for slide_4_table_1.png: 200
+2025-05-25 17:16:00,261 - config - INFO - Generated scene slide_4_scene_1 for slide 4
+2025-05-25 17:16:00,261 - config - INFO - Processing slide 5
+2025-05-25 17:16:00,353 - config - INFO - Processing image: temp_uploads\extracted\2604aafd-05c7-4f51-96eb-0209607c8a7a\slide_5_img_0.png
+2025-05-25 17:16:03,884 - config - INFO - HeyGen API response status for slide_5_img_0.png: 200
+2025-05-25 17:16:04,860 - config - INFO - Generated scene slide_5_scene_1 for slide 5
+2025-05-25 17:16:04,862 - config - INFO - Generated 11 scenes for file_id 2604aafd-05c7-4f51-96eb-0209607c8a7a.pptx
+2025-05-25 17:16:11,784 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-25 17:16:13,712 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/79e8fefa0e0749bea21794a8b7d669b6/original
+2025-05-25 17:16:23,999 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-25 17:16:25,818 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/dbf8706d4a8b41ad94de344e2c5c9389/original
+2025-05-25 17:16:30,817 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-25 17:16:32,914 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0124bf144319412cb667c808ca610a67/original
+2025-05-25 17:16:42,923 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-25 17:16:45,618 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/02084847a0c74af390fa7bb3f2e58ccd/original
+2025-05-25 17:16:50,839 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-25 17:16:52,713 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/b8c83a1d2f7b42f8a8ff6c5a409a451e/original
+2025-05-25 17:16:59,825 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-25 17:17:02,143 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/f9191d1170ad43de8298e4b4639c5f00/original
+2025-05-25 17:17:07,846 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-25 17:17:09,574 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/eb31471576ca41718f0d8705fac1f833/original
+2025-05-25 17:17:17,577 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-25 17:17:20,263 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/4da9f41d082d4a31a18e2fa5dc8e3452/original
+2025-05-25 17:17:27,927 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-25 17:17:30,993 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/0029e493a9554006b186be83d42d0188/original
+2025-05-25 17:17:37,723 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-25 17:17:39,731 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/9c34bb3380be46bdb467a5dda301860f/original
+2025-05-25 17:17:45,846 - config - INFO - Uploading image to HeyGen (Content-Type: image/png)
+2025-05-25 17:17:48,146 - config - INFO - Image generated and uploaded successfully: https://resource2.heygen.ai/image/094944d33efe452ea0e8e2020d1bc3cf/original
+2025-05-25 17:55:08,697 - config - INFO - Uploading merged image to HeyGen (type: image/png)
+2025-05-25 17:55:11,225 - config - INFO - Merged image uploaded successfully to HeyGen: https://resource2.heygen.ai/image/96c686ab594c4912a25b5a9e5a41c1d9/original
+2025-05-25 17:55:44,663 - config - INFO - Uploading merged image to HeyGen (type: image/png)
+2025-05-25 17:55:46,576 - config - INFO - Merged image uploaded successfully to HeyGen: https://resource2.heygen.ai/image/bd1b79bfb31b4f9cb40e917f0bc6fd49/original
+2025-05-25 18:09:00,558 - config - INFO - Uploading image: abc.png (type: image/png)
+2025-05-25 18:09:00,561 - config - INFO - Merging image with logo: https://resource2.heygen.ai/image/5468705098aa45baae93b8d02b37a536/original
+2025-05-25 18:09:06,353 - config - INFO - Uploading merged image to HeyGen
+2025-05-25 18:09:17,570 - config - INFO - Image uploaded successfully to HeyGen: https://resource2.heygen.ai/image/ee89da4dfc6a42a396400e5f4f8a33a4/original
+2025-05-25 18:10:09,021 - config - INFO - Uploading merged image to HeyGen (type: image/png)
+2025-05-25 18:10:10,613 - config - INFO - Merged image uploaded successfully to HeyGen: https://resource2.heygen.ai/image/1c0bc80d765946dfa500eeee3c9f891a/original
