@@ -131,13 +131,39 @@ export const usePresentation = () => {
     return true;
   };
 
-  const handleCustomUploadRequest = async ({ file }) => {
+  const handleCustomUploadRequest = async ({
+    file,
+    onSuccess,
+    onError,
+    onProgress,
+  }) => {
     setUploading(true);
+
     try {
+      // Attempt real upload via your API
       const fileId = await api.uploadFile(file, (percent) => {
+        onProgress?.({ percent });
         setFileList([{ ...file, percent }]);
       });
+
       setUploadedFileId(fileId);
+      onSuccess?.("ok");
+    } catch (error) {
+      console.error("Upload failed:", error);
+
+      let errorMessage = "An unexpected error occurred during upload.";
+      if (!error.response) {
+        // Network error
+        errorMessage = "Network error: Please check your internet connection.";
+      } else if (error.response.status >= 500) {
+        errorMessage = "Server error: Please try again later.";
+      } else if (error.response.status === 413) {
+        errorMessage = "File too large. Please upload a file under 10MB.";
+      }
+
+      message.error(errorMessage);
+      setFileList([{ ...file, status: "error" }]);
+      onError?.(error);
     } finally {
       setUploading(false);
     }

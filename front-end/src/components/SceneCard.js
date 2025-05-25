@@ -18,6 +18,7 @@ import {
   MinusOutlined,
   UploadOutlined,
   PictureOutlined,
+  UndoOutlined, // Added for restore icon
 } from "@ant-design/icons";
 import {
   StyledCard,
@@ -29,7 +30,7 @@ import {
 } from "../styles/AppStyle";
 import AntImage from "antd/lib/image";
 import { uploadImage } from "../utils/api";
-import { overlayAndUploadImage } from "../utils/imageProcessing"; // Import the new utility
+import { overlayAndUploadImage } from "../utils/imageProcessing";
 
 const { Text } = Typography;
 const { TextArea } = Input;
@@ -53,7 +54,7 @@ const SceneCard = ({
 }) => {
   const [uploading, setUploading] = useState(false);
   const [overlaying, setOverlaying] = useState(false);
-  const [originalImageUrl, setOriginalImageUrl] = useState(null); // Store the original image URL when it first loads or changes
+  const [originalImageUrl, setOriginalImageUrl] = useState(null);
 
   useEffect(() => {
     if (scene.generated_image_url && !originalImageUrl) {
@@ -70,7 +71,7 @@ const SceneCard = ({
       );
       const newImageUrl = response.image_url;
       handleSceneChange(scene.scene_id, "generated_image_url", newImageUrl);
-      setOriginalImageUrl(newImageUrl); // Store as the new original
+      setOriginalImageUrl(newImageUrl);
       message.success("Image uploaded successfully!");
     } catch (error) {
       console.error("Image upload failed:", error);
@@ -158,6 +159,21 @@ const SceneCard = ({
                     />
                   </Upload>
                 </Tooltip>
+                {/* Moved Restore button here as an icon */}
+                {originalImageUrl &&
+                  scene.generated_image_url !== originalImageUrl && (
+                    <Tooltip title="Restore original image">
+                      <Button
+                        icon={<UndoOutlined />}
+                        onClick={handleRestoreImage}
+                        size="small"
+                        shape="circle"
+                        disabled={
+                          scene.isGenerating || scene.isQueued || uploading
+                        }
+                      />
+                    </Tooltip>
+                  )}
               </Space>
             </Col>
           </Row>
@@ -209,20 +225,6 @@ const SceneCard = ({
                       disabled={imageZoom <= 0.5}
                       style={{ marginLeft: 4 }}
                     />
-                    {/* Add Restore button - only show if current image is different from original */}
-                    {originalImageUrl &&
-                      scene.generated_image_url !== originalImageUrl && (
-                        <Tooltip title="Restore original image">
-                          <Button
-                            type="text"
-                            onClick={handleRestoreImage}
-                            size="small"
-                            style={{ marginLeft: 4 }}
-                          >
-                            Restore
-                          </Button>
-                        </Tooltip>
-                      )}
                   </ZoomControls>
                   <AntImage
                     src={scene.generated_image_url}

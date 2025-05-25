@@ -121,7 +121,7 @@ async def extract_content(request: ExtractRequest):
                             cell.set_linewidth(0.5)
                             cell.set_height(0.1)  # Fixed cell height
                             cell.set_edgecolor('black')  # Ensure visible borders
-                            cell.PAD = 0.02  # Further reduce cell padding
+                            cell.PAD = 0.05  # Further reduce cell padding
 
                         # Auto-adjust column widths
                         table_img.auto_set_column_width([i for i in range(num_cols)])
@@ -133,7 +133,7 @@ async def extract_content(request: ExtractRequest):
                         # Save the image
                         img_filename = f"slide_{slide_number}_table_{table_index}.png"
                         img_save_path = os.path.join(specific_extracted_path, img_filename)
-                        fig.savefig(img_save_path, dpi=300, bbox_inches='tight', pad_inches=0.01, transparent=True)
+                        fig.savefig(img_save_path, dpi=300, bbox_inches='tight', pad_inches=0.1, transparent=True)
                         plt.close(fig)
 
                         # Get image dimensions
