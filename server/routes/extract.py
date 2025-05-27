@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
 from pptx.enum.dml import MSO_COLOR_TYPE, MSO_THEME_COLOR
+from pptx.enum.text import PP_ALIGN, MSO_VERTICAL_ANCHOR
 from pptx.dml.color import RGBColor
 import os
 from pptx import Presentation
@@ -100,6 +101,7 @@ def get_cell_text_color(cell):
             return RGBColor(0, 0, 0)
     return RGBColor(0, 0, 0)  # Default to black
 
+
 @router.post("/api/extract")
 async def extract_content(request: ExtractRequest):
     file_id = request.file_id
@@ -173,6 +175,38 @@ async def extract_content(request: ExtractRequest):
                         for row in table.rows
                     ]
 
+                    # Extract horizontal and vertical alignments
+                    cell_h_alignments = []
+                    cell_v_alignments = []
+                    for row in table.rows:
+                        row_h_alignments = []
+                        row_v_alignments = []
+                        for cell in row.cells:
+                            # Get horizontal alignment
+                            h_align = 'center'  # Default
+                            if cell.text_frame and cell.text_frame.paragraphs:
+                                paragraph = cell.text_frame.paragraphs[0]
+                                if paragraph.alignment == PP_ALIGN.LEFT:
+                                    h_align = 'left'
+                                elif paragraph.alignment == PP_ALIGN.RIGHT:
+                                    h_align = 'right'
+                                elif paragraph.alignment == PP_ALIGN.CENTER:
+                                    h_align = 'center'
+
+                            # Get vertical alignment
+                            v_align = 'center'  # Default
+                            if cell.vertical_anchor == MSO_VERTICAL_ANCHOR.TOP:
+                                v_align = 'top'
+                            elif cell.vertical_anchor == MSO_VERTICAL_ANCHOR.BOTTOM:
+                                v_align = 'bottom'
+                            elif cell.vertical_anchor == MSO_VERTICAL_ANCHOR.MIDDLE:
+                                v_align = 'center'
+
+                            row_h_alignments.append(h_align)
+                            row_v_alignments.append(v_align)
+                        cell_h_alignments.append(row_h_alignments)
+                        cell_v_alignments.append(row_v_alignments)
+
                     if table_data_list:
                         num_rows = len(table_data_list)
                         num_cols = len(table_data_list[0]) if table_data_list else 1
@@ -185,7 +219,7 @@ async def extract_content(request: ExtractRequest):
                         # Create the table with matplotlib
                         table_img = ax.table(
                             cellText=table_data_list,
-                            cellLoc='center',
+                            cellLoc='center',  # This will be overridden per cell
                             loc='center',
                             colWidths=[1.0 / num_cols] * num_cols
                         )
@@ -203,16 +237,22 @@ async def extract_content(request: ExtractRequest):
                                 else:
                                     cell.set_facecolor('white')  # Default to white if no color
 
-                                # Set text color
+                                # Set text color and alignment
                                 text_color = cell_text_colors[row][col]
+                                h_align = cell_h_alignments[row][col]
+                                v_align = cell_v_alignments[row][col]
                                 if text_color:
                                     cell.set_text_props(
-                                        ha='center',
-                                        va='center',
+                                        ha=h_align,
+                                        va=v_align,
                                         color=(text_color[0] / 255, text_color[1] / 255, text_color[2] / 255)
                                     )
                                 else:
-                                    cell.set_text_props(ha='center', va='center', color='black')
+                                    cell.set_text_props(
+                                        ha=h_align,
+                                        va=v_align,
+                                        color='black'
+                                    )
 
                                 # Set cell properties
                                 cell.set_linewidth(0.5)
