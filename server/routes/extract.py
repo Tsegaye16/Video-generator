@@ -6,7 +6,8 @@ import uuid
 import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
-
+from pptx.enum.dml import MSO_COLOR_TYPE, MSO_THEME_COLOR
+from pptx.dml.color import RGBColor
 import os
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
@@ -75,6 +76,30 @@ def process_group_shapes(shapes, slide_number, specific_extracted_path, image_in
             logger.error(f"Error processing shape in slide {slide_number}: {e}")
     return images
 
+def get_cell_background_color(cell):
+    """Extract the background color of a cell."""
+    fill = cell.fill
+    if fill.type == 1:  # Solid fill
+        if fill.fore_color.type == MSO_COLOR_TYPE.RGB:
+            return fill.fore_color.rgb
+        elif fill.fore_color.type == MSO_COLOR_TYPE.SCHEME:
+            theme_color = fill.fore_color.theme_color
+            # Map theme color to RGB (approximation, may need theme color mapping)
+            # Placeholder: Return white if theme color is not mapped
+            return RGBColor(255, 255, 255)
+    return None  # Default to no color (transparent)
+
+def get_cell_text_color(cell):
+    """Extract the text color of a cell."""
+    if cell.text_frame.paragraphs:
+        run = cell.text_frame.paragraphs[0].runs
+        if run and run[0].font.color.type == MSO_COLOR_TYPE.RGB:
+            return run[0].font.color.rgb
+        elif run and run[0].font.color.type == MSO_COLOR_TYPE.SCHEME:
+            # Placeholder: Map theme color to RGB or return default (black)
+            return RGBColor(0, 0, 0)
+    return RGBColor(0, 0, 0)  # Default to black
+
 @router.post("/api/extract")
 async def extract_content(request: ExtractRequest):
     file_id = request.file_id
@@ -138,6 +163,16 @@ async def extract_content(request: ExtractRequest):
                         for row in table.rows
                     ]
 
+                    # Extract cell background and text colors
+                    cell_bg_colors = [
+                        [get_cell_background_color(cell) for cell in row.cells]
+                        for row in table.rows
+                    ]
+                    cell_text_colors = [
+                        [get_cell_text_color(cell) for cell in row.cells]
+                        for row in table.rows
+                    ]
+
                     if table_data_list:
                         num_rows = len(table_data_list)
                         num_cols = len(table_data_list[0]) if table_data_list else 1
@@ -147,6 +182,7 @@ async def extract_content(request: ExtractRequest):
                         ax.axis('off')
                         plt.box(False)
 
+                        # Create the table with matplotlib
                         table_img = ax.table(
                             cellText=table_data_list,
                             cellLoc='center',
@@ -156,22 +192,45 @@ async def extract_content(request: ExtractRequest):
                         table_img.auto_set_font_size(False)
                         table_img.set_fontsize(8)
 
-                        for (row, col), cell in table_img.get_celld().items():
-                            cell.set_text_props(ha='center', va='center')
-                            cell.set_linewidth(0.5)
-                            cell.set_height(0.1)
-                            cell.set_edgecolor('black')
-                            cell.PAD = 0.05
+                        # Apply formatting to each cell
+                        for row in range(num_rows):
+                            for col in range(num_cols):
+                                cell = table_img[(row, col)]
+                                # Set background color
+                                bg_color = cell_bg_colors[row][col]
+                                if bg_color:
+                                    cell.set_facecolor((bg_color[0] / 255, bg_color[1] / 255, bg_color[2] / 255))
+                                else:
+                                    cell.set_facecolor('white')  # Default to white if no color
+
+                                # Set text color
+                                text_color = cell_text_colors[row][col]
+                                if text_color:
+                                    cell.set_text_props(
+                                        ha='center',
+                                        va='center',
+                                        color=(text_color[0] / 255, text_color[1] / 255, text_color[2] / 255)
+                                    )
+                                else:
+                                    cell.set_text_props(ha='center', va='center', color='black')
+
+                                # Set cell properties
+                                cell.set_linewidth(0.5)
+                                cell.set_height(0.1)
+                                cell.set_edgecolor('black')
+                                cell.PAD = 0.05
 
                         table_img.auto_set_column_width([i for i in range(num_cols)])
                         fig.tight_layout(pad=0.0)
                         fig.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0)
 
+                        # Save the table as an image
                         img_filename = f"slide_{slide_number}_table_{table_index}.png"
                         img_save_path = os.path.join(specific_extracted_path, img_filename)
                         fig.savefig(img_save_path, dpi=300, bbox_inches='tight', pad_inches=0.1, transparent=True)
                         plt.close(fig)
 
+                        # Add image info
                         with Image.open(img_save_path) as img:
                             width, height = img.size
 
