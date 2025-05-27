@@ -238,12 +238,12 @@ async def extract_content(request: ExtractRequest):
 
                             # Get vertical alignment
                             v_align = 'center'  # Default
-                            if cell.vertical_anchor == MSO_VERTICAL_ANCHOR.TOP:
-                                v_align = 'top'
-                            elif cell.vertical_anchor == MSO_VERTICAL_ANCHOR.BOTTOM:
-                                v_align = 'bottom'
-                            elif cell.vertical_anchor == MSO_VERTICAL_ANCHOR.MIDDLE:
-                                v_align = 'center'
+                            # if cell.vertical_anchor == MSO_VERTICAL_ANCHOR.TOP:
+                            #     v_align = 'top'
+                            # elif cell.vertical_anchor == MSO_VERTICAL_ANCHOR.BOTTOM:
+                            #     v_align = 'bottom'
+                            # elif cell.vertical_anchor == MSO_VERTICAL_ANCHOR.MIDDLE:
+                            #     v_align = 'center'
 
                             row_h_alignments.append(h_align)
                             row_v_alignments.append(v_align)
@@ -267,7 +267,7 @@ async def extract_content(request: ExtractRequest):
                             colWidths=[1.0 / num_cols] * num_cols
                         )
                         table_img.auto_set_font_size(False)
-                        table_img.set_fontsize(8)
+                        table_img.set_fontsize(9)
 
                         # Apply formatting to each cell
                         for row in range(num_rows):
