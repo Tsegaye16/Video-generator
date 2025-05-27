@@ -91,16 +91,59 @@ def get_cell_background_color(cell):
     return None  # Default to no color (transparent)
 
 def get_cell_text_color(cell):
-    """Extract the text color of a cell."""
-    if cell.text_frame.paragraphs:
-        run = cell.text_frame.paragraphs[0].runs
-        if run and run[0].font.color.type == MSO_COLOR_TYPE.RGB:
-            return run[0].font.color.rgb
-        elif run and run[0].font.color.type == MSO_COLOR_TYPE.SCHEME:
-            # Placeholder: Map theme color to RGB or return default (black)
-            return RGBColor(0, 0, 0)
-    return RGBColor(0, 0, 0)  # Default to black
-
+    """Extract the text color of a cell, handling all MSO_COLOR_TYPE values."""
+    try:
+        if cell.text_frame and cell.text_frame.paragraphs:
+            for paragraph in cell.text_frame.paragraphs:
+                for run in paragraph.runs:
+                    if run.font and run.font.color and run.font.color.type:
+                        color = run.font.color
+                        if color.type == MSO_COLOR_TYPE.RGB:
+                            return color.rgb
+                        elif color.type == MSO_COLOR_TYPE.SCHEME:
+                            # Map theme color to RGB using theme color dictionary
+                            theme_color = color.theme_color
+                            # Example theme color mapping (adjust based on presentation theme)
+                            theme_rgb_map = {
+                                MSO_THEME_COLOR.DARK_1: RGBColor(0, 0, 0),          # Black
+                                MSO_THEME_COLOR.LIGHT_1: RGBColor(255, 255, 255),  # White
+                                MSO_THEME_COLOR.DARK_2: RGBColor(68, 84, 106),     # Dark gray
+                                MSO_THEME_COLOR.LIGHT_2: RGBColor(238, 236, 225),  # Light gray
+                                MSO_THEME_COLOR.ACCENT_1: RGBColor(31, 73, 125),   # Blue
+                                MSO_THEME_COLOR.ACCENT_2: RGBColor(79, 129, 189),  # Light blue
+                                MSO_THEME_COLOR.ACCENT_3: RGBColor(192, 80, 77),   # Red
+                                MSO_THEME_COLOR.ACCENT_4: RGBColor(155, 187, 89),  # Green
+                                MSO_THEME_COLOR.ACCENT_5: RGBColor(128, 100, 162), # Purple
+                                MSO_THEME_COLOR.ACCENT_6: RGBColor(75, 172, 198),  # Cyan
+                                MSO_THEME_COLOR.HYPERLINK: RGBColor(0, 0, 255),    # Blue
+                                MSO_THEME_COLOR.FOLLOWED_HYPERLINK: RGBColor(128, 0, 128),  # Purple
+                                MSO_THEME_COLOR.TEXT_1: RGBColor(0, 0, 0),         # Black
+                                MSO_THEME_COLOR.BACKGROUND_1: RGBColor(255, 255, 255),  # White
+                                MSO_THEME_COLOR.TEXT_2: RGBColor(68, 84, 106),     # Dark gray
+                                MSO_THEME_COLOR.BACKGROUND_2: RGBColor(238, 236, 225),  # Light gray
+                            }
+                            return theme_rgb_map.get(theme_color, RGBColor(0, 0, 0))
+                        elif color.type == MSO_COLOR_TYPE.HSL:
+                            # Convert HSL to RGB (placeholder, requires conversion logic)
+                            return RGBColor(0, 0, 0)  # Default to black
+                        elif color.type == MSO_COLOR_TYPE.PRESET:
+                            # Preset colors are less common; default to black or map if known
+                            return RGBColor(0, 0, 0)  # Default to black
+                        elif color.type == MSO_COLOR_TYPE.SCRGB:
+                            # scRGB uses floating-point RGB; convert to standard RGB
+                            rgb = color.rgb  # May need scaling if scRGB is out of range
+                            return rgb if rgb else RGBColor(0, 0, 0)
+                        elif color.type == MSO_COLOR_TYPE.SYSTEM:
+                            # System colors depend on OS; default to black
+                            return RGBColor(0, 0, 0)  # Default to black
+                        elif color.type == MSO_COLOR_TYPE.AUTO:
+                            # AUTO typically inherits from theme or default (black)
+                            return RGBColor(0, 0, 0)  # Default to black
+        # Fallback for empty cells or no color defined
+        return RGBColor(0, 0, 0)  # Default to black
+    except Exception:
+        # Handle unexpected errors
+        return RGBColor(0, 0, 0)  # Default to black
 
 @router.post("/api/extract")
 async def extract_content(request: ExtractRequest):
@@ -171,9 +214,9 @@ async def extract_content(request: ExtractRequest):
                         for row in table.rows
                     ]
                     cell_text_colors = [
-                        [get_cell_text_color(cell) for cell in row.cells]
+                        [get_cell_text_color(cell) for cell in row.cells] 
                         for row in table.rows
-                    ]
+]
 
                     # Extract horizontal and vertical alignments
                     cell_h_alignments = []
@@ -282,6 +325,7 @@ async def extract_content(request: ExtractRequest):
                         ))
 
                         table_index += 1
+
 
             extracted_slides_data.append(current_slide_data)
             logger.info(f"Extracted slide {slide_number} with title: {current_slide_data.title}")
