@@ -11,6 +11,7 @@ import os
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 from spire.presentation import Presentation as SpirePresentation, FileFormat
+import logging
 
 router = APIRouter()
 
@@ -18,6 +19,61 @@ import textwrap
 
 def wrap_text(text: str, max_width: int = 12) -> str:
     return '\n'.join(textwrap.wrap(text, width=max_width))
+
+# Configure logger
+logger = logging.getLogger(__name__)
+
+def process_group_shapes(shapes, slide_number, specific_extracted_path, image_index):
+    """Recursively process shapes, including group shapes, to extract images."""
+    images = []
+    for shape in shapes:
+        try:
+            if shape.shape_type == MSO_SHAPE_TYPE.GROUP:
+                # Recursively process shapes within a group
+                group_images = process_group_shapes(shape.shapes, slide_number, specific_extracted_path, image_index)
+                images.extend(group_images)
+                image_index += len(group_images)
+            elif shape.shape_type == MSO_SHAPE_TYPE.PICTURE or hasattr(shape, 'image'):
+                try:
+                    image = shape.image
+                    if image and image.blob:  # Ensure image is valid
+                        img_filename = f"slide_{slide_number}_img_{image_index}.{image.ext.lower()}"
+                        img_save_path = os.path.join(specific_extracted_path, img_filename)
+                        with open(img_save_path, 'wb') as f:
+                            f.write(image.blob)
+                        images.append(ImageInfo(
+                            filename=img_filename,
+                            content_type=image.content_type,
+                            width_emu=image.size[0],
+                            height_emu=image.size[1]
+                        ))
+                        logger.info(f"Extracted image: {img_filename}")
+                        image_index += 1
+                except Exception as e:
+                    logger.error(f"Error extracting image from shape in slide {slide_number}: {e}")
+            else:
+                # Check for images in placeholders or other shapes
+                if hasattr(shape, 'element') and shape.element.tag.endswith('pic'):
+                    try:
+                        image = shape.image
+                        if image and image.blob:
+                            img_filename = f"slide_{slide_number}_img_{image_index}.{image.ext.lower()}"
+                            img_save_path = os.path.join(specific_extracted_path, img_filename)
+                            with open(img_save_path, 'wb') as f:
+                                f.write(image.blob)
+                            images.append(ImageInfo(
+                                filename=img_filename,
+                                content_type=image.content_type,
+                                width_emu=image.size[0],
+                                height_emu=image.size[1]
+                            ))
+                            logger.info(f"Extracted image from placeholder: {img_filename}")
+                            image_index += 1
+                    except Exception as e:
+                        logger.error(f"Error extracting placeholder image in slide {slide_number}: {e}")
+        except Exception as e:
+            logger.error(f"Error processing shape in slide {slide_number}: {e}")
+    return images
 
 @router.post("/api/extract")
 async def extract_content(request: ExtractRequest):
@@ -66,25 +122,15 @@ async def extract_content(request: ExtractRequest):
                 title_shape = slide.shapes.title
                 current_slide_data.title = title_shape.text.strip()
 
+            # Extract images, including those in groups or placeholders
+            current_slide_data.images = process_group_shapes(slide.shapes, slide_number, specific_extracted_path, image_index)
+
             for shape in slide.shapes:
                 if shape.has_text_frame and shape != title_shape:
                     text = shape.text.strip()
                     if text:
                         current_slide_data.text_elements.append(text)
 
-                if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
-                    image = shape.image
-                    img_filename = f"slide_{slide_number}_img_{image_index}.{image.ext.lower()}"
-                    img_save_path = os.path.join(specific_extracted_path, img_filename)
-                    with open(img_save_path, 'wb') as f:
-                        f.write(image.blob)
-                    current_slide_data.images.append(ImageInfo(
-                        filename=img_filename,
-                        content_type=image.content_type,
-                        width_emu=image.size[0],
-                        height_emu=image.size[1]
-                    ))
-                    image_index += 1
                 if shape.shape_type == MSO_SHAPE_TYPE.TABLE:
                     table = shape.table
                     table_data_list = [
@@ -93,50 +139,39 @@ async def extract_content(request: ExtractRequest):
                     ]
 
                     if table_data_list:
-                        # Calculate figure size dynamically based on table dimensions
                         num_rows = len(table_data_list)
                         num_cols = len(table_data_list[0]) if table_data_list else 1
-                        fig_width = min(8, num_cols * 1.5)  # Adjust width based on number of columns
-                        fig_height = min(4, num_rows * 1.5)  # Adjust height based on number of rows
+                        fig_width = min(8, num_cols * 1.5)
+                        fig_height = min(4, num_rows * 1.5)
                         fig, ax = plt.subplots(figsize=(fig_width, fig_height))
-
-                        # Turn off axis and set tight layout
                         ax.axis('off')
-                        plt.box(False)  # Remove border around the figure
+                        plt.box(False)
 
-                        # Create table with minimal padding
                         table_img = ax.table(
                             cellText=table_data_list,
                             cellLoc='center',
                             loc='center',
-                            colWidths=[1.0 / num_cols] * num_cols  # Equal column widths
+                            colWidths=[1.0 / num_cols] * num_cols
                         )
-
-                        # Customize table appearance
                         table_img.auto_set_font_size(False)
                         table_img.set_fontsize(8)
 
                         for (row, col), cell in table_img.get_celld().items():
                             cell.set_text_props(ha='center', va='center')
                             cell.set_linewidth(0.5)
-                            cell.set_height(0.1)  # Fixed cell height
-                            cell.set_edgecolor('black')  # Ensure visible borders
-                            cell.PAD = 0.05  # Further reduce cell padding
+                            cell.set_height(0.1)
+                            cell.set_edgecolor('black')
+                            cell.PAD = 0.05
 
-                        # Auto-adjust column widths
                         table_img.auto_set_column_width([i for i in range(num_cols)])
-
-                        # Remove all margins
                         fig.tight_layout(pad=0.0)
                         fig.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.0)
 
-                        # Save the image
                         img_filename = f"slide_{slide_number}_table_{table_index}.png"
                         img_save_path = os.path.join(specific_extracted_path, img_filename)
                         fig.savefig(img_save_path, dpi=300, bbox_inches='tight', pad_inches=0.1, transparent=True)
                         plt.close(fig)
 
-                        # Get image dimensions
                         with Image.open(img_save_path) as img:
                             width, height = img.size
 
@@ -148,7 +183,6 @@ async def extract_content(request: ExtractRequest):
                         ))
 
                         table_index += 1
-
 
             extracted_slides_data.append(current_slide_data)
             logger.info(f"Extracted slide {slide_number} with title: {current_slide_data.title}")
@@ -167,7 +201,7 @@ async def extract_content(request: ExtractRequest):
                 logger.info(f"Cleaned up converted file: {converted_file_path}")
         except Exception as e:
             logger.warning(f"Failed to clean up files: {e}")
-    
+
     return ExtractionResponse(
         file_id=file_id,
         extracted_content_path=specific_extracted_path,
