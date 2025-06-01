@@ -14,7 +14,90 @@ from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 from spire.presentation import Presentation as SpirePresentation, FileFormat
 import logging
+from wand.image import Image as WandImage
+from PIL import Image as PILImage
+import os
+import io
 
+def convert_wmf_to_png(wmf_path, png_path, resolution=300):
+    """
+    Convert WMF file to PNG using ImageMagick (wand)
+    
+    Args:
+        wmf_path: Path to input WMF file
+        png_path: Path to save output PNG
+        resolution: DPI resolution for output (default 300)
+    """
+    try:
+        # Convert using ImageMagick
+        with WandImage(filename=wmf_path, resolution=resolution) as img:
+            img.format = 'png'
+            img.save(filename=png_path)
+        
+        # Optimize the PNG with Pillow
+        with PILImage.open(png_path) as img:
+            img.save(png_path, 'PNG', optimize=True)
+        
+        return True
+    except Exception as e:
+        print(f"Error converting WMF to PNG: {e}")
+        return False
+
+def process_wmf_image(blob, slide_number, image_index, output_dir):
+    """
+    Process a WMF image blob from PowerPoint
+    
+    Args:
+        blob: Binary data of the WMF image
+        slide_number: Slide number for naming
+        image_index: Image index for naming
+        output_dir: Directory to save files
+    
+    Returns:
+        ImageInfo object or None if conversion fails
+    """
+    try:
+        # Save original WMF
+        wmf_filename = f"slide_{slide_number}_img_{image_index}.wmf"
+        wmf_path = os.path.join(output_dir, wmf_filename)
+        
+        with open(wmf_path, 'wb') as f:
+            f.write(blob)
+        
+        # Convert to PNG
+        png_filename = f"slide_{slide_number}_img_{image_index}.png"
+        png_path = os.path.join(output_dir, png_filename)
+        
+        if convert_wmf_to_png(wmf_path, png_path):
+            # Get dimensions
+            with PILImage.open(png_path) as img:
+                width, height = img.size
+            
+            # Clean up WMF if PNG conversion succeeded
+            os.remove(wmf_path)
+            
+            return ImageInfo(
+                filename=png_filename,
+                content_type="image/png",
+                width_emu=width,
+                height_emu=height
+            )
+        else:
+            # Fallback to WMF if conversion fails
+            with open(wmf_path, 'rb') as f:
+                with PILImage.open(f) as img:
+                    width, height = img.size
+            
+            return ImageInfo(
+                filename=wmf_filename,
+                content_type="image/wmf",
+                width_emu=width,
+                height_emu=height
+            )
+    
+    except Exception as e:
+        print(f"Error processing WMF image: {e}")
+        return None
 router = APIRouter()
 
 import textwrap
@@ -38,19 +121,53 @@ def process_group_shapes(shapes, slide_number, specific_extracted_path, image_in
             elif shape.shape_type == MSO_SHAPE_TYPE.PICTURE or hasattr(shape, 'image'):
                 try:
                     image = shape.image
-                    if image and image.blob:  # Ensure image is valid
-                        img_filename = f"slide_{slide_number}_img_{image_index}.{image.ext.lower()}"
-                        img_save_path = os.path.join(specific_extracted_path, img_filename)
-                        with open(img_save_path, 'wb') as f:
-                            f.write(image.blob)
-                        images.append(ImageInfo(
-                            filename=img_filename,
-                            content_type=image.content_type,
-                            width_emu=image.size[0],
-                            height_emu=image.size[1]
-                        ))
-                        logger.info(f"Extracted image: {img_filename}")
-                        image_index += 1
+                    if image and image.blob:
+                        ext = image.ext.lower()
+                        
+                        # Special handling for WMF/EMF
+                        if ext in ('wmf', 'emf'):
+                            img_info = process_wmf_image(
+                                image.blob,
+                                slide_number,
+                                image_index,
+                                specific_extracted_path
+                            )
+                            if img_info:
+                                images.append(img_info)
+                                image_index += 1
+                        else:
+                            # Normal image processing for other formats
+                            img_filename = f"slide_{slide_number}_img_{image_index}.{ext}"
+                            img_path = os.path.join(specific_extracted_path, img_filename)
+                            
+                            with open(img_path, 'wb') as f:
+                                f.write(image.blob)
+                            
+                            # Convert to PNG if not already
+                            if ext != 'png':
+                                png_filename = f"slide_{slide_number}_img_{image_index}.png"
+                                png_path = os.path.join(specific_extracted_path, png_filename)
+                                
+                                try:
+                                    with PILImage.open(img_path) as img:
+                                        img.save(png_path, 'PNG')
+                                    os.remove(img_path)
+                                    img_filename = png_filename
+                                    ext = 'png'
+                                except Exception as conv_e:
+                                    print(f"Couldn't convert to PNG, keeping original: {conv_e}")
+                            
+                            with PILImage.open(os.path.join(specific_extracted_path, img_filename)) as img:
+                                width, height = img.size
+                            
+                            images.append(ImageInfo(
+                                filename=img_filename,
+                                content_type=f"image/{ext}",
+                                width_emu=width,
+                                height_emu=height
+                            ))
+                            image_index += 1
+                
                 except Exception as e:
                     logger.error(f"Error extracting image from shape in slide {slide_number}: {e}")
             else:
@@ -59,17 +176,49 @@ def process_group_shapes(shapes, slide_number, specific_extracted_path, image_in
                     try:
                         image = shape.image
                         if image and image.blob:
-                            img_filename = f"slide_{slide_number}_img_{image_index}.{image.ext.lower()}"
-                            img_save_path = os.path.join(specific_extracted_path, img_filename)
-                            with open(img_save_path, 'wb') as f:
+                            # Same conversion process as above
+                            original_ext = image.ext.lower()
+                            original_img_filename = f"slide_{slide_number}_img_{image_index}_original.{original_ext}"
+                            original_img_path = os.path.join(specific_extracted_path, original_img_filename)
+                            with open(original_img_path, 'wb') as f:
                                 f.write(image.blob)
-                            images.append(ImageInfo(
-                                filename=img_filename,
-                                content_type=image.content_type,
-                                width_emu=image.size[0],
-                                height_emu=image.size[1]
-                            ))
-                            logger.info(f"Extracted image from placeholder: {img_filename}")
+                            
+                            png_filename = f"slide_{slide_number}_img_{image_index}.png"
+                            png_path = os.path.join(specific_extracted_path, png_filename)
+                            
+                            try:
+                                with Image.open(original_img_path) as img:
+                                    if img.mode in ('RGBA', 'LA', 'P'):
+                                        img = img.convert('RGBA')
+                                    elif img.mode != 'RGB':
+                                        img = img.convert('RGB')
+                                    img.save(png_path, 'PNG', quality=95)
+                                
+                                with Image.open(png_path) as img:
+                                    width, height = img.size
+                                
+                                images.append(ImageInfo(
+                                    filename=png_filename,
+                                    content_type="image/png",
+                                    width_emu=width,
+                                    height_emu=height
+                                ))
+                                logger.info(f"Extracted and converted placeholder image to PNG: {png_filename}")
+                                
+                                # os.remove(original_img_path)
+                                
+                            except Exception as conv_e:
+                                logger.error(f"Error converting placeholder image to PNG: {conv_e}")
+                                with Image.open(original_img_path) as img:
+                                    width, height = img.size
+                                
+                                images.append(ImageInfo(
+                                    filename=original_img_filename,
+                                    content_type=image.content_type,
+                                    width_emu=width,
+                                    height_emu=height
+                                ))
+                            
                             image_index += 1
                     except Exception as e:
                         logger.error(f"Error extracting placeholder image in slide {slide_number}: {e}")
